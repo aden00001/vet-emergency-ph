@@ -1,0 +1,84 @@
+{
+  "generated_at": "2026-06-08T20:49:44.701Z",
+  "csv_rows": 38,
+  "google_json": 38,
+  "manual_json": 10,
+  "osm_json": 239,
+  "db_total": 299,
+  "issues_by_type": {
+    "facebook_only_contact": 1,
+    "db_facebook_only_phone": 1,
+    "alias_candidate": 6
+  },
+  "errors": [],
+  "warnings": [
+    {
+      "severity": "warn",
+      "type": "facebook_only_contact",
+      "name": "VET CLINIC 24HOURS",
+      "contact_note": "Contact via Facebook"
+    },
+    {
+      "severity": "warn",
+      "type": "db_facebook_only_phone",
+      "name": "VET CLINIC 24HOURS",
+      "phone": "Contact via Facebook"
+    }
+  ],
+  "issues": [
+    {
+      "severity": "warn",
+      "type": "facebook_only_contact",
+      "name": "VET CLINIC 24HOURS",
+      "contact_note": "Contact via Facebook"
+    },
+    {
+      "severity": "warn",
+      "type": "db_facebook_only_phone",
+      "name": "VET CLINIC 24HOURS",
+      "phone": "Contact via Facebook"
+    },
+    {
+      "severity": "info",
+      "type": "alias_candidate",
+      "osm": "Animal Clinic",
+      "curated": "Holy Spirit Animal Clinic",
+      "meters": 15
+    },
+    {
+      "severity": "info",
+      "type": "alias_candidate",
+      "osm": "Animal Wonders",
+      "curated": "Animal Wonders Veterinary Clinic",
+      "meters": 4
+    },
+    {
+      "severity": "info",
+      "type": "alias_candidate",
+      "osm": "Dog @ Cat Clinic",
+      "curated": "VET to PETZ Veterinary Clinic-Tandang Sora",
+      "meters": 11
+    },
+    {
+      "severity": "info",
+      "type": "alias_candidate",
+      "osm": "Serbisyo Beterinaryo Animal Hospital",
+      "curated": "Serbisyo Beterinaryo Animal Hospital Quezon City 24 Hrs Pet Emergency",
+      "meters": 5
+    },
+    {
+      "severity": "info",
+      "type": "alias_candidate",
+      "osm": "Vetlink Veterinary Services",
+      "curated": "Vetlink Veterinary Services - A Community Vet Clinic",
+      "meters": 18
+    },
+    {
+      "severity": "info",
+      "type": "alias_candidate",
+      "osm": "Wolfpack",
+      "curated": "Los Animales Veterinary Clinic and Petshop",
+      "meters": 11
+    }
+  ]
+}
