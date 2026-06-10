@@ -3,6 +3,7 @@
  */
 
 import { isHumanBiteCenter } from "./clinic-exclusions.mjs";
+import { decodePlusCode, extractPlusCode } from "./geocode-lib.mjs";
 
 const SKIP_CATEGORIES = [
   "pet groomer",
@@ -84,39 +85,73 @@ export function inferEmergency(name, category) {
 }
 
 export function buildAddress(row) {
+  if (row.full_address) return String(row.full_address).replace(/\s+/g, " ").trim();
   const parts = [row.street, row.city, row.state].filter(Boolean);
   return parts.join(", ").replace(/\s+/g, " ").trim();
 }
 
+function extractCoordsFromUrl(url) {
+  const m = url?.match(/!3d(-?\d+\.?\d*)!4d(-?\d+\.?\d*)/);
+  if (m) return { latitude: parseFloat(m[1]), longitude: parseFloat(m[2]) };
+  const at = url?.match(/@(-?\d+\.?\d*),(-?\d+\.?\d*)/);
+  if (at) return { latitude: parseFloat(at[1]), longitude: parseFloat(at[2]) };
+  return null;
+}
+
+function resolveCoords(row, address) {
+  let latitude = row.latitude ?? row.lat ?? null;
+  let longitude = row.longitude ?? row.lng ?? row.lon ?? null;
+  if (latitude != null && longitude != null) return { latitude, longitude };
+
+  const url = row.url || row.link || row.google_maps_url || "";
+  const fromUrl = extractCoordsFromUrl(url);
+  if (fromUrl) return fromUrl;
+
+  const plusCode = row.plus_code || extractPlusCode(address);
+  if (plusCode) {
+    const decoded = decodePlusCode(String(plusCode).toUpperCase());
+    if (decoded) return { latitude: decoded.latitude, longitude: decoded.longitude };
+  }
+
+  return { latitude: null, longitude: null };
+}
+
 export function parseOutscraperRow(row) {
-  const name = cleanGoogleMapsName(row.title?.trim() || "");
+  const name = cleanGoogleMapsName(row.title?.trim() || row.name?.trim() || "");
   if (!name) return null;
 
-  const category = row.categoryName || (row.categories ?? []).join(", ") || "";
+  const category =
+    row.categoryName ||
+    row.category ||
+    row.type ||
+    (row.categories ?? []).join(", ") ||
+    "";
   if (!isVetRelevant(name, category)) return null;
 
   const address = buildAddress(row);
-  const google_place_id = extractPlaceId(row.url);
+  const mapsUrl = row.url || row.link || row.google_maps_url || "";
+  const google_place_id = row.place_id || extractPlaceId(mapsUrl);
   const emergency_capable = inferEmergency(name, category);
+  const { latitude, longitude } = resolveCoords(row, address);
 
   return {
     name,
     address: address || null,
     phone: normalizePhone(row.phone),
-    latitude: row.latitude ?? row.lat ?? null,
-    longitude: row.longitude ?? row.lng ?? row.lon ?? null,
+    latitude,
+    longitude,
     emergency_capable,
     owner_verified: false,
     services: emergency_capable ? ["trauma", "poisoning", "respiratory"] : ["trauma"],
     hours: row.openingHours ?? row.hours ?? null,
     source: "google_maps_scrape",
-    google_maps_url: row.url?.split("?")[0] || undefined,
+    google_maps_url: mapsUrl || undefined,
     google_place_id: google_place_id || undefined,
     image_url: row.photo ?? row.mainPhoto ?? row.image ?? undefined,
     category,
     website: row.website || undefined,
     rating: row.totalScore ?? undefined,
-    review_count: row.reviewsCount ?? undefined,
+    review_count: row.reviewsCount ?? row.reviews ?? undefined,
   };
 }
 

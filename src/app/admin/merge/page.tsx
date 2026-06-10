@@ -289,12 +289,12 @@ export default function MergeClinicsPage() {
               <pre className="overflow-x-auto rounded-lg border bg-muted/40 p-3 text-xs">
                 {`cd "d:\\Vibe Code\\Emergency Vet clinics\\vet-emergency-ph"
 npm run geocode:merged
+# optional: npm run geocode:merged:google  (needs GOOGLE_PLACES_API_KEY)
 node scripts/import-clinics.mjs --file=data/clinics-merged.json --upsert`}
               </pre>
               <p className="text-muted-foreground text-xs">
-                Or do both in one step:{" "}
-                <code className="text-foreground">npm run import:clinics:merged</code> (~15 min for
-                900 clinics).
+                Outscraper JSON usually has no GPS — geocoding takes ~1–2 sec per clinic and saves
+                every 25 rows. Re-run safely; use Google fallback for stragglers.
               </p>
             </CardContent>
           </Card>
