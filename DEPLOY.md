@@ -12,12 +12,18 @@
 
 ## 1. Remote Supabase
 
+**Region:** Choose **Southeast Asia (Singapore)** when creating the project — not India or US. Lower latency for Philippines users and closer to Vercel's Singapore edge.
+
+After the project is created, copy the **Project URL** from **Settings → API** (looks like `https://abcdefghijklmnop.supabase.co`). The project ref is the subdomain before `.supabase.co` — **not** the database password you set at creation.
+
 ```powershell
 cd vet-emergency-ph
 supabase login
-supabase link --project-ref YOUR_PROJECT_REF
+supabase link --project-ref fmmktluhbxxfvmmogztb
 supabase db push
 ```
+
+**Production Supabase URL:** `https://fmmktluhbxxfvmmogztb.supabase.co`
 
 Import real clinic data (after scrape + review):
 
@@ -45,7 +51,7 @@ Enable **PostGIS** in Dashboard → Database → Extensions if not already enabl
 Configure Auth redirect URLs:
 
 - `http://localhost:3000/auth/callback`
-- `https://your-app.vercel.app/auth/callback`
+- `https://vet-emergency-ph.vercel.app/auth/callback`
 
 ---
 
@@ -64,10 +70,18 @@ Configure Auth redirect URLs:
 
 | Variable | Value |
 |----------|--------|
-| `NEXT_PUBLIC_SUPABASE_URL` | Supabase project URL |
-| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase anon key |
-| `SUPABASE_SERVICE_ROLE_KEY` | Service role (server only) |
-| `NEXT_PUBLIC_APP_URL` | `https://your-app.vercel.app` |
+| `NEXT_PUBLIC_SUPABASE_URL` | `https://fmmktluhbxxfvmmogztb.supabase.co` |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase → Settings → API → anon public (`eyJ...`) |
+| `SUPABASE_URL` | Same URL as above (server runtime — **required on Vercel**) |
+| `SUPABASE_ANON_KEY` | Same anon key as above (server runtime — **required on Vercel**) |
+| `SUPABASE_SERVICE_ROLE_KEY` | Supabase → Settings → API → service_role |
+| `NEXT_PUBLIC_APP_URL` | `https://vet-emergency-ph.vercel.app` |
+
+> Use the **anon JWT** (`eyJ...`), not the publishable key (`sb_...`). Enable all vars for **Production**. After saving, redeploy **without** build cache.
+
+**Production branch:** `master` (not `main`).
+
+**Verify after deploy:** `https://vet-emergency-ph.vercel.app/api/health` should show `"ok": true`.
 | `UPSTASH_REDIS_REST_URL` | Upstash REST URL |
 | `UPSTASH_REDIS_REST_TOKEN` | Upstash token |
 | `WEBHOOK_SECRET` | Random secret string |
@@ -97,6 +111,6 @@ Test magic links with real email (not Inbucket).
 | Environment | `NEXT_PUBLIC_SUPABASE_URL` |
 |-------------|----------------------------|
 | Local Docker | `http://127.0.0.1:54321` |
-| Production | `https://xxxx.supabase.co` |
+| Production (Vercel) | `https://fmmktluhbxxfvmmogztb.supabase.co` |
 
 Keep separate `.env.local` (local) and Vercel env vars (production).
