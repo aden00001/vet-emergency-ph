@@ -13,7 +13,7 @@ import { SiteHeader } from "@/components/site-header";
 import { ClaimClinicButton } from "@/components/claim-clinic-button";
 import { createClient } from "@/lib/supabase/server";
 import { formatDistance } from "@/lib/geo";
-import { telHref } from "@/lib/phone";
+import { CallButton } from "@/components/call-button";
 import { STATUS_CONFIG } from "@/lib/status";
 import type { ClinicReview, ReviewSummary, Verification } from "@/types/database";
 import { ArrowLeft, BadgeCheck, Clock, MapPin, Phone } from "lucide-react";
@@ -196,13 +196,14 @@ export default async function ClinicDetailPage({ params }: PageProps) {
               </div>
             )}
             <div className="flex flex-wrap gap-2 pt-1">
-              <a
-                href={telHref(clinic.phone)}
-                className={buttonVariants({ size: "lg", className: "h-11 gap-2 shadow-soft" })}
+              <CallButton
+                phone={clinic.phone}
+                size="lg"
+                className="h-11 gap-2 shadow-soft"
               >
                 <Phone className="size-4" />
-                {clinic.phone}
-              </a>
+                {clinic.phone || "No phone number"}
+              </CallButton>
               <DirectionsButtons
                 lat={clinic.latitude}
                 lng={clinic.longitude}

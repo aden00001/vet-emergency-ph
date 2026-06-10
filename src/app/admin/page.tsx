@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -141,7 +142,10 @@ export default function AdminPage() {
         <div>
           <h1 className="text-2xl font-bold">Clinic Admin</h1>
           <p className="text-muted-foreground text-sm">
-            Passwordless management for verified clinic owners.
+            Passwordless management for verified clinic owners.{" "}
+            <Link href="/admin/merge" className="text-primary hover:underline">
+              Merge clinic JSON
+            </Link>
           </p>
         </div>
 

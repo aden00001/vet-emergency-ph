@@ -5,6 +5,7 @@
  *   node scripts/import-clinics.mjs              # merge (skip duplicates by name)
  *   node scripts/import-clinics.mjs --replace    # wipe clinics + re-import
  *   node scripts/import-clinics.mjs --upsert         # update existing rows by name
+ *   node scripts/import-clinics.mjs --file=data/clinics-merged.json --geocode-first --upsert
  *
  * Requires SUPABASE_SERVICE_ROLE_KEY + NEXT_PUBLIC_SUPABASE_URL in .env.local
  */
@@ -13,7 +14,8 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import { createClient } from "@supabase/supabase-js";
-import { isHumanBiteCenter, humanBiteExclusionReason } from "./clinic-exclusions.mjs";
+import { isHumanBiteCenter } from "./clinic-exclusions.mjs";
+import { geocodeClinics } from "./geocode-lib.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
@@ -24,6 +26,7 @@ loadEnvFile(path.join(ROOT, ".env"));
 const args = process.argv.slice(2);
 const replace = args.includes("--replace");
 const upsert = args.includes("--upsert");
+const geocodeFirst = args.includes("--geocode-first");
 const fileArg = args.find((a) => a.startsWith("--file="));
 const inputFile = fileArg
   ? fileArg.split("=")[1]
@@ -53,9 +56,33 @@ async function main() {
     throw new Error(`Missing ${inputFile} — run: node scripts/scrape-clinics.mjs`);
   }
 
-  const { clinics } = JSON.parse(fs.readFileSync(inputFile, "utf8"));
+  const payload = JSON.parse(fs.readFileSync(inputFile, "utf8"));
+  const clinics = payload.clinics ?? payload;
   if (!Array.isArray(clinics) || clinics.length === 0) {
     throw new Error("No clinics in input file");
+  }
+
+  if (geocodeFirst) {
+    const missing = clinics.filter((c) => c.latitude == null || c.longitude == null).length;
+    if (missing) {
+      console.log(`Geocoding ${missing} clinic(s) before import (~1 sec each)…`);
+      const stats = await geocodeClinics(clinics, {
+        onProgress({ phase, label, result, reason }) {
+          if (phase === "start") process.stdout.write(`  ${label} … `);
+          else if (phase === "ok") console.log(`${result.latitude}, ${result.longitude}`);
+          else console.log(`NOT FOUND${reason ? ` (${reason})` : ""}`);
+        },
+      });
+      console.log(
+        `Geocode done: ${stats.geocoded} found, ${stats.failed} failed, ${stats.skipped} already had coordinates`
+      );
+      if (payload.clinics) {
+        payload.clinics = clinics;
+        payload.with_coordinates = clinics.filter((c) => c.latitude != null).length;
+        fs.writeFileSync(inputFile, JSON.stringify(payload, null, 2));
+        console.log(`Saved coordinates back to ${inputFile}`);
+      }
+    }
   }
 
   const supabase = createClient(url, key);

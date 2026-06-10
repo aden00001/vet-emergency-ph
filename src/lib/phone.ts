@@ -1,3 +1,10 @@
+export function isCallablePhone(phone: string | null | undefined): boolean {
+  if (!phone?.trim()) return false;
+  const digits = phone.replace(/\D/g, "");
+  if (!digits) return false;
+  return !/^0+$/.test(digits);
+}
+
 export function normalizePhilippinePhone(phone: string): string {
   const digits = phone.replace(/\D/g, "");
 

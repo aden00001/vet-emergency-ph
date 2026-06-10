@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
-import { buttonVariants } from "@/components/ui/button";
+import { CallButton } from "@/components/call-button";
 import { Card } from "@/components/ui/card";
 import { ClinicImage } from "@/components/clinic-image";
 import { ConfidenceBadge } from "@/components/confidence-badge";
@@ -8,9 +8,7 @@ import { DirectionsButtons } from "@/components/directions-buttons";
 import { StarRating } from "@/components/star-rating";
 import { formatDistance } from "@/lib/geo";
 import { formatAverageRating } from "@/lib/reviews";
-import { telHref } from "@/lib/phone";
 import { STATUS_CONFIG } from "@/lib/status";
-import { cn } from "@/lib/utils";
 import type { NearbyClinic } from "@/types/database";
 import { BadgeCheck, MapPin, Phone } from "lucide-react";
 
@@ -72,16 +70,14 @@ export function ClinicCard({ clinic }: ClinicCardProps) {
             {status.emoji} {status.label}
           </Badge>
           <div className="flex w-full flex-wrap gap-2">
-            <a
-              href={telHref(clinic.phone)}
-              className={cn(
-                buttonVariants({ size: "sm" }),
-                "h-9 flex-1 min-w-[110px] gap-1.5 shadow-soft"
-              )}
+            <CallButton
+              phone={clinic.phone}
+              size="sm"
+              className="h-9 flex-1 min-w-[110px] gap-1.5 shadow-soft"
             >
               <Phone className="size-4" />
               Call Now
-            </a>
+            </CallButton>
             <DirectionsButtons
               lat={clinic.latitude}
               lng={clinic.longitude}

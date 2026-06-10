@@ -16,10 +16,13 @@
     "import:clinics:replace": "node scripts/import-clinics.mjs --replace",
     "import:clinics:manual": "node scripts/geocode-clinics.mjs data/clinics-manual.json && node scripts/import-clinics.mjs --file=data/clinics-manual.json",
     "geocode:clinics": "node scripts/geocode-clinics.mjs",
+    "geocode:merged": "node scripts/geocode-clinics.mjs --file=data/clinics-merged.json",
+    "import:clinics:merged": "node scripts/geocode-clinics.mjs --file=data/clinics-merged.json && node scripts/import-clinics.mjs --file=data/clinics-merged.json --upsert",
     "parse:google-maps": "node scripts/parse-google-maps-csv.mjs data/google-maps-export.csv",
     "parse:google-maps:import": "node scripts/parse-google-maps-csv.mjs data/google-maps-export.csv --import",
     "parse:google-maps-json": "node scripts/parse-google-maps-json.mjs data/metro-manila-outscraper.json --geocode",
     "parse:google-maps-json:import": "node scripts/parse-google-maps-json.mjs data/metro-manila-outscraper.json --geocode --import",
+    "merge:clinics": "node scripts/merge-clinic-json.mjs",
     "scrape:google-maps-url": "node scripts/scrape-google-maps-url.mjs",
     "audit:clinics": "node scripts/audit-clinic-data.mjs --fix-report",
     "purge:bite-clinics": "node scripts/purge-human-bite-clinics.mjs"

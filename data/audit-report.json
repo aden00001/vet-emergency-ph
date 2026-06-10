@@ -1,42 +1,5718 @@
 {
-  "generated_at": "2026-06-08T20:49:44.701Z",
-  "csv_rows": 38,
-  "google_json": 38,
+  "generated_at": "2026-06-10T01:17:00.706Z",
+  "csv_rows": 122,
+  "google_json": 405,
   "manual_json": 10,
   "osm_json": 239,
-  "db_total": 299,
+  "db_total": 221,
   "issues_by_type": {
-    "facebook_only_contact": 1,
-    "db_facebook_only_phone": 1,
-    "alias_candidate": 6
+    "missing_in_db": 364,
+    "missing_phone": 132,
+    "mangled_google_name": 1,
+    "alias_candidate": 27
   },
-  "errors": [],
+  "errors": [
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "3J's Pet Camp Animal Clinic & Supplies",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Abel Nosce Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Ace Veterinary Clinic - Batasan"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Ace Veterinary Clinic - Batasan",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Ace Veterinary Clinic - Batasan",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Affordavet Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "All About Pets",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Angeles Pet Care Center Sucat",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "ANILIFE Vet Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Animal Care Specialists",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Animal House Alabang",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Animal House Bicutan - Better Living",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Animal House Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Animal House Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Animal House Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Animal House Veterinary Clinic Pet Salon And Grooming Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Animal Shelter Clinic New Branch"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Animal Shelter Clinic New Branch",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Animal Supplement and Pharmaceutical Philippines Inc"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Animal Supplement and Pharmaceutical Philippines Inc",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Animal Wonders Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Animal Wonders Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Animal Wonders Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Animal World Pet Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Animal World Pet Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Animal World Pet Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Animales De Compania Veterinary Clinic - C. Raymundo Avenue",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Animates Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Animed Veterinary Hospital"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Animed Veterinary Hospital",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Animed Veterinary Hospital",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "ANS Animal Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "ANS Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "ANS Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Arevalo's Animal Clinic Ortigas",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "ASJP Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "ASJP Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "ASJP Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "ASVC Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "AVH Satellite Veterinary Clinic - Zabarte",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Baivet Bailon Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Bayport Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Bebita Dog and Cat Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Beterinarya Plus",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Beterinaryo sa Fort Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "BF Paw and Claw Royal Veterinary Clinic - Paranaque"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "BF Paw and Claw Royal Veterinary Clinic - Paranaque",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Bido Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Bido Veterinary Clinic - Congressional Avenue Extension",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Big Paws Animal Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Biyaya Animal Care - Katarungan (Spay & Neuter Clinic)",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Biyaya Animal Care - Mandala (Pet Hospital)",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Blessed Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Blessed Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Blessed Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "BON-DOCTEUR ANIMAL CLINIC"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "BON-DOCTEUR ANIMAL CLINIC",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Bretton Woods Veterinary Clinic & Distemper Recovery Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Bureau of Animal Industry- Laboratory Services Division-Veterinary Biologics Standardization Section"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Bureau of Animal Industry- Laboratory Services Division-Veterinary Biologics Standardization Section",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "BVC Bernardino Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "BVC Bernardino Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Caloocan Veterinary Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Camarin Vet Doctors Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Canine Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Cardinal Pet Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Cardinal Pet Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Carlos Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Carveldon Veterinary Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Cayco Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Celebrity Pet Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Celebrity Pet Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Celebrity Pet Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Centro Veterinario de Las Piñas (Veterinary Clinic)",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Chinese General Hospital and Medical Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "CityVets Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Clinica Veterinaria de Filipinas - Pasay",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "College Of Veterinary Medicine - De La Salle Araneta University"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "College Of Veterinary Medicine - De La Salle Araneta University",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Companion Animal Medical Center"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Companion Animal Medical Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Congressional Animal Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Congressional Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Congressional Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "CONSULT A VET- Capitol Hills Branch"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "CONSULT A VET- Capitol Hills Branch",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "CONSULT A VET- Dahlia Branch"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "CONSULT A VET- Dahlia Branch",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "CONSULT A VET- Dahlia Branch",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "CONSULT A VET- Tandang Sora Branch"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "CONSULT A VET- Tandang Sora Branch",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "CONSULT A VET- Tandang Sora Branch",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Cornerstone Animal Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Cornerstone Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Cornerstone Animal Clinic C5 Branch",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Creatures and Critters Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Critical Care Center"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Critical Care Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Cruz Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Cubao Animal Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Cuddly Care Animal Clinic — East Drive",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "CURAPET ANIMAL CLINIC",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "CVMAS - College of Veterinary Medicine & Agricultural Science"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "CVMAS - College of Veterinary Medicine & Agricultural Science",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Dagupan Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Dela Salle Araneta University Veterinary Teaching Hospital",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Dimla Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "DLS Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "DLS Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "DMV Pagamutang Panghayop Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "DMV Pagamutang Panghayop Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "DMV Pagamutang Panghayop Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Doc Arf Arf Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Doc Ferds Animal Wellness Center"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Doc Ferds Animal Wellness Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Doc Ferds Animal Wellness Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Doc Ferds Animal Wellness Center North Edsa"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Doc Ferds Animal Wellness Center North Edsa",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Doc Ferds Animal Wellness Center UP Town Center"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Doc Ferds Animal Wellness Center UP Town Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Doc Ferds Animal Wellness Center UP Town Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Doc Gab Home Service Veterinarian",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Doc Gab Neuter and Wellness Center"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Doc Gab Neuter and Wellness Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Doc Jay's Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "DOC UY DUBvetsplace",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Dogs and the City Eastwood",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Dogs N Us Pet Supplies & Vet Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Dogs N Us Pet Supplies & Vet Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Downtown Animal Clinic & Pet Supplies",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Dr. E.N. Lee Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Dr. Love PET Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Dr. Love PET Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Dr. Mayem Yao"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Dr. Mayem Yao",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Dr. Pet Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Dr. Z Animal Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "DRMQA VETERINARY CLINIC",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "DVM Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "East Gate Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "ES General Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "ESC Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Estacion Animales Clinica Veterinaria Otis",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Family Pet Care Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Fil-Chinese Group of Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "FMH Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "FMJC Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Four Paws Animal Wellness and Hospital Corp",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "FTVC"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "FTVC",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "FUR-MDS VETERINARY CLINIC AND GROOMING CENTER"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "FUR-MDS VETERINARY CLINIC AND GROOMING CENTER",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "FUR-MDS VETERINARY CLINIC AND GROOMING CENTER",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "FURRHOUSE VETERINARY CLINIC - 24/7"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "FURRHOUSE VETERINARY CLINIC - 24/7",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "FURRHOUSE VETERINARY CLINIC - 24/7",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "FURRPET VETERINARY CLINIC - ZARAGOZA",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Furs Choice Veterinary Clinic Manila",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "GenkiPets Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Genmar Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Golden Bunch Veterinary Clinic and Grooming Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Golden Pet Home Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Golden Pet Home Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Good Samaritan Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Good Samaritan Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Great&Small Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Gusi Animal Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Hamilton Pet Medics Plus"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Hamilton Pet Medics Plus",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Hamilton Pet Medics Plus V Luna"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Hamilton Pet Medics Plus V Luna",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Healthy Tails Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Holistic Paws Manila Veterinary Clinic OPEN 24/7"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Holistic Paws Manila Veterinary Clinic OPEN 24/7",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Holistic Paws Manila Veterinary Clinic OPEN 24/7",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Holy Spirit Animal Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "HOPE FOR PETS Distemper Clinic and Referral Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Horseshoe Pet Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "House of Puppies Veterinary Clinic and Grooming Salon"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "House of Puppies Veterinary Clinic and Grooming Salon",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "INFINNOMED ENTERPRISE"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "INFINNOMED ENTERPRISE",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Jacobe Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Jacobe Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "JM PADRINAO ANIMAL CLINIC MARULAS BRANCH (MAIN)",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "JMR Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Jordan Veterinary Clinic-Alabang-Zapote Rd.",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Jordan Veterinary Clinic-BF Parañaque",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Jordan Veterinary Clinic-Pilar Branch",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Jordan Veterinary Clinic-SM Southmall",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "JRH Petcare Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "JVV Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Kho Veterinary Clinic Manila Sampaloc Branch",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "KINGVET ANIMAL CLINIC"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "KINGVET ANIMAL CLINIC",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "KINGVET ANIMAL CLINIC",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Kruhay Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Leysa Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Lg Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Little Hoomans Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Little Hoomans Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Little Hoomans Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Los Animales Veterinary Clinic and Petshop",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "M C Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "M C Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Makati Animal Medical Center Inc.",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Makati City Animal Care Facility"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Makati City Animal Care Facility",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Makati City Pound and Veterinary Services Office",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Malate Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Manila East Veterinary Care (MEVC)"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Manila East Veterinary Care (MEVC)",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Manila East Veterinary Care (MEVC)",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Manila Emergency Veterinary Hospital"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Manila Emergency Veterinary Hospital",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Manila Emergency Veterinary Hospital",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Manila Feline Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Marikina Heights Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Marikina Veterinary Hospital"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "MedPaws Veterinary Clinic and Grooming Services - Project 8"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "MedPaws Veterinary Clinic and Grooming Services - Project 8",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "MedPaws Veterinary Clinic and Grooming Services - Project 8",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Metro Paws Pet Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "MetroAvenue Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Mindz Pet Canine Distemper Rehabilitation Center"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Mindz Pet Canine Distemper Rehabilitation Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Mindz Pet Canine Distemper Rehabilitation Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Mindz Pet Veterinary and Grooming Services Navotas Cuatro",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Mindz Pet Veterinary Clinic and Grooming Services TONDO"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Mindz Pet Veterinary Clinic and Grooming Services TONDO",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Mount Sinai Veterinary Practice",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Mount Sinai Veterinary Practice QC"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Mount Sinai Veterinary Practice QC",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Mount Sinai Veterinary Practice QC",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Mr. Dapitan's Fur-a-holic Petshop and Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "My Pet Doctor PH",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Navotas Pet Station Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "New Alabang Veterinary Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Nhet's Animal Shoppe & Veterinary Supply"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Nhet's Animal Shoppe & Veterinary Supply",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "NM Petshop"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "NM Petshop",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Noahs Ark Pet Wellness Center - Veterinarian",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Nomar Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "North Harbour Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Northbay Veterinary Clinic and Pet Supply",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Northeast Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "NovaVets Animal Clinic And Grooming Center"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "NovaVets Animal Clinic And Grooming Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "OPTIONVET"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "OPTIONVET",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "OPTIONVET",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Ortiz Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "P.V. Animal Shelter Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pael Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "PARC Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "PARC Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Parkdale Vet. Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Parkdale Vet. Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pasig Line Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pawcketful Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Pawprint Veterinary Clinic l Quezon City"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pawprint Veterinary Clinic l Quezon City",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Paws & Partners PH",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "PAWS Animal Rehabilitation Center"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "PAWS Animal Rehabilitation Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pawsitive Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "PAWspital Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "PCBP ANIMAL HOSPITAL MAKATI 24/7",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "PCBP ANIMAL HOSPITAL-Shaw branch",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Peace Avenue Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Pendragon Veterinary Clinic 24/7 Emergency ON CALL"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pendragon Veterinary Clinic 24/7 Emergency ON CALL",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pendragon Veterinary Clinic 24/7 Emergency ON CALL",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Peralta Veterinary Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "PET 911 VETERINARY CLINIC AND GROOMING SALON"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "PET 911 VETERINARY CLINIC AND GROOMING SALON",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "PET 911 VETERINARY CLINIC AND GROOMING SALON",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet Aid Veterinary Clinic - Roces",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet Almighty Veterinary Clinic and Grooming Center - Novaliches",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet Almighty Veterinary Clinic and Grooming Center (Camarin)",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet Essentials Diwa Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet Guild Veterinary Clinic and Grooming - Malanday Valenzuela City NCR",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "PET HIVE VET CLINIC & GROOMING SALON",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Pet House Veterinary Clinic - Don Antonio"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet House Veterinary Clinic - Don Antonio",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Pet House Veterinary Hospital for Dogs - Maginhawa"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet House Veterinary Hospital for Dogs - Maginhawa",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet House Veterinary Hospital for Dogs - Maginhawa",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet Hub Veterinary Clinic - Las Pinas Branch",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet Hub Veterinary Clinic - Parañaque",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Pet Lovers Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet Lovers Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet Medics Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Pet Partner QC Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet Partner QC Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet Partner QC Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet Paws Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Pet Town Veterinary Clinic and Pet Supplies"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet Town Veterinary Clinic and Pet Supplies",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Pet Vet Animal Health Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet Vet Animal Health Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Pet Vet Animal Health Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet Vet Animal Health Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet-A-Holic Veterinary Clinic And Petshop",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Pet's Avenue Veterinary Medical Clinic Corp."
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet's Avenue Veterinary Medical Clinic Corp.",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Petelier Veterinary, Grooming & Hotel",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Petfriends Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Petfriends Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Petfriends Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Petfriends Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Petlink",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Petlink - 10th Avenue, Caloocan"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Petlink - 10th Avenue, Caloocan",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Petlink - 10th Avenue, Caloocan",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Petlink - EDSA, Caloocan"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Petlink - EDSA, Caloocan",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Petlink Canine Distemper Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Petlink- Caybiga, 24/7 Vet Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Petlink- Caybiga, 24/7 Vet Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Petlink- Caybiga, 24/7 Vet Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "PETmalu Animal Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "PetMarvel Veterinary Clinic and Grooming"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "PetMarvel Veterinary Clinic and Grooming",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "PetPlay'ce Veterinary Clinic & Pet Supplies",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pets Avenue Animal Wellness Center -Altura",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Pets Perfect Animal Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pets Perfect Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pets Vet Express Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Petshield Veterinary Clinic and Grooming Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Petto Mart",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Petunia Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "PetVet Jr"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "PetVet Jr",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Philippine Animal Medical Center"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Philippine College Of Canine Practitioners"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Philippine College Of Canine Practitioners",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Philippine College of Veterinary Public Health"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Philippine College of Veterinary Public Health",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Philippine Veterinary Medical Association"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Philippine Veterinary Medical Association",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pink Farm 24 Hour Pet Grooming And Veterinary Clinic — C5 MRT Group Of Animal Clinics",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "PPBCC Foundation, Inc.",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "PPBCC Veterinary Hospital (Animal Specialty, Surgical and Trauma Center)",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Precious Fur Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "PSPCA",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Purr-Paws Vet Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "QUEZON CITY VETERINARY DEPARTMENT"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "QUEZON CITY VETERINARY DEPARTMENT",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "R. Papa Vet",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "R'Pet Station Animal Clinic & Grooming Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "RaphaVets Pet Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Regalado Veterinary Medical Center"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "RHS Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "RHS Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "RHS Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Rightvet Animal Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Rima Animal Hospital"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Rima Animal Hospital",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Riverside Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Roose-Vet Animal Clinic and Kapon Center"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Roose-Vet Animal Clinic and Kapon Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Royal Petcare Veterinary Clinic by SanCorBab",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Sacred Heart Animal Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Sacred Heart Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Sacred Paws Veterinary Clinic and Wellness Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Sagittarius Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Santa Ana Animal Health Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "SantiVet PH Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Serbisyo Beterinaryo Animal Hospital - Parañaque",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Serbisyo Beterinaryo Animal Hospital 24 Hrs Pet Emergency Mandaluyong",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Serbisyo Beterinaryo Animal Hospital Makati",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Serbisyo Beterinaryo Animal Hospital Marikina",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Serbisyo Beterinaryo Animal Hospital Pasig",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Serbisyo Beterinaryo Animal Hospital Quezon City 24 Hrs Pet Emergency"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Serbisyo Beterinaryo Animal Hospital Quezon City 24 Hrs Pet Emergency",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Serbisyo Beterinaryo Animal Hospital Quezon City 24 Hrs Pet Emergency",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Shepherd Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Signal Animal Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Signal Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Snouts and Whiskers Veterinary Clinic and Grooming Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "St. Dwyn Animal Care Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "St. Francis Animal Clinic Grooming Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "St. Joseph Veterinary Clinic & Supplies",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Stella’s Animal Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Stella’s Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "teacher furmom",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "The Cat Clinic Alabang Branch",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "The Cat Clinic Greenhills",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "The Cat Clinic Makati",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "The Furr Project Animal Hospital",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "The Furr Project Animal Hospital - Quezon City"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "The Furr Project Animal Hospital - Quezon City",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "The Furr Project Animal Hospital - Quezon City",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "The Golden Fur Veterinary Center, Makati",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "THE HOUSE OF PETS VETERINARY CLINIC",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "The Pawsh Vet",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "The Pawsome Pets PH"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "The Pawsome Pets PH",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "The Pet Mobile",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "The Pet Project Vet Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "The Pooch Club Veterinary Clinic & Wellness Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "The Veterinary Hub Pte Corp Morato"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "The Veterinary Hub Pte Corp Morato",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "The Veterinary Hub Pte. Corp",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "The Veterinary Surgery Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Tiny Paws Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Topvets Animal Health",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Ultra Pet Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "UP Veterinary Teaching Hospital, Diliman Station"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "UPHDMC - Pet/Ct Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "VAC Valenzuela Animal Clinic and Grooming Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Valerio Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Vet 911 Animal Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Vet 911 Animal Clinic - Kingspoint"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vet 911 Animal Clinic - Kingspoint",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Vet clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vet clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Vet Lane"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vet On Call - Animal Wellness Clinic and Grooming Services",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Vet Precision - QC Branch"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vet Precision - QC Branch",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Vet Street Animal Medical Center"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vet Street Animal Medical Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vet Street Animal Medical Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "VET to PETZ Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "VET+ER CARE ANIMAL CLINIC",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "VETCROSS Animal Care Center"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "VETCROSS Animal Care Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Veterinary Referal Center Ph"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Veterinary Referal Center Ph",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Veterinary Services Office (VSO) - City Government of Makati",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Vetermedics Animal Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vetermedics Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vetermedics Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vetfront Animal Wellness Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "VETLIFE ANIMAL CLINIC",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "VetLink Animal Recovery Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "VetLink Animal Recovery Clinic - Pasig City",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vetlink Veterinary Services - A Community Vet Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Vetmate Farma Corporation"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vetmate Farma Corporation",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "VetMedica Animal Clinic & Grooming Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vetmedix Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vetpark Animal Care and Grooming Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "VetPro AMC Valenzuela"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "VetPro AMC Valenzuela",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "VetPro Animal Medical Center"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "VetPro Animal Medical Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "VetPro Animal Medical Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Vetropolitan Animal Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vetropolitan Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vetropolitan Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Vets at Work Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vets at Work Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vets In Practice Alabang",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vets In Practice Mandaluyong",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Vets In Practice Quezon City Inc."
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vets In Practice Quezon City Inc.",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vets In Practice Quezon City Inc.",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vets In Practice The Fort",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vets on Point Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vets on the Go PH",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Vetsharp Animal Clinic - Columbia Cubao"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vetsharp Animal Clinic - Columbia Cubao",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Vetsharp Animal Clinic P. Tuazon"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vetsharp Animal Clinic P. Tuazon",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Vetsharp Animal Health & Wellness Center - Veterans"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vetsharp Animal Health & Wellness Center - Veterans",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "VetSolutions Xavierville"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "VetSolutions Xavierville",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "VIP Pet Clinic by Vets In Practice",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Vis Medicatrix Naturae Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vis Medicatrix Naturae Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "VM Veterinary Clinic, Petshop & Spa",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Wags & Purrs Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Wags & Tails Veterinary Clinic ( Managed by The Veterinary Hub Pte. Corp.)"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Wags & Tails Veterinary Clinic ( Managed by The Veterinary Hub Pte. Corp.)",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Wags & Tails Veterinary Clinic ( Managed by The Veterinary Hub Pte. Corp.)",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Xorvor Tan Homeservice Veterinarian",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Yggdrasil Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Yggdrasil Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Your Vets Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "ZenMiracle Medical Center - Parang Marikina Branch",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Zootopia Animal Wellness Center BGC",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pendragon Veterinary Clinic",
+      "source": "manual"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Blessed Veterinary Clinic",
+      "source": "manual"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Serbisyo Beterinaryo Animal Hospital - Quezon City",
+      "source": "manual"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Serbisyo Beterinaryo Animal Hospital Marikina",
+      "source": "manual"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Doc Ferds Animal Wellness Center",
+      "source": "manual"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "KINGVET ANIMAL CLINIC",
+      "source": "manual"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Bido Veterinary Clinic - Congressional Avenue Extension",
+      "source": "manual"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "VET CLINIC 24HOURS",
+      "source": "manual"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Bretton Woods Veterinary Clinic (24/7 Home Service)",
+      "source": "manual"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "AMC ANIMALS MEDICAL CENTER",
+      "source": "manual"
+    }
+  ],
   "warnings": [
     {
       "severity": "warn",
-      "type": "facebook_only_contact",
-      "name": "VET CLINIC 24HOURS",
-      "contact_note": "Contact via Facebook"
-    },
-    {
-      "severity": "warn",
-      "type": "db_facebook_only_phone",
-      "name": "VET CLINIC 24HOURS",
-      "phone": "Contact via Facebook"
+      "type": "mangled_google_name",
+      "name": "Pawprint Veterinary Clinic l Quezon City"
     }
   ],
   "issues": [
     {
-      "severity": "warn",
-      "type": "facebook_only_contact",
-      "name": "VET CLINIC 24HOURS",
-      "contact_note": "Contact via Facebook"
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "3J's Pet Camp Animal Clinic & Supplies",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Abel Nosce Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Ace Veterinary Clinic - Batasan"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Ace Veterinary Clinic - Batasan",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Ace Veterinary Clinic - Batasan",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Affordavet Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "All About Pets",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Angeles Pet Care Center Sucat",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "ANILIFE Vet Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Animal Care Specialists",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Animal House Alabang",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Animal House Bicutan - Better Living",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Animal House Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Animal House Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Animal House Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Animal House Veterinary Clinic Pet Salon And Grooming Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Animal Shelter Clinic New Branch"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Animal Shelter Clinic New Branch",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Animal Supplement and Pharmaceutical Philippines Inc"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Animal Supplement and Pharmaceutical Philippines Inc",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Animal Wonders Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Animal Wonders Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Animal Wonders Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Animal World Pet Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Animal World Pet Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Animal World Pet Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Animales De Compania Veterinary Clinic - C. Raymundo Avenue",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Animates Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Animed Veterinary Hospital"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Animed Veterinary Hospital",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Animed Veterinary Hospital",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "ANS Animal Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "ANS Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "ANS Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Arevalo's Animal Clinic Ortigas",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "ASJP Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "ASJP Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "ASJP Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "ASVC Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "AVH Satellite Veterinary Clinic - Zabarte",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Baivet Bailon Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Bayport Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Bebita Dog and Cat Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Beterinarya Plus",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Beterinaryo sa Fort Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "BF Paw and Claw Royal Veterinary Clinic - Paranaque"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "BF Paw and Claw Royal Veterinary Clinic - Paranaque",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Bido Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Bido Veterinary Clinic - Congressional Avenue Extension",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Big Paws Animal Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Biyaya Animal Care - Katarungan (Spay & Neuter Clinic)",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Biyaya Animal Care - Mandala (Pet Hospital)",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Blessed Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Blessed Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Blessed Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "BON-DOCTEUR ANIMAL CLINIC"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "BON-DOCTEUR ANIMAL CLINIC",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Bretton Woods Veterinary Clinic & Distemper Recovery Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Bureau of Animal Industry- Laboratory Services Division-Veterinary Biologics Standardization Section"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Bureau of Animal Industry- Laboratory Services Division-Veterinary Biologics Standardization Section",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "BVC Bernardino Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "BVC Bernardino Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Caloocan Veterinary Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Camarin Vet Doctors Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Canine Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Cardinal Pet Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Cardinal Pet Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Carlos Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Carveldon Veterinary Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Cayco Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Celebrity Pet Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Celebrity Pet Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Celebrity Pet Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Centro Veterinario de Las Piñas (Veterinary Clinic)",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Chinese General Hospital and Medical Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "CityVets Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Clinica Veterinaria de Filipinas - Pasay",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "College Of Veterinary Medicine - De La Salle Araneta University"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "College Of Veterinary Medicine - De La Salle Araneta University",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Companion Animal Medical Center"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Companion Animal Medical Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Congressional Animal Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Congressional Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Congressional Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "CONSULT A VET- Capitol Hills Branch"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "CONSULT A VET- Capitol Hills Branch",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "CONSULT A VET- Dahlia Branch"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "CONSULT A VET- Dahlia Branch",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "CONSULT A VET- Dahlia Branch",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "CONSULT A VET- Tandang Sora Branch"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "CONSULT A VET- Tandang Sora Branch",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "CONSULT A VET- Tandang Sora Branch",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Cornerstone Animal Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Cornerstone Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Cornerstone Animal Clinic C5 Branch",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Creatures and Critters Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Critical Care Center"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Critical Care Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Cruz Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Cubao Animal Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Cuddly Care Animal Clinic — East Drive",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "CURAPET ANIMAL CLINIC",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "CVMAS - College of Veterinary Medicine & Agricultural Science"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "CVMAS - College of Veterinary Medicine & Agricultural Science",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Dagupan Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Dela Salle Araneta University Veterinary Teaching Hospital",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Dimla Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "DLS Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "DLS Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "DMV Pagamutang Panghayop Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "DMV Pagamutang Panghayop Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "DMV Pagamutang Panghayop Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Doc Arf Arf Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Doc Ferds Animal Wellness Center"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Doc Ferds Animal Wellness Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Doc Ferds Animal Wellness Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Doc Ferds Animal Wellness Center North Edsa"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Doc Ferds Animal Wellness Center North Edsa",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Doc Ferds Animal Wellness Center UP Town Center"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Doc Ferds Animal Wellness Center UP Town Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Doc Ferds Animal Wellness Center UP Town Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Doc Gab Home Service Veterinarian",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Doc Gab Neuter and Wellness Center"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Doc Gab Neuter and Wellness Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Doc Jay's Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "DOC UY DUBvetsplace",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Dogs and the City Eastwood",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Dogs N Us Pet Supplies & Vet Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Dogs N Us Pet Supplies & Vet Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Downtown Animal Clinic & Pet Supplies",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Dr. E.N. Lee Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Dr. Love PET Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Dr. Love PET Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Dr. Mayem Yao"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Dr. Mayem Yao",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Dr. Pet Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Dr. Z Animal Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "DRMQA VETERINARY CLINIC",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "DVM Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "East Gate Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "ES General Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "ESC Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Estacion Animales Clinica Veterinaria Otis",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Family Pet Care Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Fil-Chinese Group of Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "FMH Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "FMJC Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Four Paws Animal Wellness and Hospital Corp",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "FTVC"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "FTVC",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "FUR-MDS VETERINARY CLINIC AND GROOMING CENTER"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "FUR-MDS VETERINARY CLINIC AND GROOMING CENTER",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "FUR-MDS VETERINARY CLINIC AND GROOMING CENTER",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "FURRHOUSE VETERINARY CLINIC - 24/7"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "FURRHOUSE VETERINARY CLINIC - 24/7",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "FURRHOUSE VETERINARY CLINIC - 24/7",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "FURRPET VETERINARY CLINIC - ZARAGOZA",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Furs Choice Veterinary Clinic Manila",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "GenkiPets Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Genmar Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Golden Bunch Veterinary Clinic and Grooming Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Golden Pet Home Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Golden Pet Home Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Good Samaritan Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Good Samaritan Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Great&Small Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Gusi Animal Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Hamilton Pet Medics Plus"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Hamilton Pet Medics Plus",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Hamilton Pet Medics Plus V Luna"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Hamilton Pet Medics Plus V Luna",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Healthy Tails Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Holistic Paws Manila Veterinary Clinic OPEN 24/7"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Holistic Paws Manila Veterinary Clinic OPEN 24/7",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Holistic Paws Manila Veterinary Clinic OPEN 24/7",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Holy Spirit Animal Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "HOPE FOR PETS Distemper Clinic and Referral Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Horseshoe Pet Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "House of Puppies Veterinary Clinic and Grooming Salon"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "House of Puppies Veterinary Clinic and Grooming Salon",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "INFINNOMED ENTERPRISE"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "INFINNOMED ENTERPRISE",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Jacobe Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Jacobe Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "JM PADRINAO ANIMAL CLINIC MARULAS BRANCH (MAIN)",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "JMR Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Jordan Veterinary Clinic-Alabang-Zapote Rd.",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Jordan Veterinary Clinic-BF Parañaque",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Jordan Veterinary Clinic-Pilar Branch",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Jordan Veterinary Clinic-SM Southmall",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "JRH Petcare Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "JVV Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Kho Veterinary Clinic Manila Sampaloc Branch",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "KINGVET ANIMAL CLINIC"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "KINGVET ANIMAL CLINIC",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "KINGVET ANIMAL CLINIC",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Kruhay Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Leysa Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Lg Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Little Hoomans Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Little Hoomans Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Little Hoomans Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Los Animales Veterinary Clinic and Petshop",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "M C Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "M C Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Makati Animal Medical Center Inc.",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Makati City Animal Care Facility"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Makati City Animal Care Facility",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Makati City Pound and Veterinary Services Office",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Malate Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Manila East Veterinary Care (MEVC)"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Manila East Veterinary Care (MEVC)",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Manila East Veterinary Care (MEVC)",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Manila Emergency Veterinary Hospital"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Manila Emergency Veterinary Hospital",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Manila Emergency Veterinary Hospital",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Manila Feline Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Marikina Heights Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Marikina Veterinary Hospital"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "MedPaws Veterinary Clinic and Grooming Services - Project 8"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "MedPaws Veterinary Clinic and Grooming Services - Project 8",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "MedPaws Veterinary Clinic and Grooming Services - Project 8",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Metro Paws Pet Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "MetroAvenue Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Mindz Pet Canine Distemper Rehabilitation Center"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Mindz Pet Canine Distemper Rehabilitation Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Mindz Pet Canine Distemper Rehabilitation Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Mindz Pet Veterinary and Grooming Services Navotas Cuatro",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Mindz Pet Veterinary Clinic and Grooming Services TONDO"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Mindz Pet Veterinary Clinic and Grooming Services TONDO",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Mount Sinai Veterinary Practice",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Mount Sinai Veterinary Practice QC"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Mount Sinai Veterinary Practice QC",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Mount Sinai Veterinary Practice QC",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Mr. Dapitan's Fur-a-holic Petshop and Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "My Pet Doctor PH",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Navotas Pet Station Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "New Alabang Veterinary Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Nhet's Animal Shoppe & Veterinary Supply"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Nhet's Animal Shoppe & Veterinary Supply",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "NM Petshop"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "NM Petshop",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Noahs Ark Pet Wellness Center - Veterinarian",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Nomar Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "North Harbour Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Northbay Veterinary Clinic and Pet Supply",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Northeast Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "NovaVets Animal Clinic And Grooming Center"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "NovaVets Animal Clinic And Grooming Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "OPTIONVET"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "OPTIONVET",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "OPTIONVET",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Ortiz Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "P.V. Animal Shelter Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pael Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "PARC Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "PARC Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Parkdale Vet. Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Parkdale Vet. Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pasig Line Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pawcketful Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Pawprint Veterinary Clinic l Quezon City"
     },
     {
       "severity": "warn",
-      "type": "db_facebook_only_phone",
+      "type": "mangled_google_name",
+      "name": "Pawprint Veterinary Clinic l Quezon City"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pawprint Veterinary Clinic l Quezon City",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Paws & Partners PH",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "PAWS Animal Rehabilitation Center"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "PAWS Animal Rehabilitation Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pawsitive Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "PAWspital Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "PCBP ANIMAL HOSPITAL MAKATI 24/7",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "PCBP ANIMAL HOSPITAL-Shaw branch",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Peace Avenue Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Pendragon Veterinary Clinic 24/7 Emergency ON CALL"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pendragon Veterinary Clinic 24/7 Emergency ON CALL",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pendragon Veterinary Clinic 24/7 Emergency ON CALL",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Peralta Veterinary Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "PET 911 VETERINARY CLINIC AND GROOMING SALON"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "PET 911 VETERINARY CLINIC AND GROOMING SALON",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "PET 911 VETERINARY CLINIC AND GROOMING SALON",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet Aid Veterinary Clinic - Roces",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet Almighty Veterinary Clinic and Grooming Center - Novaliches",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet Almighty Veterinary Clinic and Grooming Center (Camarin)",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet Essentials Diwa Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet Guild Veterinary Clinic and Grooming - Malanday Valenzuela City NCR",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "PET HIVE VET CLINIC & GROOMING SALON",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Pet House Veterinary Clinic - Don Antonio"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet House Veterinary Clinic - Don Antonio",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Pet House Veterinary Hospital for Dogs - Maginhawa"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet House Veterinary Hospital for Dogs - Maginhawa",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet House Veterinary Hospital for Dogs - Maginhawa",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet Hub Veterinary Clinic - Las Pinas Branch",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet Hub Veterinary Clinic - Parañaque",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Pet Lovers Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet Lovers Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet Medics Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Pet Partner QC Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet Partner QC Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet Partner QC Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet Paws Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Pet Town Veterinary Clinic and Pet Supplies"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet Town Veterinary Clinic and Pet Supplies",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Pet Vet Animal Health Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet Vet Animal Health Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Pet Vet Animal Health Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet Vet Animal Health Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet-A-Holic Veterinary Clinic And Petshop",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Pet's Avenue Veterinary Medical Clinic Corp."
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pet's Avenue Veterinary Medical Clinic Corp.",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Petelier Veterinary, Grooming & Hotel",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Petfriends Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Petfriends Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Petfriends Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Petfriends Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Petlink",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Petlink - 10th Avenue, Caloocan"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Petlink - 10th Avenue, Caloocan",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Petlink - 10th Avenue, Caloocan",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Petlink - EDSA, Caloocan"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Petlink - EDSA, Caloocan",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Petlink Canine Distemper Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Petlink- Caybiga, 24/7 Vet Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Petlink- Caybiga, 24/7 Vet Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Petlink- Caybiga, 24/7 Vet Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "PETmalu Animal Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "PetMarvel Veterinary Clinic and Grooming"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "PetMarvel Veterinary Clinic and Grooming",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "PetPlay'ce Veterinary Clinic & Pet Supplies",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pets Avenue Animal Wellness Center -Altura",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Pets Perfect Animal Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pets Perfect Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pets Vet Express Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Petshield Veterinary Clinic and Grooming Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Petto Mart",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Petunia Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "PetVet Jr"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "PetVet Jr",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Philippine Animal Medical Center"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Philippine College Of Canine Practitioners"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Philippine College Of Canine Practitioners",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Philippine College of Veterinary Public Health"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Philippine College of Veterinary Public Health",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Philippine Veterinary Medical Association"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Philippine Veterinary Medical Association",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pink Farm 24 Hour Pet Grooming And Veterinary Clinic — C5 MRT Group Of Animal Clinics",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "PPBCC Foundation, Inc.",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "PPBCC Veterinary Hospital (Animal Specialty, Surgical and Trauma Center)",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Precious Fur Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "PSPCA",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Purr-Paws Vet Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "QUEZON CITY VETERINARY DEPARTMENT"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "QUEZON CITY VETERINARY DEPARTMENT",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "R. Papa Vet",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "R'Pet Station Animal Clinic & Grooming Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "RaphaVets Pet Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Regalado Veterinary Medical Center"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "RHS Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "RHS Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "RHS Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Rightvet Animal Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Rima Animal Hospital"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Rima Animal Hospital",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Riverside Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Roose-Vet Animal Clinic and Kapon Center"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Roose-Vet Animal Clinic and Kapon Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Royal Petcare Veterinary Clinic by SanCorBab",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Sacred Heart Animal Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Sacred Heart Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Sacred Paws Veterinary Clinic and Wellness Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Sagittarius Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Santa Ana Animal Health Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "SantiVet PH Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Serbisyo Beterinaryo Animal Hospital - Parañaque",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Serbisyo Beterinaryo Animal Hospital 24 Hrs Pet Emergency Mandaluyong",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Serbisyo Beterinaryo Animal Hospital Makati",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Serbisyo Beterinaryo Animal Hospital Marikina",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Serbisyo Beterinaryo Animal Hospital Pasig",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Serbisyo Beterinaryo Animal Hospital Quezon City 24 Hrs Pet Emergency"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Serbisyo Beterinaryo Animal Hospital Quezon City 24 Hrs Pet Emergency",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Serbisyo Beterinaryo Animal Hospital Quezon City 24 Hrs Pet Emergency",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Shepherd Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Signal Animal Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Signal Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Snouts and Whiskers Veterinary Clinic and Grooming Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "St. Dwyn Animal Care Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "St. Francis Animal Clinic Grooming Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "St. Joseph Veterinary Clinic & Supplies",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Stella’s Animal Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Stella’s Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "teacher furmom",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "The Cat Clinic Alabang Branch",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "The Cat Clinic Greenhills",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "The Cat Clinic Makati",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "The Furr Project Animal Hospital",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "The Furr Project Animal Hospital - Quezon City"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "The Furr Project Animal Hospital - Quezon City",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "The Furr Project Animal Hospital - Quezon City",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "The Golden Fur Veterinary Center, Makati",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "THE HOUSE OF PETS VETERINARY CLINIC",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "The Pawsh Vet",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "The Pawsome Pets PH"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "The Pawsome Pets PH",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "The Pet Mobile",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "The Pet Project Vet Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "The Pooch Club Veterinary Clinic & Wellness Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "The Veterinary Hub Pte Corp Morato"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "The Veterinary Hub Pte Corp Morato",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "The Veterinary Hub Pte. Corp",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "The Veterinary Surgery Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Tiny Paws Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Topvets Animal Health",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Ultra Pet Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "UP Veterinary Teaching Hospital, Diliman Station"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "UPHDMC - Pet/Ct Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "VAC Valenzuela Animal Clinic and Grooming Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Valerio Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Vet 911 Animal Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Vet 911 Animal Clinic - Kingspoint"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vet 911 Animal Clinic - Kingspoint",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Vet clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vet clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Vet Lane"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vet On Call - Animal Wellness Clinic and Grooming Services",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Vet Precision - QC Branch"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vet Precision - QC Branch",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Vet Street Animal Medical Center"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vet Street Animal Medical Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vet Street Animal Medical Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "VET to PETZ Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "VET+ER CARE ANIMAL CLINIC",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "VETCROSS Animal Care Center"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "VETCROSS Animal Care Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Veterinary Referal Center Ph"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Veterinary Referal Center Ph",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Veterinary Services Office (VSO) - City Government of Makati",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Vetermedics Animal Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vetermedics Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vetermedics Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vetfront Animal Wellness Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "VETLIFE ANIMAL CLINIC",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "VetLink Animal Recovery Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "VetLink Animal Recovery Clinic - Pasig City",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vetlink Veterinary Services - A Community Vet Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Vetmate Farma Corporation"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vetmate Farma Corporation",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "VetMedica Animal Clinic & Grooming Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vetmedix Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vetpark Animal Care and Grooming Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "VetPro AMC Valenzuela"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "VetPro AMC Valenzuela",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "VetPro Animal Medical Center"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "VetPro Animal Medical Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "VetPro Animal Medical Center",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Vetropolitan Animal Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vetropolitan Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vetropolitan Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Vets at Work Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vets at Work Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vets In Practice Alabang",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vets In Practice Mandaluyong",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Vets In Practice Quezon City Inc."
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vets In Practice Quezon City Inc.",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vets In Practice Quezon City Inc.",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vets In Practice The Fort",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vets on Point Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vets on the Go PH",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Vetsharp Animal Clinic - Columbia Cubao"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vetsharp Animal Clinic - Columbia Cubao",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Vetsharp Animal Clinic P. Tuazon"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vetsharp Animal Clinic P. Tuazon",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Vetsharp Animal Health & Wellness Center - Veterans"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vetsharp Animal Health & Wellness Center - Veterans",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "VetSolutions Xavierville"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "VetSolutions Xavierville",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "VIP Pet Clinic by Vets In Practice",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Vis Medicatrix Naturae Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Vis Medicatrix Naturae Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "VM Veterinary Clinic, Petshop & Spa",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Wags & Purrs Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Wags & Tails Veterinary Clinic ( Managed by The Veterinary Hub Pte. Corp.)"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Wags & Tails Veterinary Clinic ( Managed by The Veterinary Hub Pte. Corp.)",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Wags & Tails Veterinary Clinic ( Managed by The Veterinary Hub Pte. Corp.)",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Xorvor Tan Homeservice Veterinarian",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_phone",
+      "name": "Yggdrasil Veterinary Clinic"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Yggdrasil Veterinary Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Your Vets Animal Clinic",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "ZenMiracle Medical Center - Parang Marikina Branch",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Zootopia Animal Wellness Center BGC",
+      "source": "google"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Pendragon Veterinary Clinic",
+      "source": "manual"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Blessed Veterinary Clinic",
+      "source": "manual"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Serbisyo Beterinaryo Animal Hospital - Quezon City",
+      "source": "manual"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Serbisyo Beterinaryo Animal Hospital Marikina",
+      "source": "manual"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Doc Ferds Animal Wellness Center",
+      "source": "manual"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "KINGVET ANIMAL CLINIC",
+      "source": "manual"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Bido Veterinary Clinic - Congressional Avenue Extension",
+      "source": "manual"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
       "name": "VET CLINIC 24HOURS",
-      "phone": "Contact via Facebook"
+      "source": "manual"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "Bretton Woods Veterinary Clinic (24/7 Home Service)",
+      "source": "manual"
+    },
+    {
+      "severity": "error",
+      "type": "missing_in_db",
+      "name": "AMC ANIMALS MEDICAL CENTER",
+      "source": "manual"
     },
     {
       "severity": "info",
@@ -48,6 +5724,13 @@
     {
       "severity": "info",
       "type": "alias_candidate",
+      "osm": "Animal House",
+      "curated": "Animal House Alabang",
+      "meters": 0
+    },
+    {
+      "severity": "info",
+      "type": "alias_candidate",
       "osm": "Animal Wonders",
       "curated": "Animal Wonders Veterinary Clinic",
       "meters": 4
@@ -55,9 +5738,100 @@
     {
       "severity": "info",
       "type": "alias_candidate",
-      "osm": "Dog @ Cat Clinic",
-      "curated": "VET to PETZ Veterinary Clinic-Tandang Sora",
-      "meters": 11
+      "osm": "Bretton Woods Veterinary Clinic",
+      "curated": "Bretton Woods Veterinary Clinic & Distemper Recovery Center",
+      "meters": 4
+    },
+    {
+      "severity": "info",
+      "type": "alias_candidate",
+      "osm": "Consult A Vet Clinic",
+      "curated": "CONSULT A VET- Dahlia Branch",
+      "meters": 13
+    },
+    {
+      "severity": "info",
+      "type": "alias_candidate",
+      "osm": "De La Salle Araneta Veterinary Teaching Hospital",
+      "curated": "College Of Veterinary Medicine - De La Salle Araneta University",
+      "meters": 41
+    },
+    {
+      "severity": "info",
+      "type": "alias_candidate",
+      "osm": "East Gate Veterinary",
+      "curated": "East Gate Veterinary Clinic",
+      "meters": 0
+    },
+    {
+      "severity": "info",
+      "type": "alias_candidate",
+      "osm": "ES General Veterinary Hospital",
+      "curated": "ES General Veterinary Clinic",
+      "meters": 1
+    },
+    {
+      "severity": "info",
+      "type": "alias_candidate",
+      "osm": "Furrhouse Veterinary Clinic",
+      "curated": "FURRHOUSE VETERINARY CLINIC - 24/7",
+      "meters": 6
+    },
+    {
+      "severity": "info",
+      "type": "alias_candidate",
+      "osm": "Furry Tales Veterinary Clinic",
+      "curated": "FTVC",
+      "meters": 5
+    },
+    {
+      "severity": "info",
+      "type": "alias_candidate",
+      "osm": "Good Shepherd Animal Clinic",
+      "curated": "Shepherd Animal Clinic",
+      "meters": 0
+    },
+    {
+      "severity": "info",
+      "type": "alias_candidate",
+      "osm": "Makati Animal Medical Center",
+      "curated": "Makati Animal Medical Center Inc.",
+      "meters": 63
+    },
+    {
+      "severity": "info",
+      "type": "alias_candidate",
+      "osm": "MM pet Shop and Grooming and Vet",
+      "curated": "M C Veterinary Clinic",
+      "meters": 21
+    },
+    {
+      "severity": "info",
+      "type": "alias_candidate",
+      "osm": "Paw Print Veterinary Clinic",
+      "curated": "Pawprint Veterinary Clinic l Quezon City",
+      "meters": 14
+    },
+    {
+      "severity": "info",
+      "type": "alias_candidate",
+      "osm": "PCBP Animal Hospital",
+      "curated": "PCBP ANIMAL HOSPITAL-Shaw branch",
+      "meters": 0
+    },
+    {
+      "severity": "info",
+      "type": "alias_candidate",
+      "osm": "Petlink Prime Veterinary clinic",
+      "curated": "Petlink",
+      "meters": 0
+    },
+    {
+      "severity": "info",
+      "type": "alias_candidate",
+      "osm": "Pets Vet Express Veterinary",
+      "curated": "Pets Vet Express Veterinary Clinic",
+      "meters": 15
     },
     {
       "severity": "info",
@@ -69,6 +5843,34 @@
     {
       "severity": "info",
       "type": "alias_candidate",
+      "osm": "The Cat Clinic",
+      "curated": "The Cat Clinic Greenhills",
+      "meters": 0
+    },
+    {
+      "severity": "info",
+      "type": "alias_candidate",
+      "osm": "The Purple Groom Pet Salon - Xavierville",
+      "curated": "VetSolutions Xavierville",
+      "meters": 38
+    },
+    {
+      "severity": "info",
+      "type": "alias_candidate",
+      "osm": "Vet 911 Animal Clinic",
+      "curated": "Vet 911 Animal Clinic - Kingspoint",
+      "meters": 13
+    },
+    {
+      "severity": "info",
+      "type": "alias_candidate",
+      "osm": "Vet Solutions",
+      "curated": "VetSolutions Xavierville",
+      "meters": 12
+    },
+    {
+      "severity": "info",
+      "type": "alias_candidate",
       "osm": "Vetlink Veterinary Services",
       "curated": "Vetlink Veterinary Services - A Community Vet Clinic",
       "meters": 18
@@ -76,9 +5878,30 @@
     {
       "severity": "info",
       "type": "alias_candidate",
+      "osm": "VetPro",
+      "curated": "VetPro Animal Medical Center",
+      "meters": 1
+    },
+    {
+      "severity": "info",
+      "type": "alias_candidate",
+      "osm": "Vetsharp Animal Clinic",
+      "curated": "Vetsharp Animal Clinic - Columbia Cubao",
+      "meters": 10
+    },
+    {
+      "severity": "info",
+      "type": "alias_candidate",
+      "osm": "Vis Medicatrix Naturae",
+      "curated": "Vis Medicatrix Naturae Veterinary Clinic",
+      "meters": 3
+    },
+    {
+      "severity": "info",
+      "type": "alias_candidate",
       "osm": "Wolfpack",
-      "curated": "Los Animales Veterinary Clinic and Petshop",
-      "meters": 11
+      "curated": "KINGVET ANIMAL CLINIC",
+      "meters": 20
     }
   ]
 }

@@ -1,60 +1,76 @@
 /**
  * Geocode clinics missing lat/lng using Nominatim (OpenStreetMap).
- * Usage: node scripts/geocode-clinics.mjs data/clinics-manual.json
+ *
+ * Usage:
+ *   node scripts/geocode-clinics.mjs data/clinics-merged.json
+ *   node scripts/geocode-clinics.mjs --file=data/clinics-merged.json
+ *
+ * ~1 second per clinic (Nominatim rate limit). 900 clinics ≈ 15 minutes.
  */
 
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { geocodeClinics } from "./geocode-lib.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const inputPath = process.argv[2] || path.join(__dirname, "../data/clinics-manual.json");
 
-function sleep(ms) {
-  return new Promise((r) => setTimeout(r, ms));
-}
-
-async function geocode(address) {
-  const q = encodeURIComponent(`${address}, Philippines`);
-  const url = `https://nominatim.openstreetmap.org/search?q=${q}&format=json&limit=1&countrycodes=ph`;
-  const res = await fetch(url, {
-    headers: {
-      "User-Agent": "VetEmergency.ph/1.0 (local dev; geocoding for vet directory)",
-    },
-  });
-  if (!res.ok) throw new Error(`Nominatim ${res.status}`);
-  const results = await res.json();
-  if (!results.length) return null;
-  return {
-    latitude: parseFloat(results[0].lat),
-    longitude: parseFloat(results[0].lon),
-    display_name: results[0].display_name,
-  };
-}
+const args = process.argv.slice(2);
+const fileArg = args.find((a) => a.startsWith("--file="));
+const inputPath =
+  fileArg?.split("=")[1] ??
+  args.find((a) => !a.startsWith("--")) ??
+  path.join(__dirname, "../data/clinics-manual.json");
 
 async function main() {
-  const data = JSON.parse(fs.readFileSync(inputPath, "utf8"));
-  let geocoded = 0;
-
-  for (const clinic of data.clinics) {
-    if (clinic.latitude != null && clinic.longitude != null) continue;
-
-    console.log(`Geocoding: ${clinic.name}`);
-    const result = await geocode(clinic.address);
-    if (result) {
-      clinic.latitude = result.latitude;
-      clinic.longitude = result.longitude;
-      clinic.geocoded_from = result.display_name;
-      geocoded++;
-      console.log(`  → ${result.latitude}, ${result.longitude}`);
-    } else {
-      console.warn(`  → NOT FOUND`);
-    }
-    await sleep(1100); // Nominatim rate limit: 1 req/sec
+  if (!fs.existsSync(inputPath)) {
+    console.error(`Missing ${inputPath}`);
+    process.exit(1);
   }
 
-  fs.writeFileSync(inputPath, JSON.stringify(data, null, 2));
-  console.log(`\nGeocoded ${geocoded} clinics. Updated ${inputPath}`);
+  const data = JSON.parse(fs.readFileSync(inputPath, "utf8"));
+  const clinics = data.clinics ?? data;
+  if (!Array.isArray(clinics)) {
+    console.error("Expected { clinics: [...] } or a clinic array");
+    process.exit(1);
+  }
+
+  const missing = clinics.filter((c) => c.latitude == null || c.longitude == null).length;
+  if (!missing) {
+    console.log("All clinics already have coordinates.");
+    return;
+  }
+
+  console.log(`Geocoding ${missing} clinic(s) missing coordinates…`);
+  console.log("This takes about 1 second per clinic (Nominatim rate limit).\n");
+
+  const stats = await geocodeClinics(clinics, {
+    onProgress({ phase, label, result, reason }) {
+      if (phase === "start") {
+        process.stdout.write(`Geocoding: ${label} … `);
+      } else if (phase === "ok") {
+        console.log(`${result.latitude}, ${result.longitude}`);
+      } else {
+        console.log(`NOT FOUND${reason ? ` (${reason})` : ""}`);
+      }
+    },
+  });
+
+  const payload = data.clinics ? { ...data, clinics } : { clinics };
+  if (payload.clinics) {
+    payload.with_coordinates = clinics.filter((c) => c.latitude != null).length;
+    payload.count = clinics.length;
+  }
+
+  fs.writeFileSync(inputPath, JSON.stringify(payload, null, 2));
+
+  console.log(
+    `\nDone: ${stats.geocoded} geocoded, ${stats.failed} failed, ${stats.skipped} already had coordinates`
+  );
+  console.log(`Updated ${inputPath}`);
+  console.log(
+    `\nNext: node scripts/import-clinics.mjs --file=${inputPath} --upsert`
+  );
 }
 
 main().catch((e) => {
