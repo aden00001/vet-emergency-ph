@@ -202,7 +202,16 @@ export default function HomePage() {
         </div>
 
         <p className="pb-6 text-center text-xs text-muted-foreground">
-          {SITE_NAME} is an informational directory.{" "}
+          {SITE_NAME} is an informational directory. Powered by{" "}
+          <a
+            href="https://kennzchoice.online"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-primary underline-offset-2 hover:underline"
+          >
+            Kennz Choice
+          </a>
+          .{" "}
           <a href="/disclaimer" className="font-medium text-primary underline-offset-2 hover:underline">
             Read disclaimer
           </a>
