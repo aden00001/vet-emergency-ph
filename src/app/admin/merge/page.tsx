@@ -101,9 +101,9 @@ export default function MergeClinicsPage() {
           </Link>
           <h1 className="text-2xl font-bold">Merge clinic JSON</h1>
           <p className="text-muted-foreground text-sm">
-            Upload multiple Outscraper or Google Maps JSON exports. Files are merged in your
-            browser, bite centers are removed, and you download one combined file. Nothing is
-            uploaded to a server.
+            Upload Apify, Outscraper, or other Google Maps JSON exports. Files are merged in your
+            browser, bite centers are removed, and you download one combined file. Apify exports
+            usually include GPS coordinates. Nothing is uploaded to a server.
           </p>
         </div>
 
@@ -148,8 +148,8 @@ export default function MergeClinicsPage() {
                 <p className="text-muted-foreground text-sm">or click to browse</p>
               </div>
               <p className="text-muted-foreground text-xs">
-                Outscraper exports and parsed <code className="text-foreground">clinics</code>{" "}
-                files both work
+                Apify JSON, Outscraper JSON, and parsed <code className="text-foreground">clinics</code>{" "}
+                files all work
               </p>
             </div>
 

@@ -22,7 +22,8 @@ import {
   dedupeClinics,
   extractOutscraperRows,
   filterBiteCenters,
-  isOutscraperExport,
+  isGoogleMapsScrapeExport,
+  scrapeExportFormat,
   isParsedClinicsExport,
   parseOutscraperRows,
 } from "./google-maps-parse-lib.mjs";
@@ -48,12 +49,12 @@ function loadClinicsFromFile(filePath) {
   const raw = loadJson(filePath);
   const baseName = path.basename(filePath);
 
-  if (isOutscraperExport(raw)) {
+  if (isGoogleMapsScrapeExport(raw)) {
     const rows = extractOutscraperRows(raw);
     const { clinics, excludedBite, excludedOther } = parseOutscraperRows(rows);
     return {
       file: baseName,
-      format: "outscraper",
+      format: scrapeExportFormat(rows),
       clinics,
       excludedBite,
       excludedOther,

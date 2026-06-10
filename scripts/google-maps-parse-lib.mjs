@@ -50,9 +50,12 @@ export function normalizePhone(raw) {
   return "";
 }
 
-export function extractPlaceId(url) {
+export function extractPlaceId(url, explicitId) {
+  if (explicitId) return String(explicitId);
   const chij = url?.match(/query_place_id=([^&]+)/);
   if (chij) return decodeURIComponent(chij[1]);
+  const placeParam = url?.match(/place_id[=:]([A-Za-z0-9_-]+)/i);
+  if (placeParam) return placeParam[1];
   const hex = url?.match(/1s(0x[a-f0-9]+:0x[a-f0-9]+)/i);
   return hex ? hex[1].toLowerCase() : null;
 }
@@ -85,9 +88,23 @@ export function inferEmergency(name, category) {
 }
 
 export function buildAddress(row) {
+  if (row.address) return String(row.address).replace(/\s+/g, " ").trim();
   if (row.full_address) return String(row.full_address).replace(/\s+/g, " ").trim();
   const parts = [row.street, row.city, row.state].filter(Boolean);
   return parts.join(", ").replace(/\s+/g, " ").trim();
+}
+
+export function formatHours(hours) {
+  if (!hours) return null;
+  if (Array.isArray(hours)) {
+    return hours
+      .map((h) => {
+        const slot = Array.isArray(h.hours) ? h.hours.join(", ") : h.hours;
+        return h.day ? `${h.day}: ${slot}` : slot;
+      })
+      .join("; ");
+  }
+  return String(hours);
 }
 
 function extractCoordsFromUrl(url) {
@@ -99,6 +116,10 @@ function extractCoordsFromUrl(url) {
 }
 
 function resolveCoords(row, address) {
+  if (row.location?.lat != null && row.location?.lng != null) {
+    return { latitude: row.location.lat, longitude: row.location.lng };
+  }
+
   let latitude = row.latitude ?? row.lat ?? null;
   let longitude = row.longitude ?? row.lng ?? row.lon ?? null;
   if (latitude != null && longitude != null) return { latitude, longitude };
@@ -107,7 +128,7 @@ function resolveCoords(row, address) {
   const fromUrl = extractCoordsFromUrl(url);
   if (fromUrl) return fromUrl;
 
-  const plusCode = row.plus_code || extractPlusCode(address);
+  const plusCode = row.plusCode || row.plus_code || extractPlusCode(address);
   if (plusCode) {
     const decoded = decodePlusCode(String(plusCode).toUpperCase());
     if (decoded) return { latitude: decoded.latitude, longitude: decoded.longitude };
@@ -130,28 +151,33 @@ export function parseOutscraperRow(row) {
 
   const address = buildAddress(row);
   const mapsUrl = row.url || row.link || row.google_maps_url || "";
-  const google_place_id = row.place_id || extractPlaceId(mapsUrl);
-  const emergency_capable = inferEmergency(name, category);
+  const placeId = row.placeId || row.place_id;
+  const google_place_id = extractPlaceId(mapsUrl, placeId);
+  const hoursText = formatHours(row.openingHours ?? row.hours ?? row.open_hours);
+  const emergency_capable = inferEmergency(
+    `${name} ${hoursText ?? ""}`,
+    category
+  );
   const { latitude, longitude } = resolveCoords(row, address);
 
   return {
     name,
     address: address || null,
-    phone: normalizePhone(row.phone),
+    phone: normalizePhone(row.phone ?? row.phoneUnformatted),
     latitude,
     longitude,
     emergency_capable,
     owner_verified: false,
     services: emergency_capable ? ["trauma", "poisoning", "respiratory"] : ["trauma"],
-    hours: row.openingHours ?? row.hours ?? null,
+    hours: hoursText,
     source: "google_maps_scrape",
     google_maps_url: mapsUrl || undefined,
     google_place_id: google_place_id || undefined,
-    image_url: row.photo ?? row.mainPhoto ?? row.image ?? undefined,
+    image_url: row.photo ?? row.mainPhoto ?? row.image ?? row.heroPhotoUrl ?? undefined,
     category,
     website: row.website || undefined,
-    rating: row.totalScore ?? undefined,
-    review_count: row.reviewsCount ?? row.reviews ?? undefined,
+    rating: row.totalScore ?? row.rating ?? undefined,
+    review_count: row.reviewsCount ?? row.reviews_count ?? row.reviewCount ?? undefined,
   };
 }
 
@@ -200,16 +226,38 @@ export function dedupeClinics(clinics) {
   return kept;
 }
 
-export function extractOutscraperRows(raw) {
+export function extractScrapeRows(raw) {
   if (Array.isArray(raw)) return raw;
-  return raw.results ?? raw.data ?? [];
+  return raw.results ?? raw.data ?? raw.places ?? raw.items ?? [];
 }
 
-export function isOutscraperExport(raw) {
-  const rows = extractOutscraperRows(raw);
+/** @deprecated use extractScrapeRows */
+export const extractOutscraperRows = extractScrapeRows;
+
+export function isGoogleMapsScrapeExport(raw) {
+  const rows = extractScrapeRows(raw);
   if (!rows.length) return false;
   const first = rows[0];
-  return Boolean(first?.title && (first?.categoryName || first?.categories || first?.url));
+  const name = first?.title || first?.name;
+  return Boolean(
+    name &&
+      (first?.categoryName ||
+        first?.category ||
+        first?.categories ||
+        first?.url ||
+        first?.placeId ||
+        first?.place_id ||
+        first?.location)
+  );
+}
+
+/** @deprecated use isGoogleMapsScrapeExport */
+export const isOutscraperExport = isGoogleMapsScrapeExport;
+
+export function scrapeExportFormat(rows) {
+  const first = rows[0] ?? {};
+  if (first.location?.lat != null || first.placeId) return "apify";
+  return "outscraper";
 }
 
 export function isParsedClinicsExport(raw) {
@@ -226,8 +274,13 @@ export function parseOutscraperRows(rows) {
   const parsed = [];
 
   for (const row of rows) {
-    const category = row.categoryName || (row.categories ?? []).join(", ") || "";
-    if (isHumanBiteCenter(row.title, category)) {
+    const rowName = row.title || row.name || "";
+    const category =
+      row.categoryName ||
+      row.category ||
+      (row.categories ?? []).join(", ") ||
+      "";
+    if (isHumanBiteCenter(rowName, category)) {
       excludedBite++;
       continue;
     }
