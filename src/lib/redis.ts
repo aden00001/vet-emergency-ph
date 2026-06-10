@@ -60,6 +60,30 @@ export async function setCachedNearbyClinics(
   }
 }
 
+export async function getCachedJson<T>(key: string): Promise<T | null> {
+  const client = getRedis();
+  if (!client) return null;
+  try {
+    return await client.get<T>(key);
+  } catch {
+    return null;
+  }
+}
+
+export async function setCachedJson<T>(
+  key: string,
+  data: T,
+  ttlSeconds: number
+): Promise<void> {
+  const client = getRedis();
+  if (!client) return;
+  try {
+    await client.set(key, data, { ex: ttlSeconds });
+  } catch {
+    // Graceful degradation
+  }
+}
+
 export async function invalidateClinicCache(
   lat: number,
   lng: number

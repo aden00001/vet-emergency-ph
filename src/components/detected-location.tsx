@@ -21,6 +21,7 @@ const SOURCE_META: Record<
   search: { badge: "Searched address", icon: Search },
   custom: { badge: "Custom pin", icon: Crosshair },
   default: { badge: "Default area", icon: MapPin },
+  unset: { badge: "No area selected", icon: MapPin },
 };
 
 export function DetectedLocation({
@@ -50,7 +51,7 @@ export function DetectedLocation({
               {meta.badge}
             </span>
             <span className="text-[11px] font-medium text-muted-foreground">
-              Searching clinics here
+              {source === "unset" ? "Pick an area to start" : "Searching clinics here"}
             </span>
           </div>
 
@@ -59,6 +60,10 @@ export function DetectedLocation({
               <div className="h-4 w-44 max-w-full animate-pulse rounded bg-primary/15" />
               <div className="h-3 w-28 max-w-full animate-pulse rounded bg-muted-foreground/20" />
             </div>
+          ) : source === "unset" ? (
+            <p className="font-display text-base font-bold leading-snug text-foreground">
+              Choose your location
+            </p>
           ) : (
             <>
               <p className="font-display text-base font-bold leading-snug text-foreground">

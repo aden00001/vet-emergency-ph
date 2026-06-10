@@ -14,14 +14,9 @@ import { LocationPicker, type LocationPickerValue } from "@/components/location-
 import { HeroIllustration } from "@/components/hero-illustration";
 import { SiteHeader } from "@/components/site-header";
 import type { ClinicSortOption } from "@/lib/clinic-sort";
-import {
-  DEFAULT_PRESET_ID,
-  getPresetById,
-} from "@/lib/location-presets";
+import { PH_CENTER } from "@/lib/location-presets";
 import { SITE_NAME } from "@/lib/brand";
 import type { NearbyClinic, TriageCategory } from "@/types/database";
-
-const defaultPreset = getPresetById(DEFAULT_PRESET_ID)!;
 
 export default function HomePage() {
   const [clinics, setClinics] = useState<NearbyClinic[]>([]);
@@ -29,10 +24,10 @@ export default function HomePage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [location, setLocation] = useState<LocationPickerValue>({
-    lat: defaultPreset.latitude,
-    lng: defaultPreset.longitude,
-    label: defaultPreset.label,
-    source: "default",
+    lat: PH_CENTER.lat,
+    lng: PH_CENTER.lng,
+    label: "Philippines",
+    source: "unset",
   });
   const [triage, setTriage] = useState<TriageCategory | null>(null);
   const [emergencyOnly, setEmergencyOnly] = useState(true);
@@ -71,10 +66,12 @@ export default function HomePage() {
     [triage, emergencyOnly, limit, sortBy]
   );
 
+  const awaitingArea = location.source === "unset";
+
   useEffect(() => {
-    if (!locationReady) return;
+    if (!locationReady || awaitingArea) return;
     searchClinics(location.lat, location.lng);
-  }, [location.lat, location.lng, locationReady, searchClinics]);
+  }, [location.lat, location.lng, locationReady, awaitingArea, searchClinics]);
 
   const shownCount = clinics.length;
 
@@ -138,7 +135,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {locationReady && !loading && !error && totalCount > 0 && (
+        {locationReady && !awaitingArea && !loading && !error && totalCount > 0 && (
           <div className="flex min-w-0 flex-col gap-3 px-1 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
             <div className="min-w-0 space-y-0.5">
               <h2 className="font-display text-sm font-semibold text-muted-foreground">
@@ -165,20 +162,32 @@ export default function HomePage() {
           </div>
         )}
 
-        {(!locationReady || loading) && (
+        {(!locationReady || (loading && !awaitingArea)) && (
           <div className="flex items-center justify-center gap-2 py-16 text-muted-foreground">
             <Loader2 className="size-5 animate-spin" />
             {!locationReady ? "Detecting your location…" : "Finding nearest clinics…"}
           </div>
         )}
 
-        {error && (
+        {locationReady && awaitingArea && (
+          <div className="rounded-2xl border border-dashed border-primary/30 bg-primary/[0.03] py-12 text-center">
+            <p className="font-display font-semibold text-foreground">
+              Choose your area to see nearby clinics
+            </p>
+            <p className="mx-auto mt-1 max-w-sm text-sm text-muted-foreground">
+              Use GPS, pick your city or province, or search an address above —
+              we cover clinics across the Philippines.
+            </p>
+          </div>
+        )}
+
+        {error && !awaitingArea && (
           <div className="rounded-xl border border-destructive/30 bg-destructive/10 p-4 text-sm text-destructive">
             {error}
           </div>
         )}
 
-        {locationReady && !loading && !error && clinics.length === 0 && (
+        {locationReady && !awaitingArea && !loading && !error && clinics.length === 0 && (
           <div className="rounded-2xl border border-dashed border-border py-12 text-center text-muted-foreground">
             <p className="font-medium">No clinics found nearby</p>
             <p className="mt-1 text-sm">
@@ -189,6 +198,7 @@ export default function HomePage() {
 
         <div className="space-y-3">
           {locationReady &&
+            !awaitingArea &&
             !loading &&
             clinics.map((clinic, index) => (
             <div

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { ChevronDown, MapPin, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -17,15 +17,40 @@ import {
 import { DetectedLocation } from "@/components/detected-location";
 import { reverseGeocodeLabel, shortenGeocodeLabel } from "@/lib/geocode";
 import {
-  DEFAULT_PRESET_ID,
   LOCATION_PRESETS,
-  LOCATION_REGIONS,
   loadSavedLocation,
+  PH_CENTER,
   requestUserGeolocation,
   saveLocation,
   type LocationSource,
   type SavedLocation,
 } from "@/lib/location-presets";
+import {
+  AREA_GROUP_ORDER,
+  type AreaGroup,
+  type ClinicArea,
+} from "@/lib/ph-regions";
+
+interface AreaGroupResult {
+  group: AreaGroup;
+  areas: ClinicArea[];
+}
+
+/** Static fallback grouping used if the live area list can't be fetched. */
+function fallbackAreaGroups(): AreaGroupResult[] {
+  const ncr = LOCATION_PRESETS.filter((p) =>
+    p.region.startsWith("Metro Manila")
+  ).map((p) => ({
+    id: p.id,
+    label: p.label,
+    group: "Metro Manila" as AreaGroup,
+    count: 0,
+    emergencyCount: 0,
+    lat: p.latitude,
+    lng: p.longitude,
+  }));
+  return ncr.length > 0 ? [{ group: "Metro Manila", areas: ncr }] : [];
+}
 
 export interface LocationPickerValue {
   lat: number;
@@ -43,15 +68,51 @@ interface LocationPickerProps {
 }
 
 export function LocationPicker({ value, onChange, onGpsError, onReady }: LocationPickerProps) {
-  const [presetId, setPresetId] = useState<string>(DEFAULT_PRESET_ID);
+  const [selectedAreaId, setSelectedAreaId] = useState<string>("");
   const [addressQuery, setAddressQuery] = useState("");
   const [geocoding, setGeocoding] = useState(false);
   const [showAdvanced, setShowAdvanced] = useState(false);
-  const [showOptions, setShowOptions] = useState(false);
+  const [showOptions, setShowOptions] = useState(value.source === "unset");
   const [gpsBusy, setGpsBusy] = useState(false);
   const [advLat, setAdvLat] = useState(String(value.lat));
   const [advLng, setAdvLng] = useState(String(value.lng));
   const [resolvingLabel, setResolvingLabel] = useState(false);
+  const [areaGroups, setAreaGroups] = useState<AreaGroupResult[] | null>(null);
+
+  // Load the nationwide area list derived from clinics actually in the DB.
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        const res = await fetch("/api/clinics/areas");
+        const json = await res.json();
+        if (cancelled) return;
+        const groups = (json.groups ?? []) as AreaGroupResult[];
+        setAreaGroups(groups.length > 0 ? groups : fallbackAreaGroups());
+      } catch {
+        if (!cancelled) setAreaGroups(fallbackAreaGroups());
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const renderedGroups = useMemo<AreaGroupResult[]>(() => {
+    const groups = areaGroups ?? [];
+    return AREA_GROUP_ORDER.map((group) => ({
+      group,
+      areas: groups.find((g) => g.group === group)?.areas ?? [],
+    })).filter((g) => g.areas.length > 0);
+  }, [areaGroups]);
+
+  const areaById = useMemo(() => {
+    const map = new Map<string, ClinicArea>();
+    for (const g of areaGroups ?? []) {
+      for (const a of g.areas) map.set(a.id, a);
+    }
+    return map;
+  }, [areaGroups]);
 
   useEffect(() => {
     let cancelled = false;
@@ -65,7 +126,7 @@ export function LocationPicker({ value, onChange, onGpsError, onReady }: Locatio
           label: saved.label,
           source: saved.source ?? (saved.presetId ? "preset" : "gps"),
         });
-        if (saved.presetId) setPresetId(saved.presetId);
+        if (saved.presetId) setSelectedAreaId(saved.presetId);
         setAdvLat(String(saved.lat));
         setAdvLng(String(saved.lng));
         onReady?.();
@@ -76,15 +137,17 @@ export function LocationPicker({ value, onChange, onGpsError, onReady }: Locatio
         const coords = await requestUserGeolocation();
         if (cancelled) return;
         await applyGpsLocation(coords);
-        setPresetId("");
+        setSelectedAreaId("");
       } catch {
-        // Permission denied or unavailable — keep the default preset silently.
+        // No GPS and no saved area — ask the user to choose an area instead of
+        // silently defaulting to one city (data is now nationwide).
         onChange({
-          lat: value.lat,
-          lng: value.lng,
-          label: value.label,
-          source: "default",
+          lat: PH_CENTER.lat,
+          lng: PH_CENTER.lng,
+          label: "Philippines",
+          source: "unset",
         });
+        setShowOptions(true);
       } finally {
         if (!cancelled) onReady?.();
       }
@@ -135,15 +198,15 @@ export function LocationPicker({ value, onChange, onGpsError, onReady }: Locatio
     }
   }
 
-  function handlePresetChange(id: string | null) {
+  function handleAreaChange(id: string | null) {
     if (!id) return;
-    setPresetId(id);
-    const preset = LOCATION_PRESETS.find((p) => p.id === id);
-    if (!preset) return;
+    setSelectedAreaId(id);
+    const area = areaById.get(id);
+    if (!area) return;
     applyLocation({
-      lat: preset.latitude,
-      lng: preset.longitude,
-      label: preset.label,
+      lat: area.lat,
+      lng: area.lng,
+      label: area.label,
       presetId: id,
       source: "preset",
     });
@@ -155,7 +218,7 @@ export function LocationPicker({ value, onChange, onGpsError, onReady }: Locatio
     try {
       const coords = await requestUserGeolocation();
       await applyGpsLocation(coords);
-      setPresetId("");
+      setSelectedAreaId("");
     } catch {
       setShowOptions(true);
       onGpsError?.(
@@ -185,7 +248,7 @@ export function LocationPicker({ value, onChange, onGpsError, onReady }: Locatio
         label: shortenGeocodeLabel(first.label),
         source: "search",
       });
-      setPresetId("");
+      setSelectedAreaId("");
       setAddressQuery("");
       setShowOptions(false);
     } catch (err) {
@@ -201,7 +264,7 @@ export function LocationPicker({ value, onChange, onGpsError, onReady }: Locatio
     const lng = Number(advLng);
     if (Number.isNaN(lat) || Number.isNaN(lng)) return;
     applyLocation({ lat, lng, label: "Custom pin", source: "custom" });
-    setPresetId("");
+    setSelectedAreaId("");
   }
 
   return (
@@ -216,7 +279,13 @@ export function LocationPicker({ value, onChange, onGpsError, onReady }: Locatio
         gpsBusy={gpsBusy}
       />
 
-      <div className="rounded-xl border border-border/70">
+      <div
+        className={`rounded-xl border ${
+          value.source === "unset"
+            ? "border-primary/40 bg-primary/[0.03]"
+            : "border-border/70"
+        }`}
+      >
         <button
           type="button"
           onClick={() => setShowOptions((v) => !v)}
@@ -225,7 +294,9 @@ export function LocationPicker({ value, onChange, onGpsError, onReady }: Locatio
         >
           <span className="flex items-center gap-2">
             <MapPin className="size-4 text-muted-foreground" />
-            Not right? Change your location
+            {value.source === "unset"
+              ? "Choose your area to find nearby clinics"
+              : "Not right? Change your location"}
           </span>
           <ChevronDown
             className={`size-4 text-muted-foreground transition-transform ${
@@ -238,19 +309,33 @@ export function LocationPicker({ value, onChange, onGpsError, onReady }: Locatio
           <div className="space-y-4 border-t border-border/70 p-3.5">
             <div className="space-y-1.5">
               <Label htmlFor="area-preset" className="text-xs text-muted-foreground">
-                Pick your city or district
+                Pick your city or province
               </Label>
-              <Select value={presetId || undefined} onValueChange={handlePresetChange}>
+              <Select
+                value={selectedAreaId || undefined}
+                onValueChange={handleAreaChange}
+                disabled={!areaGroups}
+              >
                 <SelectTrigger id="area-preset" className="w-full">
-                  <SelectValue placeholder="Choose city or district…" />
+                  <SelectValue
+                    placeholder={
+                      areaGroups ? "Choose city or province…" : "Loading areas…"
+                    }
+                  />
                 </SelectTrigger>
                 <SelectContent className="max-h-72">
-                  {LOCATION_REGIONS.map((region) => (
-                    <SelectGroup key={region}>
-                      <SelectLabel>{region}</SelectLabel>
-                      {LOCATION_PRESETS.filter((p) => p.region === region).map((preset) => (
-                        <SelectItem key={preset.id} value={preset.id}>
-                          {preset.label}
+                  {renderedGroups.map((g) => (
+                    <SelectGroup key={g.group}>
+                      <SelectLabel>{g.group}</SelectLabel>
+                      {g.areas.map((area) => (
+                        <SelectItem key={area.id} value={area.id}>
+                          {area.label}
+                          {area.count > 0 ? (
+                            <span className="text-muted-foreground">
+                              {" "}
+                              · {area.count}
+                            </span>
+                          ) : null}
                         </SelectItem>
                       ))}
                     </SelectGroup>
@@ -261,12 +346,12 @@ export function LocationPicker({ value, onChange, onGpsError, onReady }: Locatio
 
             <form onSubmit={searchAddress} className="space-y-1.5">
               <Label htmlFor="address-search" className="text-xs text-muted-foreground">
-                Search barangay, street, or landmark
+                Or search any barangay, street, or landmark
               </Label>
               <div className="flex gap-2">
                 <Input
                   id="address-search"
-                  placeholder="e.g. Fairview, Timog Ave, Cubao"
+                  placeholder="e.g. Cebu City, Timog Ave, Davao"
                   value={addressQuery}
                   onChange={(e) => setAddressQuery(e.target.value)}
                 />

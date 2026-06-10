@@ -8,7 +8,7 @@
   ],
   "count": 1711,
   "emergency_count": 173,
-  "with_coordinates": 1618,
+  "with_coordinates": 1707,
   "notes": [
     "Merged from multiple JSON uploads. Review before treating emergency_capable as verified.",
     "Excluded: human bite centers (anti-rabies / PEP clinics for people)."
@@ -27423,8 +27423,8 @@
       "name": "Serbisyo Beterinaryo Animal Hospital San Pablo 24 hrs Pet Emergency",
       "address": "28XR+M4F, 1, San Pablo City, Laguna",
       "phone": "+639177101135",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.0540712,
+      "longitude": 121.3140089,
       "emergency_capable": true,
       "owner_verified": false,
       "services": [
@@ -27438,7 +27438,10 @@
       "google_place_id": "ChIJOdlOgpFDvTMRkMB2NW16WW8",
       "category": "Veterinarian",
       "rating": 3.7,
-      "review_count": 58
+      "review_count": 58,
+      "geocoded_from": "1, Don Ramon Street, Teomora Village Phases 1 & 2, San Gabriel, San Pablo, Laguna, Calabarzon, 4000, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Serbisyo Beterinaryo Animal Hospital Sta Rosa 24Hrs Emergency Vet",
@@ -27501,8 +27504,8 @@
       "name": "Shambala",
       "address": "523-C Hernan Cortes St, Mandaue, Cebu",
       "phone": "+6363323190412",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 10.3274183,
+      "longitude": 123.9421517,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -27515,7 +27518,10 @@
       "category": "Veterinary care",
       "website": "http://www.facebook.com/pages/Shambala-Veterinary-Clinic/218855708178315",
       "rating": 4.4,
-      "review_count": 39
+      "review_count": 39,
+      "geocoded_from": "National Shrine of Saint Joseph, S.B. Cabahug Street, Centro, Mandaue, Central Visayas, 6014, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Shepherd Animal Clinic",
@@ -27541,8 +27547,8 @@
       "name": "Shepherd Animal Clinic Muzon",
       "address": "B1 L6 Provincial RD Sitio Libis 2, Linawan, SJDM, Bulacan",
       "phone": "+639093700840",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.8101978,
+      "longitude": 121.0474088,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -27554,7 +27560,10 @@
       "google_place_id": "ChIJu4ufx56vlzMRNQ09Q3-Rv70",
       "category": "Animal hospital",
       "rating": 4.1,
-      "review_count": 24
+      "review_count": 24,
+      "geocoded_from": "San Jose del Monte, Bulacan, Central Luzon, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Shrine Pet Care Center",
@@ -27658,8 +27667,8 @@
       "name": "Siquijor Veterinary Health Care Centre",
       "address": "5F5V+F37, Siquijor Circumferential Rd, San Juan, Siquijor",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 9.1184617,
+      "longitude": 123.5531805,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -27671,7 +27680,10 @@
       "google_place_id": "ChIJ97nWyFA-qzMRZ8gPdB5XeHc",
       "category": "Veterinary care",
       "rating": 5,
-      "review_count": 1
+      "review_count": 1,
+      "geocoded_from": "Siquijor Circumferential Road, Timbaon, San Juan, Siquijor, Negros Island Region, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "SIRANG GROOMING & PET SUPPLIES",
@@ -27694,8 +27706,8 @@
       "name": "Sitio Beterinaryo Cabuyao",
       "address": "Centennial Plaza Building National Highway cor Putol Road Barangay, Cabuyao City, Laguna",
       "phone": "+639989718055",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.2795538,
+      "longitude": 121.1235712,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -27708,7 +27720,10 @@
       "category": "Veterinarian",
       "website": "https://www.facebook.com/sitiobeterinaryo/",
       "rating": 4,
-      "review_count": 21
+      "review_count": 21,
+      "geocoded_from": "Cabuyao, Laguna, Calabarzon, 4025, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Sitio Ubat Catalunan Grande Davao City infront of Veterinary Clinic",
@@ -27731,8 +27746,8 @@
       "name": "Sji Pet Turf Animal Clinic",
       "address": "26GH+Q77, Artacho St, Lingayen, Pangasinan",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 16.0270881,
+      "longitude": 120.2282106,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -27744,7 +27759,10 @@
       "google_place_id": "ChIJz6smiGdekTMR2cxg732VArw",
       "category": "Veterinary care",
       "rating": 4.6,
-      "review_count": 11
+      "review_count": 11,
+      "geocoded_from": "Artacho Street, Poblacion, Lingayen, Pangasinan, Ilocos Region, 2401, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Small and Exotic Animal Veterinary Services and Grooming Center (SEAVET)",
@@ -27885,8 +27903,8 @@
       "name": "South Paw Animal Clinic",
       "address": "Carmel Mall, Canlubang, Calamba City Canlubang, Calamba City, 4027, Metro Manila, Calamba, Laguna",
       "phone": "+6363498084584",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.2060217,
+      "longitude": 121.1556496,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -27898,7 +27916,10 @@
       "google_place_id": "ChIJeezI1wRjvTMRijOKsqOewEY",
       "category": "Animal hospital",
       "rating": 3.9,
-      "review_count": 27
+      "review_count": 27,
+      "geocoded_from": "Calamba, Laguna, Calabarzon, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "South Paws Animal Clinic",
@@ -27945,8 +27966,8 @@
       "name": "South Paws Veterinary Hospital",
       "address": "Southwestern University PHINMA, CVM Building, J. Urgello St, Cebu City, Cebu",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 10.3285605,
+      "longitude": 123.9008849,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -27957,7 +27978,10 @@
       "google_maps_url": "https://www.google.com/maps/search/",
       "google_place_id": "ChIJrQb7RgCZqTMRnFoZNFrs57c",
       "category": "Veterinarian",
-      "website": "https://www.facebook.com/swusouthpaws"
+      "website": "https://www.facebook.com/swusouthpaws",
+      "geocoded_from": "University of Southern Philippines Foundation, Salinas Drive, Lahug, Cebu City, Central Visayas, 6000, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "SOUTH PET VETERINARY CLINIC",
@@ -28060,8 +28084,8 @@
       "name": "Southgate Veterinary Clinic",
       "address": "Unit 3 G/F, Sierra Makiling Bldg, Santo Tomas, Batangas",
       "phone": "+639498025466",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.1078443,
+      "longitude": 121.1453304,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -28073,7 +28097,10 @@
       "google_place_id": "ChIJR4XsVJplvTMRJpLYDXwCEBE",
       "category": "Veterinarian",
       "rating": 4.7,
-      "review_count": 15
+      "review_count": 15,
+      "geocoded_from": "Santo Tomas, Batangas, Calabarzon, 4234, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "SOUTHPAW ANIMAL DOCTORS CO",
@@ -28099,8 +28126,8 @@
       "name": "Southvalley Veterinary Clinic",
       "address": "4900 National Hi-way, City of Santa Rosa, Laguna",
       "phone": "+639272222040",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.3146042,
+      "longitude": 121.1137004,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -28112,14 +28139,17 @@
       "google_place_id": "ChIJOSxENErYlzMRVPmpcxR7NoA",
       "category": "Animal hospital",
       "rating": 3.9,
-      "review_count": 264
+      "review_count": 264,
+      "geocoded_from": "Santa Rosa, Laguna, Calabarzon, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Spoiled Pets Veterinary Clinic Angono",
       "address": "27 Manila East Road, Cor San Francisco Street, Angono, Rizal",
       "phone": "+639568997522",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.5258481,
+      "longitude": 121.1529683,
       "emergency_capable": true,
       "owner_verified": false,
       "services": [
@@ -28134,7 +28164,10 @@
       "category": "Emergency veterinarian service",
       "website": "https://www.facebook.com/SpoiledPetsVet",
       "rating": 5,
-      "review_count": 1
+      "review_count": 1,
+      "geocoded_from": "Angono, Rizal, Calabarzon, 1930, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "ST FELIX VETERINARY CLINIC AND GROOMING CENTER",
@@ -28178,8 +28211,8 @@
       "name": "St. Anne Veterinary Services",
       "address": "585 Palo - Santa Fe Rd, Santa Fe, Leyte",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 11.1858908,
+      "longitude": 124.915326,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -28189,7 +28222,10 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/",
       "google_place_id": "ChIJZ2E7PgB1CDMRYB3s_JHRhFI",
-      "category": "Veterinarian"
+      "category": "Veterinarian",
+      "geocoded_from": "Santa Fe, 1st District, Leyte, Eastern Visayas, 6513, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "St. Benedict Veterinary Clinic",
@@ -28311,8 +28347,8 @@
       "name": "St. Didacus Veterinary Clinic",
       "address": "W3JR+GXR, 1, Gumaca, Quezon",
       "phone": "+639289643259",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 13.9221715,
+      "longitude": 122.0991276,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -28322,7 +28358,10 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/",
       "google_place_id": "ChIJYcWv_8iQojMRSw3WUHcuZqk",
-      "category": "Animal hospital"
+      "category": "Animal hospital",
+      "geocoded_from": "Gumaca, Quezon, Calabarzon, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "ST. FRANCIS VETERINARY CLINIC",
@@ -28347,8 +28386,8 @@
       "name": "St. Hyacinth Animal Clinic-branch1",
       "address": "Unit A-340 ME(A) Penafrancia, Marikina-Infanta Hwy, Antipolo, Rizal",
       "phone": "+639171732914",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.5871972,
+      "longitude": 121.1759246,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -28360,14 +28399,17 @@
       "google_place_id": "ChIJl5TYROO4lzMRx0kaNzr52V4",
       "category": "Veterinarian",
       "rating": 4.4,
-      "review_count": 73
+      "review_count": 73,
+      "geocoded_from": "Antipolo, Rizal, Calabarzon, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "St. John Animal Pet Center",
       "address": "XQ35+3JF, MacArthur Hwy, Apalit, Pampanga",
       "phone": "+639194153361",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.9711727,
+      "longitude": 120.757202,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -28379,7 +28421,10 @@
       "google_place_id": "ChIJ46TmJktWljMR-1MZWc8ofsE",
       "category": "Veterinary care",
       "rating": 4.3,
-      "review_count": 7
+      "review_count": 7,
+      "geocoded_from": "MacArthur Highway, Purok 1, Sampaloc, Apalit, Pampanga, Central Luzon, 2016, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "St. John Veterinary Supply",
@@ -28497,8 +28542,8 @@
       "name": "St. Martin Animal Cinic and Venterinary Services",
       "address": "Unit 10, Costway Complex, Arellano St, Dagupan City, Pangasinan",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 16.0431813,
+      "longitude": 120.3341895,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -28508,7 +28553,10 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/",
       "google_place_id": "ChIJuxN25P1nkTMR67MMhUMcCIk",
-      "category": "Veterinary care"
+      "category": "Veterinary care",
+      "geocoded_from": "Dagupan City Park, Poblacion Oeste, Pogo Grande, Dagupan, Pangasinan, Ilocos Region, 2400, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "St. Mary's Animal Clinic and Agrivet Supply",
@@ -28553,8 +28601,8 @@
       "name": "St. Ruiz Veterinary Clinic",
       "address": "Brgy 17 Don Eleuterio Ruiz, Laoag City, Ilocos Norte",
       "phone": "+6363777711515",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 18.1973235,
+      "longitude": 120.5935433,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -28566,14 +28614,17 @@
       "google_place_id": "ChIJTR16YR_GjjMRXvHLA3BWlSE",
       "category": "Veterinary care",
       "rating": 3.3,
-      "review_count": 6
+      "review_count": 6,
+      "geocoded_from": "Laoag, Brgy. 13, Ilocos Norte, Ilocos Region, 2900, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "St. Therese Veterinary Clinic & Pet Supplies",
       "address": "GHCC+7W9, Allen - Catarman Rd, Bobon, Northern Samar",
       "phone": "+639178422005",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 12.52002,
+      "longitude": 124.5534787,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -28583,7 +28634,10 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/",
       "google_place_id": "ChIJhQ60JgABCjMRXWSkd-0L9QY",
-      "category": "Veterinarian"
+      "category": "Veterinarian",
+      "geocoded_from": "Allen-Catarman Road, Salvacion, Bobon, Northern Samar, Eastern Visayas, 6401, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "St. Vincent Veterinary Clinic",
@@ -28665,8 +28719,8 @@
       "name": "Sta. Rosa Animal Clinic",
       "address": "8456+C8X, Rizal Blvd, City of Santa Rosa, Laguna",
       "phone": "+639298682314",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.296367,
+      "longitude": 121.1062139,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -28678,7 +28732,10 @@
       "google_place_id": "ChIJD_5ydrHZlzMRTjS8TypR2dA",
       "category": "Animal hospital",
       "rating": 3.9,
-      "review_count": 41
+      "review_count": 41,
+      "geocoded_from": "Rizal Boulevard, Balibago, Santa Rosa, Laguna, Calabarzon, 4026, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "STARBARKS VETERINARY CLINIC",
@@ -28823,8 +28880,8 @@
       "name": "SUMMIT VIEW PET CLINIC",
       "address": "Veterans Street, Kalibo, Aklan",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 11.7088966,
+      "longitude": 122.3640225,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -28836,7 +28893,10 @@
       "google_place_id": "ChIJOcTVRIWdpTMRpLnokmKwF-s",
       "category": "Veterinary care",
       "rating": 4.9,
-      "review_count": 12
+      "review_count": 12,
+      "geocoded_from": "Kalibo, Aklan, Western Visayas, 5600, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Supreme Agri-Vet",
@@ -28859,8 +28919,8 @@
       "name": "SVC Veterinary Clinic",
       "address": "Unit 9, Enoc Gas Station, San Fernando, Pampanga",
       "phone": "+639457916129",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 15.0283014,
+      "longitude": 120.6938038,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -28870,14 +28930,17 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/",
       "google_place_id": "ChIJj02TEH73ljMRlSLJM8nun_o",
-      "category": "Veterinarian"
+      "category": "Veterinarian",
+      "geocoded_from": "San Fernando, Pampanga, Central Luzon, 2000, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Sy Clinica Veterinaria",
       "address": "San Jose - Carmen Road, Rosales, Pangasinan",
       "phone": "+639061165383",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 15.8924255,
+      "longitude": 120.6329883,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -28889,7 +28952,10 @@
       "google_place_id": "ChIJgTWuWs87kTMRmBIDeKgzsDY",
       "category": "Veterinarian",
       "rating": 3.6,
-      "review_count": 18
+      "review_count": 18,
+      "geocoded_from": "Rosales, Pangasinan, Ilocos Region, 2441, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Tacloban City Veterinary Office",
@@ -28971,8 +29037,8 @@
       "name": "Tambalanan sa Hayopan Pet Clinic Veterinary",
       "address": "QG6M+PX9, Legaspi St, Dalaguete, Cebu",
       "phone": "+639289828378",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 9.7619608,
+      "longitude": 123.5334368,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -28982,7 +29048,10 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/",
       "google_place_id": "ChIJB55ggKW5qzMRJRR6yGD-mwM",
-      "category": "Veterinarian"
+      "category": "Veterinarian",
+      "geocoded_from": "Legaspi Street, Poblacion, Dalaguete, Cebu, Central Visayas, 6022, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "tan veterinary clinic",
@@ -29082,8 +29151,8 @@
       "name": "Tayabas City Veterinary",
       "address": "Lupa Hall, Munting Bayan, Barangay San Isidro Zone 4, Tayabas City, Quezon Province, City of Tayabas, Quezon",
       "phone": "+6363427132003",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.0263471,
+      "longitude": 121.5918364,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -29095,7 +29164,10 @@
       "google_place_id": "ChIJVzQCtn1NvTMRZr22txUqI7Q",
       "category": "Veterinary care",
       "rating": 4.9,
-      "review_count": 9
+      "review_count": 9,
+      "geocoded_from": "Tayabas, Quezon, Calabarzon, 4327, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Templado Veterinary Clinic",
@@ -29200,8 +29272,8 @@
       "name": "The Animal Patrol",
       "address": "34MQ+RWQ, Mabini Ave, Tanauan City, Batangas",
       "phone": "+639165583130",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.0844726,
+      "longitude": 121.1500014,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -29211,7 +29283,10 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/",
       "google_place_id": "ChIJfSWBVGRvvTMRWN4_6StoUTM",
-      "category": "Veterinary care"
+      "category": "Veterinary care",
+      "geocoded_from": "Mabini Avenue, Barangay 1, Poblacion, Tanauan, Batangas, Calabarzon, 4232, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "The Ark Panorama",
@@ -29392,8 +29467,8 @@
       "name": "THL Veterinary Clinic Emergency Calamba",
       "address": "Unit 1 A & B, RDC Building, 1, Calamba, Laguna",
       "phone": "+639189850918",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.2060217,
+      "longitude": 121.1556496,
       "emergency_capable": true,
       "owner_verified": false,
       "services": [
@@ -29408,7 +29483,10 @@
       "category": "Emergency veterinarian service",
       "website": "https://www.facebook.com/thlvetclinic",
       "rating": 4.3,
-      "review_count": 118
+      "review_count": 118,
+      "geocoded_from": "Calamba, Laguna, Calabarzon, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Timbry Veterinary Clinic",
@@ -29721,8 +29799,8 @@
       "name": "Trinity Vet Animal Center",
       "address": "One SG Place, Commercial Center, MacArthur Hwy, San Fernando, Pampanga",
       "phone": "+639318404940",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 15.0283014,
+      "longitude": 120.6938038,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -29735,7 +29813,10 @@
       "category": "Veterinarian",
       "website": "https://www.facebook.com/profile.php?id=61573926449023",
       "rating": 5,
-      "review_count": 6
+      "review_count": 6,
+      "geocoded_from": "San Fernando, Pampanga, Central Luzon, 2000, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "TrustiVet Animal Clinic",
@@ -29782,8 +29863,8 @@
       "name": "Umingan Veterinary Clinic",
       "address": "WRHR+QGM, Umingan, Pangasinan",
       "phone": "+639454777554",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 15.9272139,
+      "longitude": 120.8407438,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -29795,7 +29876,10 @@
       "google_place_id": "ChIJLVa4AwAhkTMRskuECW7AHSw",
       "category": "Veterinarian",
       "rating": 5,
-      "review_count": 3
+      "review_count": 3,
+      "geocoded_from": "Umingan, Pangasinan, Ilocos Region, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "United Doctors Animal Clinic",
@@ -29880,8 +29964,8 @@
       "name": "UPLB Veterinary Teaching Hospital",
       "address": "57F7+5V8, Jose R Velasco Ave, Los Baños, Laguna",
       "phone": "+639088802101",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.1654172,
+      "longitude": 121.2363382,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -29894,7 +29978,10 @@
       "category": "Animal hospital",
       "website": "http://cvm.uplb.edu.ph/",
       "rating": 4.5,
-      "review_count": 30
+      "review_count": 30,
+      "geocoded_from": "Jose R. Velasco Avenue, Batong Malake, Los Baños, Laguna, Calabarzon, 4031, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Upnorth Veterinary Services",
@@ -30057,8 +30144,8 @@
       "name": "Urza Veterinary Services",
       "address": "Purok Chrysanthemum, Ormoc City, Leyte",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 11.0090349,
+      "longitude": 124.609394,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -30068,7 +30155,10 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/",
       "google_place_id": "ChIJJa-Jff7xBzMRrBZdcSyE8hQ",
-      "category": "Veterinarian"
+      "category": "Veterinarian",
+      "geocoded_from": "Ormoc City Proper, Ormoc, Leyte, Eastern Visayas, 6541, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "V.E.N Veterinary Clinic (Alcala Branch)",
@@ -30128,8 +30218,8 @@
       "name": "Valenzuela Veterinary Clinic",
       "address": "Block 1 Lot 2, Phase, City Executive Brgy, 1 Pines, Antipolo, Rizal",
       "phone": "+639998758809",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.5871972,
+      "longitude": 121.1759246,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -30142,7 +30232,10 @@
       "category": "Veterinarian",
       "website": "https://www.facebook.com/profile.php?id=61560963045892",
       "rating": 3.4,
-      "review_count": 10
+      "review_count": 10,
+      "geocoded_from": "Antipolo, Rizal, Calabarzon, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Valerio Veterinary Clinic",
@@ -30167,8 +30260,8 @@
       "name": "Valley Vets (Animal Clinic)",
       "address": "181 Manila N Rd, San Fernando City, La Union",
       "phone": "+639069620694",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 16.6047725,
+      "longitude": 120.3029801,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -30181,7 +30274,10 @@
       "category": "Veterinarian",
       "website": "https://www.facebook.com/valleyvetsAC",
       "rating": 4.9,
-      "review_count": 9
+      "review_count": 9,
+      "geocoded_from": "National Grid Corporation of the Philippines, Poro, San Fernando, La Union, Ilocos Region, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "ValleyVets Veterinary Services",
@@ -30241,8 +30337,8 @@
       "name": "VBM Animal Clinic",
       "address": "C M Prinza St, General Trias, Cavite",
       "phone": "+639176200083",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.3861207,
+      "longitude": 120.8802855,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -30254,14 +30350,17 @@
       "google_place_id": "ChIJreeCv1jVlzMRn3mu9cIJNxk",
       "category": "Animal hospital",
       "rating": 3.4,
-      "review_count": 30
+      "review_count": 30,
+      "geocoded_from": "General Trias, Cavite, Calabarzon, 4107, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Velvet Animal Clinic",
       "address": "Poblacion, Zambrano Building, Luna, La Union",
       "phone": "+639108528416",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 16.8529495,
+      "longitude": 120.3775805,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -30273,7 +30372,10 @@
       "google_place_id": "ChIJf6VJaTjvkTMR0sj6-Enwess",
       "category": "Medical clinic",
       "rating": 3,
-      "review_count": 6
+      "review_count": 6,
+      "geocoded_from": "Luna, La Union, Ilocos Region, 2518, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "VEN VETERINARY CLINIC",
@@ -30525,8 +30627,8 @@
       "name": "VET DISTRICT- Gentri (Formerly D' Bark Veterinary Clinic Grooming Center)",
       "address": "7WR3+443, Governor's Dr, General Trias, Cavite",
       "phone": "+639690805856",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.291458,
+      "longitude": 120.9061518,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -30539,7 +30641,10 @@
       "category": "Veterinarian",
       "website": "https://www.facebook.com/dbarkvetclinic?mibextid=ZbWKwL",
       "rating": 4.4,
-      "review_count": 38
+      "review_count": 38,
+      "geocoded_from": "Governor's Drive, Manggahan, General Trias, Cavite, Calabarzon, 4107, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Vet Essence Veterinary Clinic - Indangan",
@@ -30583,8 +30688,8 @@
       "name": "Vet FurPaws Pet Care Services",
       "address": "High School Rd, Sitio Hulo, Bulacan, Santa Maria, Bulacan",
       "phone": "+639458892900",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.8187993,
+      "longitude": 120.9607117,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -30596,7 +30701,10 @@
       "google_place_id": "ChIJqwpRc3GvlzMRw6uftvnM0Vw",
       "category": "Veterinarian",
       "rating": 4.2,
-      "review_count": 53
+      "review_count": 53,
+      "geocoded_from": "Santa Maria, Bulacan, Central Luzon, 3022, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Vet In Line Animal Clinic-Grooming-Kapon Center",
@@ -30640,8 +30748,8 @@
       "name": "Vet ni Bantay Animal Clinic",
       "address": "H9HV+XXV LAJ bldg, National Highway, Bantay, Ilocos Sur",
       "phone": "+639669306905",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 17.5820178,
+      "longitude": 120.3896288,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -30653,7 +30761,10 @@
       "google_place_id": "ChIJBXIPEABljjMRq6W-ntlmPyM",
       "category": "Veterinarian",
       "rating": 5,
-      "review_count": 1
+      "review_count": 1,
+      "geocoded_from": "Bantay, Ilocos Sur, Ilocos Region, 2700, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Vet Poultry Supply And Veterinary Services",
@@ -30829,8 +30940,8 @@
       "name": "Vet Spot Animal Clinic",
       "address": "District 4 Mabini St, Ormoc City, Leyte",
       "phone": "+639208913981",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 11.0090349,
+      "longitude": 124.609394,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -30843,7 +30954,10 @@
       "category": "Veterinarian",
       "website": "https://www.facebook.com/vetspotormoc",
       "rating": 4.6,
-      "review_count": 29
+      "review_count": 29,
+      "geocoded_from": "Ormoc City Proper, Ormoc, Leyte, Eastern Visayas, 6541, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Vet Street Animal Medical Center",
@@ -30964,8 +31078,8 @@
       "name": "Vet-To-Go Animal Clinic",
       "address": "Tanza, Cavite",
       "phone": "+639324235681",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.400675,
+      "longitude": 120.8572845,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -30977,14 +31091,17 @@
       "google_place_id": "ChIJ7wVqmmYsljMRI1WgjzKeL-Q",
       "category": "Veterinary care",
       "rating": 5,
-      "review_count": 9
+      "review_count": 9,
+      "geocoded_from": "Tanza, Cavite, Calabarzon, 4108, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Vet's Corner Animal Clinic",
       "address": "Along mcarthur hiway, brgy, San Fernando, Pampanga",
       "phone": "+6363454021904",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 15.0283014,
+      "longitude": 120.6938038,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -30996,14 +31113,17 @@
       "google_place_id": "ChIJM4Gz917xljMRJfMU8ZrIRok",
       "category": "Animal hospital",
       "rating": 4.7,
-      "review_count": 71
+      "review_count": 71,
+      "geocoded_from": "San Fernando, Pampanga, Central Luzon, 2000, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Vet's Nook",
       "address": "295 Avenida Rizal, Bacoor, Cavite",
       "phone": "+6363464772207",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.3982722,
+      "longitude": 120.9767724,
       "emergency_capable": true,
       "owner_verified": false,
       "services": [
@@ -31017,7 +31137,10 @@
       "google_place_id": "ChIJu7NO5tHTlzMRpm1EernNv70",
       "category": "Emergency veterinarian service",
       "rating": 3,
-      "review_count": 38
+      "review_count": 38,
+      "geocoded_from": "Avenida Rizal, Molino Heights Subdivision, Molino III, Molino, Bacoor, Cavite, Calabarzon, 4102, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Vet's Turf Animal Clinic",
@@ -31042,8 +31165,8 @@
       "name": "Vetcare Animal Clinic",
       "address": "Clauria Plaza, 101 L. Sumulong Memorial Circle, Antipolo, Rizal",
       "phone": "+639357833930",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.5871972,
+      "longitude": 121.1759246,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -31056,14 +31179,17 @@
       "category": "Veterinarian",
       "website": "https://www.facebook.com/profile.php?id=100064240562801&mibextid=JRoKGi",
       "rating": 4.6,
-      "review_count": 83
+      "review_count": 83,
+      "geocoded_from": "Antipolo, Rizal, Calabarzon, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "VetCare Pet Clinic",
       "address": "Burgos St, Tacloban City, Leyte",
       "phone": "+639266350477",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 11.2274637,
+      "longitude": 125.0274693,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -31076,7 +31202,10 @@
       "category": "Animal hospital",
       "website": "https://www.facebook.com/vetcaretacloban?mibextid=LQQJ4d",
       "rating": 4.5,
-      "review_count": 134
+      "review_count": 134,
+      "geocoded_from": "Daniel Z. Romualdez Airport, San Jose Road, Costa Brava, 88, San Jose, Tacloban, Eastern Visayas, 6500, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "VETCARE PLUS Veterinary Clinic",
@@ -31102,8 +31231,8 @@
       "name": "Vetcentro Dog & Cat Clinic",
       "address": "Unit 1, GF, Baucam Bldg, F. Dela Cuesta Ave, Dasmariñas, Cavite",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.3270819,
+      "longitude": 120.9370871,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -31115,14 +31244,17 @@
       "google_place_id": "ChIJMwvZm-HVlzMRxyxdGew072c",
       "category": "Veterinarian",
       "rating": 3.6,
-      "review_count": 27
+      "review_count": 27,
+      "geocoded_from": "Dasmariñas, Cavite, Calabarzon, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Vetcore Veterinary Clinic",
       "address": "Barangay Norberto Street, San Miguel, Bulacan",
       "phone": "+639171374112",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 15.1405274,
+      "longitude": 120.9770621,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -31135,7 +31267,10 @@
       "category": "Veterinarian",
       "website": "https://www.facebook.com/vetcoreveterinaryclinic/",
       "rating": 4.4,
-      "review_count": 64
+      "review_count": 64,
+      "geocoded_from": "San Miguel, Bulacan, Central Luzon, 3011, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "VETCROSS Animal Care Center",
@@ -31161,8 +31296,8 @@
       "name": "VETDOMAIN ANIMAL CLINIC",
       "address": "SJDM, Bulacan",
       "phone": "+639277778129",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.8101978,
+      "longitude": 121.0474088,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -31174,14 +31309,17 @@
       "google_place_id": "ChIJ2_67CuavlzMRgk7X9QuPpo8",
       "category": "Veterinarian",
       "rating": 4.4,
-      "review_count": 42
+      "review_count": 42,
+      "geocoded_from": "San Jose del Monte, Bulacan, Central Luzon, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Vetectors Animal Clinic",
       "address": "28 JP Rizal St, Cabuyao City, Laguna",
       "phone": "+639955887022",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.2795538,
+      "longitude": 121.1235712,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -31193,7 +31331,10 @@
       "google_place_id": "ChIJkbu9z6vZlzMRNEnsgHZED8s",
       "category": "Animal hospital",
       "rating": 3.7,
-      "review_count": 3
+      "review_count": 3,
+      "geocoded_from": "Cabuyao, Laguna, Calabarzon, 4025, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Veteran",
@@ -31303,8 +31444,8 @@
       "name": "Veterinarians in Practice (VIP) Clinic",
       "address": "Near Km, 5 marker, Dumaguete - Bacong Rd, Dumaguete City, Negros Oriental",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 9.3054777,
+      "longitude": 123.3080446,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -31317,7 +31458,10 @@
       "category": "Veterinarian",
       "website": "https://www.facebook.com/VeterinariansInPractice/",
       "rating": 3.9,
-      "review_count": 7
+      "review_count": 7,
+      "geocoded_from": "Dumaguete, Negros Oriental, Negros Island Region, 6200, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Veterinarius Animal Clinic",
@@ -31416,8 +31560,8 @@
       "name": "Veterinary Hospital",
       "address": "W89Q+5J3, Dr. Martin P. Posadas Avenue, San Carlos City, Pangasinan",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 15.9260531,
+      "longitude": 120.3464235,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -31427,7 +31571,10 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/",
       "google_place_id": "ChIJNVKoNwBbkTMRT5o_ihaVZqU",
-      "category": "Veterinarian"
+      "category": "Veterinarian",
+      "geocoded_from": "San Carlos City Old Public Market, Palaris, Bonifacio, San Carlos, Pangasinan, Ilocos Region, 2420, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Veterinary Office",
@@ -31484,8 +31631,8 @@
       "name": "Veterinary Supply",
       "address": "San Antonio, Quezon",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 13.8962195,
+      "longitude": 121.2931059,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -31497,7 +31644,10 @@
       "google_place_id": "ChIJry5toYc_vTMRCITrtWOT5OQ",
       "category": "Veterinary care",
       "rating": 4,
-      "review_count": 1
+      "review_count": 1,
+      "geocoded_from": "San Antonio, 2nd District, Quezon, Calabarzon, 4324, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Veterinary Teaching Clinic DMMMSU-NLUC",
@@ -31573,8 +31723,8 @@
       "name": "Veterinatian",
       "address": "WC5Q+VQC, Unnamed Road, Isabel, Leyte",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 10.9260948,
+      "longitude": 124.4343966,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -31584,14 +31734,17 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/",
       "google_place_id": "ChIJ7UVVF_0hqDMR0fhKmj9iVLc",
-      "category": "Veterinarian"
+      "category": "Veterinarian",
+      "geocoded_from": "Isabel, 4th District, Leyte, Eastern Visayas, 6539, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Veternest Animal Clinic",
       "address": "Phase 1-A, Pacita 1, 24 6th St, San Pedro, Laguna",
       "phone": "+639362722232",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.3639435,
+      "longitude": 121.056771,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -31603,7 +31756,10 @@
       "google_place_id": "ChIJR7iVKTLXlzMRCwtbyV7qwZA",
       "category": "Veterinarian",
       "rating": 3.9,
-      "review_count": 16
+      "review_count": 16,
+      "geocoded_from": "San Pedro, Laguna, Calabarzon, 4023, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Vetfarm Enterprise",
@@ -31628,8 +31784,8 @@
       "name": "VETFriends Animal Clinic",
       "address": "beside Don Phillip Motorcycle, Rizal Avenue, San Carlos City, Pangasinan",
       "phone": "+639629880385",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 15.9260531,
+      "longitude": 120.3464235,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -31642,7 +31798,10 @@
       "category": "Veterinarian",
       "website": "https://vetfriendsanimalclinic.carrd.co/",
       "rating": 4.7,
-      "review_count": 26
+      "review_count": 26,
+      "geocoded_from": "San Carlos City Old Public Market, Palaris, Bonifacio, San Carlos, Pangasinan, Ilocos Region, 2420, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Vetfront Animal Wellness Center",
@@ -31668,8 +31827,8 @@
       "name": "Vetfusion Animal Clinic - SJDM Branch",
       "address": "Brgy Gaya Gaya Barangay Hall, Gov. F Gov Fortunato Halili Rd, SJDM, Bulacan",
       "phone": "+639660851536",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.8101978,
+      "longitude": 121.0474088,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -31681,7 +31840,10 @@
       "google_place_id": "ChIJZTnFotmvlzMR4tFDr_QDPlg",
       "category": "Animal hospital",
       "rating": 4.5,
-      "review_count": 125
+      "review_count": 125,
+      "geocoded_from": "San Jose del Monte, Bulacan, Central Luzon, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "VETGRACE VETERINARY CLINIC",
@@ -31780,8 +31942,8 @@
       "name": "Vetleague",
       "address": "Lysa Queen Bldg 2, Malolos, Bulacan",
       "phone": "+639364635465",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.843759,
+      "longitude": 120.8113694,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -31793,7 +31955,10 @@
       "google_place_id": "ChIJuQ_IMKpTljMRBuVhWD-Y114",
       "category": "Animal hospital",
       "rating": 4.6,
-      "review_count": 32
+      "review_count": 32,
+      "geocoded_from": "Malolos, Bulacan, Central Luzon, 3000, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "VetLink Animal Clinic - Isabela Branch",
@@ -31818,8 +31983,8 @@
       "name": "VetLink Animal Recovery Clinic - San Mateo",
       "address": "647 Gen. Luna Ave, San Mateo, Rizal",
       "phone": "+639958329180",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.6951949,
+      "longitude": 121.1174024,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -31831,7 +31996,10 @@
       "google_place_id": "ChIJJXS67Jq7lzMREmLarZ0z52U",
       "category": "Veterinarian",
       "rating": 4.2,
-      "review_count": 27
+      "review_count": 27,
+      "geocoded_from": "San Mateo, Rizal, Calabarzon, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Vetlink Veterinary Services - A Community Vet Clinic",
@@ -31974,8 +32142,8 @@
       "name": "Vetrite Animal Clinic",
       "address": "QF3G+H23, Bohol Circumferential Rd, Guindulman, Bohol",
       "phone": "+639155085310",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 9.7619221,
+      "longitude": 124.4879217,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -31987,7 +32155,10 @@
       "google_place_id": "ChIJjXhcGgALqjMRgf6amk7dxTo",
       "category": "Veterinarian",
       "rating": 5,
-      "review_count": 4
+      "review_count": 4,
+      "geocoded_from": "Guindulman, Bohol, Central Visayas, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Vetron Animal Clinic",
@@ -32084,8 +32255,8 @@
       "name": "Vets For Christ Veterinary Clinic",
       "address": "Lazaga-Morales Building, National Highway, Calamba, Laguna",
       "phone": "+639610427412",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.2060217,
+      "longitude": 121.1556496,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -32098,14 +32269,17 @@
       "category": "Veterinarian",
       "website": "https://www.facebook.com/VFCVeterinaryClinic",
       "rating": 4.7,
-      "review_count": 31
+      "review_count": 31,
+      "geocoded_from": "Calamba, Laguna, Calabarzon, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Vets For Pets",
       "address": "81 T.Claudio, Morong, Metro Manila",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.6309765,
+      "longitude": 120.9784497,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -32117,14 +32291,17 @@
       "google_place_id": "ChIJDZRAq7jBlzMRkxLNwHno9-0",
       "category": "Veterinary care",
       "rating": 4.3,
-      "review_count": 3
+      "review_count": 3,
+      "geocoded_from": "Morong Street, Barangay 181, Gagalangin, Tondo, Second District, Manila, Capital District, Metro Manila, 1410, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Vets For Pets Animal Clinic",
       "address": "Laoag City, Ilocos Norte",
       "phone": "+639054473209",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 18.1973235,
+      "longitude": 120.5935433,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -32137,14 +32314,17 @@
       "category": "Veterinary care",
       "website": "https://web.facebook.com/profile.php?id=100057179241026",
       "rating": 4.5,
-      "review_count": 45
+      "review_count": 45,
+      "geocoded_from": "Laoag, Brgy. 13, Ilocos Norte, Ilocos Region, 2900, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Vets for Pets Animal Clinic (Dingras Branch)",
       "address": "4M2X+MF4 Brgy, Dingras, Ilocos Norte",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 18.1034564,
+      "longitude": 120.6977344,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -32156,7 +32336,10 @@
       "google_place_id": "ChIJ58N_hgvFjjMRJmv7itU_9zA",
       "category": "Medical clinic",
       "rating": 5,
-      "review_count": 2
+      "review_count": 2,
+      "geocoded_from": "Dingras, Ilocos Norte, Ilocos Region, 2913, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Vets House Animal Care",
@@ -32223,8 +32406,8 @@
       "name": "Vets Unlimited PH",
       "address": "38C3+24V, Daang Maharlika Highway, Barangay, San Pablo City, Laguna",
       "phone": "+639171038144",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.0669728,
+      "longitude": 121.3172576,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -32237,7 +32420,10 @@
       "category": "Veterinarian",
       "website": "https://www.facebook.com/vetsunlimited/",
       "rating": 2.5,
-      "review_count": 32
+      "review_count": 32,
+      "geocoded_from": "Maharlika Highway, Bagong Bayan, San Pablo, Laguna, Calabarzon, 4000, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Vets4Pets Veterinary Clinic",
@@ -32264,8 +32450,8 @@
       "name": "Vetsaver Animal Clinic & Grooming Center Antipolo branch",
       "address": "Quattro Princesa Bldg, L. Sumulong Memorial Circle, Antipolo, Rizal",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.5871972,
+      "longitude": 121.1759246,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -32277,14 +32463,17 @@
       "google_place_id": "ChIJD5LoPNG_lzMRlooylpeczaM",
       "category": "Pet store",
       "rating": 2.9,
-      "review_count": 36
+      "review_count": 36,
+      "geocoded_from": "Antipolo, Rizal, Calabarzon, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Vetsaver Veterinary and Grooming Services",
       "address": "2, 2nd floor Cogeo Trade Hall bldg, Marikina-Infanta Hwy, Antipolo, Rizal",
       "phone": "+639270586202",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.5871972,
+      "longitude": 121.1759246,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -32297,7 +32486,10 @@
       "category": "Veterinarian",
       "website": "https://www.facebook.com/VetsaverAntipolo?mibextid=JRoKGi",
       "rating": 3.9,
-      "review_count": 134
+      "review_count": 134,
+      "geocoded_from": "Antipolo, Rizal, Calabarzon, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "VetServe Animal Clinic",
@@ -32322,8 +32514,8 @@
       "name": "Vetsfriend Gamefarm and Adriatico Bros",
       "address": "Lavezares, Northern Samar",
       "phone": "+639185644891",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 12.534318,
+      "longitude": 124.3305278,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -32333,14 +32525,17 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/",
       "google_place_id": "ChIJ-bYi02KtoDMRfjt6UvGvW0k",
-      "category": "Veterinary care"
+      "category": "Veterinary care",
+      "geocoded_from": "Lavezares, Northern Samar, Eastern Visayas, 6404, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "VetsFurrEver Veterinary Clinic",
       "address": "Brgy 1, National Hiway, San Nicolas, Ilocos Norte",
       "phone": "+6363777704054",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 18.1734424,
+      "longitude": 120.5944216,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -32352,7 +32547,10 @@
       "google_place_id": "ChIJN-IMa0jHjjMRhvK67yu3U0M",
       "category": "Veterinarian",
       "rating": 2.8,
-      "review_count": 6
+      "review_count": 6,
+      "geocoded_from": "San Nicolas, Ilocos Norte, Ilocos Region, 2900, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Vetshoppe Veterinary Clinic",
@@ -32377,8 +32575,8 @@
       "name": "Vetsmart Animal Clinic",
       "address": "70 A. Mabini St, Rodriguez, Rizal",
       "phone": "+6363289979255",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.7167371,
+      "longitude": 121.1371387,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -32390,7 +32588,10 @@
       "google_place_id": "ChIJn0YP3RG7lzMR2sqGhP94dgY",
       "category": "Animal hospital",
       "rating": 3.3,
-      "review_count": 17
+      "review_count": 17,
+      "geocoded_from": "A. Mabini Street, Alberto Subdivision, Burgos, San Jose, Montalban, Rizal, Calabarzon, 1860, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Vetspet Animal Clinic",
@@ -32415,8 +32616,8 @@
       "name": "VetsQuad Animal Health Care Services",
       "address": "8F79+4GV, Pugo, La Union",
       "phone": "+639683563968",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 16.3202994,
+      "longitude": 120.4673523,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -32429,14 +32630,17 @@
       "category": "Veterinarian",
       "website": "https://www.facebook.com/profile.php?id=100088319036643",
       "rating": 4.7,
-      "review_count": 6
+      "review_count": 6,
+      "geocoded_from": "Pugo, La Union, Ilocos Region, 2508, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Vetsquare Veterinary Clinic",
       "address": "Kalaw Compound, Los Baños, Laguna",
       "phone": "+639694973500",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.1684876,
+      "longitude": 121.245041,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -32449,7 +32653,10 @@
       "category": "Veterinarian",
       "website": "https://www.facebook.com/VetSquarePH",
       "rating": 4,
-      "review_count": 40
+      "review_count": 40,
+      "geocoded_from": "Poulpharm, Basil Street, Demarses Farmville, Batong Malake, Los Baños, Laguna, Calabarzon, 4031, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Vetstreet Veterinary Clinic and Grooming Center",
@@ -32474,8 +32681,8 @@
       "name": "VetSynergy Animal Care",
       "address": "Corner of Daang Hari, Pasong Buaya, Imus, Cavite",
       "phone": "+639156282620",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.4290216,
+      "longitude": 120.9365838,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -32487,14 +32694,17 @@
       "google_place_id": "ChIJ9ychZxTTlzMRskPbeWUv5PA",
       "category": "Veterinarian",
       "rating": 5,
-      "review_count": 11
+      "review_count": 11,
+      "geocoded_from": "Imus, Cavite, Calabarzon, 4103, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "VetterHealth Animal Clinic",
       "address": "9063 Dominador Mangubat Blvd, Dasmariñas, Cavite",
       "phone": "+639622173906",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.3272922,
+      "longitude": 120.9508776,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -32506,14 +32716,17 @@
       "google_place_id": "ChIJ_4cFhvbVlzMRQd1IuwowOwQ",
       "category": "Animal hospital",
       "rating": 3.6,
-      "review_count": 38
+      "review_count": 38,
+      "geocoded_from": "Governor Dominador Mangubat Boulevard, Burol, Dasmariñas, Cavite, Calabarzon, 4114, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "VetVillage Animal Clinic bulacan",
       "address": "Lot1 Block13 Mt. View Subd, SJDM, Bulacan",
       "phone": "+6363443072074",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.8101978,
+      "longitude": 121.0474088,
       "emergency_capable": true,
       "owner_verified": false,
       "services": [
@@ -32527,14 +32740,17 @@
       "google_place_id": "ChIJt7BovjavlzMRP3OKiYfajYY",
       "category": "Emergency veterinarian service",
       "rating": 2.5,
-      "review_count": 16
+      "review_count": 16,
+      "geocoded_from": "San Jose del Monte, Bulacan, Central Luzon, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Vetways Animal Clinic",
       "address": "Dasmariñas, Cavite",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.3270819,
+      "longitude": 120.9370871,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -32546,14 +32762,17 @@
       "google_place_id": "ChIJC6KhcPLVlzMRa1_IqeERp_4",
       "category": "Veterinarian",
       "rating": 4,
-      "review_count": 19
+      "review_count": 19,
+      "geocoded_from": "Dasmariñas, Cavite, Calabarzon, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "VETWISE ANIMAL CLINIC",
       "address": "5CQW+7R7, Alvaro St, Candon City, Ilocos Sur",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 17.1656592,
+      "longitude": 120.4414933,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -32565,14 +32784,17 @@
       "google_place_id": "ChIJUxGNOksZjjMRbRsXXWpbIKk",
       "category": "Animal hospital",
       "rating": 4.6,
-      "review_count": 20
+      "review_count": 20,
+      "geocoded_from": "Candon City Government Center, Calaoaan, Candon, Ilocos Sur, Ilocos Region, 2710, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Vetyard Vet Clinic",
       "address": "Zone 1, Brgy, 24, Pinili, Ilocos Norte",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 17.9526115,
+      "longitude": 120.5273877,
       "emergency_capable": true,
       "owner_verified": false,
       "services": [
@@ -32584,7 +32806,10 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/",
       "google_place_id": "ChIJM91lfwDtjjMRmTcOQzP2LD8",
-      "category": "Emergency veterinarian service"
+      "category": "Emergency veterinarian service",
+      "geocoded_from": "Pinili, Ilocos Norte, Ilocos Region, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "VGM Farm and Veterinary Supplies",
@@ -32628,8 +32853,8 @@
       "name": "VIDA'S PET HOME AND ANIMAL CLINIC",
       "address": "320 Katipunan St, Cebu City, Cebu",
       "phone": "+639238250604",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 10.2977885,
+      "longitude": 123.8861654,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -32641,14 +32866,17 @@
       "google_place_id": "ChIJq6rZRKCeqTMRmtXp_8DGdYU",
       "category": "Veterinarian",
       "rating": 3,
-      "review_count": 2
+      "review_count": 2,
+      "geocoded_from": "Katipunan Street, Laguna, San Nicolas Proper, Calamba, Cebu City, Central Visayas, 6000, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Villacampa Pet Care and Veterinary Services",
       "address": "Tanjay City, Negros Oriental",
       "phone": "+639223147002",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 9.5164507,
+      "longitude": 123.1566353,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -32661,14 +32889,17 @@
       "category": "Veterinarian",
       "website": "https://www.facebook.com/VillacampaPetCare/",
       "rating": 4.7,
-      "review_count": 38
+      "review_count": 38,
+      "geocoded_from": "Tanjay, Negros Oriental, Negros Island Region, 6204, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Villacampa Pet Care and Veterinary Services - Bindoy",
       "address": "Brgy, Bindoy, Negros Oriental",
       "phone": "+639177262788",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 9.7451602,
+      "longitude": 123.1515378,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -32680,7 +32911,10 @@
       "google_place_id": "ChIJyQL6dLSJqzMREEG7EJq7D0k",
       "category": "Veterinarian",
       "rating": 4,
-      "review_count": 2
+      "review_count": 2,
+      "geocoded_from": "Pangalaycayan Barangay Hall, Dumaguete North Road, Bindoy, Negros Oriental, Negros Island Region, 6209, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Village Vet Animal Clinic",
@@ -32705,8 +32939,8 @@
       "name": "Village Vet Animal Clinic and Grooming Center",
       "address": "62XX+7G7 Westborough Town Center, South Blvd, Silang, Cavite",
       "phone": "+639058740422",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.2234004,
+      "longitude": 120.9742825,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -32719,14 +32953,17 @@
       "category": "Veterinarian",
       "website": "https://www.facebook.com/VillageVetWestborough/",
       "rating": 3.9,
-      "review_count": 14
+      "review_count": 14,
+      "geocoded_from": "Silang, Cavite, Calabarzon, 4118, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Villagers Vet Clinic & Grooming Sabutan Station",
       "address": "42 J Rizal, Silang, Cavite",
       "phone": "+639498291628",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.2270909,
+      "longitude": 120.974353,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -32738,7 +32975,10 @@
       "google_place_id": "ChIJyds-749-vTMRBH4pm9GkZX4",
       "category": "Veterinary care",
       "rating": 4.5,
-      "review_count": 43
+      "review_count": 43,
+      "geocoded_from": "J. P. Rizal Street, San Vicente I, Malaking Tatiao, Silang, Cavite, Calabarzon, 4118, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Villegas veterinary",
@@ -32821,8 +33061,8 @@
       "name": "VM VETERINARY CLINIC PETSHOP AND SPA",
       "address": "b3 l13, AFP Village, 520 Langka St, San Mateo, Rizal",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.6951949,
+      "longitude": 121.1174024,
       "emergency_capable": true,
       "owner_verified": false,
       "services": [
@@ -32836,7 +33076,10 @@
       "google_place_id": "ChIJ2YGWfQC5lzMRXelPiTwVet4",
       "category": "Emergency veterinarian service",
       "rating": 5,
-      "review_count": 1
+      "review_count": 1,
+      "geocoded_from": "San Mateo, Rizal, Calabarzon, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "VNP Veterinary Clinic and Grooming Services",
@@ -32883,8 +33126,8 @@
       "name": "Waggin Tails Veterinary Clinic",
       "address": "Cantil-e Isugan Road, Bacong, Negros Oriental",
       "phone": "+6363355285015",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 9.2452115,
+      "longitude": 123.2951117,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -32897,7 +33140,10 @@
       "category": "Veterinarian",
       "website": "https://www.facebook.com/WagginTailsVetClinic",
       "rating": 5,
-      "review_count": 2
+      "review_count": 2,
+      "geocoded_from": "Bacong, Negros Oriental, Negros Island Region, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Wagging Tails and Whiskers Veterinary Clinic",
@@ -33221,8 +33467,8 @@
       "name": "WVMC Animal Bite Treatment Center",
       "address": "PGCR+2C9, Mirasol St, Iloilo City, Iloilo",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 10.7170079,
+      "longitude": 122.5406834,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -33234,14 +33480,17 @@
       "google_place_id": "ChIJXY9fPQDlrjMRTmFW31mPtqQ",
       "category": "Medical Center",
       "rating": 5,
-      "review_count": 1
+      "review_count": 1,
+      "geocoded_from": "Jose Mirasol Sr. Street, Jeferson Ville Subdivision, Mandurriao, Pale Benidicto Rizal, Iloilo City, Western Visayas, 5000, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Wz Agrivet",
       "address": "J2MM+G25, Loboc, Bohol",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 9.6370754,
+      "longitude": 124.0308694,
       "emergency_capable": true,
       "owner_verified": false,
       "services": [
@@ -33255,7 +33504,10 @@
       "google_place_id": "ChIJVUzBjllEqjMRFPWsvtz-5XE",
       "category": "Emergency veterinarian service",
       "rating": 1,
-      "review_count": 1
+      "review_count": 1,
+      "geocoded_from": "Loboc, Bohol, Central Visayas, 6316, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Xorvor Tan Homeservice Veterinarian",
@@ -33317,8 +33569,8 @@
       "name": "Yandug Animal Care Clinic",
       "address": "8B Nichols Heights, Cebu City, Cebu",
       "phone": "+639176553337",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 10.3285605,
+      "longitude": 123.9008849,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -33330,7 +33582,10 @@
       "google_place_id": "ChIJE4vw-m-fqTMRJxAYFTnqQ5g",
       "category": "Veterinarian",
       "rating": 4.7,
-      "review_count": 55
+      "review_count": 55,
+      "geocoded_from": "University of Southern Philippines Foundation, Salinas Drive, Lahug, Cebu City, Central Visayas, 6000, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "YCC Veterinary Clinic",
@@ -33355,8 +33610,8 @@
       "name": "YGY Animal Clinic",
       "address": "4 Benita Laurel St, Tanauan City, Batangas",
       "phone": "+6363437781436",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.0847265,
+      "longitude": 121.1496705,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -33368,14 +33623,17 @@
       "google_place_id": "ChIJTfS_GVxvvTMRLtPsv6HM55E",
       "category": "Veterinarian",
       "rating": 3.6,
-      "review_count": 21
+      "review_count": 21,
+      "geocoded_from": "Tanauan City, President Jose P. Laurel Highway, Barangay 4, Poblacion, Tanauan, Batangas, Calabarzon, 4232, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Zacarias Animal Clinic- Urdaneta City",
       "address": "Brgy, Bypass Road, Urdaneta City, Pangasinan",
       "phone": "+639171649225",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 15.9923987,
+      "longitude": 120.5710968,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -33388,7 +33646,10 @@
       "category": "Veterinarian",
       "website": "http://www.zacariasanimalclinic.com/",
       "rating": 2.6,
-      "review_count": 5
+      "review_count": 5,
+      "geocoded_from": "Zacarias Animal Clinic, Urdaneta Bypass Road, San Vicente, Mabanognog, Urdaneta, Pangasinan, Ilocos Region, 2428, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Zacarias Animal Clinic-Mangaldan",
@@ -33433,8 +33694,8 @@
       "name": "ZG ROCA VETERINARY CLINIC",
       "address": "SJDM, Bulacan",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.8101978,
+      "longitude": 121.0474088,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -33446,7 +33707,10 @@
       "google_place_id": "ChIJf-_PIEmulzMR7dp4U1AeJ9M",
       "category": "Veterinary care",
       "rating": 5,
-      "review_count": 4
+      "review_count": 4,
+      "geocoded_from": "San Jose del Monte, Bulacan, Central Luzon, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Zion Animal Clinic",
@@ -33471,8 +33735,8 @@
       "name": "Zippet Animal Center Veterinary Services",
       "address": "212, Calasiao, Pangasinan",
       "phone": "+639055641076",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 16.0089487,
+      "longitude": 120.3571939,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -33485,7 +33749,10 @@
       "category": "Veterinarian",
       "website": "http://www.zippet.ph/",
       "rating": 4.9,
-      "review_count": 10
+      "review_count": 10,
+      "geocoded_from": "Calasiao, Pangasinan, Ilocos Region, 2418, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Zitro Vet Clinic",

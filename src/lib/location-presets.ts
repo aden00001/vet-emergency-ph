@@ -48,7 +48,16 @@ export function getPresetById(id: string): LocationPreset | undefined {
 
 export const DEFAULT_PRESET_ID = "ncr-manila";
 
-export type LocationSource = "gps" | "preset" | "search" | "custom" | "default";
+export type LocationSource =
+  | "gps"
+  | "preset"
+  | "search"
+  | "custom"
+  | "default"
+  | "unset";
+
+/** Approximate geographic center of the Philippines (used before an area is picked). */
+export const PH_CENTER = { lat: 12.8797, lng: 121.774 };
 
 export interface SavedLocation {
   lat: number;
