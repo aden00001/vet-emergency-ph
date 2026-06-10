@@ -1,9 +1,9 @@
 import type { MetadataRoute } from "next";
+import { DEFAULT_SITE_URL } from "@/lib/brand";
 import { createClient } from "@/lib/supabase/server";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl =
-    process.env.NEXT_PUBLIC_APP_URL ?? "https://vetemergency.ph";
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL ?? DEFAULT_SITE_URL;
 
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: baseUrl, changeFrequency: "daily", priority: 1 },

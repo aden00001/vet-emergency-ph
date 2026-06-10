@@ -1,6 +1,6 @@
 # Clinic data pipeline
 
-How we collect vet clinic data for VetEmergency.ph — and why we **don't** scrape Google Maps HTML.
+How we collect vet clinic data for Vet247PH — and why we **don't** scrape Google Maps HTML.
 
 ## Recommended sources (in order)
 

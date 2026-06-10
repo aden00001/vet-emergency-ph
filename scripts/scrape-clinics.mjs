@@ -136,7 +136,7 @@ out center tags;
         headers: {
           "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
           Accept: "application/json",
-          "User-Agent": "VetEmergency.ph/1.0 (local dev; contact: dev@vetemergency.ph)",
+          "User-Agent": "Vet247PH/1.0 (local dev; contact: dev@vet247ph.com)",
         },
         body: `data=${encodeURIComponent(query)}`,
       });

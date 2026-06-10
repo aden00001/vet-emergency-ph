@@ -25,14 +25,14 @@ export function ResultsCountSelect({
   disabled,
 }: ResultsCountSelectProps) {
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex min-w-0 flex-1 items-center gap-2 sm:flex-none">
       <ListFilter className="size-3.5 shrink-0 text-muted-foreground" />
       <Select
         value={String(value)}
         onValueChange={(v) => onChange(Number(v) as ResultsCountOption)}
         disabled={disabled}
       >
-        <SelectTrigger size="sm" className="h-8 min-w-[110px] rounded-full text-xs">
+        <SelectTrigger size="sm" className="h-8 w-full min-w-0 max-w-full rounded-full text-xs sm:w-fit sm:min-w-[110px]">
           <SelectValue placeholder="Show" />
         </SelectTrigger>
         <SelectContent align="end">

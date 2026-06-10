@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 
 const NOMINATIM_HEADERS = {
-  "User-Agent": "VetEmergency.ph/1.0 (geocode for emergency vet search)",
+  "User-Agent": "Vet247PH/1.0 (geocode for emergency vet search)",
 };
 
 const forwardSchema = z.object({

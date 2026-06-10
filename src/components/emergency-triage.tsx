@@ -38,7 +38,7 @@ const TRIAGE_OPTIONS: {
   },
 ];
 
-const STORAGE_KEY = "vetemergency_triage";
+const STORAGE_KEY = "vet247ph_triage";
 
 interface EmergencyTriageProps {
   onSelect: (category: TriageCategory | null) => void;

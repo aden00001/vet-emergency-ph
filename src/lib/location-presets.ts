@@ -58,7 +58,7 @@ export interface SavedLocation {
   source?: LocationSource;
 }
 
-const STORAGE_KEY = "vetemergency_location";
+const STORAGE_KEY = "vet247ph_location";
 
 export function loadSavedLocation(): SavedLocation | null {
   if (typeof window === "undefined") return null;

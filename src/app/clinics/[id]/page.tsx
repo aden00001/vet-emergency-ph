@@ -14,6 +14,7 @@ import { ClaimClinicButton } from "@/components/claim-clinic-button";
 import { createClient } from "@/lib/supabase/server";
 import { formatDistance } from "@/lib/geo";
 import { CallButton } from "@/components/call-button";
+import { SITE_NAME } from "@/lib/brand";
 import { STATUS_CONFIG } from "@/lib/status";
 import type { ClinicReview, ReviewSummary, Verification } from "@/types/database";
 import { ArrowLeft, BadgeCheck, Clock, MapPin, Phone } from "lucide-react";
@@ -36,7 +37,7 @@ export async function generateMetadata({
   if (!clinic) return { title: "Clinic Not Found" };
 
   return {
-    title: `${clinic.name} | VetEmergency.ph`,
+    title: `${clinic.name} | ${SITE_NAME}`,
     description: `Emergency veterinary clinic: ${clinic.address}`,
     openGraph: {
       title: clinic.name,

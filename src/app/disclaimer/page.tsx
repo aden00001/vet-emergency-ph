@@ -1,9 +1,10 @@
 import { SiteHeader } from "@/components/site-header";
+import { SITE_NAME } from "@/lib/brand";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Disclaimer | VetEmergency.ph",
-  description: "Important legal disclaimer for VetEmergency.ph users.",
+  title: `Disclaimer | ${SITE_NAME}`,
+  description: `Important legal disclaimer for ${SITE_NAME} users.`,
 };
 
 export default function DisclaimerPage() {
@@ -13,7 +14,7 @@ export default function DisclaimerPage() {
       <main className="mx-auto max-w-2xl px-4 py-10 prose prose-neutral dark:prose-invert">
         <h1>Disclaimer</h1>
         <p>
-          VetEmergency.ph is an informational directory service designed to help
+          {SITE_NAME} is an informational directory service designed to help
           pet owners locate veterinary clinics that may provide emergency care.
         </p>
         <h2>Not medical advice</h2>
@@ -32,7 +33,7 @@ export default function DisclaimerPage() {
         <h2>Always call first</h2>
         <p>
           You should always contact a clinic directly by phone before traveling,
-          especially during an emergency. VetEmergency.ph is not liable for
+          especially during an emergency. {SITE_NAME} is not liable for
           outcomes resulting from reliance on directory information.
         </p>
       </main>

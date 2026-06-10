@@ -40,7 +40,7 @@ async function geocode(address, fallbackName) {
     const url = `https://nominatim.openstreetmap.org/search?q=${q}&format=json&limit=1&countrycodes=ph`;
     const res = await fetch(url, {
       headers: {
-        "User-Agent": "VetEmergency.ph/1.0 (local dev; geocoding for vet directory)",
+        "User-Agent": "Vet247PH/1.0 (local dev; geocoding for vet directory)",
       },
     });
     if (!res.ok) throw new Error(`Nominatim ${res.status}`);

@@ -2,10 +2,11 @@ import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { SiteHeader } from "@/components/site-header";
+import { SITE_NAME } from "@/lib/brand";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "For Clinics | VetEmergency.ph",
+  title: `For Clinics | ${SITE_NAME}`,
   description: "Join the Vet-Anchor Program and manage your emergency clinic profile.",
 };
 

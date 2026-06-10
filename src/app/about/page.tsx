@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { SiteHeader } from "@/components/site-header";
+import { SITE_NAME } from "@/lib/brand";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About | VetEmergency.ph",
-  description: "About VetEmergency.ph — trusted emergency veterinary discovery in the Philippines.",
+  title: `About | ${SITE_NAME}`,
+  description: `About ${SITE_NAME} — trusted emergency veterinary discovery in the Philippines.`,
 };
 
 export default function AboutPage() {
@@ -14,7 +15,7 @@ export default function AboutPage() {
       <SiteHeader />
       <main className="mx-auto max-w-2xl px-4 py-12 space-y-6">
         <h1 className="font-display text-3xl font-extrabold">
-          About <span className="text-gradient-brand">VetEmergency.ph</span>
+          About <span className="text-gradient-brand">{SITE_NAME}</span>
         </h1>
         <p className="text-muted-foreground">
           We help Filipino pet owners find emergency veterinary care within

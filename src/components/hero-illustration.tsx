@@ -1,7 +1,7 @@
 export function HeroIllustration() {
   return (
     <div
-      className="relative mx-auto w-full max-w-[280px] sm:max-w-none"
+      className="relative mx-auto w-full max-w-[280px] overflow-hidden sm:max-w-none"
       aria-hidden
     >
       <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-primary/20 via-chart-2/10 to-transparent blur-2xl" />

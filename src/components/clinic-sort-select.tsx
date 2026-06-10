@@ -25,14 +25,14 @@ export function ClinicSortSelect({
   disabled,
 }: ClinicSortSelectProps) {
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex min-w-0 flex-1 items-center gap-2 sm:flex-none">
       <ArrowDownUp className="size-3.5 shrink-0 text-muted-foreground" />
       <Select
         value={value}
         onValueChange={(v) => onChange(v as ClinicSortOption)}
         disabled={disabled}
       >
-        <SelectTrigger size="sm" className="h-8 min-w-[140px] rounded-full text-xs">
+        <SelectTrigger size="sm" className="h-8 w-full min-w-0 max-w-full rounded-full text-xs sm:w-fit sm:min-w-[140px]">
           <SelectValue placeholder="Sort by" />
         </SelectTrigger>
         <SelectContent align="end">

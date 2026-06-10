@@ -15,7 +15,6 @@ export function DirectionsButtons({
   compact = false,
 }: DirectionsButtonsProps) {
   const size = compact ? "sm" : "lg";
-  const extra = compact ? "" : "h-11";
 
   return (
     <>
@@ -23,7 +22,11 @@ export function DirectionsButtons({
         href={buildGoogleMapsDirectionsUrl(lat, lng)}
         target="_blank"
         rel="noopener noreferrer"
-        className={cn(buttonVariants({ variant: "outline", size }), "gap-1.5", extra)}
+        className={cn(
+          buttonVariants({ variant: "outline", size }),
+          "gap-1.5",
+          compact ? "w-full justify-center sm:w-auto" : "h-11"
+        )}
       >
         <MapPin className="size-4" />
         Maps
@@ -32,7 +35,11 @@ export function DirectionsButtons({
         href={buildWazeUrl(lat, lng)}
         target="_blank"
         rel="noopener noreferrer"
-        className={cn(buttonVariants({ variant: "outline", size }), "gap-1.5", extra)}
+        className={cn(
+          buttonVariants({ variant: "outline", size }),
+          "gap-1.5",
+          compact ? "w-full justify-center sm:w-auto" : "h-11"
+        )}
       >
         <Navigation className="size-4" />
         Waze

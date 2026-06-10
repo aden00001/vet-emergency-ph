@@ -1,4 +1,4 @@
-# VetEmergency.ph — QA Checklist (MVP Launch)
+# Vet247PH — QA Checklist (MVP Launch)
 
 ## Search & Discovery
 - [ ] Home page loads and shows clinics near Metro Manila default coords

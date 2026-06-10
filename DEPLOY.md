@@ -92,7 +92,7 @@ Configure Auth redirect URLs:
 
 ## 4. Custom domain
 
-Vercel → Project → Domains → add `vetemergency.ph` and configure DNS at your registrar.
+Vercel → Project → Domains → add your custom domain when ready and configure DNS at your registrar. Until then, use `https://vet-emergency-ph.vercel.app`.
 
 Update Supabase Auth redirect URLs with production domain.
 

@@ -1,4 +1,4 @@
-# VetEmergency.ph
+# Vet247PH
 
 Real-time veterinary emergency discovery platform for the Philippines. Helps pet owners find, verify, and contact emergency-capable veterinary clinics in Metro Manila and beyond.
 
@@ -124,4 +124,4 @@ supabase functions deploy confidence-score-refresh
 
 ## Disclaimer
 
-VetEmergency.ph is an informational directory. Users should always contact clinics directly before traveling. See `/disclaimer` for full terms.
+Vet247PH is an informational directory. Users should always contact clinics directly before traveling. See `/disclaimer` for full terms.

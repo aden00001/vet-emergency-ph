@@ -69,11 +69,11 @@ export function ClinicCard({ clinic }: ClinicCardProps) {
           >
             {status.emoji} {status.label}
           </Badge>
-          <div className="flex w-full flex-wrap gap-2">
+          <div className="grid w-full grid-cols-2 gap-2 sm:flex sm:flex-wrap">
             <CallButton
               phone={clinic.phone}
               size="sm"
-              className="h-9 flex-1 min-w-[110px] gap-1.5 shadow-soft"
+              className="col-span-2 h-9 w-full gap-1.5 shadow-soft sm:col-span-1 sm:min-w-[110px] sm:flex-1"
             >
               <Phone className="size-4" />
               Call Now

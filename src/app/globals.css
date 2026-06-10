@@ -122,15 +122,20 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    @apply font-sans;
+    scroll-behavior: smooth;
+    overflow-x: clip;
+    max-width: 100%;
+  }
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "cv11", "ss01";
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
-  }
-  html {
-    @apply font-sans;
-    scroll-behavior: smooth;
+    overflow-x: clip;
+    max-width: 100%;
+    overscroll-behavior-x: none;
   }
   h1,
   h2,
@@ -186,16 +191,23 @@
 
   .card-hover {
     transition:
-      transform 0.2s ease,
       box-shadow 0.2s ease,
       border-color 0.2s ease;
   }
-  .card-hover:hover {
-    transform: translateY(-2px);
-    box-shadow:
-      0 4px 8px color-mix(in oklch, var(--foreground) 6%, transparent),
-      0 16px 40px -16px color-mix(in oklch, var(--primary) 38%, transparent);
-    border-color: color-mix(in oklch, var(--primary) 35%, var(--border));
+  @media (hover: hover) and (pointer: fine) {
+    .card-hover {
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-2px);
+      box-shadow:
+        0 4px 8px color-mix(in oklch, var(--foreground) 6%, transparent),
+        0 16px 40px -16px color-mix(in oklch, var(--primary) 38%, transparent);
+      border-color: color-mix(in oklch, var(--primary) 35%, var(--border));
+    }
   }
 
   .drop-shadow-soft {

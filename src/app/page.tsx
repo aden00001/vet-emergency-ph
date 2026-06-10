@@ -18,6 +18,7 @@ import {
   DEFAULT_PRESET_ID,
   getPresetById,
 } from "@/lib/location-presets";
+import { SITE_NAME } from "@/lib/brand";
 import type { NearbyClinic, TriageCategory } from "@/types/database";
 
 const defaultPreset = getPresetById(DEFAULT_PRESET_ID)!;
@@ -78,14 +79,14 @@ export default function HomePage() {
   const shownCount = clinics.length;
 
   return (
-    <div className="app-backdrop flex min-h-full flex-col">
-      <SiteHeader />
-      <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-8 space-y-7">
-        <section className="grid items-center gap-8 sm:grid-cols-[1fr_minmax(200px,240px)] sm:gap-6">
-          <div className="space-y-3 text-center sm:text-left">
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/8 px-3 py-1 text-xs font-semibold text-primary">
-              <span className="relative flex size-2">
-                <span className="absolute inline-flex size-full animate-ping rounded-full bg-primary/70" />
+    <div className="app-backdrop flex min-h-full flex-col overflow-x-clip">
+      <SiteHeader showUtilityLinks={false} />
+      <main className="mx-auto w-full min-w-0 max-w-3xl flex-1 px-4 py-8 space-y-7">
+        <section className="grid items-center gap-8 overflow-hidden sm:grid-cols-[1fr_minmax(200px,240px)] sm:gap-6">
+          <div className="min-w-0 space-y-3 text-center sm:text-left">
+            <span className="inline-flex max-w-full items-center gap-1.5 rounded-full border border-primary/20 bg-primary/8 px-3 py-1 text-xs font-semibold text-primary">
+              <span className="relative flex size-2 shrink-0 overflow-hidden rounded-full">
+                <span className="absolute inset-0 animate-ping rounded-full bg-primary/70" />
                 <span className="relative inline-flex size-2 rounded-full bg-primary" />
               </span>
               Live emergency directory · Philippines
@@ -102,7 +103,7 @@ export default function HomePage() {
           <HeroIllustration />
         </section>
 
-        <section className="glass shadow-soft space-y-5 rounded-2xl p-5">
+        <section className="glass shadow-soft min-w-0 space-y-5 overflow-hidden rounded-2xl p-5">
           <EmergencyTriage onSelect={setTriage} selected={triage} />
 
           <div className="h-px bg-border/70" />
@@ -138,8 +139,8 @@ export default function HomePage() {
         </section>
 
         {locationReady && !loading && !error && totalCount > 0 && (
-          <div className="flex flex-wrap items-center justify-between gap-3 px-1">
-            <div className="space-y-0.5">
+          <div className="flex min-w-0 flex-col gap-3 px-1 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+            <div className="min-w-0 space-y-0.5">
               <h2 className="font-display text-sm font-semibold text-muted-foreground">
                 {shownCount < totalCount
                   ? `Showing ${shownCount} of ${totalCount} clinics`
@@ -149,7 +150,7 @@ export default function HomePage() {
                 Near <span className="font-medium text-foreground">{location.label}</span>
               </p>
             </div>
-            <div className="flex flex-wrap items-center gap-2">
+            <div className="flex min-w-0 flex-wrap items-center gap-2">
               <ClinicSortSelect
                 value={sortBy}
                 onChange={setSortBy}
@@ -201,7 +202,7 @@ export default function HomePage() {
         </div>
 
         <p className="pb-6 text-center text-xs text-muted-foreground">
-          VetEmergency.ph is an informational directory.{" "}
+          {SITE_NAME} is an informational directory.{" "}
           <a href="/disclaimer" className="font-medium text-primary underline-offset-2 hover:underline">
             Read disclaimer
           </a>
