@@ -15,6 +15,11 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { createClient } from "@supabase/supabase-js";
 import { isHumanBiteCenter } from "./clinic-exclusions.mjs";
+import {
+  findMatchingRows,
+  getPlaceId,
+  pickKeeper,
+} from "./clinic-match.mjs";
 import { geocodeClinics } from "./geocode-lib.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -95,22 +100,69 @@ async function main() {
     await supabase.from("clinics").delete().neq("id", "00000000-0000-0000-0000-000000000000");
   }
 
-  const { data: existing } = await supabase
-    .from("clinics")
-    .select("id, name, latitude, longitude, emergency_capable, phone, image_url");
-  const existingByName = new Map(
-    (existing ?? []).map((c) => [c.name.toLowerCase(), c.id])
-  );
-  const existingRows = existing ?? [];
+  const existingRows = await fetchAllClinics(supabase);
 
-  function findByCoords(lat, lng) {
-    for (const row of existingRows) {
-      if (row.latitude == null || row.longitude == null) continue;
-      const dLat = Math.abs(row.latitude - lat);
-      const dLng = Math.abs(row.longitude - lng);
-      if (dLat < 0.0008 && dLng < 0.0008) return row.id;
+  async function removeDuplicateRows(keeperId, dupeIds) {
+    for (const dupeId of dupeIds) {
+      await supabase.from("verifications").update({ clinic_id: keeperId }).eq("clinic_id", dupeId);
+
+      const { data: dupeReviews } = await supabase
+        .from("clinic_reviews")
+        .select("id, user_id")
+        .eq("clinic_id", dupeId);
+      for (const review of dupeReviews ?? []) {
+        if (review.user_id) {
+          const { data: conflict } = await supabase
+            .from("clinic_reviews")
+            .select("id")
+            .eq("clinic_id", keeperId)
+            .eq("user_id", review.user_id)
+            .maybeSingle();
+          if (conflict) {
+            await supabase.from("clinic_reviews").delete().eq("id", review.id);
+            continue;
+          }
+        }
+        await supabase.from("clinic_reviews").update({ clinic_id: keeperId }).eq("id", review.id);
+      }
+
+      const { data: dupeClaims } = await supabase
+        .from("claim_requests")
+        .select("id, user_id")
+        .eq("clinic_id", dupeId);
+      for (const claim of dupeClaims ?? []) {
+        const { data: conflict } = await supabase
+          .from("claim_requests")
+          .select("id")
+          .eq("clinic_id", keeperId)
+          .eq("user_id", claim.user_id)
+          .maybeSingle();
+        if (conflict) {
+          await supabase.from("claim_requests").delete().eq("id", claim.id);
+          continue;
+        }
+        await supabase.from("claim_requests").update({ clinic_id: keeperId }).eq("id", claim.id);
+      }
+
+      const { error } = await supabase.from("clinics").delete().eq("id", dupeId);
+      if (error) console.error(`  Dedupe delete failed ${dupeId}: ${error.message}`);
+      else {
+        const idx = existingRows.findIndex((r) => r.id === dupeId);
+        if (idx !== -1) existingRows.splice(idx, 1);
+      }
     }
-    return null;
+  }
+
+  function findExistingMatches(clinic) {
+    const probe = {
+      name: clinic.name,
+      address: clinic.address || null,
+      latitude: clinic.latitude,
+      longitude: clinic.longitude,
+      google_place_id: clinic.google_place_id,
+      google_maps_url: clinic.google_maps_url,
+    };
+    return findMatchingRows(probe, existingRows);
   }
 
   function isBadPhone(phone) {
@@ -121,6 +173,7 @@ async function main() {
   let updated = 0;
   let skipped = 0;
   let excluded = 0;
+  let deduped = 0;
 
   for (const c of clinics) {
     if (isHumanBiteCenter(c.name, c.category)) {
@@ -160,10 +213,8 @@ async function main() {
     if (c.google_maps_url) row.google_maps_url = c.google_maps_url;
     if (c.image_url) row.image_url = c.image_url;
 
-    let existingId = existingByName.get(c.name.toLowerCase());
-    if (!existingId && (upsert || replace)) {
-      existingId = findByCoords(c.latitude, c.longitude);
-    }
+    const matches = findExistingMatches(c);
+    const existingId = matches.length ? pickKeeper(matches).id : null;
 
     if (existingId && (upsert || replace)) {
       const prev = existingRows.find((r) => r.id === existingId);
@@ -180,8 +231,14 @@ async function main() {
       if (error) console.error(`Update failed: ${c.name} — ${error.message}`);
       else {
         updated++;
-        existingByName.set(c.name.toLowerCase(), existingId);
-        if (prev) prev.name = c.name;
+        if (prev) {
+          Object.assign(prev, row, { id: existingId, latitude: c.latitude, longitude: c.longitude });
+        }
+        const dupeIds = matches.filter((r) => r.id !== existingId).map((r) => r.id);
+        if (dupeIds.length) {
+          await removeDuplicateRows(existingId, dupeIds);
+          deduped += dupeIds.length;
+        }
       }
       continue;
     }
@@ -208,14 +265,48 @@ async function main() {
     );
 
     inserted++;
-    existingByName.set(c.name.toLowerCase(), data.id);
+    existingRows.push({
+      id: data.id,
+      name: c.name,
+      address: row.address,
+      phone: row.phone,
+      latitude: c.latitude,
+      longitude: c.longitude,
+      emergency_capable: row.emergency_capable,
+      owner_verified: row.owner_verified,
+      image_url: row.image_url ?? null,
+      google_maps_url: row.google_maps_url ?? null,
+      google_place_id: c.google_place_id,
+    });
   }
 
   await supabase.rpc("refresh_all_confidence_scores");
 
   console.log(
-    `Import done: ${inserted} inserted, ${updated} updated, ${skipped} skipped, ${excluded} excluded (human bite centers)`
+    `Import done: ${inserted} inserted, ${updated} updated, ${skipped} skipped, ${deduped} DB dupes removed, ${excluded} excluded (human bite centers)`
   );
+}
+
+async function fetchAllClinics(supabase) {
+  const rows = [];
+  const pageSize = 1000;
+  let from = 0;
+  while (true) {
+    const { data, error } = await supabase
+      .from("clinics")
+      .select(
+        "id, name, address, latitude, longitude, emergency_capable, phone, image_url, google_maps_url, owner_verified, claimed_by, confidence_score"
+      )
+      .range(from, from + pageSize - 1);
+    if (error) throw error;
+    if (!data?.length) break;
+    for (const row of data) {
+      rows.push({ ...row, google_place_id: getPlaceId(row) });
+    }
+    if (data.length < pageSize) break;
+    from += pageSize;
+  }
+  return rows;
 }
 
 main().catch((err) => {

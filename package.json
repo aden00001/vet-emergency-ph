@@ -28,7 +28,9 @@
     "merge:clinics": "node scripts/merge-clinic-json.mjs",
     "scrape:google-maps-url": "node scripts/scrape-google-maps-url.mjs",
     "audit:clinics": "node scripts/audit-clinic-data.mjs --fix-report",
-    "purge:bite-clinics": "node scripts/purge-human-bite-clinics.mjs"
+    "purge:bite-clinics": "node scripts/purge-human-bite-clinics.mjs",
+    "dedupe:clinics": "node scripts/dedupe-clinics-db.mjs",
+    "dedupe:clinics:apply": "node scripts/dedupe-clinics-db.mjs --apply"
   },
   "dependencies": {
     "@base-ui/react": "^1.5.0",
