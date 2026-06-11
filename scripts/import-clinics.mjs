@@ -169,24 +169,7 @@ async function main() {
     return /^\+6314\d{7,9}$/.test(phone ?? "");
   }
 
-  let inserted = 0;
-  let updated = 0;
-  let skipped = 0;
-  let excluded = 0;
-  let deduped = 0;
-
-  for (const c of clinics) {
-    if (isHumanBiteCenter(c.name, c.category)) {
-      console.warn(`Excluded (human bite center): ${c.name}`);
-      excluded++;
-      continue;
-    }
-    if (c.latitude == null || c.longitude == null) {
-      console.warn(`Skipping (no coordinates): ${c.name}`);
-      skipped++;
-      continue;
-    }
-
+  function buildContactFields(c) {
     let phone = c.phone || "";
     if (!phone && c.contact_note) phone = c.contact_note;
     if (!phone) phone = "0000000000";
@@ -197,12 +180,85 @@ async function main() {
     if (c.phone_alt) {
       hours = hours ? `${hours} | Alt: ${c.phone_alt}` : `Alt: ${c.phone_alt}`;
     }
+    return { phone, hours };
+  }
+
+  let inserted = 0;
+  let updated = 0;
+  let skipped = 0;
+  let addressOnly = 0;
+  let excluded = 0;
+  let deduped = 0;
+
+  for (const c of clinics) {
+    if (isHumanBiteCenter(c.name, c.category)) {
+      console.warn(`Excluded (human bite center): ${c.name}`);
+      excluded++;
+      continue;
+    }
+
+    if (c.latitude == null || c.longitude == null) {
+      if (!upsert) {
+        console.warn(`Skipping (no coordinates): ${c.name}`);
+        skipped++;
+        continue;
+      }
+
+      const matches = findExistingMatches(c);
+      const existingId = matches.length ? pickKeeper(matches).id : null;
+      if (!existingId) {
+        console.warn(`Skipping (no coordinates, not in DB): ${c.name}`);
+        skipped++;
+        continue;
+      }
+
+      const { phone, hours } = buildContactFields(c);
+      const row = {
+        address: c.address || "Philippines",
+        phone,
+        hours,
+        location: null,
+        location_verified: false,
+        emergency_capable: c.emergency_capable === true,
+        services: c.services?.length ? c.services : ["trauma", "poisoning", "respiratory"],
+      };
+      if (c.google_maps_url) row.google_maps_url = c.google_maps_url;
+      if (c.image_url) row.image_url = c.image_url;
+
+      const prev = existingRows.find((r) => r.id === existingId);
+      if (prev?.emergency_capable && !row.emergency_capable) {
+        row.emergency_capable = true;
+      }
+      if (isBadPhone(row.phone) && prev?.phone && !isBadPhone(prev.phone)) {
+        row.phone = prev.phone;
+      }
+      if (!row.image_url && prev?.image_url) {
+        row.image_url = prev.image_url;
+      }
+
+      const { error } = await supabase.from("clinics").update(row).eq("id", existingId);
+      if (error) console.error(`Address-only update failed: ${c.name} — ${error.message}`);
+      else {
+        addressOnly++;
+        if (prev) {
+          Object.assign(prev, row, {
+            id: existingId,
+            latitude: null,
+            longitude: null,
+          });
+        }
+      }
+      continue;
+    }
+
+    const { phone, hours } = buildContactFields(c);
 
     const row = {
       name: c.name,
       address: c.address || "Metro Manila",
       phone,
       location: `SRID=4326;POINT(${c.longitude} ${c.latitude})`,
+      location_verified: c.location_verified !== false,
       emergency_capable: c.emergency_capable === true,
       owner_verified: c.owner_verified === true,
       services: c.services?.length ? c.services : ["trauma", "poisoning", "respiratory"],
@@ -283,7 +339,7 @@ async function main() {
   await supabase.rpc("refresh_all_confidence_scores");
 
   console.log(
-    `Import done: ${inserted} inserted, ${updated} updated, ${skipped} skipped, ${deduped} DB dupes removed, ${excluded} excluded (human bite centers)`
+    `Import done: ${inserted} inserted, ${updated} updated, ${addressOnly} address-only, ${skipped} skipped, ${deduped} DB dupes removed, ${excluded} excluded (human bite centers)`
   );
 }
 

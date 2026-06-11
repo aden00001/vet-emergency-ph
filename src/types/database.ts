@@ -21,8 +21,9 @@ export interface NearbyClinic {
   name: string;
   address: string;
   phone: string;
-  latitude: number;
-  longitude: number;
+  latitude: number | null;
+  longitude: number | null;
+  location_verified: boolean;
   emergency_capable: boolean;
   owner_verified: boolean;
   services: string[];

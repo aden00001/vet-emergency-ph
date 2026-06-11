@@ -10,6 +10,20 @@ export function roundCoord(value: number, decimals = 3): number {
   return Math.round(value * factor) / factor;
 }
 
+export function hasNavigableLocation(
+  lat: number | null | undefined,
+  lng: number | null | undefined,
+  locationVerified = true
+): boolean {
+  return (
+    locationVerified &&
+    lat != null &&
+    lng != null &&
+    Number.isFinite(lat) &&
+    Number.isFinite(lng)
+  );
+}
+
 export function buildGoogleMapsDirectionsUrl(
   lat: number,
   lng: number

@@ -5,7 +5,8 @@
  *   node scripts/geocode-clinics.mjs --file=data/clinics-merged.json
  *   node scripts/geocode-clinics.mjs --file=data/clinics-merged.json --google
  *   node scripts/geocode-clinics.mjs --file=data/clinics-merged.json --fix-bad --google
- *   node scripts/geocode-clinics.mjs --file=data/clinics-merged.json --fix-bad --google-only
+ *   node scripts/geocode-clinics.mjs --file=data/clinics-merged.json --locationiq
+ *   node scripts/geocode-clinics.mjs --file=data/clinics-merged.json --fix-bad --locationiq
  *   node scripts/geocode-clinics.mjs --file=data/clinics-merged.json --limit=75 --delay=3000
  *
  * Nominatim: ~2.5s between requests (strict 1 req/sec policy). Saves every 25 clinics.
@@ -30,6 +31,8 @@ const delayArg = args.find((a) => a.startsWith("--delay="));
 const limitArg = args.find((a) => a.startsWith("--limit="));
 const useGoogle = args.includes("--google") || args.includes("--google-only") || args.includes("--fix-bad");
 const googleOnly = args.includes("--google-only");
+const useLocationIq = args.includes("--locationiq") || args.includes("--locationiq-only");
+const locationIqOnly = args.includes("--locationiq-only");
 const fixBad = args.includes("--fix-bad");
 const limit = limitArg ? Number(limitArg.split("=")[1]) : Infinity;
 const inputPath =
@@ -83,6 +86,9 @@ async function main() {
   }
 
   const googleApiKey = process.env.GOOGLE_PLACES_API_KEY || null;
+  const locationIqApiKey = process.env.LOCATIONIQ_API_KEY || null;
+  const useLocationIqForRun = useLocationIq || Boolean(locationIqApiKey);
+
   if (googleOnly && !googleApiKey) {
     console.error(
       "Missing GOOGLE_PLACES_API_KEY in .env.local — required for --google-only.\n" +
@@ -90,9 +96,17 @@ async function main() {
     );
     process.exit(1);
   }
-  if (fixBad && !googleApiKey) {
+  if (locationIqOnly && !locationIqApiKey) {
+    console.error(
+      "Missing LOCATIONIQ_API_KEY in .env.local — required for --locationiq-only.\n" +
+        "Sign up free at https://locationiq.com/ and paste your access token."
+    );
+    process.exit(1);
+  }
+  if (fixBad && !googleApiKey && !locationIqApiKey) {
     console.warn(
-      "Warning: no GOOGLE_PLACES_API_KEY — CDO/Google Maps clinics may stay unfixed (Nominatim has poor PH coverage).\n"
+      "Warning: no GOOGLE_PLACES_API_KEY or LOCATIONIQ_API_KEY — bad pins may stay unfixed.\n" +
+        "Try: npm run resolve:coords (free Playwright) or add LOCATIONIQ_API_KEY to .env.local.\n"
     );
   }
   const useGoogleForRun = useGoogle || (fixBad && googleApiKey);
@@ -110,11 +124,23 @@ async function main() {
 
   console.log(`${withCoords} already geocoded, ${missing} remaining${bad ? `, ${bad} suspect` : ""}.`);
   if (googleOnly) {
-    console.log("Mode: Google Places only (skipping Nominatim).");
+    console.log("Mode: Google Places only (skipping Nominatim/LocationIQ).");
+  } else if (locationIqOnly) {
+    console.log("Mode: LocationIQ only (~5k free requests/day).");
   } else if (fixBad) {
-    console.log("Mode: re-geocode bad pins (Google Place Details when available, else validated Nominatim).");
+    console.log(
+      "Mode: re-geocode bad pins" +
+        (useGoogleForRun ? " (Google when place_id present)" : "") +
+        (useLocationIqForRun ? " + LocationIQ" : "") +
+        (useLocationIqForRun || useGoogleForRun ? "" : ", else validated Nominatim") +
+        "."
+    );
   } else {
-    console.log(`Mode: Nominatim (${minIntervalMs}ms between requests)${useGoogleForRun ? " + Google fallback" : ""}.`);
+    console.log(
+      `Mode: ${useLocationIqForRun && locationIqApiKey ? "LocationIQ-first" : "Nominatim"} (${minIntervalMs}ms between requests)` +
+        `${useLocationIqForRun && locationIqApiKey ? "" : useLocationIqForRun ? " + LocationIQ fallback" : ""}` +
+        `${useGoogleForRun ? " + Google fallback" : ""}.`
+    );
     console.log("Plus codes (e.g. VV26+M8V) are decoded locally when possible.");
     console.log("If you see 429 errors, stop, wait 15 minutes, and re-run the same command.");
   }
@@ -126,8 +152,10 @@ async function main() {
   try {
     const stats = await geocodeClinics(clinics, {
       googleApiKey: useGoogleForRun ? googleApiKey : undefined,
+      locationIqApiKey: useLocationIqForRun ? locationIqApiKey : undefined,
       googleOnly,
-      useNominatim: !googleOnly,
+      useNominatim: !googleOnly && !locationIqOnly,
+      preferLocationIq: Boolean(locationIqApiKey) && (useLocationIq || locationIqOnly),
       fixBad,
       minIntervalMs,
       limit,
@@ -137,7 +165,12 @@ async function main() {
           process.stdout.write(`Geocoding: ${label} … `);
         } else if (phase === "ok") {
           const tag = result.precision === "city" ? " (city-level)" : "";
-          const src = result.source === "google_places" ? " [Google]" : "";
+          const src =
+            result.source === "google_places"
+              ? " [Google]"
+              : result.source === "locationiq"
+                ? " [LocationIQ]"
+                : "";
           console.log(`${result.latitude}, ${result.longitude}${tag}${src}`);
         } else if (phase === "rate_limit") {
           console.log(`\n  ⏳ Nominatim 429 — waiting ${Math.round(waitMs / 1000)}s (attempt ${attempt})…`);
@@ -158,7 +191,7 @@ async function main() {
     const stillMissing = clinics.length - finalWithCoords;
 
     console.log(
-      `\nDone: ${stats.geocoded} geocoded (${stats.googleFilled} via Google), ${stats.failed} failed, ${stats.skipped} skipped${stats.cleared ? `, ${stats.cleared} bad coords cleared` : ""}`
+      `\nDone: ${stats.geocoded} geocoded (${stats.googleFilled} via Google, ${stats.locationIqFilled ?? 0} via LocationIQ), ${stats.failed} failed, ${stats.skipped} skipped${stats.cleared ? `, ${stats.cleared} bad coords cleared` : ""}`
     );
     if (stats.rateLimitPauses) {
       console.log(`Nominatim rate-limit pauses: ${stats.rateLimitPauses}`);
@@ -166,7 +199,7 @@ async function main() {
     console.log(`${finalWithCoords} / ${clinics.length} clinics now have coordinates`);
     if (stillMissing) {
       console.log(
-        `${stillMissing} still missing — try: npm run geocode:merged:google-only (needs GOOGLE_PLACES_API_KEY)`
+        `${stillMissing} still missing — try: npm run geocode:merged:locationiq or npm run resolve:coords`
       );
     }
     console.log(`Updated ${inputPath}`);

@@ -12,7 +12,7 @@ import { ReviewSection } from "@/components/review-section";
 import { SiteHeader } from "@/components/site-header";
 import { ClaimClinicButton } from "@/components/claim-clinic-button";
 import { createClient } from "@/lib/supabase/server";
-import { formatDistance } from "@/lib/geo";
+import { formatDistance, hasNavigableLocation } from "@/lib/geo";
 import { CallButton } from "@/components/call-button";
 import { SITE_NAME } from "@/lib/brand";
 import { STATUS_CONFIG } from "@/lib/status";
@@ -114,11 +114,19 @@ export default async function ClinicDetailPage({ params }: PageProps) {
       streetAddress: clinic.address,
       addressCountry: "PH",
     },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: clinic.latitude,
-      longitude: clinic.longitude,
-    },
+    ...(hasNavigableLocation(
+      clinic.latitude,
+      clinic.longitude,
+      clinic.location_verified ?? true
+    )
+      ? {
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: clinic.latitude,
+            longitude: clinic.longitude,
+          },
+        }
+      : {}),
     telephone: clinic.phone,
     ...(reviewSummary.review_count > 0 && reviewSummary.average_rating
       ? {
@@ -208,6 +216,7 @@ export default async function ClinicDetailPage({ params }: PageProps) {
               <DirectionsButtons
                 lat={clinic.latitude}
                 lng={clinic.longitude}
+                locationVerified={clinic.location_verified ?? true}
               />
             </div>
             {!clinic.claimed_by && (

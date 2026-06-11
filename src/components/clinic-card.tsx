@@ -81,6 +81,7 @@ export function ClinicCard({ clinic }: ClinicCardProps) {
             <DirectionsButtons
               lat={clinic.latitude}
               lng={clinic.longitude}
+              locationVerified={clinic.location_verified}
               compact
             />
           </div>

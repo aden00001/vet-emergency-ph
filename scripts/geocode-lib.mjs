@@ -1,6 +1,6 @@
 /**
  * Geocode clinic addresses via Nominatim (OpenStreetMap) with fallbacks.
- * Optional Google Places lookup by place_id when Nominatim fails or is skipped.
+ * Optional LocationIQ (free tier) and Google Places lookup by place_id.
  *
  * Nominatim usage policy: max 1 request/second. We enforce a global gap between calls.
  */
@@ -16,6 +16,7 @@ const PLUS_CODE_RE = /[23456789CFGHJMPQRVWX]{4,}\+[23456789CFGHJMPQRVWX]{2,}/i;
 const PLUS_CODE_LEAD_RE = /^([23456789CFGHJMPQRVWX]{4,}\+[23456789CFGHJMPQRVWX]{2,})/i;
 
 let lastNominatimAt = 0;
+let lastLocationIqAt = 0;
 
 export function sanitizeAddress(address) {
   let a = (address || "").trim();
@@ -128,6 +129,7 @@ export function clearGeocodeFields(clinic) {
   delete clinic.geocoded_from;
   delete clinic.geocode_precision;
   delete clinic.geocode_source;
+  clinic.location_verified = false;
 }
 
 export function decodePlusCode(code, refLat = null, refLng = null) {
@@ -219,6 +221,97 @@ export async function geocodeQuery(query, options = {}) {
   };
 }
 
+async function waitForLocationIqSlot(minIntervalMs = 550) {
+  const elapsed = Date.now() - lastLocationIqAt;
+  if (elapsed < minIntervalMs) {
+    await sleep(minIntervalMs - elapsed);
+  }
+}
+
+function precisionFromLocationIq(query, hit) {
+  const cityTypes = new Set([
+    "city",
+    "town",
+    "village",
+    "municipality",
+    "county",
+    "state",
+    "administrative",
+  ]);
+  if (cityTypes.has(hit.type) || cityTypes.has(hit.addresstype)) return "city";
+  return query.split(",").length <= 3 ? "city" : "address";
+}
+
+/** LocationIQ forward geocode — free tier ~5k/day at locationiq.com */
+export async function locationIqGeocodeQuery(query, apiKey, options = {}) {
+  if (!apiKey || !query) return null;
+
+  const maxAttempts = 4;
+  const minIntervalMs = options.minIntervalMs ?? 550;
+
+  for (let attempt = 0; attempt < maxAttempts; attempt++) {
+    await waitForLocationIqSlot(minIntervalMs);
+    lastLocationIqAt = Date.now();
+
+    const url = new URL("https://us1.locationiq.com/v1/search");
+    url.searchParams.set("key", apiKey);
+    url.searchParams.set("q", query);
+    url.searchParams.set("format", "json");
+    url.searchParams.set("limit", "1");
+    url.searchParams.set("countrycodes", "ph");
+
+    const res = await fetch(url, {
+      headers: { Accept: "application/json" },
+    });
+
+    if (res.status === 429) {
+      const waitMs = Math.min(60_000, 5000 * (attempt + 1));
+      options.onRateLimit?.(waitMs, attempt + 1);
+      await sleep(waitMs);
+      continue;
+    }
+
+    if (!res.ok) {
+      const body = await res.text();
+      throw new Error(`LocationIQ ${res.status}${body ? `: ${body.slice(0, 120)}` : ""}`);
+    }
+
+    const results = await res.json();
+    if (!Array.isArray(results) || !results.length) return null;
+
+    const hit = results[0];
+    return {
+      latitude: parseFloat(hit.lat),
+      longitude: parseFloat(hit.lon),
+      display_name: hit.display_name,
+      precision: precisionFromLocationIq(query, hit),
+      source: "locationiq",
+    };
+  }
+
+  throw new Error("LocationIQ 429 (daily or per-second limit — wait and re-run)");
+}
+
+async function geocodeQueryWithProviders(query, options = {}) {
+  const { locationIqApiKey, useNominatim = true, preferLocationIq = false } = options;
+  const providers = [];
+
+  if (locationIqApiKey && preferLocationIq) {
+    providers.push(() => locationIqGeocodeQuery(query, locationIqApiKey, options));
+    if (useNominatim) providers.push(() => geocodeQuery(query, options));
+  } else {
+    if (useNominatim) providers.push(() => geocodeQuery(query, options));
+    if (locationIqApiKey) providers.push(() => locationIqGeocodeQuery(query, locationIqApiKey, options));
+  }
+
+  for (const run of providers) {
+    const result = await run();
+    if (result) return result;
+  }
+
+  return null;
+}
+
 function coordsFromUrl(clinic) {
   const coords = extractCoordsFromUrl(clinic.google_maps_url);
   if (!coords) return null;
@@ -232,9 +325,12 @@ function coordsFromUrl(clinic) {
 
 export async function geocodeClinic(clinic, options = {}) {
   const rawAddress = (clinic.address || "").trim();
-  const nominatimOpts = {
+  const providerOpts = {
     minIntervalMs: options.minIntervalMs ?? 2500,
     onRateLimit: options.onRateLimit,
+    locationIqApiKey: options.locationIqApiKey,
+    useNominatim: options.useNominatim !== false,
+    preferLocationIq: options.preferLocationIq === true,
   };
   const googleApiKey = options.googleApiKey;
 
@@ -254,7 +350,8 @@ export async function geocodeClinic(clinic, options = {}) {
 
     const { city, province } = parseAddressParts(rawAddress);
     if (city && province) {
-      const cityRef = await geocodeQuery(`${city}, ${province}, Philippines`, nominatimOpts);
+      const cityQuery = `${city}, ${province}, Philippines`;
+      const cityRef = await geocodeQueryWithProviders(cityQuery, providerOpts);
       if (cityRef && isAcceptableGeocodeResult(clinic, cityRef)) {
         const decoded = decodePlusCode(plusCode, cityRef.latitude, cityRef.longitude);
         if (decoded) {
@@ -268,7 +365,7 @@ export async function geocodeClinic(clinic, options = {}) {
 
   const queries = geocodeQueries(clinic, options.maxQueries ?? 3);
   for (const query of queries) {
-    const result = await geocodeQuery(query, nominatimOpts);
+    const result = await geocodeQueryWithProviders(query, providerOpts);
     if (result && isAcceptableGeocodeResult(clinic, result)) return result;
   }
 
@@ -305,8 +402,10 @@ export async function geocodeClinics(clinics, options = {}) {
   const {
     onProgress,
     googleApiKey,
+    locationIqApiKey,
     saveEvery,
     useNominatim = true,
+    preferLocationIq = false,
     googleOnly = false,
     minIntervalMs = 2500,
     maxQueries = 3,
@@ -320,15 +419,19 @@ export async function geocodeClinics(clinics, options = {}) {
   let failed = 0;
   let skipped = 0;
   let googleFilled = 0;
+  let locationIqFilled = 0;
   let cleared = 0;
   let processed = 0;
   let attempted = 0;
   let rateLimitPauses = 0;
 
-  const nominatimOpts = {
+  const providerOpts = {
     minIntervalMs,
     maxQueries,
     googleApiKey,
+    locationIqApiKey,
+    useNominatim,
+    preferLocationIq,
     onRateLimit(waitMs, attempt) {
       rateLimitPauses++;
       onProgress?.({ phase: "rate_limit", waitMs, attempt });
@@ -374,9 +477,10 @@ export async function geocodeClinics(clinics, options = {}) {
           if (result) googleFilled++;
           await sleep(googleDelayMs);
         }
-      } else if (!googleOnly && useNominatim) {
-        result = await geocodeClinic(clinic, nominatimOpts);
+      } else if (!googleOnly && (useNominatim || locationIqApiKey)) {
+        result = await geocodeClinic(clinic, providerOpts);
         if (result?.source === "google_places") googleFilled++;
+        if (result?.source === "locationiq") locationIqFilled++;
       }
 
       if (!result && googleApiKey) {
@@ -420,12 +524,12 @@ export async function geocodeClinics(clinics, options = {}) {
       onProgress?.({ phase: "save", clinic, label, processed });
     }
 
-    if (!googleOnly && useNominatim) {
-      await sleep(minIntervalMs);
+    if (!googleOnly && (useNominatim || locationIqApiKey)) {
+      await sleep(locationIqApiKey && preferLocationIq ? 550 : minIntervalMs);
     } else if (googleApiKey) {
       await sleep(googleDelayMs);
     }
   }
 
-  return { geocoded, failed, skipped, googleFilled, cleared, rateLimitPauses };
+  return { geocoded, failed, skipped, googleFilled, locationIqFilled, cleared, rateLimitPauses };
 }
