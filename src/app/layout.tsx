@@ -3,6 +3,7 @@ import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Toaster } from "@/components/ui/sonner";
+import { SiteFooter } from "@/components/site-footer";
 import { SITE_NAME, SITE_TAGLINE } from "@/lib/brand";
 import "./globals.css";
 
@@ -42,7 +43,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${inter.variable} ${jakarta.variable}`}
     >
-      <body className="min-h-full antialiased font-sans">
+      <body className="flex min-h-full flex-col antialiased font-sans">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -50,7 +51,8 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <TooltipProvider>
-            {children}
+            <div className="flex min-h-full flex-1 flex-col">{children}</div>
+            <SiteFooter />
             <Toaster richColors position="top-center" />
           </TooltipProvider>
         </ThemeProvider>

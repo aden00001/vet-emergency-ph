@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
+import { ContactEmail } from "@/components/contact-email";
 import { SiteHeader } from "@/components/site-header";
 import { SITE_NAME } from "@/lib/brand";
 import type { Metadata } from "next";
@@ -24,9 +25,13 @@ export default function AboutPage() {
           in the Philippines.
         </p>
         <p className="text-muted-foreground">
-          Our north star is the Emergency Match Success Rate: the percentage of
-          users who successfully connect with a clinic capable of handling their
-          emergency.
+          This directory is free to use — no paywall, no clinic signup required.
+          Listings are maintained and updated based on public sources and community
+          reports.
+        </p>
+        <p className="text-muted-foreground">
+          Spotted wrong hours, a bad pin, or a missing clinic? Email us at{" "}
+          <ContactEmail />.
         </p>
         <Link href="/" className={buttonVariants({ size: "lg", className: "shadow-soft" })}>
           Find emergency care

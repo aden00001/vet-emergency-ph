@@ -142,7 +142,7 @@ export default function AdminPage() {
         <div>
           <h1 className="text-2xl font-bold">Clinic Admin</h1>
           <p className="text-muted-foreground text-sm">
-            Passwordless management for verified clinic owners.{" "}
+            Owner tools (not linked in the public site).{" "}
             <Link href="/admin/merge" className="text-primary hover:underline">
               Merge clinic JSON
             </Link>
@@ -188,8 +188,8 @@ export default function AdminPage() {
             {clinics.length === 0 ? (
               <Card>
                 <CardContent className="pt-6 text-sm text-muted-foreground">
-                  No clinics linked to your account yet. Claim a clinic from its
-                  detail page — our team will review and approve your claim.
+                  No clinics linked to this account. Assign <code>claimed_by</code> in
+                  Supabase or use the merge import tools.
                 </CardContent>
               </Card>
             ) : (

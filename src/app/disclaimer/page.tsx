@@ -1,3 +1,4 @@
+import { ContactEmail } from "@/components/contact-email";
 import { SiteHeader } from "@/components/site-header";
 import { SITE_NAME } from "@/lib/brand";
 import type { Metadata } from "next";
@@ -35,6 +36,11 @@ export default function DisclaimerPage() {
           You should always contact a clinic directly by phone before traveling,
           especially during an emergency. {SITE_NAME} is not liable for
           outcomes resulting from reliance on directory information.
+        </p>
+        <h2>Contact</h2>
+        <p>
+          For listing corrections or general feedback, email{" "}
+          <ContactEmail />.
         </p>
       </main>
     </div>

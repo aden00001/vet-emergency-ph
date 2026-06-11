@@ -15,7 +15,6 @@ import { HeroIllustration } from "@/components/hero-illustration";
 import { SiteHeader } from "@/components/site-header";
 import type { ClinicSortOption } from "@/lib/clinic-sort";
 import { PH_CENTER } from "@/lib/location-presets";
-import { SITE_NAME } from "@/lib/brand";
 import type { NearbyClinic, TriageCategory } from "@/types/database";
 
 export default function HomePage() {
@@ -77,7 +76,7 @@ export default function HomePage() {
 
   return (
     <div className="app-backdrop flex min-h-full flex-col overflow-x-clip">
-      <SiteHeader showUtilityLinks={false} />
+      <SiteHeader />
       <main className="mx-auto w-full min-w-0 max-w-3xl flex-1 px-4 py-8 space-y-7">
         <section className="grid items-center gap-8 overflow-hidden sm:grid-cols-[1fr_minmax(200px,240px)] sm:gap-6">
           <div className="min-w-0 space-y-3 text-center sm:text-left">
@@ -211,21 +210,6 @@ export default function HomePage() {
             ))}
         </div>
 
-        <p className="pb-6 text-center text-xs text-muted-foreground">
-          {SITE_NAME} is an informational directory. Powered by{" "}
-          <a
-            href="https://kennzchoice.online"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-medium text-primary underline-offset-2 hover:underline"
-          >
-            Kennz Choice
-          </a>
-          .{" "}
-          <a href="/disclaimer" className="font-medium text-primary underline-offset-2 hover:underline">
-            Read disclaimer
-          </a>
-        </p>
       </main>
     </div>
   );

@@ -10,7 +10,6 @@ import { DirectionsButtons } from "@/components/directions-buttons";
 import { PulseForm } from "@/components/pulse-form";
 import { ReviewSection } from "@/components/review-section";
 import { SiteHeader } from "@/components/site-header";
-import { ClaimClinicButton } from "@/components/claim-clinic-button";
 import { createClient } from "@/lib/supabase/server";
 import { formatDistance, hasNavigableLocation } from "@/lib/geo";
 import { CallButton } from "@/components/call-button";
@@ -219,9 +218,6 @@ export default async function ClinicDetailPage({ params }: PageProps) {
                 locationVerified={clinic.location_verified ?? true}
               />
             </div>
-            {!clinic.claimed_by && (
-              <ClaimClinicButton clinicId={clinic.id} clinicName={clinic.name} />
-            )}
           </CardContent>
         </Card>
 
