@@ -236,4 +236,29 @@
       animation: none;
     }
   }
+
+  @keyframes geocoding-marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  .geocoding-marquee-track {
+    animation: geocoding-marquee 28s linear infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .geocoding-marquee {
+      overflow-x: auto;
+    }
+
+    .geocoding-marquee-track {
+      animation: none;
+      width: auto;
+      padding-right: 1rem;
+    }
+  }
 }

@@ -4,7 +4,8 @@
  * Usage:
  *   node scripts/geocode-clinics.mjs --file=data/clinics-merged.json
  *   node scripts/geocode-clinics.mjs --file=data/clinics-merged.json --google
- *   node scripts/geocode-clinics.mjs --file=data/clinics-merged.json --google-only
+ *   node scripts/geocode-clinics.mjs --file=data/clinics-merged.json --fix-bad --google
+ *   node scripts/geocode-clinics.mjs --file=data/clinics-merged.json --fix-bad --google-only
  *   node scripts/geocode-clinics.mjs --file=data/clinics-merged.json --limit=75 --delay=3000
  *
  * Nominatim: ~2.5s between requests (strict 1 req/sec policy). Saves every 25 clinics.
@@ -15,7 +16,7 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
-import { geocodeClinics } from "./geocode-lib.mjs";
+import { geocodeClinics, isBadGeocode } from "./geocode-lib.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
@@ -27,8 +28,9 @@ const args = process.argv.slice(2);
 const fileArg = args.find((a) => a.startsWith("--file="));
 const delayArg = args.find((a) => a.startsWith("--delay="));
 const limitArg = args.find((a) => a.startsWith("--limit="));
-const useGoogle = args.includes("--google") || args.includes("--google-only");
+const useGoogle = args.includes("--google") || args.includes("--google-only") || args.includes("--fix-bad");
 const googleOnly = args.includes("--google-only");
+const fixBad = args.includes("--fix-bad");
 const limit = limitArg ? Number(limitArg.split("=")[1]) : Infinity;
 const inputPath =
   fileArg?.split("=")[1] ??
@@ -72,14 +74,15 @@ async function main() {
   }
 
   const missing = clinics.filter((c) => c.latitude == null || c.longitude == null).length;
+  const bad = clinics.filter((c) => isBadGeocode(c)).length;
   const withCoords = clinics.length - missing;
 
-  if (!missing) {
+  if (!missing && !fixBad) {
     console.log("All clinics already have coordinates.");
     return;
   }
 
-  const googleApiKey = useGoogle ? process.env.GOOGLE_PLACES_API_KEY : null;
+  const googleApiKey = process.env.GOOGLE_PLACES_API_KEY || null;
   if (googleOnly && !googleApiKey) {
     console.error(
       "Missing GOOGLE_PLACES_API_KEY in .env.local — required for --google-only.\n" +
@@ -87,12 +90,31 @@ async function main() {
     );
     process.exit(1);
   }
+  if (fixBad && !googleApiKey) {
+    console.warn(
+      "Warning: no GOOGLE_PLACES_API_KEY — CDO/Google Maps clinics may stay unfixed (Nominatim has poor PH coverage).\n"
+    );
+  }
+  const useGoogleForRun = useGoogle || (fixBad && googleApiKey);
 
-  console.log(`${withCoords} already geocoded, ${missing} remaining.`);
+  if (fixBad) {
+    console.log(`Fix-bad mode: ${bad} clinic(s) with suspect coordinates will be re-geocoded.`);
+    if (!bad) {
+      console.log("No bad geocodes detected.");
+      return;
+    }
+  } else if (!missing) {
+    console.log("All clinics already have coordinates.");
+    return;
+  }
+
+  console.log(`${withCoords} already geocoded, ${missing} remaining${bad ? `, ${bad} suspect` : ""}.`);
   if (googleOnly) {
     console.log("Mode: Google Places only (skipping Nominatim).");
+  } else if (fixBad) {
+    console.log("Mode: re-geocode bad pins (Google Place Details when available, else validated Nominatim).");
   } else {
-    console.log(`Mode: Nominatim (${minIntervalMs}ms between requests)${googleApiKey ? " + Google fallback" : ""}.`);
+    console.log(`Mode: Nominatim (${minIntervalMs}ms between requests)${useGoogleForRun ? " + Google fallback" : ""}.`);
     console.log("Plus codes (e.g. VV26+M8V) are decoded locally when possible.");
     console.log("If you see 429 errors, stop, wait 15 minutes, and re-run the same command.");
   }
@@ -103,9 +125,10 @@ async function main() {
 
   try {
     const stats = await geocodeClinics(clinics, {
-      googleApiKey: googleApiKey || undefined,
+      googleApiKey: useGoogleForRun ? googleApiKey : undefined,
       googleOnly,
       useNominatim: !googleOnly,
+      fixBad,
       minIntervalMs,
       limit,
       saveEvery: 25,
@@ -135,7 +158,7 @@ async function main() {
     const stillMissing = clinics.length - finalWithCoords;
 
     console.log(
-      `\nDone: ${stats.geocoded} geocoded (${stats.googleFilled} via Google), ${stats.failed} failed, ${stats.skipped} already had coordinates`
+      `\nDone: ${stats.geocoded} geocoded (${stats.googleFilled} via Google), ${stats.failed} failed, ${stats.skipped} skipped${stats.cleared ? `, ${stats.cleared} bad coords cleared` : ""}`
     );
     if (stats.rateLimitPauses) {
       console.log(`Nominatim rate-limit pauses: ${stats.rateLimitPauses}`);

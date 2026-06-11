@@ -12,6 +12,7 @@ import {
 import { EmergencyTriage } from "@/components/emergency-triage";
 import { LocationPicker, type LocationPickerValue } from "@/components/location-picker";
 import { HeroIllustration } from "@/components/hero-illustration";
+import { GeocodingWarningBanner } from "@/components/geocoding-warning-banner";
 import { SiteHeader } from "@/components/site-header";
 import type { ClinicSortOption } from "@/lib/clinic-sort";
 import { PH_CENTER } from "@/lib/location-presets";
@@ -77,6 +78,7 @@ export default function HomePage() {
 
   return (
     <div className="app-backdrop flex min-h-full flex-col overflow-x-clip">
+      <GeocodingWarningBanner />
       <SiteHeader showUtilityLinks={false} />
       <main className="mx-auto w-full min-w-0 max-w-3xl flex-1 px-4 py-8 space-y-7">
         <section className="grid items-center gap-8 overflow-hidden sm:grid-cols-[1fr_minmax(200px,240px)] sm:gap-6">

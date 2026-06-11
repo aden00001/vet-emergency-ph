@@ -46,6 +46,90 @@ export function extractPlusCode(address) {
   return m ? m[1].toUpperCase() : null;
 }
 
+export function extractCoordsFromUrl(url) {
+  const m = url?.match(/!3d(-?\d+\.?\d*)!4d(-?\d+\.?\d*)/);
+  if (m) return { latitude: parseFloat(m[1]), longitude: parseFloat(m[2]) };
+  const at = url?.match(/@(-?\d+\.?\d*),(-?\d+\.?\d*)/);
+  if (at) return { latitude: parseFloat(at[1]), longitude: parseFloat(at[2]) };
+  return null;
+}
+
+export function extractPlaceId(url, explicitId) {
+  if (explicitId) return String(explicitId);
+  const chij = url?.match(/query_place_id=([^&]+)/);
+  if (chij) return decodeURIComponent(chij[1]);
+  const placeParam = url?.match(/place_id[=:]([A-Za-z0-9_-]+)/i);
+  if (placeParam) return placeParam[1];
+  const hex = url?.match(/1s(0x[a-f0-9]+:0x[a-f0-9]+)/i);
+  return hex ? hex[1].toLowerCase() : null;
+}
+
+function normalizeCityToken(city) {
+  return (city || "")
+    .toLowerCase()
+    .replace(/\s+city$/i, "")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
+/** Reject vague Nominatim hits (e.g. USTP for every CDO address). */
+export function isAcceptableGeocodeResult(clinic, result) {
+  if (!result) return false;
+
+  const rawAddress = clinic.address || "";
+  const { street, city, province } = parseAddressParts(rawAddress);
+  const displayLower = (result.display_name || "").toLowerCase();
+  const nameLower = (clinic.name || "").toLowerCase();
+
+  if (result.precision === "city" && (street || extractPlusCode(rawAddress))) {
+    return false;
+  }
+
+  if (city) {
+    const cityNorm = normalizeCityToken(city);
+    if (cityNorm && !displayLower.includes(cityNorm)) return false;
+  }
+
+  if (province) {
+    const provNorm = province.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+    if (provNorm && !displayLower.includes(provNorm)) return false;
+  }
+
+  const landmarkTerms = /university|college|institute of technology|\bustp\b|hospital center|trauma and medical center/i;
+  const businessLooksAcademic = /university|college|\bustp\b/i.test(`${nameLower} ${rawAddress}`);
+  if (landmarkTerms.test(displayLower) && !businessLooksAcademic) {
+    return false;
+  }
+
+  return true;
+}
+
+/** Detect coordinates saved from a bad city-level or landmark fallback. */
+export function isBadGeocode(clinic) {
+  if (clinic.latitude == null || clinic.longitude == null) return false;
+
+  if (clinic.geocode_precision === "city") {
+    const { street } = parseAddressParts(clinic.address || "");
+    if (street || extractPlusCode(clinic.address)) return true;
+  }
+
+  const from = (clinic.geocoded_from || "").toLowerCase();
+  const name = (clinic.name || "").toLowerCase();
+  if (/university of science and technology|\bustp\b/i.test(from) && !/university|college|\bustp\b/i.test(name)) {
+    return true;
+  }
+
+  return false;
+}
+
+export function clearGeocodeFields(clinic) {
+  delete clinic.latitude;
+  delete clinic.longitude;
+  delete clinic.geocoded_from;
+  delete clinic.geocode_precision;
+  delete clinic.geocode_source;
+}
+
 export function decodePlusCode(code, refLat = null, refLng = null) {
   try {
     let area;
@@ -135,12 +219,33 @@ export async function geocodeQuery(query, options = {}) {
   };
 }
 
+function coordsFromUrl(clinic) {
+  const coords = extractCoordsFromUrl(clinic.google_maps_url);
+  if (!coords) return null;
+  return {
+    ...coords,
+    display_name: clinic.google_maps_url,
+    precision: "google_maps_url",
+    source: "google_maps_url",
+  };
+}
+
 export async function geocodeClinic(clinic, options = {}) {
   const rawAddress = (clinic.address || "").trim();
   const nominatimOpts = {
     minIntervalMs: options.minIntervalMs ?? 2500,
     onRateLimit: options.onRateLimit,
   };
+  const googleApiKey = options.googleApiKey;
+
+  const fromUrl = coordsFromUrl(clinic);
+  if (fromUrl) return fromUrl;
+
+  const placeId = extractPlaceId(clinic.google_maps_url, clinic.google_place_id);
+  if (placeId && googleApiKey) {
+    const google = await googlePlaceCoords(placeId, googleApiKey);
+    if (google) return google;
+  }
 
   const plusCode = extractPlusCode(rawAddress);
   if (plusCode) {
@@ -150,10 +255,11 @@ export async function geocodeClinic(clinic, options = {}) {
     const { city, province } = parseAddressParts(rawAddress);
     if (city && province) {
       const cityRef = await geocodeQuery(`${city}, ${province}, Philippines`, nominatimOpts);
-      if (cityRef) {
+      if (cityRef && isAcceptableGeocodeResult(clinic, cityRef)) {
         const decoded = decodePlusCode(plusCode, cityRef.latitude, cityRef.longitude);
         if (decoded) {
           decoded.display_name = `${plusCode}, ${city}, ${province}`;
+          decoded.precision = "plus_code";
           return decoded;
         }
       }
@@ -163,7 +269,11 @@ export async function geocodeClinic(clinic, options = {}) {
   const queries = geocodeQueries(clinic, options.maxQueries ?? 3);
   for (const query of queries) {
     const result = await geocodeQuery(query, nominatimOpts);
-    if (result) return result;
+    if (result && isAcceptableGeocodeResult(clinic, result)) return result;
+  }
+
+  if (placeId && googleApiKey) {
+    return googlePlaceCoords(placeId, googleApiKey);
   }
 
   return null;
@@ -202,12 +312,15 @@ export async function geocodeClinics(clinics, options = {}) {
     maxQueries = 3,
     googleDelayMs = 150,
     limit = Infinity,
+    fixBad = false,
+    force = false,
   } = options;
 
   let geocoded = 0;
   let failed = 0;
   let skipped = 0;
   let googleFilled = 0;
+  let cleared = 0;
   let processed = 0;
   let attempted = 0;
   let rateLimitPauses = 0;
@@ -215,6 +328,7 @@ export async function geocodeClinics(clinics, options = {}) {
   const nominatimOpts = {
     minIntervalMs,
     maxQueries,
+    googleApiKey,
     onRateLimit(waitMs, attempt) {
       rateLimitPauses++;
       onProgress?.({ phase: "rate_limit", waitMs, attempt });
@@ -222,9 +336,19 @@ export async function geocodeClinics(clinics, options = {}) {
   };
 
   for (const clinic of clinics) {
-    if (clinic.latitude != null && clinic.longitude != null) {
-      skipped++;
-      continue;
+    const hasCoords = clinic.latitude != null && clinic.longitude != null;
+
+    if (hasCoords) {
+      if (fixBad && isBadGeocode(clinic)) {
+        clearGeocodeFields(clinic);
+        cleared++;
+      } else if (force) {
+        clearGeocodeFields(clinic);
+        cleared++;
+      } else {
+        skipped++;
+        continue;
+      }
     }
 
     if (attempted >= limit) break;
@@ -233,7 +357,7 @@ export async function geocodeClinics(clinics, options = {}) {
     const label = clinic.name || "Unknown clinic";
     onProgress?.({ phase: "start", clinic, label });
 
-    if (!clinic.address && !clinic.name && !clinic.google_place_id) {
+    if (!clinic.address && !clinic.name && !clinic.google_place_id && !clinic.google_maps_url) {
       onProgress?.({ phase: "fail", clinic, label, reason: "no address or name" });
       failed++;
       processed++;
@@ -243,14 +367,25 @@ export async function geocodeClinics(clinics, options = {}) {
     try {
       let result = null;
 
-      if (!googleOnly && useNominatim) {
+      if (googleOnly && googleApiKey) {
+        const placeId = extractPlaceId(clinic.google_maps_url, clinic.google_place_id);
+        if (placeId) {
+          result = await googlePlaceCoords(placeId, googleApiKey);
+          if (result) googleFilled++;
+          await sleep(googleDelayMs);
+        }
+      } else if (!googleOnly && useNominatim) {
         result = await geocodeClinic(clinic, nominatimOpts);
+        if (result?.source === "google_places") googleFilled++;
       }
 
-      if (!result && googleApiKey && clinic.google_place_id) {
-        result = await googlePlaceCoords(clinic.google_place_id, googleApiKey);
-        if (result) googleFilled++;
-        await sleep(googleDelayMs);
+      if (!result && googleApiKey) {
+        const placeId = extractPlaceId(clinic.google_maps_url, clinic.google_place_id);
+        if (placeId) {
+          result = await googlePlaceCoords(placeId, googleApiKey);
+          if (result) googleFilled++;
+          await sleep(googleDelayMs);
+        }
       }
 
       if (result) {
@@ -292,5 +427,5 @@ export async function geocodeClinics(clinics, options = {}) {
     }
   }
 
-  return { geocoded, failed, skipped, googleFilled, rateLimitPauses };
+  return { geocoded, failed, skipped, googleFilled, cleared, rateLimitPauses };
 }

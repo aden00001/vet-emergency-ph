@@ -56,10 +56,8 @@ async function main() {
   if (!url || !key) throw new Error("Missing Supabase env in .env.local");
 
   const supabase = createClient(url, key);
-  const { data: rows, error } = await supabase
-    .from("clinics")
-    .select("id, name, phone, address, latitude, longitude");
-  if (error) throw error;
+  const rows = await fetchAllClinics(supabase);
+  if (!rows.length) throw new Error("No clinics returned");
 
   console.log(`Total clinics in DB: ${rows.length}\n`);
 
@@ -110,3 +108,21 @@ main().catch((err) => {
   console.error(err);
   process.exit(1);
 });
+
+async function fetchAllClinics(supabase) {
+  const rows = [];
+  const pageSize = 1000;
+  let from = 0;
+  while (true) {
+    const { data, error } = await supabase
+      .from("clinics")
+      .select("id, name, phone, address, latitude, longitude")
+      .range(from, from + pageSize - 1);
+    if (error) throw error;
+    if (!data?.length) break;
+    rows.push(...data);
+    if (data.length < pageSize) break;
+    from += pageSize;
+  }
+  return rows;
+}

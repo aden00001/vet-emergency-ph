@@ -22,7 +22,7 @@
   ],
   "count": 1964,
   "emergency_count": 189,
-  "with_coordinates": 1802,
+  "with_coordinates": 1955,
   "notes": [
     "Merged from multiple JSON uploads. Review before treating emergency_capable as verified.",
     "Excluded: human bite centers (anti-rabies / PEP clinics for people)."
@@ -13538,8 +13538,8 @@
       "name": "Furcare Veterinary Clinic - Canitoan Branch",
       "address": "FJC3+W9V, Mauricia N. Roa St, Cagayan De Oro City, Misamis Oriental",
       "phone": "+639534512091",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.4860705,
+      "longitude": 124.656805,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -13551,7 +13551,10 @@
       "google_place_id": "ChIJqW17QACN_zIRQu6YetZO628",
       "category": "Veterinarian",
       "rating": 5,
-      "review_count": 6
+      "review_count": 6,
+      "geocoded_from": "University of Science and Technology of Southern Philippines, C. M. Recto Avenue, Mambato, Barangay 26, Poblacion, Cagayan de Oro, Northern Mindanao, 9000, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Furever Animal Clinic",
@@ -13708,8 +13711,8 @@
       "name": "Furpet'sake Veterinary Clinic",
       "address": "67Q2+W8P Brgy, Vicente Sheker St, Iligan City, Lanao del Norte",
       "phone": "+639171050446",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.2454672,
+      "longitude": 124.2542936,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -13722,7 +13725,10 @@
       "category": "Veterinarian",
       "website": "https://www.facebook.com/furpetsakevetclinic",
       "rating": 4.9,
-      "review_count": 27
+      "review_count": 27,
+      "geocoded_from": "SM City Iligan, Tambo, Santo Rosario, Iligan, Northern Mindanao, 9200, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Furr-fect Paws Animal Clinic",
@@ -14413,8 +14419,8 @@
       "name": "Golden Pet",
       "address": "FMGJ+547, National Highway, Cagayan De Oro City, Misamis Oriental",
       "phone": "+6363888805056",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.4860705,
+      "longitude": 124.656805,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -14426,7 +14432,10 @@
       "google_place_id": "ChIJGSGHrKjy_zIRQqE0XNIh6JE",
       "category": "Animal hospital",
       "rating": 4.2,
-      "review_count": 20
+      "review_count": 20,
+      "geocoded_from": "University of Science and Technology of Southern Philippines, C. M. Recto Avenue, Mambato, Barangay 26, Poblacion, Cagayan de Oro, Northern Mindanao, 9000, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "GoldenApple Veterinary Clinic",
@@ -14664,8 +14673,8 @@
       "name": "Graysville Vet Clinic",
       "address": "Gen. Luna Rd, Baguio, Benguet",
       "phone": "+639303488044",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 16.4329569,
+      "longitude": 120.6515014,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -14677,14 +14686,17 @@
       "google_place_id": "ChIJKYvwwVyhkTMR647QKJV6AWY",
       "category": "Veterinarian",
       "rating": 4,
-      "review_count": 28
+      "review_count": 28,
+      "geocoded_from": "Alphaland Baguio Mountain Lodges, Tocmo, Benguet, Cordillera Administrative Region, 2604, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Great and Small Animal Clinic Tabuk",
       "address": "FF99+9R8, City of Tabuk, Kalinga",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 17.4111502,
+      "longitude": 121.4414409,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -14694,7 +14706,10 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Great%20and%20Small%20Animal%20Clinic%20Tabuk&query_place_id=ChIJV9ARXgCDjzMRIo5jCqMnQ5o",
       "google_place_id": "ChIJV9ARXgCDjzMRIo5jCqMnQ5o",
-      "category": "Animal hospital"
+      "category": "Animal hospital",
+      "geocoded_from": "Tabuk, Kalinga, Cordillera Administrative Region, 3800, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "GreatPets Veterinary Clinic",
@@ -14846,8 +14861,8 @@
       "name": "GSC Pet Care Center Calumpang",
       "address": "J. P. Rizal St, General Santos City (Dadiangas), South Cotabato",
       "phone": "+639985761322",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 6.1169509,
+      "longitude": 125.1715433,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -14860,7 +14875,10 @@
       "category": "Veterinarian",
       "website": "https://www.facebook.com/gscpetcare",
       "rating": 3.9,
-      "review_count": 7
+      "review_count": 7,
+      "geocoded_from": "Mindanao State University - General Santos, Marist Street, Dadiangas East, General Santos, Soccsksargen, 9500, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "GSC Pet Care Center Veterinary Hospital",
@@ -14885,8 +14903,8 @@
       "name": "Gubat Vet-Clinic & Agrivet Supplies",
       "address": "Manook St, Gubat, Sorsogon",
       "phone": "+639054804633",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 12.921445,
+      "longitude": 124.1225278,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -14898,7 +14916,10 @@
       "google_place_id": "ChIJrY_ax4HroDMRYNX9kDjhY7c",
       "category": "Veterinarian",
       "rating": 5,
-      "review_count": 1
+      "review_count": 1,
+      "geocoded_from": "Manook Street, Cota na Daco, Poblacion, Gubat, Sorsogon, Bicol Region, 4710, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Guihulngan City Veterinary Office",
@@ -14921,8 +14942,8 @@
       "name": "H2R Vet-Ventures",
       "address": "H8MV+999, GF Caballero Bldg., Tomas Cladio St, Dipolog City, Zamboanga del Norte",
       "phone": "+639053954464",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.5863596,
+      "longitude": 123.3448798,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -14932,14 +14953,17 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=H2R%20Vet-Ventures&query_place_id=ChIJ-XF0HYmXVDIRBRg6_X-1HIE",
       "google_place_id": "ChIJ-XF0HYmXVDIRBRg6_X-1HIE",
-      "category": "Veterinarian"
+      "category": "Veterinarian",
+      "geocoded_from": "Dipolog, Zamboanga del Norte, Zamboanga Peninsula, 7100, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "HapiPET ANIMAL CLINIC",
       "address": "Zone 9, 284 St Bartolome St, Cagayan De Oro City, Misamis Oriental",
       "phone": "+6363888501998",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.4860705,
+      "longitude": 124.656805,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -14951,7 +14975,10 @@
       "google_place_id": "ChIJhcctYz3z_zIRXWzXDQpC8Zg",
       "category": "Veterinarian",
       "rating": 3.9,
-      "review_count": 24
+      "review_count": 24,
+      "geocoded_from": "University of Science and Technology of Southern Philippines, C. M. Recto Avenue, Mambato, Barangay 26, Poblacion, Cagayan de Oro, Northern Mindanao, 9000, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Happi Hound Animal Clinic",
@@ -15052,8 +15079,8 @@
       "name": "Happy paws hub",
       "address": "GX5G+6X6, San Francisco, Agusan del Sur",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.5050281,
+      "longitude": 125.9771179,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -15065,7 +15092,10 @@
       "google_place_id": "ChIJCfBoMB79_TIR1t5GW1XxMFk",
       "category": "Veterinarian",
       "rating": 5,
-      "review_count": 1
+      "review_count": 1,
+      "geocoded_from": "San Francisco, Agusan del Sur, Caraga, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "happy paws veterinary clinic",
@@ -15109,8 +15139,8 @@
       "name": "Happy Pets Veterinary Clinic & Pet Grooming Services",
       "address": "Purok 2B, May-as Street, San Francisco, Agusan del Sur",
       "phone": "+639098250841",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.5050281,
+      "longitude": 125.9771179,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -15122,7 +15152,10 @@
       "google_place_id": "ChIJfSU2D1T9_TIRs3onociRzls",
       "category": "Veterinarian",
       "rating": 3.4,
-      "review_count": 5
+      "review_count": 5,
+      "geocoded_from": "San Francisco, Agusan del Sur, Caraga, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Happy Tail's Pet Care Clinic",
@@ -15361,8 +15394,8 @@
       "name": "Healing Paws Animal Clinic",
       "address": "Mezzanine Floor, Faralles Building, Cabrera St, Pagadian City, Zamboanga del Sur",
       "phone": "+6363623083917",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 7.8249717,
+      "longitude": 123.4365816,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -15375,7 +15408,10 @@
       "category": "Veterinarian",
       "website": "http://facebook.com/HealingPawsPagadian",
       "rating": 4.1,
-      "review_count": 21
+      "review_count": 21,
+      "geocoded_from": "Pagadian, Zamboanga del Sur, Zamboanga Peninsula, 7016, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "HealMark Veterinary Services",
@@ -15577,8 +15613,8 @@
       "name": "Highland Vets Animal Clinic",
       "address": "Fortich St, Malaybalay City, Bukidnon",
       "phone": "+639673442583",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.1480603,
+      "longitude": 125.132005,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -15591,7 +15627,10 @@
       "category": "Veterinarian",
       "website": "https://www.facebook.com/hvacmalaybalay?mibextid=ZbWKwL",
       "rating": 5,
-      "review_count": 3
+      "review_count": 3,
+      "geocoded_from": "Fortich Street, Barangay 7, Malaybalay, Bukidnon, Northern Mindanao, 8700, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "HIGHLANDS VETERINARY CLINIC",
@@ -15944,8 +15983,8 @@
       "name": "Ido ug Miya Veterinary Clinic and Grooming Station",
       "address": "G4GC+V9C, Surigao - Davao Coastal Rd, Barobo, Surigao del Sur",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.5338429,
+      "longitude": 126.1212603,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -15955,7 +15994,10 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Ido%20ug%20Miya%20Veterinary%20Clinic%20and%20Grooming%20Station&query_place_id=ChIJwY2g_bTx_TIROjLuq7LDfQs",
       "google_place_id": "ChIJwY2g_bTx_TIROjLuq7LDfQs",
-      "category": "Veterinarian"
+      "category": "Veterinarian",
+      "geocoded_from": "Surigao-Davao Coastal Road, Purok 1, Barobo, Surigao del Sur, Caraga, 8309, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Ikigai Veterinary Clinic",
@@ -15999,8 +16041,8 @@
       "name": "Iligan Dog and Cat Doctor - Linamon Veterinary Clinic and Grooming Spa",
       "address": "Economic Center and Bus Terminal, Linamon, Lanao del Norte",
       "phone": "+639178287345",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.1839585,
+      "longitude": 124.1569454,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -16012,14 +16054,17 @@
       "google_place_id": "ChIJxfciccufVTIR1Tb9I0Ym2kI",
       "category": "Veterinarian",
       "rating": 5,
-      "review_count": 3
+      "review_count": 3,
+      "geocoded_from": "Linamon, Lanao del Norte, Northern Mindanao, 9201, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Iligan Dog and Cat Doctor Animal Clinical Center",
       "address": "17 Fortaleza St, Iligan City, Lanao del Norte",
       "phone": "+6363632217572",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.2454672,
+      "longitude": 124.2542936,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -16031,7 +16076,10 @@
       "google_place_id": "ChIJo9SdSed1VTIRI5Fze696Khs",
       "category": "Animal hospital",
       "rating": 2.7,
-      "review_count": 43
+      "review_count": 43,
+      "geocoded_from": "SM City Iligan, Tambo, Santo Rosario, Iligan, Northern Mindanao, 9200, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Ilocos Sur Animal Quarantine Building",
@@ -16179,8 +16227,8 @@
       "name": "Impulse Veterinary Clinic",
       "address": "1 Ambuklao Rd, Baguio, Benguet",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 16.4281165,
+      "longitude": 120.6229358,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -16192,7 +16240,10 @@
       "google_place_id": "ChIJy4nvOVShkTMRt6H92bT7AkE",
       "category": "Veterinary care",
       "rating": 1,
-      "review_count": 1
+      "review_count": 1,
+      "geocoded_from": "Ambuklao Road, Mines View, District 1, Baguio, Benguet, Cordillera Administrative Region, 2600, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "IMUS PET CROSSING ANIMAL CLINIC",
@@ -16282,8 +16333,8 @@
       "name": "INU NEKO Veterinary Clinic (Pet Clinic)",
       "address": "RC Intino Building 2, Butuan City, Agusan del Norte",
       "phone": "+639478940375",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.9282308,
+      "longitude": 125.5514944,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -16296,7 +16347,10 @@
       "category": "Veterinarian",
       "website": "https://m.facebook.com/inu.neko.at.intino/?",
       "rating": 5,
-      "review_count": 2
+      "review_count": 2,
+      "geocoded_from": "Butuan City Police Station 1, Butuan, Agusan del Norte, Caraga, 8600, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Iolac Animal Clinic and Grooming Center",
@@ -16322,8 +16376,8 @@
       "name": "Ipil Beast Friend Veterinary Clinic",
       "address": "Purok Petrotex, Ipil, Zamboanga Sibugay",
       "phone": "+639525304748",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 7.7821902,
+      "longitude": 122.5867388,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -16336,14 +16390,17 @@
       "category": "Veterinarian",
       "website": "https://www.facebook.com/IpilBeastFriendClinic",
       "rating": 4.7,
-      "review_count": 17
+      "review_count": 17,
+      "geocoded_from": "Ipil, Zamboanga Sibugay, Zamboanga Peninsula, 7001, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Ipil Pet Doctors Veterinary Clinic",
       "address": "Purok Dahlia, Ipil, Zamboanga Sibugay",
       "phone": "+639971925474",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 7.7821902,
+      "longitude": 122.5867388,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -16355,14 +16412,17 @@
       "google_place_id": "ChIJtfM_nNrZUzIRhRjrfwPUvlc",
       "category": "Veterinarian",
       "rating": 4.3,
-      "review_count": 6
+      "review_count": 6,
+      "geocoded_from": "Ipil, Zamboanga Sibugay, Zamboanga Peninsula, 7001, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Iriga Animal Clinic",
       "address": "CC94+W87, Iriga City, Camarines Sur",
       "phone": "+639293271508",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 13.4222626,
+      "longitude": 123.4129406,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -16374,7 +16434,10 @@
       "google_place_id": "ChIJb86L3jmYoTMRX14o6oaKvWo",
       "category": "Animal hospital",
       "rating": 4.6,
-      "review_count": 10
+      "review_count": 10,
+      "geocoded_from": "Iriga, Camarines Sur, Bicol Region, 4431, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Isabela Animates Veterinary Clinic & Supplies",
@@ -16477,8 +16540,8 @@
       "name": "Island Paws Veterinary Clinic Elnido",
       "address": "Nasigdan, El Nido, Palawan",
       "phone": "+639671235291",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 11.1800395,
+      "longitude": 119.390496,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -16490,7 +16553,10 @@
       "google_place_id": "ChIJr6gC9upVtjMRVX-PUbTWkiM",
       "category": "Veterinarian",
       "rating": 4.2,
-      "review_count": 13
+      "review_count": 13,
+      "geocoded_from": "El Nido, Palawan, Mimaropa, 5313, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Island Paws Veterinary Services",
@@ -16535,8 +16601,8 @@
       "name": "ITAWES ANIMAL CLINIC",
       "address": "QFFW+CG3, Piat Rd, Piat, Cagayan",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 17.7915986,
+      "longitude": 121.4771204,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -16546,7 +16612,10 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=ITAWES%20ANIMAL%20CLINIC&query_place_id=ChIJjb7DIjJkjzMRCn7YAB7LQc4",
       "google_place_id": "ChIJjb7DIjJkjzMRCn7YAB7LQc4",
-      "category": "Veterinary care"
+      "category": "Veterinary care",
+      "geocoded_from": "Piat, Cagayan, Cagayan Valley, 3527, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Ivan's Animal Clinic",
@@ -16695,8 +16764,8 @@
       "name": "J.A.G VETERINARY SERVICES",
       "address": "Orillaneda Street, Cantilan, Surigao del Sur",
       "phone": "+639327909499",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 9.3364223,
+      "longitude": 125.9782371,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -16706,7 +16775,10 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=J.A.G%20VETERINARY%20SERVICES&query_place_id=ChIJVecn557XAzMRdv54u0erYt4",
       "google_place_id": "ChIJVecn557XAzMRdv54u0erYt4",
-      "category": "Veterinarian"
+      "category": "Veterinarian",
+      "geocoded_from": "Orillaneda Street, Lininti-an, Cantilan, Surigao del Sur, Caraga, 8317, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "J.E. Cabanlig Veterinary Clinic",
@@ -16770,8 +16842,8 @@
       "name": "Jahfriends Veterinary Clinic",
       "address": "5R3J+X3W, Burgos, Labo, Camarines Norte",
       "phone": "+639204204115",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 14.1575552,
+      "longitude": 122.8311549,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -16783,7 +16855,10 @@
       "google_place_id": "ChIJgaVbs6elmDMRHIPvCOSBX5s",
       "category": "Animal hospital",
       "rating": 3.7,
-      "review_count": 3
+      "review_count": 3,
+      "geocoded_from": "Burgos Street, Purok 2, Pinya, Poblacion, Gumamela, Labo, Camarines Norte, Bicol Region, 4604, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "JAM'S VETERINARY PRODUCTS TRADING",
@@ -17069,8 +17144,8 @@
       "name": "JDP Veterinary Clinic",
       "address": "W3FV+7H4, Valencia City, Bukidnon",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 7.9028844,
+      "longitude": 125.0898033,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -17082,7 +17157,10 @@
       "google_place_id": "ChIJ4WXzuFIb_zIRrhtGnSDRWlE",
       "category": "Veterinarian",
       "rating": 3.6,
-      "review_count": 8
+      "review_count": 8,
+      "geocoded_from": "Valencia, Bukidnon, Northern Mindanao, 8709, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Je-An Animal Care Center",
@@ -17214,8 +17292,8 @@
       "name": "JGL Veterinary Services-Clinic",
       "address": "Pres. Quirino St, Kiamba, Sarangani",
       "phone": "+639177712333",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 5.9879555,
+      "longitude": 124.6241575,
       "emergency_capable": true,
       "owner_verified": false,
       "services": [
@@ -17228,14 +17306,17 @@
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=JGL%20Veterinary%20Services-Clinic&query_place_id=ChIJ_V8oiy_R9zIRDyoOGgu21iU",
       "google_place_id": "ChIJ_V8oiy_R9zIRDyoOGgu21iU",
       "category": "Emergency veterinarian service",
-      "website": "https://www.facebook.com/JGL.Vet.Services?mibextid=LQQJ4d"
+      "website": "https://www.facebook.com/JGL.Vet.Services?mibextid=LQQJ4d",
+      "geocoded_from": "Kiamba, Sarangani, Soccsksargen, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "JGT5 Vet Clinic",
       "address": "Unit G/F, De Leon Bldg, 470 B Fraternidad St, Naga City, Camarines Sur",
       "phone": "+639183786436",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 13.6240122,
+      "longitude": 123.1850318,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -17247,7 +17328,10 @@
       "google_place_id": "ChIJDzleKQCNoTMROmcKb83esjE",
       "category": "Veterinarian",
       "rating": 5,
-      "review_count": 2
+      "review_count": 2,
+      "geocoded_from": "Naga City, Bicol Region, 4400, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Jhay Veterinary Clinic",
@@ -17289,8 +17373,8 @@
       "name": "JJ's VETERINARY CLINIC",
       "address": "purok 6, north poblacion maramag, Maramag, Bukidnon",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 7.7665193,
+      "longitude": 125.0048581,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -17302,7 +17386,10 @@
       "google_place_id": "ChIJFYYPUmM7_zIREAzr3ta3M8A",
       "category": "Veterinary care",
       "rating": 4,
-      "review_count": 1
+      "review_count": 1,
+      "geocoded_from": "Purok 1, North Poblacion, Maramag, Bukidnon, Northern Mindanao, 8714, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Jlc Animal Clinic",
@@ -17404,8 +17491,8 @@
       "name": "JMW ANIMAL CLINIC",
       "address": "CQG9+WP5, Cabagan - Santa Maria Rd, Cabagan, Isabela",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 17.4505377,
+      "longitude": 121.7484684,
       "emergency_capable": true,
       "owner_verified": false,
       "services": [
@@ -17417,7 +17504,10 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=JMW%20ANIMAL%20CLINIC&query_place_id=ChIJjWmwOAB5hTMRS3X3VsePmkM",
       "google_place_id": "ChIJjWmwOAB5hTMRS3X3VsePmkM",
-      "category": "Emergency veterinarian service"
+      "category": "Emergency veterinarian service",
+      "geocoded_from": "Cabagan-Santa Maria Bridge, Cabagan-Santa Maria Road, Poblacion 3, Mozzozzin North, Santa Maria, Isabela, Cagayan Valley, 3328, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Jna Animal Clinic",
@@ -17567,8 +17657,8 @@
       "name": "Joshelei's Veterinary Clinic & Agrivet Supply",
       "address": "Cauayan City, Isabela",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 16.9305428,
+      "longitude": 121.7522268,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -17580,7 +17670,10 @@
       "google_place_id": "ChIJb-PzTJxRhTMRaU84NG3XxSM",
       "category": "Veterinary care",
       "rating": 5,
-      "review_count": 1
+      "review_count": 1,
+      "geocoded_from": "Cauayan Airport, Airport Road, San Fermin, Poblacion, Cauayan, Isabela, Cagayan Valley, 3305, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Joshua",
@@ -17625,8 +17718,8 @@
       "name": "Jrd Animal Clinic",
       "address": "Diadi, Nueva Vizcaya",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 16.6606225,
+      "longitude": 121.3693297,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -17636,7 +17729,10 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Jrd%20Animal%20Clinic&query_place_id=ChIJtdYhejoRkDMRD6ppLRX00Ac",
       "google_place_id": "ChIJtdYhejoRkDMRD6ppLRX00Ac",
-      "category": "Veterinary care"
+      "category": "Veterinary care",
+      "geocoded_from": "Diadi, Nueva Vizcaya, Cagayan Valley, 3712, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Juan Da Veterinarian Animal Clinic",
@@ -17942,8 +18038,8 @@
       "name": "Kapatagan Valley Veterinary Clinic Services",
       "address": "Purok 10, Infront of SDA Elem School/ Church, Sampaguita St, Kapatagan, Lanao del Norte",
       "phone": "+639551832718",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 7.8959157,
+      "longitude": 123.7671411,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -17955,7 +18051,10 @@
       "google_place_id": "ChIJ1YSLCWl5SYIRPU9krmBVT0c",
       "category": "Veterinarian",
       "rating": 4.3,
-      "review_count": 12
+      "review_count": 12,
+      "geocoded_from": "Kapatagan, Lanao del Norte, Northern Mindanao, 9214, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Kart & Kyle Feeds & Veterinary Supply",
@@ -18014,8 +18113,8 @@
       "name": "KHO VETERINARY CLINIC",
       "address": "Naga City, Camarines Sur",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 13.6240122,
+      "longitude": 123.1850318,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -18027,14 +18126,17 @@
       "google_place_id": "ChIJ5W1VQFOumDMREAipb1ZfFmU",
       "category": "Veterinary care",
       "rating": 3.8,
-      "review_count": 4
+      "review_count": 4,
+      "geocoded_from": "Naga City, Bicol Region, 4400, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Kho Veterinary Clinic Catanduanes Branch",
       "address": "027, Virac, Catanduanes",
       "phone": "+639212501316",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 13.5803594,
+      "longitude": 124.2312028,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -18046,14 +18148,17 @@
       "google_place_id": "ChIJ4cHwTWUXoDMR3OxzXAndUQI",
       "category": "Veterinarian",
       "rating": 4.5,
-      "review_count": 11
+      "review_count": 11,
+      "geocoded_from": "Virac, Catanduanes, Bicol Region, 4800, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Kho Veterinary Clinic Main Branch",
       "address": "National Highway, TCDC Compound, Zone 5, Naga City, Camarines Sur",
       "phone": "+639296944414",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 13.6240122,
+      "longitude": 123.1850318,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -18065,14 +18170,17 @@
       "google_place_id": "ChIJhYxnlDGNoTMRfWyC0o3nsFg",
       "category": "Veterinarian",
       "rating": 3.5,
-      "review_count": 18
+      "review_count": 18,
+      "geocoded_from": "Naga City, Bicol Region, 4400, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Kho Veterinary Clinic Marupit",
       "address": "Zone 2, Camaligan, Camarines Sur",
       "phone": "+639296944414",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 13.6210464,
+      "longitude": 123.1639475,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -18084,14 +18192,17 @@
       "google_place_id": "ChIJs-7z3WKLoTMRHB43Jla6IiI",
       "category": "Veterinarian",
       "rating": 5,
-      "review_count": 4
+      "review_count": 4,
+      "geocoded_from": "Camaligan, Camarines Sur, Bicol Region, 4401, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Kho Veterinary Clinic Nabua Branch",
       "address": "C98V+FMJ, Nabua - Iriga Rd, Nabua, Camarines Sur",
       "phone": "+639296944414",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 13.4147823,
+      "longitude": 123.3904563,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -18103,14 +18214,17 @@
       "google_place_id": "ChIJJ5zRr62ZoTMRM-qiJxaRmzM",
       "category": "Veterinarian",
       "rating": 4.9,
-      "review_count": 9
+      "review_count": 9,
+      "geocoded_from": "Petro Gazz Nabua, Iriga-Nabua Road, San Jose, Santa Lucia, Nabua, Camarines Sur, Bicol Region, 4434, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Kho Veterinary Clinic Pawili Branch",
       "address": "Pili, Camarines Sur",
       "phone": "+639194531058",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 13.5562068,
+      "longitude": 123.2740809,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -18123,7 +18237,10 @@
       "category": "Veterinarian",
       "website": "https://www.facebook.com/khoveterinaryclinicpawilibula?mibextid=ZbWKwL",
       "rating": 5,
-      "review_count": 5
+      "review_count": 5,
+      "geocoded_from": "Pili, Camarines Sur, Bicol Region, 4418, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Kim Pet Care",
@@ -18323,8 +18440,8 @@
       "name": "KMJ VetBuddies Animal Clinic",
       "address": "G/F Rusville Bldg., #20 Dayangdang, Corner Soler Sts, Naga City, Camarines Sur",
       "phone": "+639696282145",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 13.6240122,
+      "longitude": 123.1850318,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -18337,7 +18454,10 @@
       "category": "Veterinarian",
       "website": "http://www.facebook.com/kmjvetbuddies",
       "rating": 5,
-      "review_count": 2
+      "review_count": 2,
+      "geocoded_from": "Naga City, Bicol Region, 4400, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Koinonia Veterinary Clinic",
@@ -18526,8 +18646,8 @@
       "name": "La' Casa Veterinary Clinic",
       "address": "Zone 3 Upper, Cagayan De Oro City, Misamis Oriental",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.4860705,
+      "longitude": 124.656805,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -18537,14 +18657,17 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=La'%20Casa%20Veterinary%20Clinic&query_place_id=ChIJbTEnoy_z_zIRiFr-jocw3hY",
       "google_place_id": "ChIJbTEnoy_z_zIRiFr-jocw3hY",
-      "category": "Veterinarian"
+      "category": "Veterinarian",
+      "geocoded_from": "University of Science and Technology of Southern Philippines, C. M. Recto Avenue, Mambato, Barangay 26, Poblacion, Cagayan de Oro, Northern Mindanao, 9000, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Labitad Pet Care Clinic",
       "address": "GH9G+V2X, A. Seriña St, Opol, Misamis Oriental",
       "phone": "+6363883263544",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.5191776,
+      "longitude": 124.5744992,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -18556,7 +18679,10 @@
       "google_place_id": "ChIJJ_f5WGf0_zIRiwLATfEDZRA",
       "category": "Veterinarian",
       "rating": 3.6,
-      "review_count": 12
+      "review_count": 12,
+      "geocoded_from": "A. Seriña Street, Poblacion, Luyongbonbon, Bonbon, Opol, Misamis Oriental, Northern Mindanao, 9016, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Labos Animal Clinic & Supplies",
@@ -18939,8 +19065,8 @@
       "name": "Lifevet Philippines",
       "address": "9HXM+FP4 Baguio, Baguio, Benguet",
       "phone": "+639817582596",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 16.4321006,
+      "longitude": 120.5645037,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -18950,14 +19076,17 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Lifevet%20Philippines&query_place_id=ChIJXZe9wBuhkTMRzLNoFO8UcOc",
       "google_place_id": "ChIJXZe9wBuhkTMRzLNoFO8UcOc",
-      "category": "Animal hospital"
+      "category": "Animal hospital",
+      "geocoded_from": "Baguio - Bauang Road to Quezon Hill Road 1, Pinsao Proper, District 16, Baguio, Benguet, Cordillera Administrative Region, 2600, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Ligao Petcare and Veterinary Clinic",
       "address": "purok 4, Ligao City, Albay",
       "phone": "+639263967678",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 13.238216,
+      "longitude": 123.542562,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -18970,7 +19099,10 @@
       "category": "Veterinarian",
       "website": "https://www.facebook.com/LPCVC/",
       "rating": 4.2,
-      "review_count": 48
+      "review_count": 48,
+      "geocoded_from": "PROPOSED LIGAO CITY TERMINAL (FINAL), Dunao, Ligao, Albay, Bicol Region, 4504, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Light Animal Clinic - Candelaria Branch",
@@ -19192,8 +19324,8 @@
       "name": "Loving Care Veterinary Clinic",
       "address": "Tagum, Davao del Norte",
       "phone": "+639516810151",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 7.4470784,
+      "longitude": 125.8094853,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -19204,7 +19336,10 @@
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Loving%20Care%20Veterinary%20Clinic&query_place_id=ChIJ5SuR7wBT-TIRpPl2CTPH4lU",
       "google_place_id": "ChIJ5SuR7wBT-TIRpPl2CTPH4lU",
       "category": "Veterinarian",
-      "website": "https://www.facebook.com/share/1Dc9cVPK6g/"
+      "website": "https://www.facebook.com/share/1Dc9cVPK6g/",
+      "geocoded_from": "Tagum, Davao del Norte, Davao Region, 8100, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Loyal Pet Cremation Pampanga Branch",
@@ -19435,8 +19570,8 @@
       "name": "Maigo Veterinary Clinic",
       "address": "Maigo, Lanao del Norte",
       "phone": "+639177714094",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.1586175,
+      "longitude": 123.9610824,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -19448,7 +19583,10 @@
       "google_place_id": "ChIJ1aodOoivVTIRDc6PZOJVPiw",
       "category": "Veterinarian",
       "rating": 4.9,
-      "review_count": 7
+      "review_count": 7,
+      "geocoded_from": "Maigo, Lanao del Norte, Northern Mindanao, 9206, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Makahayop Animal Clinic",
@@ -19781,8 +19919,8 @@
       "name": "Marawi Veterinary Clinic",
       "address": "Amai Pakpak Ave, Marawi City, Lanao del Sur",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.0038094,
+      "longitude": 124.2842249,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -19795,7 +19933,10 @@
       "category": "Veterinarian",
       "website": "https://www.facebook.com/Marawi-Veterinary-Clinic-103300644746867/",
       "rating": 3.4,
-      "review_count": 5
+      "review_count": 5,
+      "geocoded_from": "Amai Pakpak Avenue, Barrio Green, Bito Buadi Parba, Marawi, Lanao del Sur, Bangsamoro, 9700, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Margavet Animal Clinic",
@@ -19972,8 +20113,8 @@
       "name": "Mayon Veterinary Care Specialists Co",
       "address": "M.H. Del Pilar Street, Daraga, Albay",
       "phone": "+639388664009",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 13.1476104,
+      "longitude": 123.7125897,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -19985,7 +20126,10 @@
       "google_place_id": "ChIJZSYy-eADoTMRIT3UFLtQghA",
       "category": "Veterinarian",
       "rating": 4.8,
-      "review_count": 57
+      "review_count": 57,
+      "geocoded_from": "M. H. del Pilar Street, Ilawod Area Poblacion, Kimantong, Daraga, Albay, Bicol Region, 4501, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "MC AGRIVET",
@@ -20269,8 +20413,8 @@
       "name": "Mighty Paws Veterinary Clinic",
       "address": "VHHM+5P6, Santiago - Tuguegarao Rd, San Mateo, Isabela",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 16.8812168,
+      "longitude": 121.588086,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -20282,7 +20426,10 @@
       "google_place_id": "ChIJJ622mbL_jzMR7Ah63STBqF8",
       "category": "Veterinary care",
       "rating": 5,
-      "review_count": 3
+      "review_count": 3,
+      "geocoded_from": "Santiago-Tuguegarao Road, San Mateo, Isabela, Cagayan Valley, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Mikaelah Trading",
@@ -20495,8 +20642,8 @@
       "name": "MITSUHA VETERINARY CLINIC",
       "address": "Purok 3, Ligao City, Albay",
       "phone": "+639280191537",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 13.238216,
+      "longitude": 123.542562,
       "emergency_capable": true,
       "owner_verified": false,
       "services": [
@@ -20511,7 +20658,10 @@
       "category": "Emergency veterinarian service",
       "website": "https://www.facebook.com/profile.php?id=61561928396690&mibextid=LQQJ4d",
       "rating": 4,
-      "review_count": 4
+      "review_count": 4,
+      "geocoded_from": "PROPOSED LIGAO CITY TERMINAL (FINAL), Dunao, Ligao, Albay, Bicol Region, 4504, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "MJM Veterinary Clinic and Supplies",
@@ -20637,8 +20787,8 @@
       "name": "MonteSiaz Veterinary Clinic",
       "address": "Capitol Road, P Jupiter, City of Tandag, Surigao del Sur",
       "phone": "+639309933936",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 9.0799833,
+      "longitude": 126.1974606,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -20651,7 +20801,10 @@
       "category": "Veterinarian",
       "website": "https://www.sweetpew.com/ph/montesiaz-veterinary-clinic",
       "rating": 5,
-      "review_count": 4
+      "review_count": 4,
+      "geocoded_from": "Tandag, Surigao del Sur, Caraga, 8300, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Most Valuable Pet (MVP) Vet Clinic",
@@ -20721,8 +20874,8 @@
       "name": "MPVET Animal Clinic",
       "address": "Purok Everlasting, 008 Mirafuentes St., Tagum, Davao del Norte",
       "phone": "+639457394125",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 7.4470784,
+      "longitude": 125.8094853,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -20735,7 +20888,10 @@
       "category": "Veterinarian",
       "website": "https://www.facebook.com/mpvetanimalclinic",
       "rating": 5,
-      "review_count": 9
+      "review_count": 9,
+      "geocoded_from": "Tagum, Davao del Norte, Davao Region, 8100, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "MRP Bacani Veterinary Clinic",
@@ -20828,8 +20984,8 @@
       "name": "N & A Veterinary Clinic",
       "address": "Zone 7, Cagayan De Oro City, Misamis Oriental",
       "phone": "+639050350691",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.4860705,
+      "longitude": 124.656805,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -20841,7 +20997,10 @@
       "google_place_id": "ChIJoZyfh3rz_zIRXQFm0Z7sdCU",
       "category": "Veterinary care",
       "rating": 3.3,
-      "review_count": 6
+      "review_count": 6,
+      "geocoded_from": "University of Science and Technology of Southern Philippines, C. M. Recto Avenue, Mambato, Barangay 26, Poblacion, Cagayan de Oro, Northern Mindanao, 9000, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "N.E. Veterinary Clinic",
@@ -20866,8 +21025,8 @@
       "name": "Nabunturan Animal Clinic",
       "address": "L -C Arabejo Avenue, Nabunturan, Davao de Oro",
       "phone": "+639331032808",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 7.6021804,
+      "longitude": 125.9687792,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -20879,7 +21038,10 @@
       "google_place_id": "ChIJMdGDICwD_DIRjLS6y35yr6c",
       "category": "Animal hospital",
       "rating": 4,
-      "review_count": 4
+      "review_count": 4,
+      "geocoded_from": "Nabunturan, Davao de Oro, Davao Region, 8800, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Naga Vet Care",
@@ -20907,8 +21069,8 @@
       "name": "NAGA's VETERINARY CLINIC",
       "address": "Naga City, Camarines Sur",
       "phone": "+639630895389",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 13.6240122,
+      "longitude": 123.1850318,
       "emergency_capable": true,
       "owner_verified": false,
       "services": [
@@ -20922,14 +21084,17 @@
       "google_place_id": "ChIJS-MkHhXzoTMRypn3zfDZ7DI",
       "category": "Emergency veterinarian service",
       "rating": 4.3,
-      "review_count": 8
+      "review_count": 8,
+      "geocoded_from": "Naga City, Bicol Region, 4400, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Nagodnila’s paws and claws veterinary clinic",
       "address": "Zone 2, Concepcion st, Bulan, Sorsogon",
       "phone": "+639386682933",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 12.6689078,
+      "longitude": 123.8769586,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -20941,7 +21106,10 @@
       "google_place_id": "ChIJm3pIP77boDMRkvdVHst9YCo",
       "category": "Veterinarian",
       "rating": 5,
-      "review_count": 1
+      "review_count": 1,
+      "geocoded_from": "Bulan, Sorsogon, Bicol Region, 4706, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "NAGUILIAN VETERINARY CLINIC",
@@ -21634,8 +21802,8 @@
       "name": "Northern Coast Veterinary Clinic",
       "address": "Pines Drive, Santa Ana, Cagayan",
       "phone": "+639563258880",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 18.4596072,
+      "longitude": 122.1405823,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -21645,7 +21813,10 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Northern%20Coast%20Veterinary%20Clinic&query_place_id=ChIJX4ayLS5DhjMRadqxHGreFh4",
       "google_place_id": "ChIJX4ayLS5DhjMRadqxHGreFh4",
-      "category": "Veterinarian"
+      "category": "Veterinarian",
+      "geocoded_from": "Pines Drive, Centro, Palawig, Santa Ana, Cagayan, Cagayan Valley, 3514, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Northern Valley Veterinary Clinic",
@@ -21690,8 +21861,8 @@
       "name": "Northland Animal Clinic",
       "address": "Loakan Road 2nd Floor, F/C Building, Baguio, Benguet",
       "phone": "+639811980980",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 16.4329569,
+      "longitude": 120.6515014,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -21703,7 +21874,10 @@
       "google_place_id": "ChIJ5ac8TzunkTMRT1mUHnribF0",
       "category": "Veterinarian",
       "rating": 5,
-      "review_count": 1
+      "review_count": 1,
+      "geocoded_from": "Alphaland Baguio Mountain Lodges, Tocmo, Benguet, Cordillera Administrative Region, 2604, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "NORTHPOINT VETERINARY CLINIC",
@@ -21729,8 +21903,8 @@
       "name": "Northside Vet",
       "address": "Gadingan St, Bayombong, Nueva Vizcaya",
       "phone": "+639562602653",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 16.4855681,
+      "longitude": 121.1480796,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -21742,14 +21916,17 @@
       "google_place_id": "ChIJmZG5irBFkDMRdrAjYtFzquY",
       "category": "Veterinarian",
       "rating": 5,
-      "review_count": 4
+      "review_count": 4,
+      "geocoded_from": "Gadingan Street, Villa Natividad, Bayombong, Nueva Vizcaya, Cagayan Valley, 3700, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Northvets Avenue Veterinary Clinic",
       "address": "Cagayan De Oro City, Misamis Oriental",
       "phone": "+639171257005",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.4860705,
+      "longitude": 124.656805,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -21761,7 +21938,10 @@
       "google_place_id": "ChIJeyrDeoPt_zIRvjHjTkaah-g",
       "category": "Veterinarian",
       "rating": 4.8,
-      "review_count": 6
+      "review_count": 6,
+      "geocoded_from": "University of Science and Technology of Southern Philippines, C. M. Recto Avenue, Mambato, Barangay 26, Poblacion, Cagayan de Oro, Northern Mindanao, 9000, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Northwest Animal Clinic",
@@ -22489,8 +22669,8 @@
       "name": "Officer In Charge City Veterinarian",
       "address": "Provincial Capitol Parking Lot, Gonzales Street, Dipolog City, Zamboanga del Norte",
       "phone": "+6363652136612",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.5863596,
+      "longitude": 123.3448798,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -22500,7 +22680,10 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Officer%20In%20Charge%20City%20Veterinarian&query_place_id=ChIJQ-qRKgqWVDIR_4ANL9ypIv8",
       "google_place_id": "ChIJQ-qRKgqWVDIR_4ANL9ypIv8",
-      "category": "Government office"
+      "category": "Government office",
+      "geocoded_from": "Dipolog, Zamboanga del Norte, Zamboanga Peninsula, 7100, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "OJ Ole Veterinary Clinic",
@@ -22628,8 +22811,8 @@
       "name": "ORAGON PET CLINIC",
       "address": "7B-Duplex Panganiban Drive, Naga City, Camarines Sur",
       "phone": "+639198202905",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 13.6240122,
+      "longitude": 123.1850318,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -22641,7 +22824,10 @@
       "google_place_id": "ChIJSQGCJ7aMoTMRudCSRH8M2gw",
       "category": "Veterinarian",
       "rating": 4.5,
-      "review_count": 37
+      "review_count": 37,
+      "geocoded_from": "Naga City, Bicol Region, 4400, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Orig VetCare Animal Clinic",
@@ -22689,8 +22875,8 @@
       "name": "Oro Woof N' Meow Veterinary Clinic",
       "address": "Barrientos St, Oroquieta City, Misamis Occidental",
       "phone": "+639128231337",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.4868958,
+      "longitude": 123.8074597,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -22702,7 +22888,10 @@
       "google_place_id": "ChIJxTQEAD4fVTIR4izKQ5OOIKA",
       "category": "Veterinarian",
       "rating": 5,
-      "review_count": 1
+      "review_count": 1,
+      "geocoded_from": "Oroquieta City, President Ramon Magsaysay Avenue, Purok 4, Lower Loboc, Oroquieta, Misamis Occidental, Northern Mindanao, 7207, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Ortega Petcare Veterinary Clinic",
@@ -22879,8 +23068,8 @@
       "name": "Panacan Veterinary Clinic",
       "address": "Jetti Gasoline Station, Km 14, Davao City, Davao del Sur",
       "phone": "+639923886272",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 7.0857729,
+      "longitude": 125.6160832,
       "emergency_capable": true,
       "owner_verified": false,
       "services": [
@@ -22894,7 +23083,10 @@
       "google_place_id": "ChIJzdWTl1Fp-TIRj3PsLr64Mvs",
       "category": "Emergency veterinarian service",
       "rating": 5,
-      "review_count": 2
+      "review_count": 2,
+      "geocoded_from": "University of Southeastern Philippines - Obrero Campus, A. Iñigo Street, Barangay 18-B, Poblacion District, Davao City, Davao Region, 8000, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "PANACEA Veterinary Clinic",
@@ -23260,8 +23452,8 @@
       "name": "Pawlympus Veterinary Clinic",
       "address": "purok 7 barangay Revolution street, Guinobatan, Albay",
       "phone": "+639630921599",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 13.1904597,
+      "longitude": 123.5999458,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -23273,7 +23465,10 @@
       "google_place_id": "ChIJb0ntbAAJoTMRzXFnQqwbnoY",
       "category": "Veterinarian",
       "rating": 4,
-      "review_count": 4
+      "review_count": 4,
+      "geocoded_from": "Guinobatan, Albay, Bicol Region, 4503, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "PAWMERA ANIMAL CLINIC",
@@ -23361,8 +23556,8 @@
       "name": "Pawprint Animal Treatment and Care Hub - Veterinary Clinic",
       "address": "Pioneer Ave, Tagum, Davao del Norte",
       "phone": "+639935809362",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 7.4471093,
+      "longitude": 125.8095099,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -23375,7 +23570,10 @@
       "category": "Veterinarian",
       "website": "https://www.facebook.com/pawprinttagum",
       "rating": 5,
-      "review_count": 10
+      "review_count": 10,
+      "geocoded_from": "Pioneer Avenue, Nangka, Briz District, Magugpo Poblacion, Tagum, Davao del Norte, Davao Region, 8100, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "PAWPRINTS VETERINARY CLINIC",
@@ -23497,8 +23695,8 @@
       "name": "Paws and Hooves Animal Clinic and Grooming Center",
       "address": "Zone 2, 8578 Ilagan - Delfin Albano - Mallig Rd, Delfin Albano, Isabela",
       "phone": "+639925161982",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 17.3045743,
+      "longitude": 121.7789303,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -23508,7 +23706,10 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Paws%20and%20Hooves%20Animal%20Clinic%20and%20Grooming%20Center&query_place_id=ChIJJydHxLplhTMRkF0Y3SAuQa4",
       "google_place_id": "ChIJJydHxLplhTMRkF0Y3SAuQa4",
-      "category": "Veterinarian"
+      "category": "Veterinarian",
+      "geocoded_from": "Delfin Albano, Isabela, Cagayan Valley, 3326, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Paws and Tails Animal Clinic",
@@ -23531,8 +23732,8 @@
       "name": "Paws Claws Veterinary Clinic",
       "address": "MV7G+42G, Imaculada Concepcion Street, Bulan, Sorsogon",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 12.6689078,
+      "longitude": 123.8769586,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -23544,7 +23745,10 @@
       "google_place_id": "ChIJl1GGo7DWoDMRvemd5Mnnv6k",
       "category": "Veterinary care",
       "rating": 3.3,
-      "review_count": 6
+      "review_count": 6,
+      "geocoded_from": "Bulan, Sorsogon, Bicol Region, 4706, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "PAWS Doctor Animal Clinic",
@@ -23725,8 +23929,8 @@
       "name": "Pawsitive Point Veterinary Services and Supplies",
       "address": "GX5H+42P Public Market, San Francisco, Agusan del Sur",
       "phone": "+639124610876",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.5074571,
+      "longitude": 125.9777881,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -23738,7 +23942,10 @@
       "google_place_id": "ChIJPR8-qU39_TIRpNdR153Qjwc",
       "category": "Veterinarian",
       "rating": 4.5,
-      "review_count": 12
+      "review_count": 12,
+      "geocoded_from": "San Francisco Public Market, Roxas Street, Purok 4, Barangay 4, Poblacion, Karaos, San Francisco, Agusan del Sur, Caraga, 8501, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Pawsitive Veterinary Clinic",
@@ -23783,8 +23990,8 @@
       "name": "PAWSLIFE WELLNESS AND ANIMAL CLINIC",
       "address": "Washington Drive Brgy 16, Legazpi City, Albay",
       "phone": "+639335212355",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 13.1462449,
+      "longitude": 123.7405309,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -23796,7 +24003,10 @@
       "google_place_id": "ChIJFZjBZewBoTMR8Q04PDtiW0c",
       "category": "Veterinary pharmacy",
       "rating": 4.5,
-      "review_count": 21
+      "review_count": 21,
+      "geocoded_from": "Canon Philippines, B. S. Imperial Street, Bitano, Legazpi, Albay, Bicol Region, 4500, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "PAWSOME FURIENDS VETERINARY SERVICES",
@@ -23819,8 +24029,8 @@
       "name": "Pawsome Vet",
       "address": "Diadi, Nueva Vizcaya",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 16.6606225,
+      "longitude": 121.3693297,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -23830,7 +24040,10 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Pawsome%20Vet&query_place_id=ChIJ2b2KeToRkDMRxkXQjKnF-3w",
       "google_place_id": "ChIJ2b2KeToRkDMRxkXQjKnF-3w",
-      "category": "Veterinary care"
+      "category": "Veterinary care",
+      "geocoded_from": "Diadi, Nueva Vizcaya, Cagayan Valley, 3712, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Pawsprint Veterinary Clinic",
@@ -23878,8 +24091,8 @@
       "name": "Pawssible Solutions Veterinary Clinic",
       "address": "W3HP+G93, Old Guiwan Hwy, Zamboanga City, Zamboanga del Sur",
       "phone": "+639477312312",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 6.9013985,
+      "longitude": 122.0821206,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -23891,7 +24104,10 @@
       "google_place_id": "ChIJdeJHewBDUDIRm6WVMD1Wj7g",
       "category": "Veterinarian",
       "rating": 3.8,
-      "review_count": 4
+      "review_count": 4,
+      "geocoded_from": "National Museum of the Philippines - Zamboanga, N. S. Valderosa Street, Campo Muslim, Rio Hondo, Santa Catalina, Zamboanga City, Zamboanga Peninsula, 7000, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Pawssion animal clinic",
@@ -24873,8 +25089,8 @@
       "name": "Pet Global Animal Medical Center",
       "address": "Front of Geo Gas, Zone 1 Rodolfo N. Pelaez Blvd, Cagayan De Oro City, Misamis Oriental",
       "phone": "+639056959266",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.4860705,
+      "longitude": 124.656805,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -24887,7 +25103,10 @@
       "category": "Veterinarian",
       "website": "https://www.facebook.com/PetGlobalCDO",
       "rating": 4.4,
-      "review_count": 8
+      "review_count": 8,
+      "geocoded_from": "University of Science and Technology of Southern Philippines, C. M. Recto Avenue, Mambato, Barangay 26, Poblacion, Cagayan de Oro, Northern Mindanao, 9000, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Pet Guild Veterinary Clinic and Grooming - Malanday Valenzuela City NCR",
@@ -25101,8 +25320,8 @@
       "name": "Pet Hub Veterinary Clinic",
       "address": "PQ62+P3J, Lawaan St, City of Bayugan, Agusan del Sur",
       "phone": "+639773082908",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.7226205,
+      "longitude": 125.7347276,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -25115,7 +25334,10 @@
       "category": "Veterinarian",
       "website": "http://facebook.com/pethubbayugancity",
       "rating": 4.2,
-      "review_count": 14
+      "review_count": 14,
+      "geocoded_from": "Department of the Environment and Natural Resources - City Enviromental and Natural Resources Office Bayugan, Narra Avenue, Purok 23, Poblacion, Bayugan, Agusan del Sur, Caraga, 8502, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Pet Hub Veterinary Clinic - Bacoor Branch",
@@ -25372,8 +25594,8 @@
       "name": "Pet Med Animal Clinic & Petshoppe",
       "address": "W36R+J96, Aguilar St, Valencia City, Bukidnon",
       "phone": "+639750483349",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 7.9117049,
+      "longitude": 125.091335,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -25385,7 +25607,10 @@
       "google_place_id": "ChIJT4fa2dYb_zIRRqmAqT_WgMI",
       "category": "Veterinary care",
       "rating": 4.4,
-      "review_count": 14
+      "review_count": 14,
+      "geocoded_from": "A. Aguilar Street, Purok 11, Poblacion, Lumbo, Valencia, Bukidnon, Northern Mindanao, 8709, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Pet Medic Animal Clinic",
@@ -25662,8 +25887,8 @@
       "name": "PET PURRFECT Animal Clinic",
       "address": "YOU WE TONG BLDG GUSA HIGHWAY, Cagayan De Oro City, Misamis Oriental",
       "phone": "+639177092185",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.4860705,
+      "longitude": 124.656805,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -25676,7 +25901,10 @@
       "category": "Animal hospital",
       "website": "https://web.facebook.com/Pet-Purrfect-Animal-Clinic-786567171423463/",
       "rating": 4.5,
-      "review_count": 31
+      "review_count": 31,
+      "geocoded_from": "University of Science and Technology of Southern Philippines, C. M. Recto Avenue, Mambato, Barangay 26, Poblacion, Cagayan de Oro, Northern Mindanao, 9000, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Pet Royale Clinic Veterinary Services",
@@ -25821,8 +26049,8 @@
       "name": "Pet Stewards VETERINARY CLINIC",
       "address": "MFF8+C5Q, San Mariano St, Cordon, Isabela",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 16.674369,
+      "longitude": 121.4651618,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -25832,7 +26060,10 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Pet%20Stewards%20VETERINARY%20CLINIC&query_place_id=ChIJL73MKsEPkDMR09-kxq1naUg",
       "google_place_id": "ChIJL73MKsEPkDMR09-kxq1naUg",
-      "category": "Veterinary care"
+      "category": "Veterinary care",
+      "geocoded_from": "San Mariano Street, Laurel, Cordon, Isabela, Cagayan Valley, 3312, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Pet Vet Animal Medical Center",
@@ -25861,8 +26092,8 @@
       "name": "Pet Villa Animal Clinic",
       "address": "Zone 6, St Paul Subdivision, Pili, Camarines Sur",
       "phone": "+639705284377",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 13.5562068,
+      "longitude": 123.2740809,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -25875,7 +26106,10 @@
       "category": "Veterinarian",
       "website": "https://www.facebook.com/petvillavetph",
       "rating": 4.8,
-      "review_count": 5
+      "review_count": 5,
+      "geocoded_from": "Pili, Camarines Sur, Bicol Region, 4418, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Pet Village WELLNESS CLINIC",
@@ -25901,8 +26135,8 @@
       "name": "Pet Welfare Veterinary Clinic",
       "address": "PP9X+5PM, Pomelo Street, City of Bayugan, Agusan del Sur",
       "phone": "+639051130793",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.7226205,
+      "longitude": 125.7347276,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -25914,7 +26148,10 @@
       "google_place_id": "ChIJw_y24sj9ATMRWulDMW4dHFw",
       "category": "Veterinarian",
       "rating": 4.5,
-      "review_count": 18
+      "review_count": 18,
+      "geocoded_from": "Department of the Environment and Natural Resources - City Enviromental and Natural Resources Office Bayugan, Narra Avenue, Purok 23, Poblacion, Bayugan, Agusan del Sur, Caraga, 8502, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Pet Wellness",
@@ -26148,8 +26385,8 @@
       "name": "PetCity Animal Clinic (Veterinary Clinic in Naga City)",
       "address": "153 Caceres St, Naga City, Camarines Sur",
       "phone": "+639530782584",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 13.6240122,
+      "longitude": 123.1850318,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -26161,7 +26398,10 @@
       "google_place_id": "ChIJ-auGr9CNoTMRqbN0PVvm7Lc",
       "category": "Veterinarian",
       "rating": 5,
-      "review_count": 5
+      "review_count": 5,
+      "geocoded_from": "Naga City, Bicol Region, 4400, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Petco. Animal Clinic - Manggahan Branch",
@@ -26451,8 +26691,8 @@
       "name": "Petlantis Veterinary Clinic",
       "address": "Concepcion St, Ligao City, Albay",
       "phone": "+639120282981",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 13.2402789,
+      "longitude": 123.5365227,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -26464,7 +26704,10 @@
       "google_place_id": "ChIJvbdiybEJoTMRg0VY0SXQPzg",
       "category": "Veterinarian",
       "rating": 4.4,
-      "review_count": 8
+      "review_count": 8,
+      "geocoded_from": "Ligao, Albay, Bicol Region, 4504, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Petlife Veterinary Clinic",
@@ -26618,8 +26861,8 @@
       "name": "Petmate Veterinary Clinic",
       "address": "666J+R6J, Iligan City, Lanao del Norte",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.2454672,
+      "longitude": 124.2542936,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -26631,14 +26874,17 @@
       "google_place_id": "ChIJS_F8BkCfVTIR3jeOpfUdCOk",
       "category": "Veterinarian",
       "rating": 4.7,
-      "review_count": 21
+      "review_count": 21,
+      "geocoded_from": "SM City Iligan, Tambo, Santo Rosario, Iligan, Northern Mindanao, 9200, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Petmatters animal clinic",
       "address": "C.T. Montalban Street, Butuan City, Agusan del Norte",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.9282308,
+      "longitude": 125.5514944,
       "emergency_capable": true,
       "owner_verified": false,
       "services": [
@@ -26652,7 +26898,10 @@
       "google_place_id": "ChIJR7xUIuvBATMRrgmPliqaqsA",
       "category": "Emergency veterinarian service",
       "rating": 4.4,
-      "review_count": 14
+      "review_count": 14,
+      "geocoded_from": "Butuan City Police Station 1, Butuan, Agusan del Norte, Caraga, 8600, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "PetMed Veterinary Clinic - Tungko",
@@ -26944,8 +27193,8 @@
       "name": "Pets 2GO Veterinary Clinic Bulua",
       "address": "Zone 4, Upper, Beside Go Compound right after Bulua elementary school, Cagayan De Oro City, Misamis Oriental",
       "phone": "+639274266229",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.4860705,
+      "longitude": 124.656805,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -26957,14 +27206,17 @@
       "google_place_id": "ChIJ6bi8Bbjz_zIRxOnbVMKT6wQ",
       "category": "Veterinarian",
       "rating": 4.1,
-      "review_count": 33
+      "review_count": 33,
+      "geocoded_from": "University of Science and Technology of Southern Philippines, C. M. Recto Avenue, Mambato, Barangay 26, Poblacion, Cagayan de Oro, Northern Mindanao, 9000, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Pets Avenue Veterinary Services",
       "address": "President Roxas, Cotabato",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 7.1577578,
+      "longitude": 125.0513245,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -26974,7 +27226,10 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Pets%20Avenue%20Veterinary%20Services&query_place_id=ChIJbaqRTZHl-DIRXqV3DH37bAQ",
       "google_place_id": "ChIJbaqRTZHl-DIRXqV3DH37bAQ",
-      "category": "Veterinary care"
+      "category": "Veterinary care",
+      "geocoded_from": "President Roxas, Cotabato, Soccsksargen, 9405, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Pets Choice Veterinary Clinic",
@@ -27175,8 +27430,8 @@
       "name": "PETS POINT Veterinary Clinic",
       "address": "Purok 15 Poblacion Road, Prosperidad, Agusan del Sur",
       "phone": "+639309326459",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.6023961,
+      "longitude": 125.9116338,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -27188,7 +27443,10 @@
       "google_place_id": "ChIJXU0Jb9EB_jIRQkryv4W6p7U",
       "category": "Veterinarian",
       "rating": 5,
-      "review_count": 3
+      "review_count": 3,
+      "geocoded_from": "Prosperidad, Agusan del Sur, Caraga, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Pets Royale Veterinary Clinic",
@@ -27271,8 +27529,8 @@
       "name": "Pets World Veterinary Clinic",
       "address": "117 Montilla Boulevard, Butuan City, Agusan del Norte, Butuan City, Agusan del Norte",
       "phone": "+6363853425648",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.9282308,
+      "longitude": 125.5514944,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -27282,7 +27540,10 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Pets%20World%20Veterinary%20Clinic&query_place_id=ChIJ6Zq_akvAATMRkIHygUmt3Ss",
       "google_place_id": "ChIJ6Zq_akvAATMRkIHygUmt3Ss",
-      "category": "Veterinary care"
+      "category": "Veterinary care",
+      "geocoded_from": "Butuan City Police Station 1, Butuan, Agusan del Norte, Caraga, 8600, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Pets! Animal Clinic",
@@ -27447,8 +27708,8 @@
       "name": "Petspace Veterinary Clinic - Ilang",
       "address": "3 Daang Maharlika Hwy, Davao City, Davao del Sur",
       "phone": "+639923886272",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 6.9611697,
+      "longitude": 125.4754112,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -27460,7 +27721,10 @@
       "google_place_id": "ChIJyRJiTwBr-TIRsJFm0wzzvis",
       "category": "Veterinarian",
       "rating": 5,
-      "review_count": 2
+      "review_count": 2,
+      "geocoded_from": "Davao-Cotabato Highway, Parrot, Fatima, Toril District, Davao City, Davao del Sur, Davao Region, 8001, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Petstacular Veterinary Clinic",
@@ -27649,8 +27913,8 @@
       "name": "Petvet Central Vet Clinic - Barra Branch",
       "address": "4 Zone, Barra Opol, Opol, Misamis Oriental",
       "phone": "+639275698880",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.5212764,
+      "longitude": 124.5747129,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -27662,14 +27926,17 @@
       "google_place_id": "ChIJ4-VIhGDz_zIRZKBgfBQ5RNE",
       "category": "Veterinarian",
       "rating": 4.3,
-      "review_count": 33
+      "review_count": 33,
+      "geocoded_from": "Opol, Misamis Oriental, Northern Mindanao, 9017, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "PetVet Central Vet Clinic Uptown",
       "address": "Lorraine's Portico, Masterson Ave, Cagayan De Oro City, Misamis Oriental",
       "phone": "+639162359535",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.4860705,
+      "longitude": 124.656805,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -27681,14 +27948,17 @@
       "google_place_id": "ChIJrbrCtOuM_zIRBtcI53iFgKA",
       "category": "Veterinarian",
       "rating": 4.4,
-      "review_count": 86
+      "review_count": 86,
+      "geocoded_from": "University of Science and Technology of Southern Philippines, C. M. Recto Avenue, Mambato, Barangay 26, Poblacion, Cagayan de Oro, Northern Mindanao, 9000, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "PetVet Central Veterinary Clinic",
       "address": "FMGF+4GF, Justiniano R. Borja Ext, Cagayan De Oro City, Misamis Oriental",
       "phone": "+639664429800",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.4860705,
+      "longitude": 124.656805,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -27700,7 +27970,10 @@
       "google_place_id": "ChIJkw1ii5Xz_zIRadJGJjGF_yk",
       "category": "Veterinarian",
       "rating": 4.3,
-      "review_count": 13
+      "review_count": 13,
+      "geocoded_from": "University of Science and Technology of Southern Philippines, C. M. Recto Avenue, Mambato, Barangay 26, Poblacion, Cagayan de Oro, Northern Mindanao, 9000, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "PetVet Jr",
@@ -27725,8 +27998,8 @@
       "name": "PetVet Tumauini Animal Clinic",
       "address": "Padron street, Tumauini, Isabela",
       "phone": "+639350529581",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 17.2740459,
+      "longitude": 121.809876,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -27736,7 +28009,10 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=PetVet%20Tumauini%20Animal%20Clinic&query_place_id=ChIJU-Yd0kNlhTMRvs0AGt2zD4M",
       "google_place_id": "ChIJU-Yd0kNlhTMRvs0AGt2zD4M",
-      "category": "Veterinarian"
+      "category": "Veterinarian",
+      "geocoded_from": "Tumauini, Isabela, Cagayan Valley, 3325, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Petville Veterinary Clinic",
@@ -27959,8 +28235,8 @@
       "name": "PHOENIX VETERINARY CLINIC",
       "address": "FMM5+FXP, Butuan - Cagayan de Oro - Iligan Rd, Cagayan De Oro City, Misamis Oriental",
       "phone": "+6363888562971",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.4860705,
+      "longitude": 124.656805,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -27972,7 +28248,10 @@
       "google_place_id": "ChIJfRwvFMHy_zIRtjg1XYkj89c",
       "category": "Veterinarian",
       "rating": 4.3,
-      "review_count": 8
+      "review_count": 8,
+      "geocoded_from": "University of Science and Technology of Southern Philippines, C. M. Recto Avenue, Mambato, Barangay 26, Poblacion, Cagayan de Oro, Northern Mindanao, 9000, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Pila Vet Hub",
@@ -28017,8 +28296,8 @@
       "name": "Pinefield Animalcare Veterinary Clinic",
       "address": "Zone 9, Manolo Fortich, Bukidnon",
       "phone": "+639759743233",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.3678344,
+      "longitude": 124.8663083,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -28030,7 +28309,10 @@
       "google_place_id": "ChIJ523GEvmX_zIRmtmzQZhsn8g",
       "category": "Veterinarian",
       "rating": 4.8,
-      "review_count": 6
+      "review_count": 6,
+      "geocoded_from": "Manolo Fortich, Bukidnon, Northern Mindanao, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Pines Veterinary Clinic",
@@ -28212,8 +28494,8 @@
       "name": "Ppl Paws & Tails Veterinary Clinic",
       "address": "MFWQ+5QW, Gov Jose T. Fuentebella National Hwy, Goa, Camarines Sur",
       "phone": "+639196821681",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 13.6973443,
+      "longitude": 123.4885073,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -28225,7 +28507,10 @@
       "google_place_id": "ChIJbW3uD67DoTMRhfRlu8hTXDY",
       "category": "Veterinary care",
       "rating": 4.4,
-      "review_count": 20
+      "review_count": 20,
+      "geocoded_from": "Goa, Camarines Sur, Bicol Region, 4423, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "PRAGMAVET Animal Clinic 24/7",
@@ -28255,8 +28540,8 @@
       "name": "PRBB Veterinary Clinic",
       "address": "Zone 1 National Highway, Pili, Camarines Sur",
       "phone": "+639086157231",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 13.7130695,
+      "longitude": 123.744706,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -28268,7 +28553,10 @@
       "google_place_id": "ChIJXwwdorKToTMRjsgHXEhu6ig",
       "category": "Veterinarian",
       "rating": 4.5,
-      "review_count": 12
+      "review_count": 12,
+      "geocoded_from": "Governor Felix A. Fuentebella National Highway, Presentacion, Camarines Sur, Bicol Region, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Precious Fur Animal Clinic Biñan Branch",
@@ -28524,8 +28812,8 @@
       "name": "Primo Vet Animal Clinic",
       "address": "Block 1 Lot 36, Deca Homes, Cabantian Highway, Davao City, Davao del Sur",
       "phone": "+639173225961",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 7.0857729,
+      "longitude": 125.6160832,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -28537,7 +28825,10 @@
       "google_place_id": "ChIJye_ssi5t-TIRoZQYOLrN3PQ",
       "category": "Medical clinic",
       "rating": 4,
-      "review_count": 4
+      "review_count": 4,
+      "geocoded_from": "University of Southeastern Philippines - Obrero Campus, A. Iñigo Street, Barangay 18-B, Poblacion District, Davao City, Davao Region, 8000, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Primovet Advanced Animal Healthcare Clinic",
@@ -28839,8 +29130,8 @@
       "name": "Provincial Veterinary Office (PVO)",
       "address": "Tagum, Davao del Norte",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 7.4470784,
+      "longitude": 125.8094853,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -28853,7 +29144,10 @@
       "category": "Local government office",
       "website": "https://www.facebook.com/davnorpvo",
       "rating": 2.5,
-      "review_count": 2
+      "review_count": 2,
+      "geocoded_from": "Tagum, Davao del Norte, Davao Region, 8100, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Provincial Veterinary Office Cattle Production Farm",
@@ -28971,8 +29265,8 @@
       "name": "Provincial Veterinary Sanitation Check Point",
       "address": "CM78+882, Manolo Fortich - Libona - Indahag Rd, Libona, Bukidnon",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.3335275,
+      "longitude": 124.7484031,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -28982,7 +29276,10 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Provincial%20Veterinary%20Sanitation%20Check%20Point&query_place_id=ChIJty5VGJWN_zIR58f9hYz-Vvc",
       "google_place_id": "ChIJty5VGJWN_zIR58f9hYz-Vvc",
-      "category": "Veterinary care"
+      "category": "Veterinary care",
+      "geocoded_from": "Libona, Bukidnon, Northern Mindanao, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Provincial Veterinary Training Center",
@@ -29043,8 +29340,8 @@
       "name": "Psalms 231 Veterinary Clinic",
       "address": "Plete compond Tuazon Subd, Polomolok, South Cotabato",
       "phone": "+639709082344",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 6.2202374,
+      "longitude": 125.0628101,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -29054,7 +29351,10 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Psalms%20231%20Veterinary%20Clinic&query_place_id=ChIJv0ecj_qb9zIRAoK_cQlQ8XU",
       "google_place_id": "ChIJv0ecj_qb9zIRAoK_cQlQ8XU",
-      "category": "Veterinarian"
+      "category": "Veterinarian",
+      "geocoded_from": "Polomolok, South Cotabato, Soccsksargen, 9504, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Puerto Princesa City - City Veterinarian Office",
@@ -29252,8 +29552,8 @@
       "name": "Quiñones Veterinary Clinic",
       "address": "X645+77R, Dona Rosa St, City of Mati, Davao Oriental",
       "phone": "+6363873883749",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 6.9591223,
+      "longitude": 126.2053666,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -29265,7 +29565,10 @@
       "google_place_id": "ChIJ78DTThLJ-zIR0Oclx3GASkM",
       "category": "Veterinarian",
       "rating": 4,
-      "review_count": 4
+      "review_count": 4,
+      "geocoded_from": "Doña Rosa Street, Don Luis Village, Madang, Central, Mati, Davao Oriental, Davao Region, 8200, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Quirino Pet House - Cabarroguis, Quirino",
@@ -29450,8 +29753,8 @@
       "name": "Ragay Veterinary Clinic",
       "address": "RQCM+2Q8, Ragay, Camarines Sur",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 13.8210634,
+      "longitude": 122.78763,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -29463,14 +29766,17 @@
       "google_place_id": "ChIJ19bnrYcTojMRKkDn7ab96mk",
       "category": "Veterinarian",
       "rating": 5,
-      "review_count": 1
+      "review_count": 1,
+      "geocoded_from": "Ragay, Camarines Sur, Bicol Region, 4409, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "RAMON VETERINARY CLINIC",
       "address": "QGMM+GRF, Santiago - Tuguegarao Rd, Ramon, Isabela",
       "phone": "+639677917278",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 16.78192,
+      "longitude": 121.5351776,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -29480,7 +29786,10 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=RAMON%20VETERINARY%20CLINIC&query_place_id=ChIJ80e35uIDkDMRKJntMLHvabE",
       "google_place_id": "ChIJ80e35uIDkDMRKJntMLHvabE",
-      "category": "Laundry"
+      "category": "Laundry",
+      "geocoded_from": "Santiago-Tuguegarao Road, Bugallon Proper, Purok 7, Ramon, Isabela, Cagayan Valley, 3319, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Rare Pet Care Veterinary Services 4.0",
@@ -29704,8 +30013,8 @@
       "name": "RED Animal Clinic",
       "address": "9R37+66V, Manolo Fortich, Bukidnon",
       "phone": "+639266303831",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.3678344,
+      "longitude": 124.8663083,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -29717,7 +30026,10 @@
       "google_place_id": "ChIJeUnv1faW_zIRi9guzwJKLb0",
       "category": "Animal hospital",
       "rating": 4,
-      "review_count": 3
+      "review_count": 3,
+      "geocoded_from": "Manolo Fortich, Bukidnon, Northern Mindanao, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Red Marks Animal Hospital",
@@ -29871,8 +30183,8 @@
       "name": "Reyhan Animal Care Clinic",
       "address": "9V88+XX5, Sayre Hwy, Manolo Fortich, Bukidnon",
       "phone": "+639264813135",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.3713749,
+      "longitude": 124.8556802,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -29884,7 +30196,10 @@
       "google_place_id": "ChIJ887U8ti9_zIRCWioGXXhsFs",
       "category": "Veterinarian",
       "rating": 5,
-      "review_count": 3
+      "review_count": 3,
+      "geocoded_from": "Sayre Highway, Tankulan, Dicklum, Manolo Fortich, Bukidnon, Northern Mindanao, 8703, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Ric-Ric Animal Clinic by PetVet",
@@ -29910,8 +30225,8 @@
       "name": "Riceville Animal Clinic",
       "address": "General Ocampo St., Libmanan, Camarines Sur",
       "phone": "+639318825243",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 13.6936298,
+      "longitude": 123.0620792,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -29921,7 +30236,10 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Riceville%20Animal%20Clinic&query_place_id=ChIJw-CVuikfojMR3eRVRDi-BSI",
       "google_place_id": "ChIJw-CVuikfojMR3eRVRDi-BSI",
-      "category": "Veterinarian"
+      "category": "Veterinarian",
+      "geocoded_from": "General E. Ocampo Street, Zone 3, Poblacion, Libmanan, Camarines Sur, Bicol Region, 4407, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Rick Franklin Veterinary Supply And Services",
@@ -29983,8 +30301,8 @@
       "name": "Rinconada Veterinary Clinic",
       "address": "zone 1, Highway 1, Iriga City, Camarines Sur",
       "phone": "+639816625262",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 13.4222626,
+      "longitude": 123.4129406,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -29997,7 +30315,10 @@
       "category": "Veterinarian",
       "website": "https://www.facebook.com/profile.php?id=100087943285422&mibextid=ZbWKwL",
       "rating": 3.8,
-      "review_count": 9
+      "review_count": 9,
+      "geocoded_from": "Iriga, Camarines Sur, Bicol Region, 4431, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Rizal Canine Distemper Facility",
@@ -30329,8 +30650,8 @@
       "name": "Roxas Dog&Cat Veterinary Services",
       "address": "Diversion Road, Purok Sampaguita, Roxas, Palawan",
       "phone": "+639691592047",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 10.3196268,
+      "longitude": 119.3430042,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -30342,7 +30663,10 @@
       "google_place_id": "ChIJa9T8N2fNtTMRBrcZrH-FCPw",
       "category": "Veterinarian",
       "rating": 5,
-      "review_count": 4
+      "review_count": 4,
+      "geocoded_from": "Roxas, Palawan, Mimaropa, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Roxas Veterinary Clinic",
@@ -31357,8 +31681,8 @@
       "name": "SAS Animal Birth Control Center Veterinary Services",
       "address": "Pasil-Bonbon Rd, Cagayan De Oro City, Misamis Oriental",
       "phone": "+639298192621",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.4860705,
+      "longitude": 124.656805,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -31370,7 +31694,10 @@
       "google_place_id": "ChIJrRQYqrrz_zIRn2a4i5o1hCo",
       "category": "Veterinarian",
       "rating": 5,
-      "review_count": 1
+      "review_count": 1,
+      "geocoded_from": "University of Science and Technology of Southern Philippines, C. M. Recto Avenue, Mambato, Barangay 26, Poblacion, Cagayan de Oro, Northern Mindanao, 9000, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "SASH Veterinary Clinic",
@@ -31478,8 +31805,8 @@
       "name": "Scrs Vet Trading",
       "address": "Bambang, Nueva Vizcaya",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 16.3850624,
+      "longitude": 121.1054715,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -31491,7 +31818,10 @@
       "google_place_id": "ChIJrV0hpe5akDMRalqvwH__YP0",
       "category": "Veterinary care",
       "rating": 5,
-      "review_count": 1
+      "review_count": 1,
+      "geocoded_from": "Bambang, Nueva Vizcaya, Cagayan Valley, 3702, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Seaside Veterinary Clinic",
@@ -31520,8 +31850,8 @@
       "name": "Seaside Vets Animal Clinic",
       "address": "Zone 1B, Opol, Misamis Oriental",
       "phone": "+639178881275",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.521544,
+      "longitude": 124.573648,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -31533,7 +31863,10 @@
       "google_place_id": "ChIJQ7Q-jfj1_zIR_gfnOogcp4c",
       "category": "Veterinarian",
       "rating": 4.9,
-      "review_count": 11
+      "review_count": 11,
+      "geocoded_from": "Zone 3, Poblacion, Luyongbonbon, Bonbon, Opol, Misamis Oriental, Northern Mindanao, 9016, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Seika Veterinary Clinic",
@@ -32129,8 +32462,8 @@
       "name": "Sorsogon Veterinary Clinic",
       "address": "XXCX+6MV, Sorsogon City, Sorsogon",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 12.9707848,
+      "longitude": 124.0052543,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -32140,14 +32473,17 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sorsogon%20Veterinary%20Clinic&query_place_id=ChIJcUiIGxXvoDMRQcyzy6z-g9g",
       "google_place_id": "ChIJcUiIGxXvoDMRQcyzy6z-g9g",
-      "category": "Veterinarian"
+      "category": "Veterinarian",
+      "geocoded_from": "Sorsogon City, Sorsogon, Bicol Region, 4700, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Sorsogon Veterinary Clinic and Livestock Consultancy",
       "address": "Manlangit Building, Purok 6, Balogo East, Sorsogon City, Sorsogon",
       "phone": "+639123825500",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 12.9707848,
+      "longitude": 124.0052543,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -32159,7 +32495,10 @@
       "google_place_id": "ChIJ11yGZw_voDMRc9O5XgCwyQ0",
       "category": "Veterinarian",
       "rating": 4.9,
-      "review_count": 8
+      "review_count": 8,
+      "geocoded_from": "Sorsogon City, Sorsogon, Bicol Region, 4700, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "South Negros Veterinary Hospital",
@@ -32429,8 +32768,8 @@
       "name": "Southwest Veterinary Clinic",
       "address": "H8RV+6PR, Kalibu Biasong, Dipolog City, Zamboanga del Norte",
       "phone": "+6363652124681",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.5863596,
+      "longitude": 123.3448798,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -32440,7 +32779,10 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Southwest%20Veterinary%20Clinic&query_place_id=ChIJZe9PagaWVDIRTPWLgZnCdGM",
       "google_place_id": "ChIJZe9PagaWVDIRTPWLgZnCdGM",
-      "category": "Veterinary care"
+      "category": "Veterinary care",
+      "geocoded_from": "Dipolog, Zamboanga del Norte, Zamboanga Peninsula, 7100, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Spoiled Pets Veterinary Clinic Angono",
@@ -32900,8 +33242,8 @@
       "name": "St. Paul Animal Health Clinic - San Jose",
       "address": "Labangan, National Highway, San Jose, Occidental Mindoro",
       "phone": "+639171599001",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 12.3539835,
+      "longitude": 121.0675039,
       "emergency_capable": true,
       "owner_verified": false,
       "services": [
@@ -32916,7 +33258,10 @@
       "category": "Emergency veterinarian service",
       "website": "https://www.facebook.com/share/Cazf9j47cqmrPHK3/?mibextid=LQQJ4d",
       "rating": 5,
-      "review_count": 2
+      "review_count": 2,
+      "geocoded_from": "San Jose, Occidental Mindoro, Mimaropa, 5100, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "St. Ruiz Veterinary Clinic",
@@ -32984,8 +33329,8 @@
       "name": "St. Vincent Veterinary Clinic-Damilag",
       "address": "Purok 10, Manolo Fortich, Bukidnon",
       "phone": "+639176674580",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.37825,
+      "longitude": 124.9366711,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -32997,7 +33342,10 @@
       "google_place_id": "ChIJuy-SO5CX_zIR6gMQU7nl-RI",
       "category": "Veterinarian",
       "rating": 5,
-      "review_count": 3
+      "review_count": 3,
+      "geocoded_from": "Zigzag, Manolo Fortich, Bukidnon, Northern Mindanao, 8703, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "St. Wilhelm Veterinary Clinic",
@@ -33081,8 +33429,8 @@
       "name": "Stapes Animal Clinic",
       "address": "Purok Bayanihan, Tagum, Davao del Norte",
       "phone": "+639322171370",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 7.4427678,
+      "longitude": 125.8079329,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -33094,7 +33442,10 @@
       "google_place_id": "ChIJvx3hH2lT-TIRtxUHehFlFG0",
       "category": "Veterinarian",
       "rating": 4.7,
-      "review_count": 6
+      "review_count": 6,
+      "geocoded_from": "Bayanihan, Magugpo Poblacion, Tagum, Davao del Norte, Davao Region, 8100, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "STARBARKS VETERINARY CLINIC",
@@ -33119,8 +33470,8 @@
       "name": "Sto Niño Animal Clinic",
       "address": "238 Camacam St, City of Santiago, Isabela",
       "phone": "+639684922380",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 16.6825453,
+      "longitude": 121.5511549,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -33132,7 +33483,10 @@
       "google_place_id": "ChIJd_62S7YHkDMR0YkZEsiKMAg",
       "category": "Animal hospital",
       "rating": 5,
-      "review_count": 5
+      "review_count": 5,
+      "geocoded_from": "Santiago City National High School, Narra Street, Santiago Heights Subdivision, Malvar, Santiago, Isabela, Cagayan Valley, 3311, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Sto. Rosario Agri-Vet Supply",
@@ -33297,8 +33651,8 @@
       "name": "Sur Sur Animal Clinic",
       "address": "Purok Vila, Bali, Balilahan Rd, City of Tandag, Surigao del Sur",
       "phone": "+639989584565",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 9.0799833,
+      "longitude": 126.1974606,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -33309,14 +33663,17 @@
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sur%20Sur%20Animal%20Clinic&query_place_id=ChIJuVSm9pE3AjMRuJlidv8x_J0",
       "google_place_id": "ChIJuVSm9pE3AjMRuJlidv8x_J0",
       "category": "Veterinarian",
-      "website": "https://www.facebook.com/sursuranimalhealthclinic"
+      "website": "https://www.facebook.com/sursuranimalhealthclinic",
+      "geocoded_from": "Tandag, Surigao del Sur, Caraga, 8300, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Surigao Pet Doctors",
       "address": "QFQR+MM7, Burgos Street, corner Narciso Street, Surigao, Surigao del Norte",
       "phone": "+6363868268936",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 9.7891905,
+      "longitude": 125.4916336,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -33328,7 +33685,10 @@
       "google_place_id": "ChIJ0w0ZMbo2ATMRzH8eVB3SGGE",
       "category": "Veterinary care",
       "rating": 4.8,
-      "review_count": 60
+      "review_count": 60,
+      "geocoded_from": "Surigao Pet Doctors, Burgos Street, Kaskag Village, Surigao City, Surigao del Norte, Caraga, 8400, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "SVC Veterinary Clinic",
@@ -33376,8 +33736,8 @@
       "name": "Tabaco Veterinary Clinic",
       "address": "Bocalbos St, Tabaco City, Albay",
       "phone": "+639102918981",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 13.3556843,
+      "longitude": 123.72861,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -33389,7 +33749,10 @@
       "google_place_id": "ChIJm8lfxsmtoTMRLuYmNOllYBc",
       "category": "Veterinary care",
       "rating": 4.7,
-      "review_count": 39
+      "review_count": 39,
+      "geocoded_from": "Bocalbos Street, Basud, Cobo, Tabaco, Albay, Bicol Region, 4511, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Tacloban City Veterinary Office",
@@ -33432,8 +33795,8 @@
       "name": "Tagum Emergency Veterinary Hospital",
       "address": "Purok Dahlia, Tagum, Davao del Norte",
       "phone": "+639091518813",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 7.4297497,
+      "longitude": 125.8093659,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -33446,7 +33809,10 @@
       "category": "Animal hospital",
       "website": "https://www.facebook.com/tagumvetshospital/",
       "rating": 4.7,
-      "review_count": 78
+      "review_count": 78,
+      "geocoded_from": "Dahlia, Mangga, Visayan Village, Tagum, Davao del Norte, Davao Region, 8100, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Tails & Whiskers Azuela Cove",
@@ -33801,8 +34167,8 @@
       "name": "The Country Vet Animal Clinic",
       "address": "6th Street, #54 17th St, Cagayan De Oro City, Misamis Oriental",
       "phone": "+639177170803",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.4860705,
+      "longitude": 124.656805,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -33814,14 +34180,17 @@
       "google_place_id": "ChIJOw7GY9Ty_zIRT2o0TICogmc",
       "category": "Veterinarian",
       "rating": 4.2,
-      "review_count": 15
+      "review_count": 15,
+      "geocoded_from": "University of Science and Technology of Southern Philippines, C. M. Recto Avenue, Mambato, Barangay 26, Poblacion, Cagayan de Oro, Northern Mindanao, 9000, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "The Cowboy Veterinary Clinic",
       "address": "Manolo Fortich, Bukidnon",
       "phone": "+639173013637",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.3678344,
+      "longitude": 124.8663083,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -33833,14 +34202,17 @@
       "google_place_id": "ChIJ1Se1rKuX_zIR-MJmMb6bWkw",
       "category": "Veterinarian",
       "rating": 4,
-      "review_count": 2
+      "review_count": 2,
+      "geocoded_from": "Manolo Fortich, Bukidnon, Northern Mindanao, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "The Island Vet",
       "address": "H6MP+9J6, Sta. Cruz St, Virac, Catanduanes",
       "phone": "+639292630197",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 13.5847565,
+      "longitude": 124.2364962,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -33852,7 +34224,10 @@
       "google_place_id": "ChIJh1LQjXkXoDMRqJXejjLjP9w",
       "category": "Veterinarian",
       "rating": 5,
-      "review_count": 5
+      "review_count": 5,
+      "geocoded_from": "Virac Fire Station, San Rafael Street, Santa Cruz, Capilihan, Virac, Catanduanes, Bicol Region, 4800, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "The Paw's Palace Veterinary Clinic",
@@ -33917,8 +34292,8 @@
       "name": "THE VET TRIBE VETERINARY SERVICES",
       "address": "QUEEN VILLAGE, D2 SAGING, Nasipit, Agusan del Norte",
       "phone": "+639171646440",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.9884377,
+      "longitude": 125.3408268,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -33930,7 +34305,10 @@
       "google_place_id": "ChIJ38t053UCZC8RA4E1adWg4gw",
       "category": "Veterinarian",
       "rating": 5,
-      "review_count": 2
+      "review_count": 2,
+      "geocoded_from": "Nasipit, Agusan del Norte, Caraga, 8602, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "The Veterinary Hub Pte Corp Morato",
@@ -33978,8 +34356,8 @@
       "name": "The Yellow Lab Veterinary Clinic & Grooming Station",
       "address": "Arts and Science Building (ASB), Rodolfo N. Pelaez Blvd, Cagayan De Oro City, Misamis Oriental",
       "phone": "+639175575849",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.4860705,
+      "longitude": 124.656805,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -33991,7 +34369,10 @@
       "google_place_id": "ChIJ9fjx-yDz_zIRW_pwt5BxJDE",
       "category": "Veterinarian",
       "rating": 4.1,
-      "review_count": 36
+      "review_count": 36,
+      "geocoded_from": "University of Science and Technology of Southern Philippines, C. M. Recto Avenue, Mambato, Barangay 26, Poblacion, Cagayan de Oro, Northern Mindanao, 9000, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Therpy's Veterinary Clinic, Kidapawan City",
@@ -34118,8 +34499,8 @@
       "name": "TLC Veterinary Clinic",
       "address": "Puerto Princesa North Road, Puerto Princesa City, Palawan",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 9.7808779,
+      "longitude": 118.730191,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -34129,7 +34510,10 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=TLC%20Veterinary%20Clinic&query_place_id=ChIJXYle_8KdtTMRpG3OSCXt9pU",
       "google_place_id": "ChIJXYle_8KdtTMRpG3OSCXt9pU",
-      "category": "Health care facility"
+      "category": "Health care facility",
+      "geocoded_from": "Puerto Princesa City National Science High School, Colonel R. Gabuco Road, Tiniguiban, Puerto Princesa, Mimaropa, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "TLC Veterinary Clinic - Rizal Avenue Branch",
@@ -34388,8 +34772,8 @@
       "name": "Trivets Animal Clinic and Grooming Center",
       "address": "San Antonio, Calabanga, Camarines Sur",
       "phone": "+639197300536",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 13.6984296,
+      "longitude": 123.1992689,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -34401,7 +34785,10 @@
       "google_place_id": "ChIJq6ousNfzoTMRSiBtstd-frE",
       "category": "Veterinarian",
       "rating": 5,
-      "review_count": 3
+      "review_count": 3,
+      "geocoded_from": "San Antonio, Calabanga, Camarines Sur, Bicol Region, 4405, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "TrustiVet Animal Clinic",
@@ -34448,8 +34835,8 @@
       "name": "Uken Veterinary Services & Agrivet Supply",
       "address": "Tuguegarao City, Cagayan",
       "phone": "+639491183928",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 17.6118858,
+      "longitude": 121.7300377,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -34459,7 +34846,10 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Uken%20Veterinary%20Services%20%26%20Agrivet%20Supply&query_place_id=ChIJ3_08MceFhTMRbMxo9OuujpU",
       "google_place_id": "ChIJ3_08MceFhTMRbMxo9OuujpU",
-      "category": "Veterinary care"
+      "category": "Veterinary care",
+      "geocoded_from": "Tuguegarao, Cagayan, Cagayan Valley, 3500, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Umingan Veterinary Clinic",
@@ -34487,8 +34877,8 @@
       "name": "Uni Fur Animal Clinic And Pet Supplies",
       "address": "Barrio, 2 Barrio 5 Road, Koronadal, South Cotabato",
       "phone": "+639757444901",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 6.5004041,
+      "longitude": 124.8435437,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -34500,7 +34890,10 @@
       "google_place_id": "ChIJP-tMkQoi-DIRFVJBbWkvjuw",
       "category": "Veterinary care",
       "rating": 4.6,
-      "review_count": 12
+      "review_count": 12,
+      "geocoded_from": "Koronadal, South Cotabato, Soccsksargen, 9506, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "United Doctors Animal Clinic",
@@ -34648,8 +35041,8 @@
       "name": "UPTOWN ANIMAL PET CARE SERVICES",
       "address": "CJQC+J6W, Cagayan De Oro City, Misamis Oriental",
       "phone": "+639059710978",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.4860705,
+      "longitude": 124.656805,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -34659,14 +35052,17 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=UPTOWN%20ANIMAL%20PET%20CARE%20SERVICES&query_place_id=ChIJ11TLwJ2N_zIR9ulXZGKou2s",
       "google_place_id": "ChIJ11TLwJ2N_zIR9ulXZGKou2s",
-      "category": "Veterinarian"
+      "category": "Veterinarian",
+      "geocoded_from": "University of Science and Technology of Southern Philippines, C. M. Recto Avenue, Mambato, Barangay 26, Poblacion, Cagayan de Oro, Northern Mindanao, 9000, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Ur-Vet Animal Clinic",
       "address": "Baguio, Benguet",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 16.4329569,
+      "longitude": 120.6515014,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -34678,7 +35074,10 @@
       "google_place_id": "ChIJK7UGNVShkTMRkMbWodBcKf0",
       "category": "Veterinary care",
       "rating": 5,
-      "review_count": 1
+      "review_count": 1,
+      "geocoded_from": "Alphaland Baguio Mountain Lodges, Tocmo, Benguet, Cordillera Administrative Region, 2604, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Urban Fur Veterinary Clinic",
@@ -34743,8 +35142,8 @@
       "name": "Urban Petcare Animal Clinic",
       "address": "Zone 7, Pob. (Baliling, Bangued, Abra",
       "phone": "+639165989466",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 17.5964869,
+      "longitude": 120.61785,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -34756,7 +35155,10 @@
       "google_place_id": "ChIJG0jHHwBZjjMRcVgQzZQWXYI",
       "category": "Veterinarian",
       "rating": 5,
-      "review_count": 4
+      "review_count": 4,
+      "geocoded_from": "Bangued, Abra, Cordillera Administrative Region, 2800, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Urban Pets Veterinary Clinic",
@@ -35112,8 +35514,8 @@
       "name": "Vet",
       "address": "G5PV+GH8, Sanchez-Mira, Cagayan",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 18.5603984,
+      "longitude": 121.2342313,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -35125,7 +35527,10 @@
       "google_place_id": "ChIJfR2mbPfBiDMRQGJFevCpUww",
       "category": "Animal hospital",
       "rating": 5,
-      "review_count": 1
+      "review_count": 1,
+      "geocoded_from": "Sanchez Mira, Cagayan, Cagayan Valley, 3518, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "VET 88 SUPPLY",
@@ -35263,8 +35668,8 @@
       "name": "vet clinic",
       "address": "31 Yangco Rd, Baguio, Benguet",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 16.4329569,
+      "longitude": 120.6515014,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -35274,7 +35679,10 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=vet%20clinic&query_place_id=ChIJl2_ghVuhkTMRTJ3ubGYs3Sg",
       "google_place_id": "ChIJl2_ghVuhkTMRTJ3ubGYs3Sg",
-      "category": "Veterinary care"
+      "category": "Veterinary care",
+      "geocoded_from": "Alphaland Baguio Mountain Lodges, Tocmo, Benguet, Cordillera Administrative Region, 2604, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Vet Clinic at Pet Express SM City Grand Central",
@@ -35319,8 +35727,8 @@
       "name": "Vet Crest Animal Emergency Center",
       "address": "Cagayan De Oro City, Misamis Oriental",
       "phone": "+639159305681",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.4860705,
+      "longitude": 124.656805,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -35333,7 +35741,10 @@
       "category": "Medical Center",
       "website": "https://www.facebook.com/share/1Eo3nB17Sw/?mibextid=wwXIfr",
       "rating": 5,
-      "review_count": 6
+      "review_count": 6,
+      "geocoded_from": "University of Science and Technology of Southern Philippines, C. M. Recto Avenue, Mambato, Barangay 26, Poblacion, Cagayan de Oro, Northern Mindanao, 9000, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Vet District Animal Medical Center, Inc.",
@@ -35382,8 +35793,8 @@
       "name": "Vet Essence Animal Clinic",
       "address": "Bo. Pampanga, Door 1, Maryknoll Road, Stella Hizon Rd, Davao City, Davao del Sur",
       "phone": "+639686677435",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 7.0857729,
+      "longitude": 125.6160832,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -35395,7 +35806,10 @@
       "google_place_id": "ChIJsQtJXvpt-TIRP7sfkdGrUE0",
       "category": "Veterinarian",
       "rating": 5,
-      "review_count": 11
+      "review_count": 11,
+      "geocoded_from": "University of Southeastern Philippines - Obrero Campus, A. Iñigo Street, Barangay 18-B, Poblacion District, Davao City, Davao Region, 8000, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Vet Essence Veterinary Clinic - Indangan",
@@ -35916,8 +36330,8 @@
       "name": "Vet'sMagic Clinic and Grooming",
       "address": "Cogon, Magsaysay St, Sorsogon City, Sorsogon",
       "phone": "+639171401192",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 12.9707848,
+      "longitude": 124.0052543,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -35929,7 +36343,10 @@
       "google_place_id": "ChIJbT53rhrvoDMRSe_nQLTA5pc",
       "category": "Animal hospital",
       "rating": 4.7,
-      "review_count": 16
+      "review_count": 16,
+      "geocoded_from": "Sorsogon City, Sorsogon, Bicol Region, 4700, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Vet2Go Mobile Veterinary Services",
@@ -35952,8 +36369,8 @@
       "name": "VetAlliance Animal Clinic",
       "address": "National Highway, Cauayan City, Isabela",
       "phone": "+639772132048",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 16.9305428,
+      "longitude": 121.7522268,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -35965,14 +36382,17 @@
       "google_place_id": "ChIJ3eR4Mn1RhTMRg86RGg09KT4",
       "category": "Animal hospital",
       "rating": 1,
-      "review_count": 3
+      "review_count": 3,
+      "geocoded_from": "Cauayan Airport, Airport Road, San Fermin, Poblacion, Cauayan, Isabela, Cagayan Valley, 3305, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Vetcall Animal Clinic Wellness Center",
       "address": "Legazpi City, Albay",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 13.1388505,
+      "longitude": 123.7345746,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -35982,7 +36402,10 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Vetcall%20Animal%20Clinic%20Wellness%20Center&query_place_id=ChIJ9WGDUtYDoTMRrhLExPfAU8Y",
       "google_place_id": "ChIJ9WGDUtYDoTMRrhLExPfAU8Y",
-      "category": "Veterinary care"
+      "category": "Veterinary care",
+      "geocoded_from": "Legazpi, Albay, Bicol Region, 4500, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Vetcare Animal Clinic",
@@ -36011,8 +36434,8 @@
       "name": "VetCare Animal Clinic - Legazpi",
       "address": "Ground Floor Pag-asa Bldg. Rizal St Brgy, Legazpi City, Albay",
       "phone": "+639551973899",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 13.1388505,
+      "longitude": 123.7345746,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -36025,7 +36448,10 @@
       "category": "Veterinarian",
       "website": "https://www.facebook.com/vetcareac.legazpi",
       "rating": 4.2,
-      "review_count": 16
+      "review_count": 16,
+      "geocoded_from": "Legazpi, Albay, Bicol Region, 4500, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "VetCare Pet Clinic",
@@ -36711,8 +37137,8 @@
       "name": "Vethouse Animal Clinic & Dog Spa",
       "address": "XCC5+2Q8, Butuan - Cagayan de Oro - Iligan Rd, Buenavista, Agusan del Norte",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.9701847,
+      "longitude": 125.4096125,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -36722,7 +37148,10 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Vethouse%20Animal%20Clinic%20%26%20Dog%20Spa&query_place_id=ChIJvWMxq-vHATMRB3zzvPN3ngM",
       "google_place_id": "ChIJvWMxq-vHATMRB3zzvPN3ngM",
-      "category": "Veterinary care"
+      "category": "Veterinary care",
+      "geocoded_from": "Butuan-Cagayan de Oro-Iligan Road, Poblacion 1, Poblacion, Buenavista, Agusan del Norte, Caraga, 8601, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "VetHub Veterinary Services",
@@ -36904,8 +37333,8 @@
       "name": "Vetlove animal clinic",
       "address": "90 Benigno Aquino Avenue, Solano, Nueva Vizcaya",
       "phone": "+639952530534",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 16.5180604,
+      "longitude": 121.1806163,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -36917,7 +37346,10 @@
       "google_place_id": "ChIJlTu5A9pBkDMRXCZCo-xh7Us",
       "category": "Veterinarian",
       "rating": 5,
-      "review_count": 2
+      "review_count": 2,
+      "geocoded_from": "Solano, Nueva Vizcaya, Cagayan Valley, 3709, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "VetMedica Animal Clinic & Grooming Center",
@@ -37100,8 +37532,8 @@
       "name": "Vets 2 Pets Veterinary Clinic",
       "address": "Zone 3A, Ocampo, Camarines Sur",
       "phone": "+639605750575",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 13.5581721,
+      "longitude": 123.3729397,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -37113,7 +37545,10 @@
       "google_place_id": "ChIJp2CAw02VoTMRIStBqMJcZcM",
       "category": "Veterinarian",
       "rating": 4,
-      "review_count": 1
+      "review_count": 1,
+      "geocoded_from": "Ocampo, Camarines Sur, Bicol Region, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "VETS 4 PETS",
@@ -37579,8 +38014,8 @@
       "name": "VetsTreat Animal Clinic",
       "address": "EBL Building, Mabini St, Legazpi City, Albay",
       "phone": "+639197334849",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 13.1388505,
+      "longitude": 123.7345746,
       "emergency_capable": true,
       "owner_verified": false,
       "services": [
@@ -37594,7 +38029,10 @@
       "google_place_id": "ChIJbQL-ETsBoTMRXmy9xP68pEk",
       "category": "Emergency veterinarian service",
       "rating": 4,
-      "review_count": 6
+      "review_count": 6,
+      "geocoded_from": "Legazpi, Albay, Bicol Region, 4500, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Vetstreet Veterinary Clinic and Grooming Center",
@@ -37753,8 +38191,8 @@
       "name": "VetZone Animal Clinic",
       "address": "Dr 3 Benito Ngo Building, 1, Iriga City, Camarines Sur",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 13.4222626,
+      "longitude": 123.4129406,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -37766,14 +38204,17 @@
       "google_place_id": "ChIJfTsP3t-XoTMRHrmCLVFtSB4",
       "category": "Animal hospital",
       "rating": 4.6,
-      "review_count": 25
+      "review_count": 25,
+      "geocoded_from": "Iriga, Camarines Sur, Bicol Region, 4431, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "VetZone Animal Clinic - Partido",
       "address": "Door 4&5, Asuncion Building, Zone 5 San Jose Street, Goa, Camarines Sur",
       "phone": "+639773410658",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 13.6973443,
+      "longitude": 123.4885073,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -37786,7 +38227,10 @@
       "category": "Veterinarian",
       "website": "https://www.facebook.com/profile.php?id=61550811221291",
       "rating": 5,
-      "review_count": 3
+      "review_count": 3,
+      "geocoded_from": "Goa, Camarines Sur, Bicol Region, 4423, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "VGM Farm and Veterinary Supplies",
@@ -38038,8 +38482,8 @@
       "name": "VK Veterinary Clinic",
       "address": "Gattaran, Cagayan",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 18.0603315,
+      "longitude": 121.6414943,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -38049,7 +38493,10 @@
       "source": "google_maps_scrape",
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=VK%20Veterinary%20Clinic&query_place_id=ChIJ04EJb5H4hTMRCLZCVhtH8dc",
       "google_place_id": "ChIJ04EJb5H4hTMRCLZCVhtH8dc",
-      "category": "Veterinary care"
+      "category": "Veterinary care",
+      "geocoded_from": "Gattaran, Cagayan, Cagayan Valley, 3508, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "VM VETERINARY CLINIC PETSHOP AND SPA",
@@ -38098,8 +38545,8 @@
       "name": "Wade-County Animal Clinic",
       "address": "Garcia St., P-6, Trento, Agusan del Sur",
       "phone": "+639956506877",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.043508,
+      "longitude": 126.0633157,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -38111,7 +38558,10 @@
       "google_place_id": "ChIJGWRuiL3T_TIRdjRWjhF1oKA",
       "category": "Veterinarian",
       "rating": 5,
-      "review_count": 2
+      "review_count": 2,
+      "geocoded_from": "Trento, Agusan del Sur, Caraga, 8505, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Waggie Tail Veterinary Clinic",
@@ -38179,8 +38629,8 @@
       "name": "Wagging Tails Veterinary Clinic - Casisang",
       "address": "Ramos Building (Back of Petron Gas Station) Purok 2- Landing, Malaybalay City, Bukidnon",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.1550421,
+      "longitude": 125.1305726,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -38192,7 +38642,10 @@
       "google_place_id": "ChIJ34nqRw6p_zIRBaIKXxskAP8",
       "category": "Veterinarian",
       "rating": 4.8,
-      "review_count": 15
+      "review_count": 15,
+      "geocoded_from": "Malaybalay, Bukidnon, Northern Mindanao, 8700, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Wags & Purrs Veterinary Clinic",
@@ -38351,8 +38804,8 @@
       "name": "Whimsy Vets Pet Care",
       "address": "Township, Pueblo de Oro, San Agustin Avenue, Cagayan De Oro City, Misamis Oriental",
       "phone": "+639171334095",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.4860705,
+      "longitude": 124.656805,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -38364,7 +38817,10 @@
       "google_place_id": "ChIJW6BloYSN_zIRK9KLGT-Gfhk",
       "category": "Veterinarian",
       "rating": 5,
-      "review_count": 10
+      "review_count": 10,
+      "geocoded_from": "University of Science and Technology of Southern Philippines, C. M. Recto Avenue, Mambato, Barangay 26, Poblacion, Cagayan de Oro, Northern Mindanao, 9000, Philippines",
+      "geocode_precision": "city",
+      "geocode_source": "nominatim"
     },
     {
       "name": "Whippet General Veterinary Clinic",
@@ -38518,8 +38974,8 @@
       "name": "WOOF HAVEN Veterinary Services",
       "address": "purok 1, Buenavista, Agusan del Norte",
       "phone": "",
-      "latitude": null,
-      "longitude": null,
+      "latitude": 8.9744864,
+      "longitude": 125.4090875,
       "emergency_capable": false,
       "owner_verified": false,
       "services": [
@@ -38531,7 +38987,10 @@
       "google_place_id": "ChIJp5vyjcPHATMRgGj3ABrFngY",
       "category": "Veterinarian",
       "rating": 4.4,
-      "review_count": 10
+      "review_count": 10,
+      "geocoded_from": "Buenavista, Agusan del Norte, Caraga, Philippines",
+      "geocode_precision": "address",
+      "geocode_source": "nominatim"
     },
     {
       "name": "WVMC Animal Bite Treatment Center",
