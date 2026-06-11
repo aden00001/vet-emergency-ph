@@ -10,18 +10,29 @@ export function roundCoord(value: number, decimals = 3): number {
   return Math.round(value * factor) / factor;
 }
 
+export function getNavigableCoords(
+  lat: number | null | undefined,
+  lng: number | null | undefined,
+  locationVerified = true
+): { lat: number; lng: number } | null {
+  if (
+    !locationVerified ||
+    lat == null ||
+    lng == null ||
+    !Number.isFinite(lat) ||
+    !Number.isFinite(lng)
+  ) {
+    return null;
+  }
+  return { lat, lng };
+}
+
 export function hasNavigableLocation(
   lat: number | null | undefined,
   lng: number | null | undefined,
   locationVerified = true
 ): boolean {
-  return (
-    locationVerified &&
-    lat != null &&
-    lng != null &&
-    Number.isFinite(lat) &&
-    Number.isFinite(lng)
-  );
+  return getNavigableCoords(lat, lng, locationVerified) !== null;
 }
 
 export function buildGoogleMapsDirectionsUrl(

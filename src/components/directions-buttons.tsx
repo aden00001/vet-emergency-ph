@@ -2,7 +2,7 @@ import { buttonVariants } from "@/components/ui/button";
 import {
   buildGoogleMapsDirectionsUrl,
   buildWazeUrl,
-  hasNavigableLocation,
+  getNavigableCoords,
 } from "@/lib/geo";
 import { cn } from "@/lib/utils";
 import { MapPin, Navigation } from "lucide-react";
@@ -20,7 +20,8 @@ export function DirectionsButtons({
   locationVerified = true,
   compact = false,
 }: DirectionsButtonsProps) {
-  if (!hasNavigableLocation(lat, lng, locationVerified)) {
+  const coords = getNavigableCoords(lat, lng, locationVerified);
+  if (!coords) {
     return (
       <p
         className={cn(
@@ -40,7 +41,7 @@ export function DirectionsButtons({
   return (
     <>
       <a
-        href={buildGoogleMapsDirectionsUrl(lat, lng)}
+        href={buildGoogleMapsDirectionsUrl(coords.lat, coords.lng)}
         target="_blank"
         rel="noopener noreferrer"
         className={cn(
@@ -53,7 +54,7 @@ export function DirectionsButtons({
         Maps
       </a>
       <a
-        href={buildWazeUrl(lat, lng)}
+        href={buildWazeUrl(coords.lat, coords.lng)}
         target="_blank"
         rel="noopener noreferrer"
         className={cn(
