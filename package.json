@@ -25,6 +25,7 @@
     "geocode:fix-bad": "node scripts/geocode-clinics.mjs --file=data/clinics-merged.json --fix-bad --google-only",
     "resolve:coords": "node scripts/resolve-coords-playwright.mjs --file=data/clinics-merged.json --fix-bad",
     "resolve:coords:batch": "node scripts/resolve-coords-playwright.mjs --file=data/clinics-merged.json --fix-bad --limit=50 --loop",
+    "fix:pins:batch": "node scripts/fix-pins-playwright.mjs --file=data/clinics-merged.json --limit=50 --loop",
     "strip:bad-coords": "node scripts/strip-bad-coords.mjs --file=data/clinics-merged.json",
     "import:merged:upsert": "node scripts/import-clinics.mjs --file=data/clinics-merged.json --upsert",
     "import:clinics:merged": "node scripts/geocode-clinics.mjs --file=data/clinics-merged.json && node scripts/import-clinics.mjs --file=data/clinics-merged.json --upsert",
@@ -35,6 +36,7 @@
     "merge:clinics": "node scripts/merge-clinic-json.mjs",
     "scrape:google-maps-url": "node scripts/scrape-google-maps-url.mjs",
     "audit:clinics": "node scripts/audit-clinic-data.mjs --fix-report",
+    "audit:location-issues": "node scripts/audit-location-issues.mjs --file=data/clinics-merged.json --write",
     "purge:bite-clinics": "node scripts/purge-human-bite-clinics.mjs",
     "dedupe:clinics": "node scripts/dedupe-clinics-db.mjs",
     "dedupe:clinics:apply": "node scripts/dedupe-clinics-db.mjs --apply"
