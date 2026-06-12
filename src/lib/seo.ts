@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
-import { DEFAULT_SITE_URL, SITE_NAME, SITE_TAGLINE } from "@/lib/brand";
+import { getSiteUrl, SITE_NAME, SITE_TAGLINE } from "@/lib/brand";
 
 export const SITE_DESCRIPTION =
   "Find emergency veterinary clinics across the Philippines. Real-time directory of 24/7 and after-hours vet care in Metro Manila, Cebu, and nationwide.";
 
-export function getSiteUrl(): string {
-  return process.env.NEXT_PUBLIC_APP_URL ?? DEFAULT_SITE_URL;
-}
+export { getSiteUrl } from "@/lib/brand";
 
 export function canonicalUrl(path = "/"): string {
   const base = getSiteUrl().replace(/\/$/, "");
