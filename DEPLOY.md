@@ -51,7 +51,7 @@ Enable **PostGIS** in Dashboard → Database → Extensions if not already enabl
 Configure Auth redirect URLs:
 
 - `http://localhost:3000/auth/callback`
-- `https://vet-emergency-ph.vercel.app/auth/callback`
+- `https://vet247ph.online/auth/callback`
 
 ---
 
@@ -75,13 +75,13 @@ Configure Auth redirect URLs:
 | `SUPABASE_URL` | Same URL as above (server runtime — **required on Vercel**) |
 | `SUPABASE_ANON_KEY` | Same anon key as above (server runtime — **required on Vercel**) |
 | `SUPABASE_SERVICE_ROLE_KEY` | Supabase → Settings → API → service_role |
-| `NEXT_PUBLIC_APP_URL` | `https://vet-emergency-ph.vercel.app` |
+| `NEXT_PUBLIC_APP_URL` | `https://vet247ph.online` |
 
 > Use the **anon JWT** (`eyJ...`), not the publishable key (`sb_...`). Enable all vars for **Production**. After saving, redeploy **without** build cache.
 
 **Production branch:** `master` (not `main`).
 
-**Verify after deploy:** `https://vet-emergency-ph.vercel.app/api/health` should show `"ok": true`.
+**Verify after deploy:** `https://vet247ph.online/api/health` should show `"ok": true`.
 | `UPSTASH_REDIS_REST_URL` | Upstash REST URL |
 | `UPSTASH_REDIS_REST_TOKEN` | Upstash token |
 | `WEBHOOK_SECRET` | Random secret string |
@@ -92,7 +92,7 @@ Configure Auth redirect URLs:
 
 ## 4. Custom domain
 
-Vercel → Project → Domains → add your custom domain when ready and configure DNS at your registrar. Until then, use `https://vet-emergency-ph.vercel.app`.
+Vercel → Project → Domains → add your custom domain when ready and configure DNS at your registrar. Until then, use `https://vet247ph.online`.
 
 Update Supabase Auth redirect URLs with production domain.
 

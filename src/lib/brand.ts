@@ -1,6 +1,6 @@
 export const SITE_NAME = "Vet247PH";
 export const SITE_TAGLINE = "Find Emergency Vet Care Fast";
-export const DEFAULT_SITE_URL = "https://vet-emergency-ph.vercel.app";
+export const DEFAULT_SITE_URL = "https://vet247ph.online";
 
 /** Public contact for corrections, listing updates, and feedback. */
 export const SITE_CONTACT_EMAIL =
