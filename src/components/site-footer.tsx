@@ -28,6 +28,13 @@ export function SiteFooter() {
           </a>
           .{" "}
           <Link
+            href="/about"
+            className="font-medium text-primary underline-offset-2 hover:underline"
+          >
+            About
+          </Link>
+          {" · "}
+          <Link
             href="/disclaimer"
             className="font-medium text-primary underline-offset-2 hover:underline"
           >

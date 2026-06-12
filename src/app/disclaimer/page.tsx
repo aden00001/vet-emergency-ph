@@ -1,12 +1,13 @@
 import { ContactEmail } from "@/components/contact-email";
 import { SiteHeader } from "@/components/site-header";
 import { SITE_NAME } from "@/lib/brand";
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: `Disclaimer | ${SITE_NAME}`,
+export const metadata = pageMetadata({
+  title: "Disclaimer",
   description: `Important legal disclaimer for ${SITE_NAME} users.`,
-};
+  path: "/disclaimer",
+});
 
 export default function DisclaimerPage() {
   return (

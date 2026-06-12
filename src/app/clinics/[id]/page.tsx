@@ -3,7 +3,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { JsonLd } from "@/components/json-ld";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { ClinicImage } from "@/components/clinic-image";
 import { ConfidenceBadge } from "@/components/confidence-badge";
 import { DirectionsButtons } from "@/components/directions-buttons";
@@ -13,7 +14,7 @@ import { SiteHeader } from "@/components/site-header";
 import { createClient } from "@/lib/supabase/server";
 import { formatDistance, hasNavigableLocation } from "@/lib/geo";
 import { CallButton } from "@/components/call-button";
-import { SITE_NAME } from "@/lib/brand";
+import { canonicalUrl, getSiteUrl, pageMetadata } from "@/lib/seo";
 import { STATUS_CONFIG } from "@/lib/status";
 import type { ClinicReview, ReviewSummary, Verification } from "@/types/database";
 import { ArrowLeft, BadgeCheck, Clock, MapPin, Phone } from "lucide-react";
@@ -29,20 +30,21 @@ export async function generateMetadata({
   const supabase = await createClient();
   const { data: clinic } = await supabase
     .from("clinics")
-    .select("name, address")
+    .select("name, address, image_url")
     .eq("id", id)
     .single();
 
   if (!clinic) return { title: "Clinic Not Found" };
 
-  return {
-    title: `${clinic.name} | ${SITE_NAME}`,
-    description: `Emergency veterinary clinic: ${clinic.address}`,
-    openGraph: {
-      title: clinic.name,
-      description: clinic.address,
-    },
-  };
+  const path = `/clinics/${id}`;
+  const description = `Emergency vet clinic in the Philippines — ${clinic.address}. Call before traveling. Hours, reviews, and directions on Vet247PH.`;
+
+  return pageMetadata({
+    title: clinic.name,
+    description,
+    path,
+    image: clinic.image_url,
+  });
 }
 
 export default async function ClinicDetailPage({ params }: PageProps) {
@@ -104,14 +106,24 @@ export default async function ClinicDetailPage({ params }: PageProps) {
 
   const publishedReviews = (reviews ?? []) as ClinicReview[];
 
-  const jsonLd = {
+  const clinicUrl = canonicalUrl(`/clinics/${id}`);
+  const siteUrl = getSiteUrl();
+
+  const businessJsonLd = {
     "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "EmergencyService"],
+    "@type": ["VeterinaryCare", "LocalBusiness", "EmergencyService"],
+    "@id": clinicUrl,
     name: clinic.name,
+    url: clinicUrl,
+    ...(clinic.image_url ? { image: clinic.image_url } : {}),
     address: {
       "@type": "PostalAddress",
       streetAddress: clinic.address,
       addressCountry: "PH",
+    },
+    areaServed: {
+      "@type": "Country",
+      name: "Philippines",
     },
     ...(hasNavigableLocation(
       clinic.latitude,
@@ -126,7 +138,8 @@ export default async function ClinicDetailPage({ params }: PageProps) {
           },
         }
       : {}),
-    telephone: clinic.phone,
+    ...(clinic.phone ? { telephone: clinic.phone } : {}),
+    ...(clinic.hours ? { description: `Hours: ${clinic.hours}` } : {}),
     ...(reviewSummary.review_count > 0 && reviewSummary.average_rating
       ? {
           aggregateRating: {
@@ -140,12 +153,28 @@ export default async function ClinicDetailPage({ params }: PageProps) {
       : {}),
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: clinic.name,
+        item: clinicUrl,
+      },
+    ],
+  };
+
   return (
     <div className="app-backdrop flex min-h-full flex-col">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <JsonLd data={[businessJsonLd, breadcrumbJsonLd]} />
       <SiteHeader />
       <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-8 space-y-6">
         <Link
@@ -165,9 +194,9 @@ export default async function ClinicDetailPage({ params }: PageProps) {
           />
           <CardHeader className="gap-3">
             <div className="flex flex-wrap items-start justify-between gap-2">
-              <CardTitle className="font-display text-2xl font-extrabold">
+              <h1 className="font-display text-2xl font-extrabold">
                 {clinic.name}
-              </CardTitle>
+              </h1>
               {clinic.owner_verified && (
                 <Badge className="gap-1 border-transparent bg-primary/12 text-primary">
                   <BadgeCheck className="size-3.5" />

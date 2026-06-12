@@ -3,12 +3,13 @@ import { buttonVariants } from "@/components/ui/button";
 import { ContactEmail } from "@/components/contact-email";
 import { SiteHeader } from "@/components/site-header";
 import { SITE_NAME } from "@/lib/brand";
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: `About | ${SITE_NAME}`,
+export const metadata = pageMetadata({
+  title: "About",
   description: `About ${SITE_NAME} — trusted emergency veterinary discovery in the Philippines.`,
-};
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (
