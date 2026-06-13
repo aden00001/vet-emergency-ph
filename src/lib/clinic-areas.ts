@@ -7,7 +7,7 @@ import {
   type AreaGroup,
   type ClinicArea,
 } from "@/lib/ph-regions";
-import type { NearbyClinic } from "@/types/database";
+import type { ClinicStatusType, NearbyClinic } from "@/types/database";
 
 const AREAS_CACHE_KEY = "clinics:areas:v3";
 const AREAS_CACHE_TTL_SECONDS = 60 * 60 * 24;
@@ -23,6 +23,26 @@ interface ClinicAreaRow {
   latitude: number | null;
   longitude: number | null;
   emergency_capable: boolean | null;
+}
+
+interface ClinicStatusRow {
+  current_status: ClinicStatusType | null;
+  updated_at: string | null;
+}
+
+interface AreaClinicRow extends ClinicAreaRow {
+  id: string;
+  slug: string | null;
+  name: string;
+  phone: string | null;
+  location_verified: boolean | null;
+  owner_verified: boolean | null;
+  services: string[] | null;
+  hours: string | null;
+  confidence_score: number | null;
+  image_url: string | null;
+  google_maps_url: string | null;
+  clinic_status: ClinicStatusRow | ClinicStatusRow[] | null;
 }
 
 export function buildAreas(rows: ClinicAreaRow[]): AreaGroupResult[] {
@@ -95,6 +115,54 @@ async function fetchClinicAreaRows(): Promise<ClinicAreaRow[]> {
   return rows;
 }
 
+async function fetchAreaClinicRows(
+  emergencyOnly: boolean
+): Promise<AreaClinicRow[]> {
+  const supabase = await createServiceClient();
+  const rows: AreaClinicRow[] = [];
+
+  for (let from = 0; ; from += PAGE_SIZE) {
+    let query = supabase
+      .from("clinics")
+      .select(
+        [
+          "id",
+          "slug",
+          "name",
+          "address",
+          "phone",
+          "latitude",
+          "longitude",
+          "location_verified",
+          "emergency_capable",
+          "owner_verified",
+          "services",
+          "hours",
+          "confidence_score",
+          "image_url",
+          "google_maps_url",
+          "clinic_status(current_status, updated_at)",
+        ].join(", ")
+      )
+      .not("latitude", "is", null)
+      .not("longitude", "is", null)
+      .range(from, from + PAGE_SIZE - 1);
+
+    if (emergencyOnly) {
+      query = query.eq("emergency_capable", true);
+    }
+
+    const { data, error } = await query;
+
+    if (error) throw new Error(error.message);
+    if (!data || data.length === 0) break;
+    rows.push(...(data as unknown as AreaClinicRow[]));
+    if (data.length < PAGE_SIZE) break;
+  }
+
+  return rows;
+}
+
 export async function fetchAreaGroups(): Promise<AreaGroupResult[]> {
   const cached = await getCachedJson<AreaGroupResult[]>(AREAS_CACHE_KEY);
   if (cached) return cached;
@@ -126,6 +194,72 @@ export function getTopAreas(groups: AreaGroupResult[], limit = 12): ClinicArea[]
     .slice(0, limit);
 }
 
+function distanceMeters(
+  from: Pick<ClinicArea, "lat" | "lng">,
+  to: Pick<AreaClinicRow, "latitude" | "longitude">
+): number {
+  if (to.latitude == null || to.longitude == null) return Number.POSITIVE_INFINITY;
+
+  const radiusMeters = 6371_000;
+  const fromLat = (from.lat * Math.PI) / 180;
+  const toLat = (to.latitude * Math.PI) / 180;
+  const deltaLat = ((to.latitude - from.lat) * Math.PI) / 180;
+  const deltaLng = ((to.longitude - from.lng) * Math.PI) / 180;
+  const a =
+    Math.sin(deltaLat / 2) ** 2 +
+    Math.cos(fromLat) * Math.cos(toLat) * Math.sin(deltaLng / 2) ** 2;
+
+  return radiusMeters * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
+function firstClinicStatus(
+  status: AreaClinicRow["clinic_status"]
+): ClinicStatusRow | null {
+  return Array.isArray(status) ? (status[0] ?? null) : status;
+}
+
+function toNearbyClinic(row: AreaClinicRow, area: ClinicArea): NearbyClinic {
+  const status = firstClinicStatus(row.clinic_status);
+  const currentStatus = status?.current_status ?? "accepting";
+  const confidenceScore = row.confidence_score ?? 0;
+  const distance = distanceMeters(area, row);
+  const rankScore =
+    distance / 1000 -
+    confidenceScore * 0.05 -
+    (currentStatus === "accepting"
+      ? 5
+      : currentStatus === "limited"
+        ? 2
+        : currentStatus === "not_accepting"
+          ? -3
+          : -10) -
+    (row.owner_verified ? 3 : 0);
+
+  return {
+    id: row.id,
+    slug: row.slug,
+    name: row.name,
+    address: row.address ?? "",
+    phone: row.phone ?? "",
+    latitude: row.latitude,
+    longitude: row.longitude,
+    location_verified: row.location_verified ?? false,
+    emergency_capable: row.emergency_capable ?? false,
+    owner_verified: row.owner_verified ?? false,
+    services: row.services ?? [],
+    hours: row.hours,
+    confidence_score: confidenceScore,
+    distance_meters: distance,
+    current_status: currentStatus,
+    status_updated_at: status?.updated_at ?? null,
+    rank_score: rankScore,
+    review_count: 0,
+    average_rating: null,
+    image_url: row.image_url,
+    google_maps_url: row.google_maps_url,
+  };
+}
+
 export async function fetchClinicsForArea(
   areaId: string,
   options: { emergencyOnly?: boolean; limit?: number } = {}
@@ -135,22 +269,15 @@ export async function fetchClinicsForArea(
   const area = getAreaById(groups, areaId);
   if (!area) return { area: null, clinics: [] };
 
-  const supabase = await createServiceClient();
-  const { data, error } = await supabase.rpc("nearby_emergency_clinics", {
-    p_lat: area.lat,
-    p_lng: area.lng,
-    p_radius_km: 50,
-    p_triage_category: null,
-    p_emergency_only: emergencyOnly,
-  });
-
-  if (error) throw new Error(error.message);
-
-  const filtered = ((data ?? []) as NearbyClinic[]).filter((clinic) => {
+  const rows = await fetchAreaClinicRows(emergencyOnly);
+  const filtered = rows.filter((clinic) => {
     const resolved = resolveClinicArea(clinic.address);
     return resolved?.id === areaId;
   });
 
-  const sorted = sortClinics(filtered, "recommended");
+  const sorted = sortClinics(
+    filtered.map((clinic) => toNearbyClinic(clinic, area)),
+    "recommended"
+  );
   return { area, clinics: sorted.slice(0, limit) };
 }
