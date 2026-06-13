@@ -10,6 +10,7 @@ import {
   fetchClinicsForArea,
   getAreaById,
 } from "@/lib/clinic-areas";
+import { clinicPath } from "@/lib/clinic-slug";
 import {
   breadcrumbJsonLd,
   canonicalUrl,
@@ -80,7 +81,7 @@ export default async function AreaDetailPage({ params }: PageProps) {
   const itemList = itemListJsonLd(
     clinics.map((c) => ({
       name: c.name,
-      url: canonicalUrl(`/clinics/${c.id}`),
+      url: canonicalUrl(clinicPath(c)),
     })),
     `Emergency vet clinics in ${area.label}`
   );

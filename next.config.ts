@@ -11,6 +11,16 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "maps.googleapis.com" },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.vet247ph.online" }],
+        destination: "https://vet247ph.online/:path*",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

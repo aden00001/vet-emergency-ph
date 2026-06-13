@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
@@ -12,56 +12,58 @@ import { PulseForm } from "@/components/pulse-form";
 import { ReviewSection } from "@/components/review-section";
 import { SiteHeader } from "@/components/site-header";
 import { RelatedAreaClinics } from "@/components/related-area-clinics";
-import { createClient } from "@/lib/supabase/server";
+import { clinicPath, isClinicUuid } from "@/lib/clinic-slug";
+import { fetchClinicBySlugOrId, fetchTopClinicSlugs } from "@/lib/clinics";
 import { hasNavigableLocation } from "@/lib/geo";
+import { parseOpeningHours } from "@/lib/opening-hours";
 import { CallButton } from "@/components/call-button";
-import { canonicalUrl, getSiteUrl, pageMetadata } from "@/lib/seo";
+import { canonicalUrl, getSiteUrl, pageMetadata, resolveClinicOgImage } from "@/lib/seo";
 import { resolveClinicArea } from "@/lib/ph-regions";
 import { STATUS_CONFIG } from "@/lib/status";
 import type { ClinicReview, ReviewSummary, Verification } from "@/types/database";
 import { ArrowLeft, BadgeCheck, Clock, MapPin, Phone } from "lucide-react";
+import { createClient } from "@/lib/supabase/server";
 
 interface PageProps {
-  params: Promise<{ id: string }>;
+  params: Promise<{ slug: string }>;
+}
+
+export async function generateStaticParams() {
+  const slugs = await fetchTopClinicSlugs(100);
+  return slugs.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
-  const { id } = await params;
-  const supabase = await createClient();
-  const { data: clinic } = await supabase
-    .from("clinics")
-    .select("name, address, image_url")
-    .eq("id", id)
-    .single();
+  const { slug: param } = await params;
+  const { data: clinic } = await fetchClinicBySlugOrId(param);
 
   if (!clinic) return { title: "Clinic Not Found", robots: { index: false } };
 
-  const path = `/clinics/${id}`;
+  const path = clinicPath(clinic);
   const description = `Emergency vet clinic in the Philippines — ${clinic.address}. Call before traveling. Hours, reviews, and directions on Vet247PH.`;
 
   return pageMetadata({
     title: clinic.name,
     description,
     path,
-    image: clinic.image_url,
+    image: resolveClinicOgImage(clinic),
   });
 }
 
 export default async function ClinicDetailPage({ params }: PageProps) {
-  const { id } = await params;
-  const supabase = await createClient();
-
-  const { data: clinic } = await supabase
-    .from("clinics")
-    .select(
-      "*, clinic_status(current_status, updated_at)"
-    )
-    .eq("id", id)
-    .single();
+  const { slug: param } = await params;
+  const { data: clinic } = await fetchClinicBySlugOrId(param);
 
   if (!clinic) notFound();
+
+  if (isClinicUuid(param) && clinic.slug) {
+    permanentRedirect(clinicPath(clinic));
+  }
+
+  const id = clinic.id;
+  const supabase = await createClient();
 
   const statusRow = Array.isArray(clinic.clinic_status)
     ? clinic.clinic_status[0]
@@ -108,9 +110,10 @@ export default async function ClinicDetailPage({ params }: PageProps) {
 
   const publishedReviews = (reviews ?? []) as ClinicReview[];
 
-  const clinicUrl = canonicalUrl(`/clinics/${id}`);
+  const clinicUrl = canonicalUrl(clinicPath(clinic));
   const siteUrl = getSiteUrl();
   const area = resolveClinicArea(clinic.address);
+  const openingHours = parseOpeningHours(clinic.hours);
 
   const businessJsonLd = {
     "@context": "https://schema.org",
@@ -118,16 +121,17 @@ export default async function ClinicDetailPage({ params }: PageProps) {
     "@id": clinicUrl,
     name: clinic.name,
     url: clinicUrl,
-    ...(clinic.image_url ? { image: clinic.image_url } : {}),
+    image: resolveClinicOgImage(clinic),
+    ...(clinic.image_url ? { photo: clinic.image_url } : {}),
     address: {
       "@type": "PostalAddress",
       streetAddress: clinic.address,
       addressCountry: "PH",
+      ...(area ? { addressLocality: area.label } : {}),
     },
-    areaServed: {
-      "@type": "Country",
-      name: "Philippines",
-    },
+    areaServed: area
+      ? { "@type": "City", name: area.label }
+      : { "@type": "Country", name: "Philippines" },
     ...(hasNavigableLocation(
       clinic.latitude,
       clinic.longitude,
@@ -142,7 +146,7 @@ export default async function ClinicDetailPage({ params }: PageProps) {
         }
       : {}),
     ...(clinic.phone ? { telephone: clinic.phone } : {}),
-    ...(clinic.hours ? { description: `Hours: ${clinic.hours}` } : {}),
+    ...(openingHours ? { openingHoursSpecification: openingHours } : {}),
     ...(reviewSummary.review_count > 0 && reviewSummary.average_rating
       ? {
           aggregateRating: {

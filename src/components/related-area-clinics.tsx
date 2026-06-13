@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { fetchClinicsForArea } from "@/lib/clinic-areas";
+import { clinicPath } from "@/lib/clinic-slug";
 import { resolveClinicArea } from "@/lib/ph-regions";
 
 interface RelatedAreaClinicsProps {
@@ -45,7 +46,7 @@ export async function RelatedAreaClinics({
         {related.map((clinic) => (
           <li key={clinic.id}>
             <Link
-              href={`/clinics/${clinic.id}`}
+              href={clinicPath(clinic)}
               className="block rounded-lg border border-border/60 px-3 py-2 text-sm transition-colors hover:border-primary/40 hover:bg-primary/[0.03]"
             >
               <span className="font-medium">{clinic.name}</span>

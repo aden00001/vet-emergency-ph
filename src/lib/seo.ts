@@ -18,6 +18,24 @@ export function defaultOgImageUrl(): string {
   return canonicalUrl(DEFAULT_OG_IMAGE_PATH);
 }
 
+export function clinicOgImagePath(slug: string): string {
+  return `/clinics/${slug}/opengraph-image`;
+}
+
+export function clinicOgImageUrl(slug: string): string {
+  return canonicalUrl(clinicOgImagePath(slug));
+}
+
+/** Prefer self-hosted dynamic OG; external Google URLs often block social crawlers. */
+export function resolveClinicOgImage(clinic: {
+  slug?: string | null;
+  image_url?: string | null;
+}): string {
+  if (clinic.slug) return clinicOgImageUrl(clinic.slug);
+  if (clinic.image_url?.startsWith("https://")) return clinic.image_url;
+  return defaultOgImageUrl();
+}
+
 export function pageMetadata({
   title,
   description,

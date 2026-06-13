@@ -44,7 +44,8 @@
     "search:maps:missing-place-id": "node scripts/search-maps-playwright.mjs --missing-place-id --emergency-only --apply --loop --limit=50",
     "purge:bite-clinics": "node scripts/purge-human-bite-clinics.mjs",
     "dedupe:clinics": "node scripts/dedupe-clinics-db.mjs",
-    "dedupe:clinics:apply": "node scripts/dedupe-clinics-db.mjs --apply"
+    "dedupe:clinics:apply": "node scripts/dedupe-clinics-db.mjs --apply",
+    "backfill:clinic-slugs": "node scripts/backfill-clinic-slugs.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.5.0",

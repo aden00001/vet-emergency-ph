@@ -8,6 +8,7 @@ import { DirectionsButtons } from "@/components/directions-buttons";
 import { StarRating } from "@/components/star-rating";
 import { formatDistance } from "@/lib/geo";
 import { formatAverageRating } from "@/lib/reviews";
+import { clinicPath } from "@/lib/clinic-slug";
 import { STATUS_CONFIG } from "@/lib/status";
 import type { NearbyClinic } from "@/types/database";
 import { BadgeCheck, MapPin, Phone } from "lucide-react";
@@ -29,7 +30,7 @@ export function ClinicCard({ clinic }: ClinicCardProps) {
       <div className="flex min-w-0 flex-1 flex-col gap-2.5 p-4">
         <div className="flex items-start justify-between gap-2">
           <Link
-            href={`/clinics/${clinic.id}`}
+            href={clinicPath(clinic)}
             className="font-display text-base leading-snug font-bold transition-colors hover:text-primary"
           >
             {clinic.name}

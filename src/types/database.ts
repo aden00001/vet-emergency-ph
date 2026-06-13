@@ -18,6 +18,7 @@ export type UserRole = "pet_owner" | "clinic_admin" | "admin";
 
 export interface NearbyClinic {
   id: string;
+  slug: string | null;
   name: string;
   address: string;
   phone: string;

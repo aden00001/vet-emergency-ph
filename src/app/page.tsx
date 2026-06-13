@@ -5,6 +5,7 @@ import { HeroIllustration } from "@/components/hero-illustration";
 import { HomeSearch } from "@/components/home-search";
 import { SiteHeader } from "@/components/site-header";
 import { fetchAreaGroups, getTopAreas } from "@/lib/clinic-areas";
+import { clinicPath } from "@/lib/clinic-slug";
 import { getPresetById, DEFAULT_PRESET_ID } from "@/lib/location-presets";
 import { fetchNearbyClinics } from "@/lib/nearby-clinics";
 import { canonicalUrl, itemListJsonLd, pageMetadata } from "@/lib/seo";
@@ -45,7 +46,7 @@ export default async function HomePage() {
   const itemList = itemListJsonLd(
     initialClinics.map((c) => ({
       name: c.name,
-      url: canonicalUrl(`/clinics/${c.id}`),
+      url: canonicalUrl(clinicPath(c)),
     })),
     `Emergency vet clinics near ${DEFAULT_PRESET.label}`
   );

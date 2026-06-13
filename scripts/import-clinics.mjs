@@ -21,6 +21,7 @@ import {
   pickKeeper,
 } from "./clinic-match.mjs";
 import { geocodeClinics } from "./geocode-lib.mjs";
+import { buildClinicSlug } from "./clinic-slug.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
@@ -101,6 +102,7 @@ async function main() {
   }
 
   const existingRows = await fetchAllClinics(supabase);
+  const usedSlugs = new Set(existingRows.map((r) => r.slug).filter(Boolean));
 
   async function removeDuplicateRows(keeperId, dupeIds) {
     for (const dupeId of dupeIds) {
@@ -271,9 +273,12 @@ async function main() {
 
     const matches = findExistingMatches(c);
     const existingId = matches.length ? pickKeeper(matches).id : null;
+    const prev = existingId ? existingRows.find((r) => r.id === existingId) : null;
 
     if (existingId && (upsert || replace)) {
-      const prev = existingRows.find((r) => r.id === existingId);
+      if (!prev?.slug) {
+        row.slug = buildClinicSlug(c.name, row.address, usedSlugs);
+      }
       if (prev?.emergency_capable && !row.emergency_capable) {
         row.emergency_capable = true;
       }
@@ -304,6 +309,8 @@ async function main() {
       continue;
     }
 
+    row.slug = buildClinicSlug(c.name, row.address, usedSlugs);
+
     const { data, error } = await supabase
       .from("clinics")
       .insert(row)
@@ -323,6 +330,7 @@ async function main() {
     inserted++;
     existingRows.push({
       id: data.id,
+      slug: row.slug,
       name: c.name,
       address: row.address,
       phone: row.phone,
@@ -351,7 +359,7 @@ async function fetchAllClinics(supabase) {
     const { data, error } = await supabase
       .from("clinics")
       .select(
-        "id, name, address, latitude, longitude, emergency_capable, phone, image_url, google_maps_url, owner_verified, claimed_by, confidence_score"
+        "id, name, slug, address, latitude, longitude, emergency_capable, phone, image_url, google_maps_url, owner_verified, claimed_by, confidence_score"
       )
       .range(from, from + pageSize - 1);
     if (error) throw error;

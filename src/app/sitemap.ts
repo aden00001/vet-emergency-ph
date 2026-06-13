@@ -3,6 +3,7 @@ import { getSiteUrl } from "@/lib/brand";
 import { fetchAreaGroups, flattenAreas } from "@/lib/clinic-areas";
 import { HELP_TOPICS } from "@/lib/help-content";
 import { createServiceClient } from "@/lib/supabase/server";
+import { clinicPath } from "@/lib/clinic-slug";
 
 const STATIC_LAST_MODIFIED = new Date("2026-06-13");
 
@@ -72,7 +73,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const supabase = await createServiceClient();
     const { data: clinics, error } = await supabase
       .from("clinics")
-      .select("id, updated_at");
+      .select("id, slug, updated_at");
 
     if (error) {
       console.error("[sitemap] Failed to load clinic routes:", error.message);
@@ -80,7 +81,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
 
     const clinicRoutes: MetadataRoute.Sitemap = (clinics ?? []).map((c) => ({
-      url: `${baseUrl}/clinics/${c.id}`,
+      url: `${baseUrl}${clinicPath(c)}`,
       lastModified: c.updated_at ? new Date(c.updated_at) : STATIC_LAST_MODIFIED,
       changeFrequency: "weekly" as const,
       priority: 0.8,
