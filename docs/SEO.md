@@ -37,7 +37,7 @@ The site went from a client-only search app (little crawlable content) to a **hu
 | Area detail pages | [src/app/areas/[areaId]/page.tsx](../src/app/areas/[areaId]/page.tsx) — e.g. `/areas/ncr-manila` |
 | Shared area logic | [src/lib/clinic-areas.ts](../src/lib/clinic-areas.ts) — counts, detail listings, and API |
 | Area IDs | Format `ncr-{city}` or `ph-{province}` (hyphens, no colons — Windows-safe) |
-| Area resolution | [src/lib/ph-regions.ts](../src/lib/ph-regions.ts) — `resolveClinicArea(address)` maps free-text addresses to area buckets |
+| Area resolution | [src/lib/ph-regions.ts](../src/lib/ph-regions.ts) — `resolveClinicArea(address)` maps **locality segments** (city/province comma-parts) to area buckets; not full-address substring search |
 | Schema | `ItemList` + `BreadcrumbList` JSON-LD per area page |
 | ISR | `revalidate: 3600` on area routes |
 | Sitemap | All area URLs included in [src/app/sitemap.ts](../src/app/sitemap.ts) |
@@ -61,6 +61,34 @@ Index counts and detail listings now share the same area-matching logic. Geo sea
 
 - `/areas` count for an area matches `/areas/{areaId}` listing length (up to the 50-clinic cap)
 - `ItemList` JSON-LD `numberOfItems` matches visible clinic cards on the detail page
+
+#### City-level matching — Manila false positives (June 2026 fix)
+
+**Problem:** `/areas/ncr-manila` included clinics outside the City of Manila because `resolveClinicArea()` used `address.includes("manila")` on the full string. That matched road names (`Manila S Rd`, `Manila East Road`), districts (`New Manila`, `Eastern Manila District`), and the substring inside `Metro Manila`.
+
+**Fix:** `resolveClinicArea()` now:
+
+1. Splits the address into comma-separated segments
+2. Matches only on **locality segments** (typically city/province near the end — not street lines)
+3. Applies stricter rules for **Manila** (reject roads/districts; accept a `Manila` locality segment or known Manila districts like Tondo when `Metro Manila` is present)
+4. Rejects single-word city matches inside street names (e.g. `Makati Ave` does not bucket to Makati)
+
+#### Area matching — other locations (June 2026)
+
+Audited all areas against `data/clinics-merged.json` and tightened rules beyond Manila:
+
+| Issue | Fix |
+|-------|-----|
+| `San Juan, Batangas` → NCR San Juan | NCR San Juan requires `Metro Manila` or `San Juan City` segment |
+| `San Juan Evangelista St` → NCR San Juan | Multi-word cities require exact locality segments (not substring) |
+| `Malabon, Metro Manila` → generic Metro Manila | Two-part addresses now keep both city + region segments |
+| `Pasay City` / `Cagayan De Oro City` not matching | Accept `{city} city` and postal-prefixed segments (`2514 La Union`) |
+| `Cagayan Valley Rd` / `…, Cagayan Valley` → Cagayan province | Block `cagayan valley` region strings; provinces match trailing locality segments only |
+| `Aurora` barangay in Tuguegarao → Aurora province | Province matching limited to last 1–2 non-Metro locality segments |
+
+Area cache bumped to `clinics:areas:v5` after these changes.
+
+**Remaining edge cases:** A few listings have bad source addresses (e.g. `Cainta, Metro Manila` with no `Rizal`) and still fall into generic **Metro Manila** until the address data is corrected.
 
 ### 3. Help & FAQ content
 
@@ -225,7 +253,7 @@ After deploy or major SEO changes:
 
 - Canonical URL: `NEXT_PUBLIC_APP_URL=https://vet247ph.online` (see [DEPLOY.md](../DEPLOY.md))
 - Preview deploys on `.vercel.app` are excluded from canonical base in [src/lib/brand.ts](../src/lib/brand.ts)
-- Area cache key: `clinics:areas:v3` (Redis, 24h TTL) — caches index **counts only**; detail listings are fetched fresh each request (ISR revalidates the page shell hourly)
+- Area cache key: `clinics:areas:v5` (Redis, 24h TTL) — caches index **counts only**; detail listings are fetched fresh each request (ISR revalidates the page shell hourly)
 
 ---
 

@@ -3,10 +3,10 @@
  * province) grouped by island region. Used to build a nationwide, data-driven
  * location picker from the clinics actually present in the database.
  *
- * We rely on the province / city name being present in the address string
- * (Philippine addresses almost always end with "..., City, Province"). The pin
- * we navigate to is computed from real clinic coordinates, so even an
- * approximate match still drops the user into the actual cluster.
+ * Matching uses **comma-separated locality segments** (city / province near the
+ * end of the address), not substring search over the full string. This avoids
+ * false positives such as "Manila S Rd" (Laguna) or "Metro Manila" on a Makati
+ * listing being bucketed under the City of Manila.
  */
 
 export type AreaGroup = "Metro Manila" | "Luzon" | "Visayas" | "Mindanao";
@@ -213,6 +213,192 @@ function defId(def: AreaDef): string {
     .replace(/^-|-$/g, "")}`;
 }
 
+/** Comma-separated locality parts (city / province), not street/building lines. */
+function parseLocalitySegments(address: string): string[] {
+  const segments = normalize(address)
+    .split(/[,;|]+/)
+    .map((segment) => segment.trim())
+    .filter(Boolean);
+
+  const withoutCountry = segments.filter(
+    (segment) => segment !== "philippines" && segment !== "ph"
+  );
+
+  if (withoutCountry.length === 0) return [];
+  if (withoutCountry.length === 1) return withoutCountry;
+  if (withoutCountry.length === 2) return withoutCountry;
+  if (withoutCountry.length === 3) return withoutCountry.slice(1);
+  return withoutCountry.slice(-3);
+}
+
+function escapeRegExp(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function isManilaRoadOrDistrict(segment: string): boolean {
+  return (
+    /\bmetro\s+manila\b/.test(segment) ||
+    /\b(new|east|north|south|west|eastern|northern|southern)\s+manila\b/.test(
+      segment
+    ) ||
+    /\bmanila\s+(east|north|south|west|eastern|northern|southern|n|s|e|w)\b/.test(
+      segment
+    ) ||
+    /\bmanila\s+(road|rd|hwy|highway|ave|avenue|blvd|boulevard|street|st|drive|dr|way)\b/.test(
+      segment
+    ) ||
+    /\bmanila\s+(district|dist)\b/.test(segment)
+  );
+}
+
+const MANILA_DISTRICTS = new Set([
+  "tondo",
+  "binondo",
+  "intramuros",
+  "ermita",
+  "malate",
+  "pandacan",
+  "sampaloc",
+  "quiapo",
+  "san miguel",
+  "san nicolas",
+  "port area",
+  "sta cruz",
+  "santa cruz",
+]);
+
+function isManilaDistrictSegment(
+  segment: string,
+  localitySegments: string[]
+): boolean {
+  if (!MANILA_DISTRICTS.has(segment)) return false;
+  return localitySegments.some((part) => /\bmetro\s+manila\b/.test(part));
+}
+
+function isManilaCitySegment(
+  segment: string,
+  localitySegments: string[]
+): boolean {
+  if (isManilaDistrictSegment(segment, localitySegments)) return true;
+  if (isManilaRoadOrDistrict(segment)) return false;
+  if (segment === "manila" || segment === "city of manila") return true;
+  return /\bmanila\b/.test(segment) && /\bmanila(?:\s+\d{4})?(?:\s+metro)?\s*$/.test(segment);
+}
+
+function isHyphenatedRoadSegment(segment: string, place: string): boolean {
+  const placeRe = escapeRegExp(place);
+  return new RegExp(
+    `\\b${placeRe}\\s*[-–]\\s*\\w+(?:\\s+\\w+)*\\s+(rd|road|hwy|highway|st|street|ave|avenue|way|drive|dr|blvd|boulevard)\\b`
+  ).test(segment);
+}
+
+function isFalsePositivePlaceSegment(segment: string, match: string): boolean {
+  if (match === "cagayan" && /\bcagayan\s+valley\b/.test(segment)) return true;
+  return false;
+}
+
+function isExactLocalitySegment(segment: string, match: string): boolean {
+  if (segment === match || segment === `city of ${match}` || segment === `${match} city`) {
+    return true;
+  }
+
+  if (segment.startsWith(`${match} `)) {
+    const rest = segment.slice(match.length + 1).trim();
+    if (rest === "city") return true;
+    return /^\d{4}(?:\s+metro(?:\s+manila)?)?$/.test(rest);
+  }
+
+  if (segment.endsWith(` ${match}`) || segment.endsWith(match)) {
+    const prefix = segment.slice(0, segment.length - match.length).trim();
+    if (/^\d{4}$/.test(prefix)) return true;
+  }
+
+  return false;
+}
+
+function isSanJuanCitySegment(
+  segment: string,
+  localitySegments: string[]
+): boolean {
+  if (segment === "san juan city") return true;
+  if (segment !== "san juan") return false;
+  if (isHyphenatedRoadSegment(segment, "san juan")) return false;
+  if (isCityRoadSegment(segment, "san juan")) return false;
+  return localitySegments.some((part) => /\bmetro\s+manila\b/.test(part));
+}
+
+function isCityRoadSegment(segment: string, city: string): boolean {
+  const cityRe = escapeRegExp(city);
+  return new RegExp(
+    `\\b${cityRe}\\s+(ave|avenue|road|rd|st|street|blvd|boulevard|highway|hwy|drive|dr|way|ext|extension)\\b`
+  ).test(segment);
+}
+
+function segmentMatchesDef(
+  segment: string,
+  def: AreaDef,
+  localitySegments: string[]
+): boolean {
+  const match = def.match;
+
+  if (match === "manila") {
+    return isManilaCitySegment(segment, localitySegments);
+  }
+
+  if (match === "san juan") {
+    return isSanJuanCitySegment(segment, localitySegments);
+  }
+
+  if (isExactLocalitySegment(segment, match)) return true;
+
+  if (!segment.includes(match)) return false;
+
+  if (match.includes(" ")) {
+    if (isHyphenatedRoadSegment(segment, match)) return false;
+    if (isCityRoadSegment(segment, match.split(" ")[0])) return false;
+    return isExactLocalitySegment(segment, match);
+  }
+
+  if (isFalsePositivePlaceSegment(segment, match)) return false;
+  if (isCityRoadSegment(segment, match)) return false;
+
+  if (segment === match || segment === `city of ${match}`) return true;
+
+  if (segment.startsWith(`${match} `)) {
+    const rest = segment.slice(match.length + 1).trim();
+    return /^\d{4}(?:\s+metro(?:\s+manila)?)?$/.test(rest);
+  }
+
+  return false;
+}
+
+function provinceSegmentIndexes(segments: string[]): number[] {
+  const indexes: number[] = [];
+
+  for (let i = segments.length - 1; i >= 0; i -= 1) {
+    const segment = segments[i];
+    if (/\bmetro\s+manila\b/.test(segment)) continue;
+    if (/^\d{4}(\s+metro(?:\s+manila)?)?$/.test(segment)) continue;
+    indexes.push(i);
+    if (indexes.length >= 2) break;
+  }
+
+  return indexes;
+}
+
+function localityMatchesDef(segments: string[], def: AreaDef): boolean {
+  return segments.some((segment) =>
+    segmentMatchesDef(segment, def, segments)
+  );
+}
+
+function localityMatchesProvinceDef(segments: string[], def: AreaDef): boolean {
+  const indexes = provinceSegmentIndexes(segments);
+  return indexes.some((index) =>
+    segmentMatchesDef(segments[index], def, segments)
+  );
+}
+
 /**
  * Resolves an address to its area (NCR city or province). Returns null when no
  * known locality is found — those clinics stay reachable via search / GPS.
@@ -221,20 +407,21 @@ export function resolveClinicArea(
   address: string | null | undefined
 ): Pick<ClinicArea, "id" | "label" | "group"> | null {
   if (!address) return null;
-  const text = normalize(address);
+  const localitySegments = parseLocalitySegments(address);
+  if (localitySegments.length === 0) return null;
 
   for (const def of CITY_DEFS_SORTED) {
-    if (text.includes(def.match)) {
+    if (localityMatchesDef(localitySegments, def)) {
       return { id: defId(def), label: def.label, group: def.group };
     }
   }
   for (const def of PROVINCE_DEFS_SORTED) {
-    if (text.includes(def.match)) {
+    if (localityMatchesProvinceDef(localitySegments, def)) {
       return { id: defId(def), label: def.label, group: def.group };
     }
   }
   for (const def of GENERIC_DEFS) {
-    if (text.includes(def.match)) {
+    if (localityMatchesDef(localitySegments, def)) {
       return { id: defId(def), label: def.label, group: def.group };
     }
   }

@@ -1,0 +1,2375 @@
+{
+  "mismatches": [
+    {
+      "name": "10th St. Animal Clinic",
+      "address": "10th St, Bacolod, 6100 Negros Occidental, Philippines",
+      "resolved": "Bacolod",
+      "dominant": "Negros Occidental",
+      "dominantKind": "province",
+      "dominantSegment": "6100 negros occidental",
+      "locality": "bacolod | 6100 negros occidental"
+    },
+    {
+      "name": "A-Z Animal Wellness International Veterinary Corp.",
+      "address": "8WF5+GP5, Golam Dr, Cebu City, 6000 Cebu, Philippines",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "6000 cebu",
+      "locality": "golam dr | cebu city | 6000 cebu"
+    },
+    {
+      "name": "AGAPE ANIMAL CLINIC",
+      "address": "8MVC+P69, Iloilo - Capiz Rd, Dao, Capiz, Philippines",
+      "resolved": "Capiz",
+      "dominant": "Iloilo",
+      "dominantKind": "province",
+      "dominantSegment": "iloilo - capiz rd",
+      "locality": "iloilo - capiz rd | dao | capiz"
+    },
+    {
+      "name": "AJ Veterinary Clinic",
+      "address": "36 Pres. Magsaysay St, Cebu City, 6000 Cebu, Philippines",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "6000 cebu",
+      "locality": "cebu city | 6000 cebu"
+    },
+    {
+      "name": "AJL WET MARKET",
+      "address": "Talomo, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "davao city | davao del sur"
+    },
+    {
+      "name": "AJS Veterinary Products Trading",
+      "address": "Narra Avenue, Capitol Shopping Center, Brgy, Villamonte, Bacolod, 6100 Negros Occidental, Philippines",
+      "resolved": "Bacolod",
+      "dominant": "Negros Occidental",
+      "dominantKind": "province",
+      "dominantSegment": "6100 negros occidental",
+      "locality": "villamonte | bacolod | 6100 negros occidental"
+    },
+    {
+      "name": "Akkadia Veterinary Clinic",
+      "address": "R. Duterte St, Cebu City, Cebu",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "cebu",
+      "locality": "cebu city | cebu"
+    },
+    {
+      "name": "AKKADIA VETERINARY CLINIC",
+      "address": "R. Duterte St, Cebu City, 6000 Cebu, Philippines",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "6000 cebu",
+      "locality": "cebu city | 6000 cebu"
+    },
+    {
+      "name": "AKKADIA VETERINARY CLINIC BANILAD",
+      "address": "8WP6+MG2, Gov Cuenco Ave, Cebu City, 6000 Cebu, Philippines",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "6000 cebu",
+      "locality": "gov cuenco ave | cebu city | 6000 cebu"
+    },
+    {
+      "name": "ALIVET ANIMAL CLINIC",
+      "address": "Door 1, Garces Bldg, Alijis Rd, Bacolod, 6100 Negros Occidental, Philippines",
+      "resolved": "Bacolod",
+      "dominant": "Negros Occidental",
+      "dominantKind": "province",
+      "dominantSegment": "6100 negros occidental",
+      "locality": "alijis rd | bacolod | 6100 negros occidental"
+    },
+    {
+      "name": "All Creatures Great and Small",
+      "address": "668Q+44, 59 Macapagal Ave, Iligan City, Lanao del Norte",
+      "resolved": "Lanao del Norte",
+      "dominant": "Iligan",
+      "dominantKind": "city",
+      "dominantSegment": "iligan city",
+      "locality": "59 macapagal ave | iligan city | lanao del norte"
+    },
+    {
+      "name": "AlphaVets Animal Clinic",
+      "address": "bldg. 2 door 3b, fronting toyota matina, ms land complex, km3 mcarthur highway, Talomo, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "talomo | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "Animal Clinic",
+      "address": "JW39+CXG, Villarosa St, Bacolod, Negros Occidental",
+      "resolved": "Bacolod",
+      "dominant": "Negros Occidental",
+      "dominantKind": "province",
+      "dominantSegment": "negros occidental",
+      "locality": "villarosa st | bacolod | negros occidental"
+    },
+    {
+      "name": "Animal Clinic of Davao",
+      "address": "Door 2, CIAC Building, 80 McArthur Highway, Matina Crossing, Talomo, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "talomo | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "Animal Kingdom Veterinary Clinic at Paseo Arcenas",
+      "address": "8V5F+MX9, RCBC, Don Ramon Arcenas Street, corner R. Duterte Street, Banaw, Cebu City, 6000 Cebu, Philippines",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "6000 cebu",
+      "locality": "banaw | cebu city | 6000 cebu"
+    },
+    {
+      "name": "Animal Kingdom Veterinary Hospital",
+      "address": "38 Gorordo Ave, Cebu City, 6000 Cebu, Philippines",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "6000 cebu",
+      "locality": "cebu city | 6000 cebu"
+    },
+    {
+      "name": "Animal Medical Center",
+      "address": "13 RR Landon and D. Jakosalem Street, Cogon Ramos, Cebu City, Cebu, Cebu City, Cebu",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "cebu",
+      "locality": "cebu | cebu city | cebu"
+    },
+    {
+      "name": "Animal Solutions Veterinary Hospital",
+      "address": "3JQG+935, Bolcan St, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "bolcan st | davao city | davao del sur"
+    },
+    {
+      "name": "Animal Wellness",
+      "address": "Axis Entertainment Avenue Vibo Place, N Escario St, Cebu City, Cebu",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "cebu",
+      "locality": "n escario st | cebu city | cebu"
+    },
+    {
+      "name": "Animal Wellness Veterinary Clinic - Banawa Centrale",
+      "address": "8 R. Duterte St, Banawa, Cebu City, 6000 Cebu, Philippines",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "6000 cebu",
+      "locality": "banawa | cebu city | 6000 cebu"
+    },
+    {
+      "name": "Animal Wellness Veterinary Clinic - Robinsons",
+      "address": "Robinsons Galleria Cebu, Gen. Maxilom Ext, Cebu City, 6000 Cebu, Philippines",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "6000 cebu",
+      "locality": "gen. maxilom ext | cebu city | 6000 cebu"
+    },
+    {
+      "name": "Animal Wellness Veterinary Hospital",
+      "address": "GSP Building, Gov. M. Cuenco Ave, Banilad Rd, Cebu City, Cebu",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "cebu",
+      "locality": "banilad rd | cebu city | cebu"
+    },
+    {
+      "name": "Animal Wellness Veterinary Main-Hospital",
+      "address": "Golam Dr, Kasambagan, Cebu City, 6000 Cebu, Philippines",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "6000 cebu",
+      "locality": "kasambagan | cebu city | 6000 cebu"
+    },
+    {
+      "name": "Animal World Veterinary Clinic",
+      "address": "51-A Lacson St., Corner San Sebastian Street, Bacolod, 6100 Negros Occidental, Philippines",
+      "resolved": "Bacolod",
+      "dominant": "Negros Occidental",
+      "dominantKind": "province",
+      "dominantSegment": "6100 negros occidental",
+      "locality": "corner san sebastian street | bacolod | 6100 negros occidental"
+    },
+    {
+      "name": "Arca Verde Veterinary Clinic",
+      "address": "Door 2, Sato Building, Quimpo Blvd, Ecoland, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "ecoland | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "ARF Veterinary Clinic",
+      "address": "going airport, Dr 3 Omnor bldg, DIHO phase 2 Kanto Diho, Infront of Seaoil gas station before Mamay Rd, Diversion Rd, Buhangin, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "buhangin | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "Asd Agrivet Supply",
+      "address": "Door 12 & 13, Leonor Building, Magallanes Extension, Bankerohan, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "bankerohan | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "Assumpta Vet Care Animal Clinic - Goa",
+      "address": "MFWP+P8R, San Juan Evangelista St, Goa, Camarines Sur",
+      "resolved": "Camarines Sur",
+      "dominant": "San Juan",
+      "dominantKind": "city",
+      "dominantSegment": "san juan evangelista st",
+      "locality": "san juan evangelista st | goa | camarines sur"
+    },
+    {
+      "name": "Aurora Provincial Veterinary Office",
+      "address": "XJVP+C3G, Santiago-Tuguegarao Road, Aurora, Tuguegarao City, 3500 Cagayan, Philippines",
+      "resolved": "Aurora",
+      "dominant": "Cagayan",
+      "dominantKind": "province",
+      "dominantSegment": "3500 cagayan",
+      "locality": "aurora | tuguegarao city | 3500 cagayan"
+    },
+    {
+      "name": "Aycardo Veterinary Center Inc. - Main Branch",
+      "address": "68 J. Alcantara St, Cebu City, 6000 Cebu, Philippines",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "6000 cebu",
+      "locality": "cebu city | 6000 cebu"
+    },
+    {
+      "name": "Aycardo Veterinary Center Inc. - Pardo Branch",
+      "address": "Natalio B. Bacalso Ave, Cebu City, 6000 Cebu, Philippines",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "6000 cebu",
+      "locality": "cebu city | 6000 cebu"
+    },
+    {
+      "name": "Aycardo Veterinary Center Inc. - Satellite Clinic",
+      "address": "96 J. Alcantara St, Cebu City, 6000 Cebu, Philippines",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "6000 cebu",
+      "locality": "cebu city | 6000 cebu"
+    },
+    {
+      "name": "B. Baldonado Veterinary Clinic",
+      "address": "FJ9W+66F, Tomas Saco St. & 14th St., Cagayan De Oro City, Misamis Oriental",
+      "resolved": "Misamis Oriental",
+      "dominant": "Cagayan de Oro",
+      "dominantKind": "city",
+      "dominantSegment": "cagayan de oro city",
+      "locality": "tomas saco st. & 14th st. | cagayan de oro city | misamis oriental"
+    },
+    {
+      "name": "B.Delorino Veterinary Clinic & Supply",
+      "address": "94A Lacson St, Bacolod, 6100 Negros Occidental, Philippines",
+      "resolved": "Bacolod",
+      "dominant": "Negros Occidental",
+      "dominantKind": "province",
+      "dominantSegment": "6100 negros occidental",
+      "locality": "bacolod | 6100 negros occidental"
+    },
+    {
+      "name": "BACOLOD ANIMAL HOSPITAL AND VETERINARY SUPPLY",
+      "address": "MXC4+PM4, Bacolod, 6100 Negros Occidental, Philippines",
+      "resolved": "Bacolod",
+      "dominant": "Negros Occidental",
+      "dominantKind": "province",
+      "dominantSegment": "6100 negros occidental",
+      "locality": "bacolod | 6100 negros occidental"
+    },
+    {
+      "name": "Bacolod Dog And Cat Clinic",
+      "address": "PX36+XPQ, Carlos Hilado Hwy, Bacolod, Negros Occidental",
+      "resolved": "Bacolod",
+      "dominant": "Negros Occidental",
+      "dominantKind": "province",
+      "dominantSegment": "negros occidental",
+      "locality": "carlos hilado hwy | bacolod | negros occidental"
+    },
+    {
+      "name": "Barkely and Mao Veterinary Clinic",
+      "address": "Pedro N. Roa Senior Ave, Cagayan De Oro City, Misamis Oriental",
+      "resolved": "Misamis Oriental",
+      "dominant": "Cagayan de Oro",
+      "dominantKind": "city",
+      "dominantSegment": "cagayan de oro city",
+      "locality": "cagayan de oro city | misamis oriental"
+    },
+    {
+      "name": "Barking Lot Animal Clinic",
+      "address": "Estefania Rd, Bacolod, Negros Occidental",
+      "resolved": "Bacolod",
+      "dominant": "Negros Occidental",
+      "dominantKind": "province",
+      "dominantSegment": "negros occidental",
+      "locality": "bacolod | negros occidental"
+    },
+    {
+      "name": "Barksite Animal Clinic",
+      "address": "MXVC+5J, GM Cordova Ave, Buri Road, Bacolod, 6100 Negros Occidental",
+      "resolved": "Bacolod",
+      "dominant": "Negros Occidental",
+      "dominantKind": "province",
+      "dominantSegment": "6100 negros occidental",
+      "locality": "buri road | bacolod | 6100 negros occidental"
+    },
+    {
+      "name": "Batinga Veterinary Clinic",
+      "address": "FJJV+QQ, Tiano Brothers Street, 85 Montalvan St, Cagayan De Oro City, Misamis Oriental",
+      "resolved": "Misamis Oriental",
+      "dominant": "Cagayan de Oro",
+      "dominantKind": "city",
+      "dominantSegment": "cagayan de oro city",
+      "locality": "85 montalvan st | cagayan de oro city | misamis oriental"
+    },
+    {
+      "name": "Belle's Veterinary Clinic",
+      "address": "ABB Bldg, Natalio B. Bacalso Ave, Basak Pardo, Cebu City, 6000 Cebu, Philippines",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "6000 cebu",
+      "locality": "basak pardo | cebu city | 6000 cebu"
+    },
+    {
+      "name": "Biopets Veterinary Clinic",
+      "address": "18 Subli St, Talomo, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "talomo | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "Calinan Veterinary Clinic",
+      "address": "Davao - Bukidnon Hwy, Calinan, Calinan District, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "calinan district | davao city | davao del sur"
+    },
+    {
+      "name": "Caminade Animal Hospital",
+      "address": "M. J. Cuenco Ave, Mabolo, Cebu City, 6000 Cebu, Philippines",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "6000 cebu",
+      "locality": "mabolo | cebu city | 6000 cebu"
+    },
+    {
+      "name": "Caraga Pet Doctors Animal Hospital",
+      "address": "WGW4+68V, Butuan City, Agusan del Norte",
+      "resolved": "Agusan del Norte",
+      "dominant": "Butuan",
+      "dominantKind": "city",
+      "dominantSegment": "butuan city",
+      "locality": "butuan city | agusan del norte"
+    },
+    {
+      "name": "Casas-Jamis Veterinary Hospital",
+      "address": "Zone 4 National Highway, Cagayan De Oro City, Misamis Oriental",
+      "resolved": "Misamis Oriental",
+      "dominant": "Cagayan de Oro",
+      "dominantKind": "city",
+      "dominantSegment": "cagayan de oro city",
+      "locality": "cagayan de oro city | misamis oriental"
+    },
+    {
+      "name": "Cat Care",
+      "address": "Talomo, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "davao city | davao del sur"
+    },
+    {
+      "name": "Causin Veterinary Clinic",
+      "address": "National Highway, Cagayan De Oro City, Misamis Oriental",
+      "resolved": "Misamis Oriental",
+      "dominant": "Cagayan de Oro",
+      "dominantKind": "city",
+      "dominantSegment": "cagayan de oro city",
+      "locality": "cagayan de oro city | misamis oriental"
+    },
+    {
+      "name": "CDO PET DOCTOR Uptown Branch",
+      "address": "FJ59+GJ, 180 Pedro N. Roa Senior Ave, Cagayan De Oro City, Misamis Oriental",
+      "resolved": "Misamis Oriental",
+      "dominant": "Cagayan de Oro",
+      "dominantKind": "city",
+      "dominantSegment": "cagayan de oro city",
+      "locality": "180 pedro n. roa senior ave | cagayan de oro city | misamis oriental"
+    },
+    {
+      "name": "Cebu Animal Doctor's - The Feline Clinic",
+      "address": "8WC7+J3R, Mabolo, Cebu City, Cebu",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "cebu",
+      "locality": "mabolo | cebu city | cebu"
+    },
+    {
+      "name": "Cebu Animal Doctor's Hospital - Main Branch",
+      "address": "8WR6+VWF, Cebu City, Cebu",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "cebu",
+      "locality": "cebu city | cebu"
+    },
+    {
+      "name": "Cebu Animal Doctors' Clinic V-rama Branch",
+      "address": "947-A V Rama Ave, Cebu City, Cebu",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "cebu",
+      "locality": "cebu city | cebu"
+    },
+    {
+      "name": "Cebu Dog And Cat Clinic",
+      "address": "7VWP+H46, Natalio B. Bacalso Ave, Cebu City, Cebu",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "cebu",
+      "locality": "natalio b. bacalso ave | cebu city | cebu"
+    },
+    {
+      "name": "Cebu Veterinary Doctors - BTC Branch",
+      "address": "BTC Bldg, 208, Gov. M. Cuenco Ave, Cebu City, 6000 Cebu, Philippines",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "6000 cebu",
+      "locality": "gov. m. cuenco ave | cebu city | 6000 cebu"
+    },
+    {
+      "name": "Cebu Veterinary Doctors - Main Hospital",
+      "address": "Unit 107-109, F. Ramos St, Cebu City, 6000 Lalawigan ng Cebu, Philippines",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "6000 lalawigan ng cebu",
+      "locality": "f. ramos st | cebu city | 6000 lalawigan ng cebu"
+    },
+    {
+      "name": "CELESTIAL'S ANIMAL CLINIC",
+      "address": "Lua Building, Gen. Douglas MacArthur Hwy, Talomo, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "talomo | davao city | davao del sur"
+    },
+    {
+      "name": "Central Park Veterinary Clinic",
+      "address": "Door 10, Decoarts Bldg, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "decoarts bldg | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "City Veterinarian",
+      "address": "3JMC+5X3, Barangay Kapitan Tomas Monteverde, Sr. Agdao District, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "sr. agdao district | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "City veterinarian's office-Davao Agdao district",
+      "address": "3JJC+9VX, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "davao city | davao del sur"
+    },
+    {
+      "name": "Claws Pet Care",
+      "address": "3JPC+6WJ, Dacudao Ave, Obrero, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "obrero | davao city | davao del sur"
+    },
+    {
+      "name": "Cornerstone Veterinary Clinic",
+      "address": "Reginaville, 69 Jalandoni St, Jaro, Iloilo City, 5000 Iloilo, Philippines",
+      "resolved": "Iloilo City",
+      "dominant": "Iloilo",
+      "dominantKind": "province",
+      "dominantSegment": "5000 iloilo",
+      "locality": "jaro | iloilo city | 5000 iloilo"
+    },
+    {
+      "name": "Creatures Veterinary Clinic",
+      "address": "F. Ramos Ext, Cebu City, 6000 Cebu, Philippines",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "6000 cebu",
+      "locality": "cebu city | 6000 cebu"
+    },
+    {
+      "name": "Crisan Feed Supply",
+      "address": "KM.7 Diversion Rd, San Antonio, Buhangin, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "buhangin | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "CVD Animal Health Corp.",
+      "address": "Unit 107-109, F. Ramos St, Cebu City, Cebu",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "cebu",
+      "locality": "f. ramos st | cebu city | cebu"
+    },
+    {
+      "name": "Davao Animal Central - Obrero",
+      "address": "Corner Lupo Diaz, Porras St, Obrero, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "obrero | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "Davao City Dog Pound",
+      "address": "Malagos, Baguio District, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "baguio district | davao city | davao del sur"
+    },
+    {
+      "name": "Davao Emergency Veterinary Hospital",
+      "address": "Door 4, Lacor, Elpidio Quirino Ave, Poblacion District, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "poblacion district | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "Davao Veterinary Clinic",
+      "address": "29 Governor Sales Street, 27-C Poblacion, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "27-c poblacion | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "DC Pets (Veterenarian Services)",
+      "address": "Block 139, Lot 132, Owl St. Townhouse, Deca Homes, Libby Road, Talomo, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "talomo | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "De Perro Pet Clinic and Supplies",
+      "address": "Victorina Heights, Door 4 and 5, Block 3, Lot 1, Bacolod, 6100 Negros Occidental, Philippines",
+      "resolved": "Bacolod",
+      "dominant": "Negros Occidental",
+      "dominantKind": "province",
+      "dominantSegment": "6100 negros occidental",
+      "locality": "lot 1 | bacolod | 6100 negros occidental"
+    },
+    {
+      "name": "Dector ANIMAL CLINIC & SERVICES",
+      "address": "21 De Guzman St, Toril, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "toril | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "Demaisip Pet Doctors Veterinary Clinic",
+      "address": "Door 1, #5, Alivio Building, Brgy Lopez Jaena St, La Paz, Iloilo City, 5000 Iloilo, Philippines",
+      "resolved": "Iloilo City",
+      "dominant": "Iloilo",
+      "dominantKind": "province",
+      "dominantSegment": "5000 iloilo",
+      "locality": "la paz | iloilo city | 5000 iloilo"
+    },
+    {
+      "name": "Deol Veterinary Distributors Corp.",
+      "address": "3HRJ+V85, Talomo, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "talomo | davao city | davao del sur"
+    },
+    {
+      "name": "Department of Veterinary Services City Pound",
+      "address": "8W7F+524, F. Cabahug St, Cebu City, 6000 Cebu, Philippines",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "6000 cebu",
+      "locality": "f. cabahug st | cebu city | 6000 cebu"
+    },
+    {
+      "name": "Doc Bayani's Animal Wellness Clinic - Maa Branch",
+      "address": "2 1st St, Talomo, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "talomo | davao city | davao del sur"
+    },
+    {
+      "name": "Doc John's Veterinary Clinic - Lahug",
+      "address": "935K Salinas Dr, Cebu City, 6000 Cebu, Philippines",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "6000 cebu",
+      "locality": "cebu city | 6000 cebu"
+    },
+    {
+      "name": "Dog world",
+      "address": "Santan St, Villa Arevalo District, Iloilo City, 5000 Iloilo, Philippines",
+      "resolved": "Iloilo City",
+      "dominant": "Iloilo",
+      "dominantKind": "province",
+      "dominantSegment": "5000 iloilo",
+      "locality": "villa arevalo district | iloilo city | 5000 iloilo"
+    },
+    {
+      "name": "Dok Aba Animal CLinic",
+      "address": "2FCX+J6Q, Toril, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "toril | davao city | davao del sur"
+    },
+    {
+      "name": "Dok Beterinaryo",
+      "address": "Talomo, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "davao city | 8000 davao del sur"
+    },
+    {
+      "name": "Dok Hayop Animal Clinic and Dog Spa",
+      "address": "R4G6+FR4, Butuan - Cagayan de Oro - Iligan Rd, Gingoog City, Misamis Oriental",
+      "resolved": "Misamis Oriental",
+      "dominant": "Cagayan de Oro",
+      "dominantKind": "city",
+      "dominantSegment": "butuan - cagayan de oro - iligan rd",
+      "locality": "butuan - cagayan de oro - iligan rd | gingoog city | misamis oriental"
+    },
+    {
+      "name": "Dr. Eliezer dela Cruz",
+      "address": "MX44+CH, 40-2 P Hernaez St Ext, Bacolod, 6100 Negros Occidental",
+      "resolved": "Bacolod",
+      "dominant": "Negros Occidental",
+      "dominantKind": "province",
+      "dominantSegment": "6100 negros occidental",
+      "locality": "40-2 p hernaez st ext | bacolod | 6100 negros occidental"
+    },
+    {
+      "name": "Dr. Emily T. Hurna - Veterinarian",
+      "address": "Burgos Ave, Bacolod, 6100 Negros Occidental, Philippines",
+      "resolved": "Bacolod",
+      "dominant": "Negros Occidental",
+      "dominantKind": "province",
+      "dominantSegment": "6100 negros occidental",
+      "locality": "bacolod | 6100 negros occidental"
+    },
+    {
+      "name": "Dr. Koda Pet Wellness Center",
+      "address": "Unit 29, Crossroads, Cebu City, Cebu",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "cebu",
+      "locality": "crossroads | cebu city | cebu"
+    },
+    {
+      "name": "Dr. Lee's Animal Care and Wellness Center",
+      "address": "Unit 19 City, Times Square, Senator Benigno S. Aquino Jr. Ave, Mandurriao, Iloilo City, Iloilo, Philippines",
+      "resolved": "Iloilo City",
+      "dominant": "Iloilo",
+      "dominantKind": "province",
+      "dominantSegment": "iloilo",
+      "locality": "mandurriao | iloilo city | iloilo"
+    },
+    {
+      "name": "Dr. Paws Animal Clinic",
+      "address": "Dr. Paws Animal Clinic, Calag-itan, Buanoy, Balamban, Cebu Balamban, Cebu City, 6041 Cebu, Philippines",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "6041 cebu",
+      "locality": "cebu balamban | cebu city | 6041 cebu"
+    },
+    {
+      "name": "Dr. Paws Veterinary Clinic",
+      "address": "PHQ7+GX4, Jaro, Iloilo City, Iloilo, Philippines",
+      "resolved": "Iloilo City",
+      "dominant": "Iloilo",
+      "dominantKind": "province",
+      "dominantSegment": "iloilo",
+      "locality": "jaro | iloilo city | iloilo"
+    },
+    {
+      "name": "Dr. Sam Ramos",
+      "address": "18 Emerald St, Talomo, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "talomo | davao city | davao del sur"
+    },
+    {
+      "name": "DRAGONSTONE VETERINARY CLINIC",
+      "address": "Purok 21, Ma-a, Balicat Compound, Talomo, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "talomo | davao city | davao del sur"
+    },
+    {
+      "name": "Eastern Veterinarian Dog and Cat Clinic",
+      "address": "231 C, 231 Sta. Cruz St, Barangay 44, Quarry, Tacloban City, Leyte, Philippines",
+      "resolved": "Leyte",
+      "dominant": "Tacloban",
+      "dominantKind": "city",
+      "dominantSegment": "tacloban city",
+      "locality": "quarry | tacloban city | leyte"
+    },
+    {
+      "name": "EVR VET-OPTIONS",
+      "address": "3JJC+C5Q, Nicasio Torres St, Agdao, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "agdao | davao city | davao del sur"
+    },
+    {
+      "name": "Fabulous Pets",
+      "address": "No 29, Block 3, Libby Road, Puan, Talomo, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "talomo | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "Faithful Pets Animal Center and Surgery",
+      "address": "Highway, Talomo, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "talomo | davao city | davao del sur"
+    },
+    {
+      "name": "Family Vet",
+      "address": "69, 5000 Jalandoni St, Jaro, Iloilo City, 5000 Iloilo, Philippines",
+      "resolved": "Iloilo City",
+      "dominant": "Iloilo",
+      "dominantKind": "province",
+      "dominantSegment": "5000 iloilo",
+      "locality": "jaro | iloilo city | 5000 iloilo"
+    },
+    {
+      "name": "Fil-Chi Animal Clinic",
+      "address": "8W96+JRJ, Pope John Paul II Ave, Cebu City, Cebu",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "cebu",
+      "locality": "pope john paul ii ave | cebu city | cebu"
+    },
+    {
+      "name": "Fur Pets Veterinary Clinic and Grooming Salon",
+      "address": "QQ32+G6P, Delos Reyes Rd, San Pedro, Puerto Princesa City, Palawan, Philippines",
+      "resolved": "Palawan",
+      "dominant": "Puerto Princesa",
+      "dominantKind": "city",
+      "dominantSegment": "puerto princesa city",
+      "locality": "san pedro | puerto princesa city | palawan"
+    },
+    {
+      "name": "FurBuddies Veterinary Services",
+      "address": "Phase 2 Blk 50 Lot 19, Florida Street, Deca Homes, Tacunan, Tugbok, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "tugbok | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "FurCare Veterinary Clinic",
+      "address": "FMG7+66, Door#6, One Macario Suites, 2196 J.R. Borja Ext, Cagayan De Oro City, Misamis Oriental",
+      "resolved": "Misamis Oriental",
+      "dominant": "Cagayan de Oro",
+      "dominantKind": "city",
+      "dominantSegment": "cagayan de oro city",
+      "locality": "2196 j.r. borja ext | cagayan de oro city | misamis oriental"
+    },
+    {
+      "name": "Furcare Veterinary Clinic - Canitoan Branch",
+      "address": "FJC3+W9V, Mauricia N. Roa St, Cagayan De Oro City, Misamis Oriental",
+      "resolved": "Misamis Oriental",
+      "dominant": "Cagayan de Oro",
+      "dominantKind": "city",
+      "dominantSegment": "cagayan de oro city",
+      "locality": "mauricia n. roa st | cagayan de oro city | misamis oriental"
+    },
+    {
+      "name": "Furever Friends Emegency Animal Hospital",
+      "address": "1014A, ABL Circle, Corner Cabreros St, Cebu City, Cebu",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "cebu",
+      "locality": "corner cabreros st | cebu city | cebu"
+    },
+    {
+      "name": "Furever Friends Emergency Pardo Branch",
+      "address": "Pardo (in front of REPHIL gas station, Hi way, Cebu City, Cebu",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "cebu",
+      "locality": "hi way | cebu city | cebu"
+    },
+    {
+      "name": "Furry Paws Veterinary Clinic and Pet Supplies",
+      "address": "Penano St, Calinan pob, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "calinan pob | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "Golden Pet",
+      "address": "FMGJ+547, National Highway, Cagayan De Oro City, Misamis Oriental",
+      "resolved": "Misamis Oriental",
+      "dominant": "Cagayan de Oro",
+      "dominantKind": "city",
+      "dominantSegment": "cagayan de oro city",
+      "locality": "national highway | cagayan de oro city | misamis oriental"
+    },
+    {
+      "name": "Gorre Animal Health Clinic",
+      "address": "0005 R.R. Landon Street, Cebu City, Cebu",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "cebu",
+      "locality": "cebu city | cebu"
+    },
+    {
+      "name": "GPY Veterinare Animale",
+      "address": "1203 Tres de Abril St, Cebu City, Cebu",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "cebu",
+      "locality": "cebu city | cebu"
+    },
+    {
+      "name": "Green Tails Veterinary Clinic",
+      "address": "Negros South Road, Sum-ag, Bacolod, 6100 Negros Occidental, Philippines",
+      "resolved": "Bacolod",
+      "dominant": "Negros Occidental",
+      "dominantKind": "province",
+      "dominantSegment": "6100 negros occidental",
+      "locality": "sum-ag | bacolod | 6100 negros occidental"
+    },
+    {
+      "name": "happy paws veterinary clinic",
+      "address": "happy paws veterinary clinic, Km 13 Davao-Bukidnon Rd, Talomo, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "talomo | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "HAPPY PAWS Veterinary Clinic - Guadalupe Branch",
+      "address": "947-A V Rama Ave, Guadalupe, Cebu City, 6000 Cebu, Philippines",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "6000 cebu",
+      "locality": "guadalupe | cebu city | 6000 cebu"
+    },
+    {
+      "name": "Happy Tails Veterinary Clinic",
+      "address": "Ground Floor, Unit 2 Labangon Town Center, Cebu City, 6000 Cebu, Philippines",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "6000 cebu",
+      "locality": "unit 2 labangon town center | cebu city | 6000 cebu"
+    },
+    {
+      "name": "HAPPYFEET VETERINARY CLINIC",
+      "address": "Guadalupe Building, Araneta Ave, Sum-ag, Bacolod, 6100 Negros Occidental, Philippines",
+      "resolved": "Bacolod",
+      "dominant": "Negros Occidental",
+      "dominantKind": "province",
+      "dominantSegment": "6100 negros occidental",
+      "locality": "sum-ag | bacolod | 6100 negros occidental"
+    },
+    {
+      "name": "Iloilo Veterinary Clinic",
+      "address": "JV Building, Jocson St, Villa Arevalo District, Iloilo City, 5000 Iloilo, Philippines",
+      "resolved": "Iloilo City",
+      "dominant": "Iloilo",
+      "dominantKind": "province",
+      "dominantSegment": "5000 iloilo",
+      "locality": "villa arevalo district | iloilo city | 5000 iloilo"
+    },
+    {
+      "name": "Ilonggo Vets Animal Clinic - Jaro",
+      "address": "PHPJ+J7V, Coastal Road, Jaro, Iloilo City, Iloilo, Philippines",
+      "resolved": "Iloilo City",
+      "dominant": "Iloilo",
+      "dominantKind": "province",
+      "dominantSegment": "iloilo",
+      "locality": "jaro | iloilo city | iloilo"
+    },
+    {
+      "name": "Isidore Veterinary Clinic - Buhangin",
+      "address": "Tigatto Rd, Buhangin, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "buhangin | davao city | davao del sur"
+    },
+    {
+      "name": "Island Paws Veterinary Services",
+      "address": "5F5V+F3F, Poblacion, San Juan, Siquijor",
+      "resolved": "Siquijor",
+      "dominant": "San Juan",
+      "dominantKind": "city",
+      "dominantSegment": "san juan",
+      "locality": "poblacion | san juan | siquijor"
+    },
+    {
+      "name": "JM Poultry & Livestock Supply, Inc",
+      "address": "Leonor Building, Magallanes Extension, Bankerohan, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "bankerohan | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "Juan Veterinarian-Bacolod",
+      "address": "Burgos Extension, Bacolod, 6100 Negros Occidental, Philippines",
+      "resolved": "Bacolod",
+      "dominant": "Negros Occidental",
+      "dominantKind": "province",
+      "dominantSegment": "6100 negros occidental",
+      "locality": "bacolod | 6100 negros occidental"
+    },
+    {
+      "name": "K-9 VETERINARY SERVICES",
+      "address": "NHA Bangkal, CENTRAL PARK SUBDIVISION, KANLAON, CORNER Pinatubo St, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "corner pinatubo st | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "Kart & Kyle Feeds & Veterinary Supply",
+      "address": "2F8X+M36, Agton St, Toril, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "toril | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "Khenzovan's Agrivet Supply Trading",
+      "address": "Buhangin, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "davao city | davao del sur"
+    },
+    {
+      "name": "Kim Pet Care",
+      "address": "Talomo, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "davao city | davao del sur"
+    },
+    {
+      "name": "Lil paws veterinary clinic",
+      "address": "215, 6000 Francisco Llamas St, Punta Prinsesa Labangon, Cebu City, 6000 Cebu, Philippines",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "6000 cebu",
+      "locality": "punta prinsesa labangon | cebu city | 6000 cebu"
+    },
+    {
+      "name": "Lyndel's Toril Bodega",
+      "address": "Toril, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "davao city | davao del sur"
+    },
+    {
+      "name": "Makati City Pound and Veterinary Services Office",
+      "address": "Malugay St, cor Ayala Ave, Ext, Makati City, Metro Manila, Philippines",
+      "resolved": "Metro Manila",
+      "dominant": "Makati",
+      "dominantKind": "city",
+      "dominantSegment": "makati city",
+      "locality": "ext | makati city | metro manila"
+    },
+    {
+      "name": "malleus animal clinic",
+      "address": "Door 3 Arrozal Building, El Rio Village, Bacaca Road, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "bacaca road | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "Malleus Animal Clinic",
+      "address": "5 Buhangin-Lapanday Rd, Buhangin, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "buhangin | davao city | davao del sur"
+    },
+    {
+      "name": "Malta Medical Center",
+      "address": "Kilometer 14 McArthur Highway, Toril, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "toril | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "MANADA AGRIVET & PET SUPPLIES",
+      "address": "Poblacion District, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "davao city | davao del sur"
+    },
+    {
+      "name": "MANDALAGAN VETERINARY HOSPITAL AND MARKETING",
+      "address": "310 Lacson St, Mandalagan, Bacolod, 6100 Negros Occidental, Philippines",
+      "resolved": "Bacolod",
+      "dominant": "Negros Occidental",
+      "dominantKind": "province",
+      "dominantSegment": "6100 negros occidental",
+      "locality": "mandalagan | bacolod | 6100 negros occidental"
+    },
+    {
+      "name": "Matina Crossing Veterinary Services",
+      "address": "Corners Matina Crossing, Km 5 Guadalupe Street, Davao City Diversion Rd, Talomo, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "talomo | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "Mayari Animal Rescue Organization",
+      "address": "Sapangdaku, Cebu City, Cebu",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "cebu",
+      "locality": "cebu city | cebu"
+    },
+    {
+      "name": "Mc Arthur Animal Clinic",
+      "address": "Door 14, Soriano Building, McArthur Highway, Bangkal, Talomo, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "talomo | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "Monreal Veterinary Trading",
+      "address": "HWW9+9QH, Peñafrancia St, Bacolod, Negros Occidental, Philippines",
+      "resolved": "Bacolod",
+      "dominant": "Negros Occidental",
+      "dominantKind": "province",
+      "dominantSegment": "negros occidental",
+      "locality": "penafrancia st | bacolod | negros occidental"
+    },
+    {
+      "name": "Most Valuable Pet (MVP) Vet Clinic",
+      "address": "MX87+FC6, Bacolod, 6100 Negros Occidental",
+      "resolved": "Bacolod",
+      "dominant": "Negros Occidental",
+      "dominantKind": "province",
+      "dominantSegment": "6100 negros occidental",
+      "locality": "bacolod | 6100 negros occidental"
+    },
+    {
+      "name": "NDV Pet Lovers Clinic",
+      "address": "129 Carlock St, Cebu City, Cebu",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "cebu",
+      "locality": "cebu city | cebu"
+    },
+    {
+      "name": "New Cartimar Veterinary Clinic",
+      "address": "314 Inquimboy, Pasay City, Metro Manila, Philippines",
+      "resolved": "Metro Manila",
+      "dominant": "Pasay",
+      "dominantKind": "city",
+      "dominantSegment": "pasay city",
+      "locality": "pasay city | metro manila"
+    },
+    {
+      "name": "Noa's Ark",
+      "address": "9W37+QR9, Gov. M. Cuenco Ave, Cebu City, Cebu",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "cebu",
+      "locality": "gov. m. cuenco ave | cebu city | cebu"
+    },
+    {
+      "name": "NONG JOVITO AGRIVET SUPPY",
+      "address": "Talomo, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "davao city | davao del sur"
+    },
+    {
+      "name": "Northvets Avenue Veterinary Clinic",
+      "address": "FPWW+34, Agusan, Cagayan De Oro City, Misamis Oriental",
+      "resolved": "Misamis Oriental",
+      "dominant": "Cagayan de Oro",
+      "dominantKind": "city",
+      "dominantSegment": "cagayan de oro city",
+      "locality": "agusan | cagayan de oro city | misamis oriental"
+    },
+    {
+      "name": "Office of the City Veterinarian",
+      "address": "MHW4+G3M, Delgado St, Iloilo City Proper, Iloilo City, Iloilo, Philippines",
+      "resolved": "Iloilo City",
+      "dominant": "Iloilo",
+      "dominantKind": "province",
+      "dominantSegment": "iloilo",
+      "locality": "iloilo city proper | iloilo city | iloilo"
+    },
+    {
+      "name": "Office of the City Veterinarian",
+      "address": "113 Pichon St, Poblacion District, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "poblacion district | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "ONE SHOP VETERINARY SUPPLY",
+      "address": "DOOR NO. 8, Esperanza Complex, Buhangin-Cabantian-Indangan Rd, Buhangin, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "buhangin | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "Ortega Petcare Veterinary Clinic",
+      "address": "210 Diversion Rd, Jaro, Iloilo City, 5000 Iloilo, Philippines",
+      "resolved": "Iloilo City",
+      "dominant": "Iloilo",
+      "dominantKind": "province",
+      "dominantSegment": "5000 iloilo",
+      "locality": "jaro | iloilo city | 5000 iloilo"
+    },
+    {
+      "name": "Palawan Animal Health Center",
+      "address": "Door 5, QP5W+JWC Pediapco Building, National Highway, Puerto Princesa City, Palawan, Philippines",
+      "resolved": "Palawan",
+      "dominant": "Puerto Princesa",
+      "dominantKind": "city",
+      "dominantSegment": "puerto princesa city",
+      "locality": "national highway | puerto princesa city | palawan"
+    },
+    {
+      "name": "PAPE Veterinary Clinic",
+      "address": "Quezon St, Iloilo City Proper, Iloilo City, 5000 Iloilo, Philippines",
+      "resolved": "Iloilo City",
+      "dominant": "Iloilo",
+      "dominantKind": "province",
+      "dominantSegment": "5000 iloilo",
+      "locality": "iloilo city proper | iloilo city | 5000 iloilo"
+    },
+    {
+      "name": "PAWLISTIC PETSHOP AND GROOMING STATION",
+      "address": "2GF3+J3J, Descuatan Street, Toril, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "toril | davao city | davao del sur"
+    },
+    {
+      "name": "Paws 'N Davao",
+      "address": "Belen Rd, Buhangin, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "buhangin | davao city | davao del sur"
+    },
+    {
+      "name": "PAWS Doctor Animal Clinic",
+      "address": "3GQ4+6M6, Beside Mercury Drugstore, Mintal, Tugbok, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "tugbok | davao city | davao del sur"
+    },
+    {
+      "name": "Paws Doctor Animal Clinic & Services",
+      "address": "21 De Guzman St, Toril, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "toril | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "Paws Doctor Animal Clinic & Services",
+      "address": "Tugbok, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "davao city | davao del sur"
+    },
+    {
+      "name": "PAWS DOCTOR VETERINARY CLINIC",
+      "address": "14 Circumferential Rd, Bacolod, 6100 Negros Occidental, Philippines",
+      "resolved": "Bacolod",
+      "dominant": "Negros Occidental",
+      "dominantKind": "province",
+      "dominantSegment": "6100 negros occidental",
+      "locality": "bacolod | 6100 negros occidental"
+    },
+    {
+      "name": "Paws N' Claws Veterinary Clinic",
+      "address": "Bata Christian Corner, Carlos Hilado Hwy, Bacolod, 6100 Negros Occidental, Philippines",
+      "resolved": "Bacolod",
+      "dominant": "Negros Occidental",
+      "dominantKind": "province",
+      "dominantSegment": "6100 negros occidental",
+      "locality": "carlos hilado hwy | bacolod | 6100 negros occidental"
+    },
+    {
+      "name": "Paws Rx",
+      "address": "Villa Arevalo District, Iloilo City, Iloilo, Philippines",
+      "resolved": "Iloilo City",
+      "dominant": "Iloilo",
+      "dominantKind": "province",
+      "dominantSegment": "iloilo",
+      "locality": "iloilo city | iloilo"
+    },
+    {
+      "name": "Pet Centre Animal Clinic",
+      "address": "6 F. Jaca St, Cebu City, Cebu",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "cebu",
+      "locality": "cebu city | cebu"
+    },
+    {
+      "name": "Pet Connection Veterinary Clinic",
+      "address": "6, 11th St, Lacson St, Barangay 7, Bacolod, 6100 Negros Occidental, Philippines",
+      "resolved": "Bacolod",
+      "dominant": "Negros Occidental",
+      "dominantKind": "province",
+      "dominantSegment": "6100 negros occidental",
+      "locality": "barangay 7 | bacolod | 6100 negros occidental"
+    },
+    {
+      "name": "Pet Essence Veterinary Clinic",
+      "address": "2 Deca Homes Rd, Buhangin, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "buhangin | davao city | davao del sur"
+    },
+    {
+      "name": "Pet Global Animal Medical Center",
+      "address": "GJ2R+9V, Front of Geo Gas, Zone 1 Rodolfo N. Pelaez Blvd, Cagayan De Oro City, Misamis Oriental",
+      "resolved": "Misamis Oriental",
+      "dominant": "Cagayan de Oro",
+      "dominantKind": "city",
+      "dominantSegment": "cagayan de oro city",
+      "locality": "zone 1 rodolfo n. pelaez blvd | cagayan de oro city | misamis oriental"
+    },
+    {
+      "name": "Pet Headquarters Animal Clinic",
+      "address": "Lopez Jaena St, Molo, Iloilo City, Iloilo, Philippines",
+      "resolved": "Iloilo City",
+      "dominant": "Iloilo",
+      "dominantKind": "province",
+      "dominantSegment": "iloilo",
+      "locality": "molo | iloilo city | iloilo"
+    },
+    {
+      "name": "Pet House Central Veterinary Clinic",
+      "address": "Carlos Hilado Hwy, Bacolod, 6100 Negros Occidental, Philippines",
+      "resolved": "Bacolod",
+      "dominant": "Negros Occidental",
+      "dominantKind": "province",
+      "dominantSegment": "6100 negros occidental",
+      "locality": "bacolod | 6100 negros occidental"
+    },
+    {
+      "name": "PET LIFE VETERINARY CARE",
+      "address": "L3 B6, PHHC, Circumferential Rd, Montevista, Bacolod, 6100 Negros Occidental, Philippines",
+      "resolved": "Bacolod",
+      "dominant": "Negros Occidental",
+      "dominantKind": "province",
+      "dominantSegment": "6100 negros occidental",
+      "locality": "montevista | bacolod | 6100 negros occidental"
+    },
+    {
+      "name": "Pet Nannies Clinic",
+      "address": "3G3V+62P, McArthur Highway, Matina Crossing Talomo, Talomo, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "talomo | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "Pet Priorities Veterinary Center",
+      "address": "Door 1-O OJLC Bldg, Datu Abing St, Calinan District, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "calinan district | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "Pet Science Veterinary Clinic",
+      "address": "tigbao private market, A. Miñoza, Cebu City, 6000 Cebu, Philippines",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "6000 cebu",
+      "locality": "a. minoza | cebu city | 6000 cebu"
+    },
+    {
+      "name": "Pet Village WELLNESS CLINIC",
+      "address": "JXJG+7MG Brgy, Murcia Rd, Mansilingan, Bacolod, 6100 Negros Occidental, Philippines",
+      "resolved": "Bacolod",
+      "dominant": "Negros Occidental",
+      "dominantKind": "province",
+      "dominantSegment": "6100 negros occidental",
+      "locality": "mansilingan | bacolod | 6100 negros occidental"
+    },
+    {
+      "name": "Petfurryville Veterinary Clinic",
+      "address": "132 Lopez Jaena St, Jaro, Iloilo City, 5000 Iloilo, Philippines",
+      "resolved": "Iloilo City",
+      "dominant": "Iloilo",
+      "dominantKind": "province",
+      "dominantSegment": "5000 iloilo",
+      "locality": "jaro | iloilo city | 5000 iloilo"
+    },
+    {
+      "name": "Petmate Veterinary Clinic",
+      "address": "666J+R6J, Iligan City, Lanao del Norte",
+      "resolved": "Lanao del Norte",
+      "dominant": "Iligan",
+      "dominantKind": "city",
+      "dominantSegment": "iligan city",
+      "locality": "iligan city | lanao del norte"
+    },
+    {
+      "name": "Petmatters animal clinic",
+      "address": "WGRJ+6P, C.T. Montalban Street, Butuan City, Agusan del Norte",
+      "resolved": "Agusan del Norte",
+      "dominant": "Butuan",
+      "dominantKind": "city",
+      "dominantSegment": "butuan city",
+      "locality": "c.t. montalban street | butuan city | agusan del norte"
+    },
+    {
+      "name": "Pets First Veterinary Clinic",
+      "address": "Cabaguio Ave, Agdao, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "agdao | davao city | davao del sur"
+    },
+    {
+      "name": "Pets in the City Veterinary Center",
+      "address": "Upper Ground Floor, Talamban TimeSquare, Gov. M. Cuenco Ave, Talamban, Cebu City, 6000 Cebu, Philippines",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "6000 cebu",
+      "locality": "talamban | cebu city | 6000 cebu"
+    },
+    {
+      "name": "Pets Society Veterinary and Wellness - Oakridge",
+      "address": "Ground Floor, Unit 1-106 A, OITC 1 Building, Oakridge Business Park, Cebu City, 6000 Cebu, Philippines",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "6000 cebu",
+      "locality": "oakridge business park | cebu city | 6000 cebu"
+    },
+    {
+      "name": "Pets World Veterinary Clinic",
+      "address": "117 Montilla Boulevard, Butuan City, Agusan del Norte",
+      "resolved": "Agusan del Norte",
+      "dominant": "Butuan",
+      "dominantKind": "city",
+      "dominantSegment": "butuan city",
+      "locality": "butuan city | agusan del norte"
+    },
+    {
+      "name": "PetsBest Pet Supplies and Veterinary Services",
+      "address": "8V9M+QVP, Guadalupe, Cebu City, 6000 Cebu, Philippines",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "6000 cebu",
+      "locality": "guadalupe | cebu city | 6000 cebu"
+    },
+    {
+      "name": "Petspace Veterinary Clinic - Ilang",
+      "address": "3 Daang Maharlika Hwy, Davao City, Davao del Sur",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "davao city | davao del sur"
+    },
+    {
+      "name": "PETVALUECARE VETERINARY CENTRE",
+      "address": "PGGH+3J3, 80 Guzman St, Mandurriao, Iloilo City, 5000 Iloilo, Philippines",
+      "resolved": "Iloilo City",
+      "dominant": "Iloilo",
+      "dominantKind": "province",
+      "dominantSegment": "5000 iloilo",
+      "locality": "mandurriao | iloilo city | 5000 iloilo"
+    },
+    {
+      "name": "PETVET ANIMAL MEDICAL CENTER - DAVAO",
+      "address": "Unit 7, Archon Bldg, Dacudao Ave, Agdao, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "agdao | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "PetVet Central Veterinary Clinic",
+      "address": "FMGF+4GF, Justiniano R. Borja Ext, Cagayan De Oro City, Misamis Oriental",
+      "resolved": "Misamis Oriental",
+      "dominant": "Cagayan de Oro",
+      "dominantKind": "city",
+      "dominantSegment": "cagayan de oro city",
+      "locality": "justiniano r. borja ext | cagayan de oro city | misamis oriental"
+    },
+    {
+      "name": "Philippine Veterinary Medical Association (PVMA) - Region VII-Central Visayas Chapter",
+      "address": "9 Sunset Dr, Cebu City, 6000 Cebu, Philippines",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "6000 cebu",
+      "locality": "cebu city | 6000 cebu"
+    },
+    {
+      "name": "Philippine Veterinary Medical Association (PVMA) - Region VIII-Eastern Visayas Chapter",
+      "address": "62X3+PR4 Veterinary Quarantine Services-DA RFU 8, Jones, Tacloban City, Leyte, Philippines",
+      "resolved": "Leyte",
+      "dominant": "Tacloban",
+      "dominantKind": "city",
+      "dominantSegment": "tacloban city",
+      "locality": "jones | tacloban city | leyte"
+    },
+    {
+      "name": "PHOENIX VETERINARY CLINIC",
+      "address": "FMM5+FXP, Butuan - Cagayan de Oro - Iligan Rd, Cagayan De Oro City, Misamis Oriental",
+      "resolved": "Misamis Oriental",
+      "dominant": "Cagayan de Oro",
+      "dominantKind": "city",
+      "dominantSegment": "cagayan de oro city",
+      "locality": "butuan - cagayan de oro - iligan rd | cagayan de oro city | misamis oriental"
+    },
+    {
+      "name": "Pluma veterinary Clinic",
+      "address": "Beside DMSF Hospital, Gahol Building, 18A & 19A, New, Davao City, Davao del Sur",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "new | davao city | davao del sur"
+    },
+    {
+      "name": "PLUMA VETERINARY CLINIC",
+      "address": "dmsf drive, Calinan District, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "calinan district | davao city | davao del sur"
+    },
+    {
+      "name": "PLUMA VETERINARY CLINIC",
+      "address": "Beside DMSF Hospital, Gahol Building, 18A & 19A, New, Bajada, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "bajada | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "Prime-Vet Agricultural Products Trading",
+      "address": "Avenue, 305 Lakatan St, J.P. Cabaguio, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "j.p. cabaguio | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "Primo Vet Animal Clinic",
+      "address": "4JJ8+68, Block 1 Lot 36, Deca Homes, Cabantian Highway, Buhangin, Davao City, 8000 Davao del Sur",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "buhangin | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "PROVINCIAL VETERINARY OFFICE",
+      "address": "Gatuslao St, Bacolod, 6100 Negros Occidental, Philippines",
+      "resolved": "Bacolod",
+      "dominant": "Negros Occidental",
+      "dominantKind": "province",
+      "dominantSegment": "6100 negros occidental",
+      "locality": "bacolod | 6100 negros occidental"
+    },
+    {
+      "name": "Provincial Veterinary Training Center",
+      "address": "Korea-Negros Occidental, Phils. Friendship Bldg., Gastulao Extension, Bacolod, 6100 Negros Occidental, Philippines",
+      "resolved": "Bacolod",
+      "dominant": "Negros Occidental",
+      "dominantKind": "province",
+      "dominantSegment": "6100 negros occidental",
+      "locality": "gastulao extension | bacolod | 6100 negros occidental"
+    },
+    {
+      "name": "Puerto Princesa City - City Veterinarian Office",
+      "address": "QPQP+H48, Santa Monica, Puerto Princesa City, Palawan, Philippines",
+      "resolved": "Palawan",
+      "dominant": "Puerto Princesa",
+      "dominantKind": "city",
+      "dominantSegment": "puerto princesa city",
+      "locality": "santa monica | puerto princesa city | palawan"
+    },
+    {
+      "name": "Pups & Tots Veterinary Clinic",
+      "address": "Loft One Residences, Door 2 Ruby St, Marfori Heights, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "marfori heights | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "Purrfect Pets- Paws Pads & Beyond",
+      "address": "Vincent heights subdivision, Hawaii Dr, Buhangin, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "buhangin | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "Puss & Pooch Veterinary Clinic",
+      "address": "Singcang-Airport, Automatic Climate Control, Bacolod, 6100 Negros Occidental, Philippines",
+      "resolved": "Bacolod",
+      "dominant": "Negros Occidental",
+      "dominantKind": "province",
+      "dominantSegment": "6100 negros occidental",
+      "locality": "automatic climate control | bacolod | 6100 negros occidental"
+    },
+    {
+      "name": "Pvsc Lorega Station",
+      "address": "Marilog District, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "davao city | davao del sur"
+    },
+    {
+      "name": "Que-zon Veterinary Clinic",
+      "address": "Roxas St., Quezon, 3324 Isabela, Philippines",
+      "resolved": "Quezon",
+      "dominant": "Isabela",
+      "dominantKind": "province",
+      "dominantSegment": "3324 isabela",
+      "locality": "quezon | 3324 isabela"
+    },
+    {
+      "name": "R-Nine Veterinary Services",
+      "address": "Lot 1162B, Prk.3 Brgy. Granada, Bacolod, Negros Occidental, Philippines",
+      "resolved": "Bacolod",
+      "dominant": "Negros Occidental",
+      "dominantKind": "province",
+      "dominantSegment": "negros occidental",
+      "locality": "prk.3 brgy. granada | bacolod | negros occidental"
+    },
+    {
+      "name": "R8 Agripet Caibaan",
+      "address": "5XWR+HH, L Estrera BLDG.. Brgy.95-A Maharlica Hi-way, Caibaan Rd, Tacloban City, Leyte",
+      "resolved": "Leyte",
+      "dominant": "Tacloban",
+      "dominantKind": "city",
+      "dominantSegment": "tacloban city",
+      "locality": "caibaan rd | tacloban city | leyte"
+    },
+    {
+      "name": "RC Veterinary Products & Agri Livestock Inc.",
+      "address": "Bldg. Door 9, MSLAND 984526, Km. 3 Gen. Douglas MacArthur Hwy, Matina Crossing, Talomo, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "talomo | davao city | davao del sur"
+    },
+    {
+      "name": "Rebadulla Animal Care",
+      "address": "Commission Civil St, Jaro, Iloilo City, 5000 Iloilo, Philippines",
+      "resolved": "Iloilo City",
+      "dominant": "Iloilo",
+      "dominantKind": "province",
+      "dominantSegment": "5000 iloilo",
+      "locality": "jaro | iloilo city | 5000 iloilo"
+    },
+    {
+      "name": "Red Marks Animal Hospital",
+      "address": "Gate 1, Blk 2 Lot 2, Bacolod, 6100 Negros Occidental, Philippines",
+      "resolved": "Bacolod",
+      "dominant": "Negros Occidental",
+      "dominantKind": "province",
+      "dominantSegment": "6100 negros occidental",
+      "locality": "blk 2 lot 2 | bacolod | 6100 negros occidental"
+    },
+    {
+      "name": "Regional Veterinary Quarantine Office 11",
+      "address": "4MF7+X5, Buhangin, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "buhangin | davao city | davao del sur"
+    },
+    {
+      "name": "Responsivet Animal Clinic 24/7 Emergency",
+      "address": "Cebu S Rd, Cebu City, Cebu",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "cebu",
+      "locality": "cebu city | cebu"
+    },
+    {
+      "name": "Rjl 3A's Vet-Agri Livestock Polutay Supply",
+      "address": "Talomo, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "davao city | davao del sur"
+    },
+    {
+      "name": "Rjl 3A's Vet-Agri Livestock Poultry Supply",
+      "address": "2GM7+72M, Sampaguita St, Talomo, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "talomo | davao city | davao del sur"
+    },
+    {
+      "name": "Roch Veterinary Clinic",
+      "address": "8000, Malana Commercial Building, 204 R. Castillo St, Agdao, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "agdao | davao city | davao del sur"
+    },
+    {
+      "name": "Royal Canin",
+      "address": "Poblacion District, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "davao city | davao del sur"
+    },
+    {
+      "name": "Royale Animal Clinic",
+      "address": "Dr. Ocampo Building, Km 12 McArthur Highway, Dumoy, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "dumoy | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "Royale Animal Clinic",
+      "address": "2G62+X74 Lao corner, Agton St, Toril, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "toril | davao city | davao del sur"
+    },
+    {
+      "name": "Royale Bupard AgriVeterinary Supplies",
+      "address": "5FR3+5FP, Calinan District, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "calinan district | davao city | davao del sur"
+    },
+    {
+      "name": "Saint Francis of Assisi Animal Clinic",
+      "address": "3H2R+WJ5, Quimpo Blvd, Matina, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "matina | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "Saint ROCH VETERINARY CLINIC",
+      "address": "Old Iloilo - Capiz Rd, Jaro, Iloilo City, Iloilo, Philippines",
+      "resolved": "Iloilo City",
+      "dominant": "Iloilo",
+      "dominantKind": "province",
+      "dominantSegment": "iloilo",
+      "locality": "jaro | iloilo city | iloilo"
+    },
+    {
+      "name": "Santoceldes Animal Clinic",
+      "address": "40-2 Ferrer Building, Hernaez St, Bacolod, 6100 Negros Occidental, Philippines",
+      "resolved": "Bacolod",
+      "dominant": "Negros Occidental",
+      "dominantKind": "province",
+      "dominantSegment": "6100 negros occidental",
+      "locality": "hernaez st | bacolod | 6100 negros occidental"
+    },
+    {
+      "name": "SAS AGRIVET TRADING",
+      "address": "Lot 35, Midland Village, Blk 2 Daffodil Street, Ma-a, Talomo, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "talomo | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "Shrine Pet Care Center",
+      "address": "3H5H+7WX, McArthur Highway, Matina, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "matina | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "Siquijor Veterinary Health Care Centre",
+      "address": "5F5V+F37, Siquijor Circumferential Rd, San Juan, Siquijor",
+      "resolved": "Siquijor",
+      "dominant": "San Juan",
+      "dominantKind": "city",
+      "dominantSegment": "san juan",
+      "locality": "siquijor circumferential rd | san juan | siquijor"
+    },
+    {
+      "name": "Sitio Ubat Catalunan Grande Davao City infront of Veterinary Clinic",
+      "address": "3GQG+HHW infront of Veterinary Clinic, Sitio Ubat, Catalunan Grande, Talomo, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "talomo | davao city | davao del sur"
+    },
+    {
+      "name": "South Paw Animal Clinic",
+      "address": "6476+82, Carmel Mall, Canlubang, Calamba City Canlubang, Calamba City, 4027, Metro Manila, Calamba, 4027 Laguna",
+      "resolved": "Metro Manila",
+      "dominant": "Laguna",
+      "dominantKind": "province",
+      "dominantSegment": "4027 laguna",
+      "locality": "metro manila | calamba | 4027 laguna"
+    },
+    {
+      "name": "South Paws Veterinary Hospital",
+      "address": "8V3R+7X, Southwestern University PHINMA, CVM Building, J. Urgello St, Cebu City, 6000 Cebu",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "6000 cebu",
+      "locality": "j. urgello st | cebu city | 6000 cebu"
+    },
+    {
+      "name": "SOUTHPAW ANIMAL DOCTORS CO",
+      "address": "Door 1, Belle’s Commercial Complex, P. Sobrecarey St, Poblacion District, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "poblacion district | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "St. Benedict Veterinary Clinic",
+      "address": "1300 Diosdado Macapagal Blvd, Pasay City, Metro Manila, Philippines",
+      "resolved": "Metro Manila",
+      "dominant": "Pasay",
+      "dominantKind": "city",
+      "dominantSegment": "pasay city",
+      "locality": "pasay city | metro manila"
+    },
+    {
+      "name": "St. Francis' Veterinary Clinic",
+      "address": "Commercial Building, Unit 14 Rodolfo N. Pelaez Blvd, Cagayan De Oro City, Misamis Oriental",
+      "resolved": "Misamis Oriental",
+      "dominant": "Cagayan de Oro",
+      "dominantKind": "city",
+      "dominantSegment": "cagayan de oro city",
+      "locality": "unit 14 rodolfo n. pelaez blvd | cagayan de oro city | misamis oriental"
+    },
+    {
+      "name": "ST. JUDE Dog & Cat VETERINARY CLINIC",
+      "address": "MX7C+38P, Burgos Ave, Bacolod, 6100 Negros Occidental, Philippines",
+      "resolved": "Bacolod",
+      "dominant": "Negros Occidental",
+      "dominantKind": "province",
+      "dominantSegment": "6100 negros occidental",
+      "locality": "burgos ave | bacolod | 6100 negros occidental"
+    },
+    {
+      "name": "St. Mary's Animal Clinic and Agrivet Supply",
+      "address": "6258+9RW, Paraiso, Tacloban City, Leyte",
+      "resolved": "Leyte",
+      "dominant": "Tacloban",
+      "dominantKind": "city",
+      "dominantSegment": "tacloban city",
+      "locality": "paraiso | tacloban city | leyte"
+    },
+    {
+      "name": "St. Wilhelm Veterinary Clinic",
+      "address": "DLA Bldg, Barangay Tigatto, Buhangin, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "buhangin | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "St.Roch Pet Care Grooming shop/ Veterinary clinic",
+      "address": "9WV9+CH8, Cebu City, 6000 Cebu, Philippines",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "6000 cebu",
+      "locality": "cebu city | 6000 cebu"
+    },
+    {
+      "name": "Tails & Whiskers Azuela Cove",
+      "address": "Bldg. 4, Azuela Cove, The Shops, cor R. Castillo St, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "cor r. castillo st | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "Tapales Veterinary Clinic",
+      "address": "399 Huervana St, La Paz, Iloilo City, 5000 Iloilo, Philippines",
+      "resolved": "Iloilo City",
+      "dominant": "Iloilo",
+      "dominantKind": "province",
+      "dominantSegment": "5000 iloilo",
+      "locality": "la paz | iloilo city | 5000 iloilo"
+    },
+    {
+      "name": "TFJ Rebadulla Animal Clinic",
+      "address": "John B Lacson Foundation Maritime University MH del Pilar St, Iloilo City, Iloilo",
+      "resolved": "Iloilo City",
+      "dominant": "Iloilo",
+      "dominantKind": "province",
+      "dominantSegment": "iloilo",
+      "locality": "iloilo city | iloilo"
+    },
+    {
+      "name": "The Animal Doctors Veterinary Hospital",
+      "address": "Corner, Guadalupe Village, Door 2, 3 and 5, Ramona Building, Km 7 J.P. Laurel Ave, Lanang, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "lanang | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "The Animal Doctors Veterinary Hospital - Panacan Branch",
+      "address": "4MV3+9Q8, Corner of CP Garcia Highway, Panacan Ave, Buhangin, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "buhangin | davao city | davao del sur"
+    },
+    {
+      "name": "THE ANIMAL DOCTORS VETERINARY HOSPITAL - SOUTH BRANCH",
+      "address": "Don Julian Rodriguez Sr. Ave, Talomo, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "talomo | davao city | davao del sur"
+    },
+    {
+      "name": "The Berns Vet Care",
+      "address": "purok 10 Libby Road, puan, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "puan | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "The Paw's Palace Veterinary Clinic",
+      "address": "Door 10, Rowi Square Mamay Road, Lanang, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "lanang | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "The Veterinary Hub Pte. Corp",
+      "address": "Unit W ZoneV, 1300 Taft Ave, Pasay City, Metro Manila, Philippines",
+      "resolved": "Metro Manila",
+      "dominant": "Pasay",
+      "dominantKind": "city",
+      "dominantSegment": "pasay city",
+      "locality": "1300 taft ave | pasay city | metro manila"
+    },
+    {
+      "name": "Tinga Animal Clinic",
+      "address": "Door 3, Lim Building, Gen. Douglas MacArthur Hwy, Matina, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "matina | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "TLC Veterinary Clinic",
+      "address": "Puerto Princesa North Road, Puerto Princesa City, Palawan",
+      "resolved": "Palawan",
+      "dominant": "Puerto Princesa",
+      "dominantKind": "city",
+      "dominantSegment": "puerto princesa city",
+      "locality": "puerto princesa city | palawan"
+    },
+    {
+      "name": "Toril Animal Clinic",
+      "address": "Curvada Brgy Lizada, Purok 1, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "purok 1 | davao city | davao del sur"
+    },
+    {
+      "name": "Total Feeds Supply Veterinary Products",
+      "address": "Del Monte Avenue, Saint Peter , St. Peter , 1114 Quezon City , Metro Manila, Philippines",
+      "resolved": "Metro Manila",
+      "dominant": "Quezon City",
+      "dominantKind": "city",
+      "dominantSegment": "1114 quezon city",
+      "locality": "st. peter | 1114 quezon city | metro manila"
+    },
+    {
+      "name": "Tri F Veterinary Corporation",
+      "address": "605 Camia, Talomo, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "talomo | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "UPTOWN ANIMAL PET CARE SERVICES",
+      "address": "CJQC+J6W, Cagayan De Oro City, Misamis Oriental",
+      "resolved": "Misamis Oriental",
+      "dominant": "Cagayan de Oro",
+      "dominantKind": "city",
+      "dominantSegment": "cagayan de oro city",
+      "locality": "cagayan de oro city | misamis oriental"
+    },
+    {
+      "name": "Urban Pet Clinic",
+      "address": "Door # 4, MNC Business Center, C.L. Montelibano Ave, Bacolod, 6100 Negros Occidental, Philippines",
+      "resolved": "Bacolod",
+      "dominant": "Negros Occidental",
+      "dominantKind": "province",
+      "dominantSegment": "6100 negros occidental",
+      "locality": "c.l. montelibano ave | bacolod | 6100 negros occidental"
+    },
+    {
+      "name": "URBAN PETS Veterinary Clinic - Davao City",
+      "address": "Door 30-A, Catitipan, Airport View Commercial Complex, Carlos P. Garcia, Buhangin, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "buhangin | davao city | davao del sur"
+    },
+    {
+      "name": "Vet Crest Animal Emergency Center",
+      "address": "FJQP+XF, Cagayan De Oro City, Misamis Oriental",
+      "resolved": "Misamis Oriental",
+      "dominant": "Cagayan de Oro",
+      "dominantKind": "city",
+      "dominantSegment": "cagayan de oro city",
+      "locality": "cagayan de oro city | misamis oriental"
+    },
+    {
+      "name": "Vet Essence Veterinary Clinic - Indangan",
+      "address": "Block 56 Lot 32 Phase 2, Deca Homes Indangan, Block 4, Lot 1, Phase I, Buhangin, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "buhangin | davao city | davao del sur"
+    },
+    {
+      "name": "Veteran",
+      "address": "4th-A St, Talomo, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "talomo | davao city | davao del sur"
+    },
+    {
+      "name": "Veterinary Clinic",
+      "address": "3GQG+HG3, Catalunan Grande Rd, Talomo, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "talomo | davao city | davao del sur"
+    },
+    {
+      "name": "Veterinary Clinic at SM Megamall-PetExpress",
+      "address": "St Francis Overpass, Ortigas Center, Mandaluyong City, Metro Manila, Philippines",
+      "resolved": "Metro Manila",
+      "dominant": "Mandaluyong",
+      "dominantKind": "city",
+      "dominantSegment": "mandaluyong city",
+      "locality": "ortigas center | mandaluyong city | metro manila"
+    },
+    {
+      "name": "Vetfarm Enterprise",
+      "address": "3GQQ+29F, Talomo, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "talomo | davao city | davao del sur"
+    },
+    {
+      "name": "Vethouse Animal Clinic & Dog Spa",
+      "address": "XCC5+2Q8, Butuan - Cagayan de Oro - Iligan Rd, Buenavista, Agusan del Norte",
+      "resolved": "Agusan del Norte",
+      "dominant": "Cagayan de Oro",
+      "dominantKind": "city",
+      "dominantSegment": "butuan - cagayan de oro - iligan rd",
+      "locality": "butuan - cagayan de oro - iligan rd | buenavista | agusan del norte"
+    },
+    {
+      "name": "VETLANDIA PET CARE SERVICES",
+      "address": "FN Petroleum Gas Station, Bacolod, Negros Occidental, Philippines",
+      "resolved": "Bacolod",
+      "dominant": "Negros Occidental",
+      "dominantKind": "province",
+      "dominantSegment": "negros occidental",
+      "locality": "bacolod | negros occidental"
+    },
+    {
+      "name": "Vetlane Animal Clinic",
+      "address": "Door 2, Baluran Building, Lantana St, Mintal, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "mintal | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "VETS",
+      "address": "12 Q. Abeto St, Mandurriao, Iloilo City, Iloilo, Philippines",
+      "resolved": "Iloilo City",
+      "dominant": "Iloilo",
+      "dominantKind": "province",
+      "dominantSegment": "iloilo",
+      "locality": "mandurriao | iloilo city | iloilo"
+    },
+    {
+      "name": "Vetspet Animal Clinic",
+      "address": "Abayon Subdivision 1st corner, Calinan District, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "calinan district | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "VIDA'S PET HOME AND ANIMAL CLINIC",
+      "address": "320 Katipunan St, Cebu City, Cebu",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "cebu",
+      "locality": "cebu city | cebu"
+    },
+    {
+      "name": "Village Vet Animal Clinic",
+      "address": "Blk. 1, Lot 13, Main Ave., Ledesco Village, Iloilo Lapaz, Iloilo City, Iloilo, Philippines",
+      "resolved": "Iloilo City",
+      "dominant": "Iloilo",
+      "dominantKind": "province",
+      "dominantSegment": "iloilo",
+      "locality": "iloilo lapaz | iloilo city | iloilo"
+    },
+    {
+      "name": "Vitalpet Veterinary Clinic",
+      "address": "4JH9+GG9, Buhangin-Cabantian-Indangan Rd, Buhangin, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "buhangin | davao city | davao del sur"
+    },
+    {
+      "name": "Vitapets Animal Clinic And Pet Supplies",
+      "address": "1 Aplaya Road, Talomo, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "talomo | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "WAGS & WHISKERS VETERINARY CLINIC",
+      "address": "Door 6&7, D103G Building Complex, Mamay Rd, Angliongto, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "angliongto | davao city | davao del sur"
+    },
+    {
+      "name": "Waves & Tails Animal Clinic",
+      "address": "2FHW+34C, Toril, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "toril | davao city | davao del sur"
+    },
+    {
+      "name": "Whippet General Veterinary Clinic",
+      "address": "amesco bldg, Km. 5, Gladiola St, Buhangin, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "buhangin | davao city | davao del sur"
+    },
+    {
+      "name": "Whiskers Animal Clinic",
+      "address": "#2, Skyline, Phase 2, Catalunan Grande, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "catalunan grande | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "Whiskers Animal Clinic",
+      "address": "41-61 Dao St, Talomo, Davao City, Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "davao del sur",
+      "locality": "talomo | davao city | davao del sur"
+    },
+    {
+      "name": "WVMC Animal Bite Treatment Center",
+      "address": "PGCR+2C9, Mirasol St, Iloilo City, Iloilo",
+      "resolved": "Iloilo City",
+      "dominant": "Iloilo",
+      "dominantKind": "province",
+      "dominantSegment": "iloilo",
+      "locality": "mirasol st | iloilo city | iloilo"
+    },
+    {
+      "name": "Yamavet Animal Clinic",
+      "address": "Garcia Heights, 59 Circumferential Rd, Poblacion District, Davao City, 8000 Davao del Sur, Philippines",
+      "resolved": "Davao City",
+      "dominant": "Davao del Sur",
+      "dominantKind": "province",
+      "dominantSegment": "8000 davao del sur",
+      "locality": "poblacion district | davao city | 8000 davao del sur"
+    },
+    {
+      "name": "Yandug Animal Care Clinic",
+      "address": "8V9M+3V, 8B Nichols Heights, Cebu City, 6000 Cebu",
+      "resolved": "Cebu City",
+      "dominant": "Cebu",
+      "dominantKind": "province",
+      "dominantSegment": "6000 cebu",
+      "locality": "8b nichols heights | cebu city | 6000 cebu"
+    },
+    {
+      "name": "Zitro Vet Clinic",
+      "address": "MX95+49G, Orsons Bldg. Cor. Lopez Jaena-, Burgos Ave, Bacolod, Negros Occidental, Philippines",
+      "resolved": "Bacolod",
+      "dominant": "Negros Occidental",
+      "dominantKind": "province",
+      "dominantSegment": "negros occidental",
+      "locality": "burgos ave | bacolod | negros occidental"
+    }
+  ],
+  "byResolved": {
+    "Bacolod <- Negros Occidental": 35,
+    "Cebu City <- Cebu": 52,
+    "Capiz <- Iloilo": 1,
+    "Davao City <- Davao del Sur": 108,
+    "Lanao del Norte <- Iligan": 2,
+    "Camarines Sur <- San Juan": 1,
+    "Aurora <- Cagayan": 1,
+    "Misamis Oriental <- Cagayan de Oro": 17,
+    "Agusan del Norte <- Butuan": 3,
+    "Iloilo City <- Iloilo": 22,
+    "Leyte <- Tacloban": 4,
+    "Palawan <- Puerto Princesa": 4,
+    "Siquijor <- San Juan": 2,
+    "Metro Manila <- Makati": 1,
+    "Metro Manila <- Pasay": 3,
+    "Quezon <- Isabela": 1,
+    "Metro Manila <- Laguna": 1,
+    "Metro Manila <- Quezon City": 1,
+    "Metro Manila <- Mandaluyong": 1,
+    "Agusan del Norte <- Cagayan de Oro": 1
+  }
+}

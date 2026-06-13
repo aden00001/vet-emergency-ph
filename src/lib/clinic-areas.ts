@@ -9,7 +9,7 @@ import {
 } from "@/lib/ph-regions";
 import type { ClinicStatusType, NearbyClinic } from "@/types/database";
 
-const AREAS_CACHE_KEY = "clinics:areas:v3";
+const AREAS_CACHE_KEY = "clinics:areas:v5";
 const AREAS_CACHE_TTL_SECONDS = 60 * 60 * 24;
 const PAGE_SIZE = 1000;
 

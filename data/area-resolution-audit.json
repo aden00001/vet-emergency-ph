@@ -1,0 +1,757 @@
+{
+  "generatedAt": "2026-06-13T17:05:25.803Z",
+  "withArea": 1928,
+  "suspiciousCount": 22,
+  "areaSummary": [
+    {
+      "label": "Parañaque",
+      "total": 22,
+      "suspicious": 22,
+      "rate": "1.000"
+    },
+    {
+      "label": "Cavite",
+      "total": 110,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Davao City",
+      "total": 110,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Batangas",
+      "total": 97,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Pangasinan",
+      "total": 92,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Cebu",
+      "total": 87,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Laguna",
+      "total": 70,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Isabela",
+      "total": 70,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Rizal",
+      "total": 64,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Bulacan",
+      "total": 55,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Negros Occidental",
+      "total": 54,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Cebu City",
+      "total": 52,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Pampanga",
+      "total": 51,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Quezon City",
+      "total": 50,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "La Union",
+      "total": 37,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Cagayan de Oro",
+      "total": 37,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Bacolod",
+      "total": 35,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Iloilo",
+      "total": 34,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Caloocan",
+      "total": 33,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Cagayan",
+      "total": 33,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Negros Oriental",
+      "total": 32,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Baguio",
+      "total": 30,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Camarines Sur",
+      "total": 27,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Oriental Mindoro",
+      "total": 26,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Ilocos Sur",
+      "total": 26,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Bohol",
+      "total": 25,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Bukidnon",
+      "total": 25,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Nueva Vizcaya",
+      "total": 25,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Cotabato",
+      "total": 25,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Leyte",
+      "total": 24,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Benguet",
+      "total": 22,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Iloilo City",
+      "total": 22,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Manila",
+      "total": 21,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Aklan",
+      "total": 18,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Zamboanga City",
+      "total": 16,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "South Cotabato",
+      "total": 16,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "San Juan",
+      "total": 15,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Albay",
+      "total": 15,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Davao del Norte",
+      "total": 15,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Las Piñas",
+      "total": 14,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Capiz",
+      "total": 12,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Malabon",
+      "total": 12,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "General Santos",
+      "total": 12,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Davao del Sur",
+      "total": 11,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Ilocos Norte",
+      "total": 11,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Tacloban",
+      "total": 11,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Valenzuela",
+      "total": 10,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Sorsogon",
+      "total": 9,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Northern Samar",
+      "total": 9,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Agusan del Sur",
+      "total": 9,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Occidental Mindoro",
+      "total": 8,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Quezon",
+      "total": 8,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Kalinga",
+      "total": 8,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Southern Leyte",
+      "total": 8,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Iligan",
+      "total": 7,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Zamboanga del Norte",
+      "total": 7,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Antique",
+      "total": 7,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Puerto Princesa",
+      "total": 7,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Metro Manila",
+      "total": 7,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Surigao del Sur",
+      "total": 6,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Sultan Kudarat",
+      "total": 5,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Misamis Occidental",
+      "total": 5,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Taguig / BGC",
+      "total": 5,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Butuan",
+      "total": 5,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Samar",
+      "total": 5,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Navotas",
+      "total": 5,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Lanao del Norte",
+      "total": 4,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Zamboanga del Sur",
+      "total": 4,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Eastern Samar",
+      "total": 4,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Pasay",
+      "total": 4,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Guimaras",
+      "total": 4,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Palawan",
+      "total": 4,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Biliran",
+      "total": 4,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Quirino",
+      "total": 3,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Camarines Norte",
+      "total": 3,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Pasig",
+      "total": 3,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Zambales",
+      "total": 3,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Davao de Oro",
+      "total": 3,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Agusan del Norte",
+      "total": 3,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Marikina",
+      "total": 3,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Cotabato City",
+      "total": 3,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Bataan",
+      "total": 3,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Mandaluyong",
+      "total": 3,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Misamis Oriental",
+      "total": 3,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Makati",
+      "total": 3,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Nueva Ecija",
+      "total": 3,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Ifugao",
+      "total": 2,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Davao Oriental",
+      "total": 2,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Surigao del Norte",
+      "total": 2,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Muntinlupa / Alabang",
+      "total": 2,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Zamboanga Sibugay",
+      "total": 2,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Catanduanes",
+      "total": 2,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Tarlac",
+      "total": 2,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Masbate",
+      "total": 1,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Mountain Province",
+      "total": 1,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Sarangani",
+      "total": 1,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Lanao del Sur",
+      "total": 1,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Siquijor",
+      "total": 1,
+      "suspicious": 0,
+      "rate": "0.000"
+    },
+    {
+      "label": "Abra",
+      "total": 1,
+      "suspicious": 0,
+      "rate": "0.000"
+    }
+  ],
+  "suspicious": [
+    {
+      "name": "Angeles Pet Care Center Sucat",
+      "address": "1720, 8300 Dr Arcadio Santos Ave, San Antonio, Parañaque, 1715 Metro Manila, Philippines",
+      "area": "Parañaque",
+      "areaId": "ncr-para-aque",
+      "locality": "san antonio | paranaque | 1715 metro manila"
+    },
+    {
+      "name": "BF Paw and Claw Royal Veterinary Clinic - Paranaque",
+      "address": "Unit 2, 272 Aguirre Ave, Parañaque, 1700 Metro Manila, Philippines",
+      "area": "Parañaque",
+      "areaId": "ncr-para-aque",
+      "locality": "272 aguirre ave | paranaque | 1700 metro manila"
+    },
+    {
+      "name": "Carlos Veterinary Clinic",
+      "address": "UPS 5, 0060 Dr Arcadio Santos Ave, Parañaque, 1700 Metro Manila, Philippines",
+      "area": "Parañaque",
+      "areaId": "ncr-para-aque",
+      "locality": "0060 dr arcadio santos ave | paranaque | 1700 metro manila"
+    },
+    {
+      "name": "Creatures and Critters Animal Clinic",
+      "address": "1, Borough Square Valley, Unit 19, 143 San Antonio Ave, San Antonio, Parañaque, 1709 Metro Manila, Philippines",
+      "area": "Parañaque",
+      "areaId": "ncr-para-aque",
+      "locality": "san antonio | paranaque | 1709 metro manila"
+    },
+    {
+      "name": "Dr. 143 Veterinary Clinic",
+      "address": "Brgy, BF Homes, 5 Doña Esperanza St Ireneville 1, Parañaque - Sucat Rd, Parañaque, 1700 Metro Manila, Philippines",
+      "area": "Parañaque",
+      "areaId": "ncr-para-aque",
+      "locality": "paranaque - sucat rd | paranaque | 1700 metro manila"
+    },
+    {
+      "name": "Dr. E.N. Lee Veterinary Clinic",
+      "address": "118-G, 1709 Neil Armstrong Ave, Parañaque, 1709 Metro Manila, Philippines",
+      "area": "Parañaque",
+      "areaId": "ncr-para-aque",
+      "locality": "1709 neil armstrong ave | paranaque | 1709 metro manila"
+    },
+    {
+      "name": "Family Pet Care Veterinary Clinic",
+      "address": "Unit 1BC, Better Living Subd, #72 Doña Soledad Ave, Parañaque, 1711 Metro Manila, Philippines",
+      "area": "Parañaque",
+      "areaId": "ncr-para-aque",
+      "locality": "#72 dona soledad ave | paranaque | 1711 metro manila"
+    },
+    {
+      "name": "Happy Hayop Veterinary Clinic BF Branch",
+      "address": "Unit 14, Solid Arcade, President Avenue, Parañaque, 1700 Metro Manila, Philippines",
+      "area": "Parañaque",
+      "areaId": "ncr-para-aque",
+      "locality": "president avenue | paranaque | 1700 metro manila"
+    },
+    {
+      "name": "Happy Hayop Veterinary Clinic Lopez Branch",
+      "address": "F295+GV9, Dr Arcadio Santos Ave, Parañaque, 1700 Metro Manila, Philippines",
+      "area": "Parañaque",
+      "areaId": "ncr-para-aque",
+      "locality": "dr arcadio santos ave | paranaque | 1700 metro manila"
+    },
+    {
+      "name": "Healthy Tails Animal Clinic",
+      "address": "Healthy Tails Animal Clinic, gf EMECO Buiding, 209 Doña Soledad Ave, Parañaque, 1700 Metro Manila, Philippines",
+      "area": "Parañaque",
+      "areaId": "ncr-para-aque",
+      "locality": "209 dona soledad ave | paranaque | 1700 metro manila"
+    },
+    {
+      "name": "J.E. Cabanlig Veterinary Clinic",
+      "address": "28 Vienna, Merville Park, Parañaque, 1700 Metro Manila, Philippines",
+      "area": "Parañaque",
+      "areaId": "ncr-para-aque",
+      "locality": "merville park | paranaque | 1700 metro manila"
+    },
+    {
+      "name": "Jacobe Animal Clinic",
+      "address": "7227 Marcelo Ave, San Antonio, Parañaque, Metro Manila, Philippines",
+      "area": "Parañaque",
+      "areaId": "ncr-para-aque",
+      "locality": "san antonio | paranaque | metro manila"
+    },
+    {
+      "name": "Jordan Veterinary Clinic-BF Parañaque",
+      "address": "BF Homes, 29 President's Ave, Parañaque, 1720 Metro Manila, Philippines",
+      "area": "Parañaque",
+      "areaId": "ncr-para-aque",
+      "locality": "29 president's ave | paranaque | 1720 metro manila"
+    },
+    {
+      "name": "Kruhay Animal Clinic",
+      "address": "21, Unit 1 Elizalde Ave, Parañaque, 1700 Metro Manila, Philippines",
+      "area": "Parañaque",
+      "areaId": "ncr-para-aque",
+      "locality": "unit 1 elizalde ave | paranaque | 1700 metro manila"
+    },
+    {
+      "name": "Maranatha Veterinary Hospital",
+      "address": "BF Homes, 19 President's Ave, Parañaque, 1700 Metro Manila, Philippines",
+      "area": "Parañaque",
+      "areaId": "ncr-para-aque",
+      "locality": "19 president's ave | paranaque | 1700 metro manila"
+    },
+    {
+      "name": "Parañaque City Veterinary Services Office",
+      "address": "7604 Dr Arcadio Santos Ave, Parañaque, 1718 Metro Manila, Philippines",
+      "area": "Parañaque",
+      "areaId": "ncr-para-aque",
+      "locality": "paranaque | 1718 metro manila"
+    },
+    {
+      "name": "Pawsitive Veterinary Clinic",
+      "address": "Between Alfamart and Farmacia ni Dok, Ground Floor S&M Building 187, Extension Doña Soledad Ave, Parañaque, 1711 Metro Manila, Philippines",
+      "area": "Parañaque",
+      "areaId": "ncr-para-aque",
+      "locality": "extension dona soledad ave | paranaque | 1711 metro manila"
+    },
+    {
+      "name": "Peralta Veterinary Center",
+      "address": "Brgy, Better Living Subd, Unit 1 GF JEL Plaza, Dona Soledad Ave. Ext, Don Bosco, Parañaque, 1711 Metro Manila, Philippines",
+      "area": "Parañaque",
+      "areaId": "ncr-para-aque",
+      "locality": "don bosco | paranaque | 1711 metro manila"
+    },
+    {
+      "name": "Pet Forum Veterinary Clinic",
+      "address": "Unit J Commercial Building, Elsie Gaches St, Corner Monserrat, Parañaque, 1720, Philippines",
+      "area": "Parañaque",
+      "areaId": "ncr-para-aque",
+      "locality": "corner monserrat | paranaque | 1720"
+    },
+    {
+      "name": "Pet Hub Veterinary Clinic - Parañaque",
+      "address": "Multinational Village, Unit C and D, Morgana Building, Multinational Ave, Moonwalk, Parañaque, 1709 Metro Manila, Philippines",
+      "area": "Parañaque",
+      "areaId": "ncr-para-aque",
+      "locality": "moonwalk | paranaque | 1709 metro manila"
+    },
+    {
+      "name": "Pet Paws Animal Clinic",
+      "address": "Doña Soledad Ave, Bicutan, Parañaque, 1711 Metro Manila, Philippines",
+      "area": "Parañaque",
+      "areaId": "ncr-para-aque",
+      "locality": "bicutan | paranaque | 1711 metro manila"
+    },
+    {
+      "name": "St. Joseph Veterinary Clinic & Supplies",
+      "address": "185 Aguirre Ave, PH2, Parañaque, 1720 Metro Manila, Philippines",
+      "area": "Parañaque",
+      "areaId": "ncr-para-aque",
+      "locality": "ph2 | paranaque | 1720 metro manila"
+    }
+  ]
+}
