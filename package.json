@@ -37,6 +37,11 @@
     "scrape:google-maps-url": "node scripts/scrape-google-maps-url.mjs",
     "audit:clinics": "node scripts/audit-clinic-data.mjs --fix-report",
     "audit:location-issues": "node scripts/audit-location-issues.mjs --file=data/clinics-merged.json --write",
+    "fix:clinic-images": "node scripts/fix-clinic-images.mjs --audit",
+    "fix:clinic-images:apply": "node scripts/fix-clinic-images.mjs --apply",
+    "fix:clinic-images:emergency": "node scripts/fix-clinic-images.mjs --apply --missing-only --emergency-only --loop --limit=50",
+    "search:maps": "node scripts/search-maps-playwright.mjs",
+    "search:maps:missing-place-id": "node scripts/search-maps-playwright.mjs --missing-place-id --emergency-only --apply --loop --limit=50",
     "purge:bite-clinics": "node scripts/purge-human-bite-clinics.mjs",
     "dedupe:clinics": "node scripts/dedupe-clinics-db.mjs",
     "dedupe:clinics:apply": "node scripts/dedupe-clinics-db.mjs --apply"

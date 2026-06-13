@@ -12,6 +12,12 @@ export function canonicalUrl(path = "/"): string {
   return `${base}${path.startsWith("/") ? path : `/${path}`}`;
 }
 
+export const DEFAULT_OG_IMAGE_PATH = "/opengraph-image";
+
+export function defaultOgImageUrl(): string {
+  return canonicalUrl(DEFAULT_OG_IMAGE_PATH);
+}
+
 export function pageMetadata({
   title,
   description,
@@ -27,6 +33,7 @@ export function pageMetadata({
 }): Metadata {
   const url = path ? canonicalUrl(path) : undefined;
   const ogTitle = `${title} | ${SITE_NAME}`;
+  const ogImage = image ?? defaultOgImageUrl();
 
   return {
     title,
@@ -39,13 +46,13 @@ export function pageMetadata({
       siteName: SITE_NAME,
       locale: "en_PH",
       type: "website",
-      ...(image ? { images: [{ url: image, alt: title }] } : {}),
+      images: [{ url: ogImage, alt: title }],
     },
     twitter: {
-      card: image ? "summary_large_image" : "summary_large_image",
+      card: "summary_large_image",
       title: ogTitle,
       description,
-      ...(image ? { images: [image] } : {}),
+      images: [ogImage],
     },
     ...(noIndex ? { robots: { index: false, follow: false } } : {}),
   };
@@ -76,11 +83,13 @@ export const rootMetadata: Metadata = {
     siteName: SITE_NAME,
     title: `${SITE_NAME} — ${SITE_TAGLINE}`,
     description: SITE_DESCRIPTION,
+    images: [{ url: defaultOgImageUrl(), alt: `${SITE_NAME} — ${SITE_TAGLINE}` }],
   },
   twitter: {
     card: "summary_large_image",
     title: `${SITE_NAME} — ${SITE_TAGLINE}`,
     description: SITE_DESCRIPTION,
+    images: [defaultOgImageUrl()],
   },
   alternates: {
     canonical: getSiteUrl(),
@@ -124,5 +133,55 @@ export function websiteJsonLd() {
       name: SITE_NAME,
       url: getSiteUrl(),
     },
+  };
+}
+
+export function itemListJsonLd(
+  items: { name: string; url: string }[],
+  listName: string
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: listName,
+    numberOfItems: items.length,
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      url: item.url,
+    })),
+  };
+}
+
+export function breadcrumbJsonLd(
+  crumbs: { name: string; path: string }[]
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: crumbs.map((crumb, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: crumb.name,
+      item: canonicalUrl(crumb.path),
+    })),
+  };
+}
+
+export function faqPageJsonLd(
+  faqs: { question: string; answer: string }[]
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
   };
 }

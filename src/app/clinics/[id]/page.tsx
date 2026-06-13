@@ -11,10 +11,12 @@ import { DirectionsButtons } from "@/components/directions-buttons";
 import { PulseForm } from "@/components/pulse-form";
 import { ReviewSection } from "@/components/review-section";
 import { SiteHeader } from "@/components/site-header";
+import { RelatedAreaClinics } from "@/components/related-area-clinics";
 import { createClient } from "@/lib/supabase/server";
-import { formatDistance, hasNavigableLocation } from "@/lib/geo";
+import { hasNavigableLocation } from "@/lib/geo";
 import { CallButton } from "@/components/call-button";
 import { canonicalUrl, getSiteUrl, pageMetadata } from "@/lib/seo";
+import { resolveClinicArea } from "@/lib/ph-regions";
 import { STATUS_CONFIG } from "@/lib/status";
 import type { ClinicReview, ReviewSummary, Verification } from "@/types/database";
 import { ArrowLeft, BadgeCheck, Clock, MapPin, Phone } from "lucide-react";
@@ -34,7 +36,7 @@ export async function generateMetadata({
     .eq("id", id)
     .single();
 
-  if (!clinic) return { title: "Clinic Not Found" };
+  if (!clinic) return { title: "Clinic Not Found", robots: { index: false } };
 
   const path = `/clinics/${id}`;
   const description = `Emergency vet clinic in the Philippines — ${clinic.address}. Call before traveling. Hours, reviews, and directions on Vet247PH.`;
@@ -108,6 +110,7 @@ export default async function ClinicDetailPage({ params }: PageProps) {
 
   const clinicUrl = canonicalUrl(`/clinics/${id}`);
   const siteUrl = getSiteUrl();
+  const area = resolveClinicArea(clinic.address);
 
   const businessJsonLd = {
     "@context": "https://schema.org",
@@ -163,12 +166,29 @@ export default async function ClinicDetailPage({ params }: PageProps) {
         name: "Home",
         item: siteUrl,
       },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: clinic.name,
-        item: clinicUrl,
-      },
+      ...(area
+        ? [
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: area.label,
+              item: canonicalUrl(`/areas/${area.id}`),
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: clinic.name,
+              item: clinicUrl,
+            },
+          ]
+        : [
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: clinic.name,
+              item: clinicUrl,
+            },
+          ]),
     ],
   };
 
@@ -269,6 +289,8 @@ export default async function ClinicDetailPage({ params }: PageProps) {
             />
           </CardContent>
         </Card>
+
+        <RelatedAreaClinics clinicId={id} address={clinic.address} />
       </main>
     </div>
   );

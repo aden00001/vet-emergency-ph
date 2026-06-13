@@ -1,0 +1,379 @@
+{
+  "generated_at": "2026-06-13T03:17:45.422Z",
+  "mode": "apply",
+  "scope": "emergency-capable, missing photos",
+  "checked": 111,
+  "unchanged": 38,
+  "updated": 0,
+  "cleared": 0,
+  "added": 0,
+  "failed": 73,
+  "batches": 3,
+  "mismatches": [
+    {
+      "id": "3a529223-3f11-4d09-a3fc-e39fe1886e3d",
+      "name": "24 hrs Bulacan Veterinary Clinic",
+      "issue": "missing place id"
+    },
+    {
+      "id": "a11d87ed-f50c-4e80-8398-edac07a19add",
+      "name": "24 Veterinario Clinic",
+      "issue": "missing place id"
+    },
+    {
+      "id": "ced968b3-64af-4574-bc7e-93feea3468cf",
+      "name": "AI technician",
+      "issue": "missing place id"
+    },
+    {
+      "id": "3338a909-fff8-4e31-bc9f-61e87a64c595",
+      "name": "ALPHA PET VETERINARY CLINIC",
+      "issue": "missing place id"
+    },
+    {
+      "id": "a2505671-41f1-45e4-b853-85ba96133c4b",
+      "name": "ANIMALS MEDICAL CENTER- GREENWOODS Taytay",
+      "issue": "missing place id"
+    },
+    {
+      "id": "87ec5093-594c-4d40-aaf4-7e9a6b7bea27",
+      "name": "ATL Petcare Services",
+      "issue": "missing place id"
+    },
+    {
+      "id": "01b60c6e-ad4e-4bf6-bd3d-f1d3035ff6e3",
+      "name": "Biñan Animal Clinic and Grooming Center",
+      "issue": "missing place id"
+    },
+    {
+      "id": "ec7c3001-2f69-4572-8582-03d107b26322",
+      "name": "Bohol Veterinary Clinic",
+      "issue": "missing place id"
+    },
+    {
+      "id": "0738f983-ede5-42e9-95d1-73e72d352318",
+      "name": "CBR Veterinary Clinic",
+      "issue": "missing place id"
+    },
+    {
+      "id": "9b50c070-7d09-4890-bf53-c83175503972",
+      "name": "Cebu Animal Doctor's - The Feline Clinic",
+      "issue": "missing place id"
+    },
+    {
+      "id": "a7a7c800-d2a1-4fce-b414-12a6f70d31aa",
+      "name": "Cebu Animal Doctor's Hospital - Main Branch",
+      "issue": "missing place id"
+    },
+    {
+      "id": "1a78d087-7ace-4e0b-9c76-b59ab10a24c3",
+      "name": "Cebu Animal Doctors' Clinic V-rama Branch",
+      "issue": "missing place id"
+    },
+    {
+      "id": "3874270b-adff-49d4-a496-0ea1d4b43eae",
+      "name": "Centro Veterinario de Las Piñas (Veterinary Clinic)",
+      "issue": "missing place id"
+    },
+    {
+      "id": "58dd8ec8-ecae-4631-af9c-953b70666e09",
+      "name": "Doc Modomo",
+      "issue": "missing place id"
+    },
+    {
+      "id": "5b162e42-a1ac-4db9-9db4-23cb3b561ba6",
+      "name": "DocRoqs Animal Care Operation (DRACO Vet Clinic)",
+      "issue": "missing place id"
+    },
+    {
+      "id": "281bad8f-825a-4ed9-857c-c47fd6061b49",
+      "name": "Dog Central Veterinary Clinic & Grooming",
+      "issue": "missing place id"
+    },
+    {
+      "id": "451c54a0-bf2a-45c1-a63f-3cd51ce3a6c2",
+      "name": "Dr. Clarita Malasan",
+      "issue": "missing place id"
+    },
+    {
+      "id": "052cc4b4-7f08-4fea-9aae-9a49d19c6c93",
+      "name": "Dr. Wes Animal Clinic 24/7 for emergency assistance",
+      "issue": "missing place id"
+    },
+    {
+      "id": "1fc6f34e-1822-4cc0-bedc-cac8a6ba9113",
+      "name": "ES General Veterinary Clinic",
+      "issue": "missing place id"
+    },
+    {
+      "id": "2419e5cb-6795-49fb-9fa9-468c92ca83dd",
+      "name": "Feje Veterinary Clinic",
+      "issue": "missing place id"
+    },
+    {
+      "id": "13450d43-eab4-4eea-bb52-38b79426eab3",
+      "name": "FMH Animal Clinic (Branch)",
+      "issue": "missing place id"
+    },
+    {
+      "id": "15f57ae4-6839-46ac-b201-a745970ea053",
+      "name": "Furever Friends Emergency Pardo Branch",
+      "issue": "missing place id"
+    },
+    {
+      "id": "122d8dda-4a73-4552-b50e-924b2e6446ed",
+      "name": "Furfecto Veterinary Services",
+      "issue": "missing place id"
+    },
+    {
+      "id": "d6c408ae-4ec0-4fa0-92b2-14d029004982",
+      "name": "Furrst Aid Veterinary Clinic",
+      "issue": "missing place id"
+    },
+    {
+      "id": "f99b7103-fa31-4b84-a982-79ad60f810e6",
+      "name": "Harbourside Veterinary Services",
+      "issue": "missing place id"
+    },
+    {
+      "id": "60dd8f25-26da-4122-8496-e9b604d85c77",
+      "name": "Haustier Vet Care",
+      "issue": "missing place id"
+    },
+    {
+      "id": "3ab7d731-7e56-4a59-9080-9d7f9c9c28c1",
+      "name": "Heights 24 Hours Animal Clinic",
+      "issue": "missing place id"
+    },
+    {
+      "id": "afaf241b-ef32-4825-a5e8-1cd712f77e0e",
+      "name": "Intelli-Pet HealthCare Pet Supplies Trading",
+      "issue": "missing place id"
+    },
+    {
+      "id": "431ca3d4-1dd5-4694-8fdc-e2de683824e0",
+      "name": "IVET ANIMAL CLINIC",
+      "issue": "missing place id"
+    },
+    {
+      "id": "8558344d-6e75-4b4d-a0b1-fe8bfe7ca5e2",
+      "name": "Jna Animal Clinic",
+      "issue": "missing place id"
+    },
+    {
+      "id": "6cd3f909-f22d-47a3-89d2-1956643c91df",
+      "name": "Jurisvet Calamba 24hrs Pet Emergency Hospital",
+      "issue": "missing place id"
+    },
+    {
+      "id": "1ac83b13-ced6-4166-852c-cfc86820de47",
+      "name": "Jurisvet Pet Emergency Clinic",
+      "issue": "missing place id"
+    },
+    {
+      "id": "df37ba18-5326-4ea9-b3ac-b3df654a2008",
+      "name": "Jurisvet Pet Emergency Hospital",
+      "issue": "missing place id"
+    },
+    {
+      "id": "ef585400-336e-42f3-b3d6-73834bd284d7",
+      "name": "Jurisvet Pet Emergency Hospital _ Bacoor City",
+      "issue": "missing place id"
+    },
+    {
+      "id": "e287ffb5-aff0-4d36-bd33-ab7c94192662",
+      "name": "Little Paws Animal Clinic",
+      "issue": "missing place id"
+    },
+    {
+      "id": "7a1a9713-df04-4008-b602-a42f8569a838",
+      "name": "Makati Dog and Cat Hospital",
+      "issue": "missing place id"
+    },
+    {
+      "id": "749a4ce7-66e4-4ead-be15-bc482c132f2d",
+      "name": "Miko Animal Clinic",
+      "issue": "missing place id"
+    },
+    {
+      "id": "2d818c41-a23a-4355-82ef-5147cf3af6d2",
+      "name": "Mile Heights Veterinary Clinic",
+      "issue": "missing place id"
+    },
+    {
+      "id": "dd9583d2-11fe-4fa6-a67e-cf2b8d0cce7d",
+      "name": "Not now",
+      "issue": "missing place id"
+    },
+    {
+      "id": "f8593152-3f7d-4a5e-a180-0b5633e00469",
+      "name": "Oliva Pet Clinic by Doc Troy",
+      "issue": "missing place id"
+    },
+    {
+      "id": "ad2fc37f-3e88-496c-b619-bc0e9d170e03",
+      "name": "Pawssion animal clinic",
+      "issue": "missing place id"
+    },
+    {
+      "id": "3a5820f0-721e-4cde-bb66-0be654bcb80b",
+      "name": "Pet Circle Animal Clinic/Pet Circle Pet Grooming Center",
+      "issue": "missing place id"
+    },
+    {
+      "id": "5c23b509-a009-4b47-aa7e-9167425181db",
+      "name": "Petlink - Malolos, Bulacan",
+      "issue": "missing place id"
+    },
+    {
+      "id": "de3d265f-eae4-4146-a865-14e4c8ccaa8c",
+      "name": "Pets Haven Veterinary Medical Center",
+      "issue": "missing place id"
+    },
+    {
+      "id": "13c54cf8-a7e3-4fca-9221-044bd2e6727e",
+      "name": "PETSMARTs Animal Haven Veterinary Hospital",
+      "issue": "missing place id"
+    },
+    {
+      "id": "e2e3eb0e-2c4c-45dc-af8a-a449ee393c52",
+      "name": "PRAGMAVET Animal Clinic 24/7",
+      "issue": "missing place id"
+    },
+    {
+      "id": "dab2eca4-d306-4334-8769-630ac3404638",
+      "name": "Precious Fur Dog and cat Veterinary Clinic",
+      "issue": "missing place id"
+    },
+    {
+      "id": "725b3bda-0390-4090-89a6-aa01fe7533c1",
+      "name": "QUEBEC'S VET CLINIC",
+      "issue": "missing place id"
+    },
+    {
+      "id": "c4dceb6e-4f4e-499b-a986-73edf6ea4816",
+      "name": "RAYMUNDO Veterinary Clinic San Jose Batangas",
+      "issue": "missing place id"
+    },
+    {
+      "id": "727a6ae0-a62d-46fa-a807-1ed9c66b78ca",
+      "name": "RC Animal Land And Veterinary Clinic",
+      "issue": "missing place id"
+    },
+    {
+      "id": "579a4a82-3b01-4031-a540-c0d239a0498f",
+      "name": "Redline Veterinary Clinic - 24/7 Emergency",
+      "issue": "missing place id"
+    },
+    {
+      "id": "44acda0a-94d9-4948-bf82-6bb33726d09c",
+      "name": "Regina Animal Clinic and Petshop",
+      "issue": "missing place id"
+    },
+    {
+      "id": "1d7ecc5c-2114-4946-9a2c-b3c3ac758a0b",
+      "name": "Responsivet Animal Clinic 24/7 Emergency",
+      "issue": "missing place id"
+    },
+    {
+      "id": "605b23d3-73fc-4c19-9fa0-49460eed89d5",
+      "name": "Rima Animal Hospital",
+      "issue": "missing place id"
+    },
+    {
+      "id": "dc5ff477-157b-49b3-b173-042e322e6867",
+      "name": "Rizal Canine Distemper Facility",
+      "issue": "missing place id"
+    },
+    {
+      "id": "94da31dc-9ebf-4b59-bc10-b68c749f6c62",
+      "name": "ROYAL PAWS VETERINARY HOSPITAL - CAINTA,RIZAL",
+      "issue": "missing place id"
+    },
+    {
+      "id": "b06f7ec6-8534-4ce2-a458-dad4bfc30cc4",
+      "name": "Seaside Veterinary Clinic",
+      "issue": "missing place id"
+    },
+    {
+      "id": "b6fb9240-49d9-4c30-8b41-aa65c9d8ea7b",
+      "name": "Serbisyo Beterinaryo Animal Hospital 24 Hrs Emergency Vet Lipa City",
+      "issue": "missing place id"
+    },
+    {
+      "id": "5c0e8fb7-b262-4c8c-9be9-411a13c7d530",
+      "name": "Serbisyo Beterinaryo Animal Hospital 24 Hrs Pet Emergency Mandaluyong",
+      "issue": "missing place id"
+    },
+    {
+      "id": "3895d992-f16e-4f5d-affa-0a8e55e14343",
+      "name": "Serbisyo Beterinaryo Animal Hospital Antipolo 24Hrs Pet Emergency",
+      "issue": "missing place id"
+    },
+    {
+      "id": "84481fcd-f1f0-4728-bb6e-ef4a18f00af3",
+      "name": "Serbisyo Beterinaryo Animal Hospital Marikina",
+      "issue": "missing place id"
+    },
+    {
+      "id": "66fd57fd-1ccb-4c89-aff8-9f5a34c28918",
+      "name": "Serbisyo Beterinaryo Animal Hospital San Fernando",
+      "issue": "missing place id"
+    },
+    {
+      "id": "fd2354aa-2313-478b-a626-6a2d10033d66",
+      "name": "Serbisyo Beterinaryo Animal Hospital San Pablo 24 hrs Pet Emergency",
+      "issue": "missing place id"
+    },
+    {
+      "id": "0e698144-4ffb-4c5c-aed5-f901e771eaed",
+      "name": "Shambala",
+      "issue": "missing place id"
+    },
+    {
+      "id": "feeb8ee7-6865-4690-95fd-5d924f162846",
+      "name": "Spoiled Pets Veterinary Clinic Angono",
+      "issue": "missing place id"
+    },
+    {
+      "id": "fbab4dbe-0a4c-4272-8481-270e35824387",
+      "name": "THL Veterinary Clinic Emergency Calamba",
+      "issue": "missing place id"
+    },
+    {
+      "id": "3fc2730a-5949-4c2a-93d3-8f04887ea751",
+      "name": "Vet clinic",
+      "issue": "missing place id"
+    },
+    {
+      "id": "1bef1296-67e3-4c2e-90cc-e14d6b2b1d86",
+      "name": "Vet's Nook",
+      "issue": "missing place id"
+    },
+    {
+      "id": "e018514b-d8cf-4eef-8d77-eacb94041bbc",
+      "name": "VetLink Animal Recovery Clinic",
+      "issue": "missing place id"
+    },
+    {
+      "id": "d41b62c4-f2ce-4c23-b870-822df927e096",
+      "name": "VetVillage Animal Clinic bulacan",
+      "issue": "missing place id"
+    },
+    {
+      "id": "2c623276-2318-4cb9-8f1a-d01ba6c8ae2c",
+      "name": "Vetyard Vet Clinic",
+      "issue": "missing place id"
+    },
+    {
+      "id": "75dfe0c9-0cef-49f5-b1a5-33e06a95ea51",
+      "name": "VM VETERINARY CLINIC PETSHOP AND SPA",
+      "issue": "missing place id"
+    },
+    {
+      "id": "53a7d1bb-02ac-4bfd-baf5-3f542eef4b6d",
+      "name": "Yandug Animal Care Clinic",
+      "issue": "missing place id"
+    }
+  ]
+}

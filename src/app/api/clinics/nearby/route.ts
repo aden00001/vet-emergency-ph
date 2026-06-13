@@ -64,9 +64,12 @@ export async function GET(request: NextRequest) {
       p_emergency_only: emergencyOnly,
     });
 
-    if (error) {
-      return NextResponse.json({ error: error.message }, { status: 500 });
-    }
+  if (error) {
+    return NextResponse.json(
+      { error: error.message },
+      { status: 500, headers: { "X-Robots-Tag": "noindex" } }
+    );
+  }
 
     allClinics = (data ?? []) as NearbyClinic[];
     await setCachedNearbyClinics(cacheKey, allClinics);
@@ -77,5 +80,7 @@ export async function GET(request: NextRequest) {
   const sorted = sortClinics(allClinics, sort as ClinicSortOption);
   const clinics = sorted.slice(0, limit);
 
-  return NextResponse.json({ clinics, total, cached: fromCache });
+  return NextResponse.json({ clinics, total, cached: fromCache }, {
+    headers: { "X-Robots-Tag": "noindex" },
+  });
 }

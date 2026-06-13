@@ -207,7 +207,7 @@ const PROVINCE_DEFS_SORTED = [...PROVINCE_DEFS].sort(
 );
 
 function defId(def: AreaDef): string {
-  return `${def.group === "Metro Manila" ? "ncr" : "ph"}:${def.label
+  return `${def.group === "Metro Manila" ? "ncr" : "ph"}-${def.label
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "")}`;

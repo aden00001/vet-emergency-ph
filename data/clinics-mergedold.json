@@ -1,14 +1,28 @@
 {
-  "scraped_at": "2026-06-12T21:47:36.043Z",
+  "scraped_at": "2026-06-10T23:39:20.876Z",
   "region": "Philippines (merged Google Maps exports)",
   "source": "google_maps_scrape",
   "input_files": [
     "clinics-merged.json",
-    "Laguna.json"
+    "Central Luzon.json",
+    "Cordilleras Autonomous Region.json",
+    "Bicol.json",
+    "mimaropa.json",
+    "Mindanao.json",
+    "Cagayan Valley.json",
+    "Visayas.json",
+    "Ilocos Region.json",
+    "Quezon Province.json",
+    "Pampanga.json",
+    "Batangas.json",
+    "Laguna.json",
+    "Rizal.json",
+    "Cavite.json",
+    "Bulacan.json"
   ],
-  "count": 1960,
-  "emergency_count": 188,
-  "with_coordinates": 1960,
+  "count": 1964,
+  "emergency_count": 189,
+  "with_coordinates": 1964,
   "notes": [
     "Merged from multiple JSON uploads. Review before treating emergency_capable as verified.",
     "Excluded: human bite centers (anti-rabies / PEP clinics for people)."
@@ -1848,6 +1862,26 @@
       "website": "https://www.facebook.com/beterinaryo.romblomanon"
     },
     {
+      "name": "Animal Clinic",
+      "address": "JW39+CXG, Villarosa St, Bacolod, Negros Occidental",
+      "phone": "+639287430379",
+      "latitude": 14.6693073,
+      "longitude": 121.0535634,
+      "emergency_capable": false,
+      "owner_verified": false,
+      "services": [
+        "trauma"
+      ],
+      "hours": null,
+      "source": "google_maps_scrape",
+      "google_maps_url": "https://www.google.com/maps/search/",
+      "google_place_id": "ChIJe4im3XTPrjMRWdKIgCNpIpU",
+      "category": "Veterinary care",
+      "rating": 3.2,
+      "review_count": 10,
+      "geocoded_from": "Animal Clinic, Tandang Sora Avenue, Culiat, 6th District, Quezon City, Eastern Manila District, Metro Manila, 1128, Philippines"
+    },
+    {
       "name": "ANIMAL CLINIC & DOG SPA",
       "address": "36F2+Q7M, Quezon Street, City of Tandag, Surigao del Sur",
       "phone": "",
@@ -3496,6 +3530,26 @@
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Arevalo's%20Animal%20Clinic&query_place_id=ChIJ0xhNcIC2lzMRd98Oh7bqCGE",
       "google_place_id": "ChIJ0xhNcIC2lzMRd98Oh7bqCGE",
       "category": "Veterinary care"
+    },
+    {
+      "name": "Arevalo's Animal Clinic",
+      "address": "beside Tayuman Elementary School, 796 National Road Brgy, Binangonan, Rizal",
+      "phone": "+639184929798",
+      "latitude": 14.5336633,
+      "longitude": 121.0087817,
+      "emergency_capable": false,
+      "owner_verified": false,
+      "services": [
+        "trauma"
+      ],
+      "hours": null,
+      "source": "google_maps_scrape",
+      "google_maps_url": "https://www.google.com/maps/search/",
+      "google_place_id": "ChIJx0lAL67HlzMRb1OPdCFlTWQ",
+      "category": "Animal hospital",
+      "rating": 4,
+      "review_count": 4,
+      "geocoded_from": "Arevalo's Animal Clinic, Clemente Jose Avenue, Barangay 162, Zone 18, District 2, Pasay, Southern Manila District, Metro Manila, 1303, Philippines"
     },
     {
       "name": "ARF Veterinary Clinic",
@@ -8533,6 +8587,26 @@
       "review_count": 1
     },
     {
+      "name": "CONSUELO VETERINARY SERVICES",
+      "address": "Naga, Cebu",
+      "phone": "",
+      "latitude": 10.2084724,
+      "longitude": 123.7590963,
+      "emergency_capable": false,
+      "owner_verified": false,
+      "services": [
+        "trauma"
+      ],
+      "hours": null,
+      "source": "google_maps_scrape",
+      "google_maps_url": "https://www.google.com/maps/search/",
+      "google_place_id": "ChIJlzw9HlJ4qTMRAsInt4UlqZ8",
+      "category": "Veterinary care",
+      "rating": 4,
+      "review_count": 1,
+      "geocoded_from": "Naga, Cebu, Central Visayas, 6037, Philippines"
+    },
+    {
       "name": "Consult A Vet • Imus Branch",
       "address": "9WFH+HG, 2A, 395 Malagasang Rd, Imus, 4103 Cavite",
       "phone": "+639178063150",
@@ -13269,6 +13343,27 @@
       "category": "Animal hospital",
       "rating": 4.4,
       "review_count": 18
+    },
+    {
+      "name": "FMH ANIMAL CLINIC",
+      "address": "Stall E, BM 7, Bldg Molino Rd, Bacoor, Cavite",
+      "phone": "+639176868870",
+      "latitude": 13.9411337,
+      "longitude": 120.7310836,
+      "emergency_capable": true,
+      "owner_verified": false,
+      "services": [
+        "trauma",
+        "poisoning",
+        "respiratory"
+      ],
+      "hours": "Monday: Open 24 hours; Tuesday: Open 24 hours; Wednesday: Open 24 hours; Thursday: Open 24 hours; Friday: Open 24 hours; Saturday: Open 24 hours; Sunday: Open 24 hours",
+      "source": "google_maps_scrape",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=FMH%20ANIMAL%20CLINIC&query_place_id=ChIJJwpH4iCjvTMRHu_Y-DokNes",
+      "google_place_id": "ChIJJwpH4iCjvTMRHu_Y-DokNes",
+      "category": "Emergency veterinarian service",
+      "rating": 3.9,
+      "review_count": 8
     },
     {
       "name": "FMH Animal Clinic (Branch)",

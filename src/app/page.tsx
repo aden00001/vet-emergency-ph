@@ -1,81 +1,58 @@
-"use client";
-
-import { useCallback, useEffect, useState } from "react";
-import { Loader2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { JsonLd } from "@/components/json-ld";
 import { ClinicCard } from "@/components/clinic-card";
-import { ClinicSortSelect } from "@/components/clinic-sort-select";
-import {
-  ResultsCountSelect,
-  type ResultsCountOption,
-} from "@/components/results-count-select";
-import { EmergencyTriage } from "@/components/emergency-triage";
-import { LocationPicker, type LocationPickerValue } from "@/components/location-picker";
 import { HeroIllustration } from "@/components/hero-illustration";
+import { HomeSearch } from "@/components/home-search";
 import { SiteHeader } from "@/components/site-header";
-import type { ClinicSortOption } from "@/lib/clinic-sort";
-import { PH_CENTER } from "@/lib/location-presets";
-import type { NearbyClinic, TriageCategory } from "@/types/database";
+import { fetchAreaGroups, getTopAreas } from "@/lib/clinic-areas";
+import { getPresetById, DEFAULT_PRESET_ID } from "@/lib/location-presets";
+import { fetchNearbyClinics } from "@/lib/nearby-clinics";
+import { canonicalUrl, itemListJsonLd, pageMetadata } from "@/lib/seo";
 
-export default function HomePage() {
-  const [clinics, setClinics] = useState<NearbyClinic[]>([]);
-  const [totalCount, setTotalCount] = useState(0);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [location, setLocation] = useState<LocationPickerValue>({
-    lat: PH_CENTER.lat,
-    lng: PH_CENTER.lng,
-    label: "Philippines",
-    source: "unset",
-  });
-  const [triage, setTriage] = useState<TriageCategory | null>(null);
-  const [emergencyOnly, setEmergencyOnly] = useState(true);
-  const [sortBy, setSortBy] = useState<ClinicSortOption>("recommended");
-  const [limit, setLimit] = useState<ResultsCountOption>(20);
-  const [locationReady, setLocationReady] = useState(false);
+export const metadata = pageMetadata({
+  title: "Emergency Vet Clinics Philippines",
+  description:
+    "Find 24/7 and after-hours emergency veterinary clinics across the Philippines. Search by location, call before traveling, and browse clinics in Metro Manila, Cebu, Davao, and nationwide.",
+  path: "/",
+});
 
-  const searchClinics = useCallback(
-    async (searchLat: number, searchLng: number) => {
-      setLoading(true);
-      setError(null);
-      try {
-        const params = new URLSearchParams({
-          lat: String(searchLat),
-          lng: String(searchLng),
-          radius: "25",
-          emergencyOnly: String(emergencyOnly),
-          limit: String(limit),
-          sort: sortBy,
-        });
-        if (triage) params.set("triage", triage);
+const DEFAULT_PRESET = getPresetById(DEFAULT_PRESET_ID)!;
 
-        const res = await fetch(`/api/clinics/nearby?${params}`);
-        const json = await res.json();
-        if (!res.ok) throw new Error(json.error ?? "Search failed");
-        setClinics(json.clinics ?? []);
-        setTotalCount(json.total ?? json.clinics?.length ?? 0);
-      } catch (e) {
-        setError(e instanceof Error ? e.message : "Search failed");
-        setClinics([]);
-        setTotalCount(0);
-      } finally {
-        setLoading(false);
-      }
-    },
-    [triage, emergencyOnly, limit, sortBy]
+export default async function HomePage() {
+  let initialClinics: Awaited<ReturnType<typeof fetchNearbyClinics>>["clinics"] =
+    [];
+  let initialTotal = 0;
+  let topAreas: Awaited<ReturnType<typeof getTopAreas>> = [];
+
+  try {
+    const result = await fetchNearbyClinics({
+      lat: DEFAULT_PRESET.latitude,
+      lng: DEFAULT_PRESET.longitude,
+      radiusKm: 25,
+      emergencyOnly: true,
+      limit: 20,
+      sort: "recommended",
+    });
+    initialClinics = result.clinics;
+    initialTotal = result.total;
+
+    const groups = await fetchAreaGroups();
+    topAreas = getTopAreas(groups, 12);
+  } catch {
+    // Graceful degradation — interactive search still works client-side
+  }
+
+  const itemList = itemListJsonLd(
+    initialClinics.map((c) => ({
+      name: c.name,
+      url: canonicalUrl(`/clinics/${c.id}`),
+    })),
+    `Emergency vet clinics near ${DEFAULT_PRESET.label}`
   );
-
-  const awaitingArea = location.source === "unset";
-
-  useEffect(() => {
-    if (!locationReady || awaitingArea) return;
-    searchClinics(location.lat, location.lng);
-  }, [location.lat, location.lng, locationReady, awaitingArea, searchClinics]);
-
-  const shownCount = clinics.length;
 
   return (
     <div className="app-backdrop flex min-h-full flex-col overflow-x-clip">
+      <JsonLd data={itemList} />
       <SiteHeader />
       <main className="mx-auto w-full min-w-0 max-w-3xl flex-1 px-4 py-8 space-y-7">
         <section className="grid items-center gap-8 overflow-hidden sm:grid-cols-[1fr_minmax(200px,240px)] sm:gap-6">
@@ -99,117 +76,59 @@ export default function HomePage() {
           <HeroIllustration />
         </section>
 
-        <section className="glass shadow-soft min-w-0 space-y-5 overflow-hidden rounded-2xl p-5">
-          <EmergencyTriage onSelect={setTriage} selected={triage} />
+        <HomeSearch
+          initialClinics={initialClinics}
+          initialTotal={initialTotal}
+          initialLocationLabel={DEFAULT_PRESET.label}
+        />
 
-          <div className="h-px bg-border/70" />
-
-          <LocationPicker
-            value={location}
-            onChange={setLocation}
-            onGpsError={setError}
-            onReady={() => setLocationReady(true)}
-          />
-
-          <div className="flex flex-wrap items-center gap-2 pt-1">
-            <span className="text-xs font-medium text-muted-foreground">
-              Show:
-            </span>
-            <Button
-              size="sm"
-              variant={emergencyOnly ? "default" : "outline"}
-              onClick={() => setEmergencyOnly(true)}
-              className="rounded-full"
-            >
-              Emergency only
-            </Button>
-            <Button
-              size="sm"
-              variant={!emergencyOnly ? "default" : "outline"}
-              onClick={() => setEmergencyOnly(false)}
-              className="rounded-full"
-            >
-              All clinics
-            </Button>
-          </div>
-        </section>
-
-        {locationReady && !awaitingArea && !loading && !error && totalCount > 0 && (
-          <div className="flex min-w-0 flex-col gap-3 px-1 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
-            <div className="min-w-0 space-y-0.5">
-              <h2 className="font-display text-sm font-semibold text-muted-foreground">
-                {shownCount < totalCount
-                  ? `Showing ${shownCount} of ${totalCount} clinics`
-                  : `${totalCount} ${totalCount === 1 ? "clinic" : "clinics"} near you`}
+        {initialClinics.length > 0 && (
+          <section
+            className="space-y-4"
+            aria-label={`Emergency vet clinics in ${DEFAULT_PRESET.label}`}
+          >
+            <div className="px-1">
+              <h2 className="font-display text-lg font-bold">
+                Emergency vets in {DEFAULT_PRESET.label}
               </h2>
-              <p className="text-xs text-muted-foreground">
-                Near <span className="font-medium text-foreground">{location.label}</span>
+              <p className="text-sm text-muted-foreground">
+                {initialTotal} emergency-capable{" "}
+                {initialTotal === 1 ? "clinic" : "clinics"} in this area.{" "}
+                <Link href="/areas" className="font-medium text-primary hover:underline">
+                  Browse all areas
+                </Link>
               </p>
             </div>
-            <div className="flex min-w-0 flex-wrap items-center gap-2">
-              <ClinicSortSelect
-                value={sortBy}
-                onChange={setSortBy}
-                disabled={loading}
-              />
-              <ResultsCountSelect
-                value={limit}
-                onChange={setLimit}
-                disabled={loading}
-              />
+            <div className="space-y-3">
+              {initialClinics.map((clinic) => (
+                <ClinicCard key={clinic.id} clinic={clinic} />
+              ))}
             </div>
-          </div>
+          </section>
         )}
 
-        {(!locationReady || (loading && !awaitingArea)) && (
-          <div className="flex items-center justify-center gap-2 py-16 text-muted-foreground">
-            <Loader2 className="size-5 animate-spin" />
-            {!locationReady ? "Detecting your location…" : "Finding nearest clinics…"}
-          </div>
+        {topAreas.length > 0 && (
+          <section className="space-y-3 px-1" aria-label="Browse by area">
+            <h2 className="font-display text-lg font-bold">
+              Browse emergency vets by area
+            </h2>
+            <ul className="flex flex-wrap gap-2">
+              {topAreas.map((area) => (
+                <li key={area.id}>
+                  <Link
+                    href={`/areas/${area.id}`}
+                    className="inline-flex rounded-full border border-border/80 bg-background/60 px-3 py-1.5 text-sm font-medium transition-colors hover:border-primary/40 hover:text-primary"
+                  >
+                    {area.label}
+                    <span className="ml-1.5 text-muted-foreground">
+                      ({area.emergencyCount})
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
         )}
-
-        {locationReady && awaitingArea && (
-          <div className="rounded-2xl border border-dashed border-primary/30 bg-primary/[0.03] py-12 text-center">
-            <p className="font-display font-semibold text-foreground">
-              Choose your area to see nearby clinics
-            </p>
-            <p className="mx-auto mt-1 max-w-sm text-sm text-muted-foreground">
-              Use GPS, pick your city or province, or search an address above —
-              we cover clinics across the Philippines.
-            </p>
-          </div>
-        )}
-
-        {error && !awaitingArea && (
-          <div className="rounded-xl border border-destructive/30 bg-destructive/10 p-4 text-sm text-destructive">
-            {error}
-          </div>
-        )}
-
-        {locationReady && !awaitingArea && !loading && !error && clinics.length === 0 && (
-          <div className="rounded-2xl border border-dashed border-border py-12 text-center text-muted-foreground">
-            <p className="font-medium">No clinics found nearby</p>
-            <p className="mt-1 text-sm">
-              Try a different area or turn off the emergency-only filter.
-            </p>
-          </div>
-        )}
-
-        <div className="space-y-3">
-          {locationReady &&
-            !awaitingArea &&
-            !loading &&
-            clinics.map((clinic, index) => (
-            <div
-              key={clinic.id}
-              className="animate-card-enter"
-              style={{ animationDelay: `${Math.min(index, 12) * 55}ms` }}
-            >
-              <ClinicCard clinic={clinic} />
-            </div>
-            ))}
-        </div>
-
       </main>
     </div>
   );
