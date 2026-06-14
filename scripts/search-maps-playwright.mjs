@@ -33,6 +33,7 @@ const nearArg = args.find((a) => a.startsWith("--near="));
 const fileArg = args.find((a) => a.startsWith("--file="));
 const outArg = args.find((a) => a.startsWith("--out="));
 const limitArg = args.find((a) => a.startsWith("--limit="));
+const nameFilterArg = args.find((a) => a.startsWith("--name="));
 const positionalQuery = args.find((a) => !a.startsWith("--"));
 
 const apply = args.includes("--apply");
@@ -48,6 +49,7 @@ const outPath = outArg?.split("=")[1] ?? DEFAULT_OUT;
 const nearOverride = nearArg?.split("=")[1] ?? "";
 const singleQuery = queryArg?.split("=")[1] ?? positionalQuery ?? null;
 const limit = limitArg ? Number(limitArg.split("=")[1]) : Infinity;
+const nameFilter = nameFilterArg?.split("=")[1] ?? null;
 const delayMs = 1200;
 
 loadEnvFile(path.join(ROOT, ".env.local"));
@@ -117,6 +119,7 @@ async function fetchClinicsFromDb() {
     if (emergencyOnly) query = query.eq("emergency_capable", true);
     if (missingPhoto) query = query.is("image_url", null);
     if (missingCoords) query = query.or("latitude.is.null,longitude.is.null");
+    if (nameFilter) query = query.ilike("name", `%${nameFilter}%`);
 
     const { data, error } = await query.range(from, from + 999);
     if (error) throw error;

@@ -215,19 +215,23 @@ async function main() {
       }
 
       const { phone, hours } = buildContactFields(c);
+      const prev = existingRows.find((r) => r.id === existingId);
       const row = {
         address: c.address || "Philippines",
         phone,
         hours,
-        location: null,
-        location_verified: false,
         emergency_capable: c.emergency_capable === true,
         services: c.services?.length ? c.services : ["trauma", "poisoning", "respiratory"],
       };
       if (c.google_maps_url) row.google_maps_url = c.google_maps_url;
       if (c.image_url) row.image_url = c.image_url;
 
-      const prev = existingRows.find((r) => r.id === existingId);
+      // JSON row has no coordinates — do not wipe an existing pin on upsert.
+      if (prev?.latitude == null || prev?.longitude == null) {
+        row.location = null;
+        row.location_verified = false;
+      }
+
       if (prev?.emergency_capable && !row.emergency_capable) {
         row.emergency_capable = true;
       }
@@ -245,8 +249,8 @@ async function main() {
         if (prev) {
           Object.assign(prev, row, {
             id: existingId,
-            latitude: null,
-            longitude: null,
+            latitude: prev.latitude,
+            longitude: prev.longitude,
           });
         }
       }
@@ -361,6 +365,7 @@ async function fetchAllClinics(supabase) {
       .select(
         "id, name, slug, address, latitude, longitude, emergency_capable, phone, image_url, google_maps_url, owner_verified, claimed_by, confidence_score"
       )
+      .order("id", { ascending: true })
       .range(from, from + pageSize - 1);
     if (error) throw error;
     if (!data?.length) break;

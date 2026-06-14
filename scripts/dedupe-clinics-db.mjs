@@ -41,8 +41,9 @@ async function fetchAllClinics(supabase) {
     const { data, error } = await supabase
       .from("clinics")
       .select(
-        "id, name, address, phone, latitude, longitude, emergency_capable, owner_verified, claimed_by, confidence_score, image_url, google_maps_url"
+        "id, name, address, phone, latitude, longitude, location_verified, emergency_capable, owner_verified, claimed_by, confidence_score, image_url, google_maps_url"
       )
+      .order("id", { ascending: true })
       .range(from, from + pageSize - 1);
     if (error) throw error;
     if (!data?.length) break;
@@ -70,6 +71,32 @@ function buildDuplicateGroups(rows) {
 
 async function reassignChildRows(supabase, fromId, toId) {
   await supabase.from("verifications").update({ clinic_id: toId }).eq("clinic_id", fromId);
+
+  const { data: dupeStatus } = await supabase
+    .from("clinic_status")
+    .select("current_status, updated_at, updated_by")
+    .eq("clinic_id", fromId)
+    .maybeSingle();
+
+  if (dupeStatus) {
+    const { data: keeperStatus } = await supabase
+      .from("clinic_status")
+      .select("updated_at")
+      .eq("clinic_id", toId)
+      .maybeSingle();
+
+    if (!keeperStatus || new Date(dupeStatus.updated_at) > new Date(keeperStatus.updated_at)) {
+      await supabase.from("clinic_status").upsert(
+        {
+          clinic_id: toId,
+          current_status: dupeStatus.current_status,
+          updated_at: dupeStatus.updated_at,
+          updated_by: dupeStatus.updated_by,
+        },
+        { onConflict: "clinic_id" }
+      );
+    }
+  }
 
   const { data: dupeReviews } = await supabase
     .from("clinic_reviews")
@@ -112,6 +139,78 @@ async function reassignChildRows(supabase, fromId, toId) {
   }
 }
 
+function hasImage(row) {
+  return typeof row.image_url === "string" && row.image_url.trim().length > 0;
+}
+
+function hasCoordinates(row) {
+  return row.latitude != null && row.longitude != null;
+}
+
+function hasVerifiedCoordinates(row) {
+  return row.location_verified === true && hasCoordinates(row);
+}
+
+function sameCoordinates(a, b) {
+  return (
+    hasCoordinates(a) &&
+    hasCoordinates(b) &&
+    Number(a.latitude) === Number(b.latitude) &&
+    Number(a.longitude) === Number(b.longitude)
+  );
+}
+
+function pickBestImageRow(group, keeper) {
+  if (hasImage(keeper)) return keeper;
+  return group.filter(hasImage).sort((a, b) => pickScore(b) - pickScore(a))[0] ?? null;
+}
+
+function pickBestLocationRow(group, keeper) {
+  if (hasVerifiedCoordinates(keeper)) return keeper;
+
+  const verified = group
+    .filter(hasVerifiedCoordinates)
+    .sort((a, b) => pickScore(b) - pickScore(a))[0];
+  if (verified) return verified;
+
+  if (hasCoordinates(keeper)) return keeper;
+  return group.filter(hasCoordinates).sort((a, b) => pickScore(b) - pickScore(a))[0] ?? null;
+}
+
+function pickScore(row) {
+  return (
+    (hasImage(row) ? 20 : 0) +
+    (hasVerifiedCoordinates(row) ? 18 : hasCoordinates(row) ? 6 : 0) +
+    (row.owner_verified ? 20 : 0) +
+    (row.claimed_by ? 15 : 0) +
+    (row.google_maps_url ? 5 : 0) +
+    (row.emergency_capable ? 3 : 0) +
+    ((row.confidence_score ?? 50) / 100)
+  );
+}
+
+function buildKeeperPatch(group, keeper) {
+  const patch = {};
+  const imageRow = pickBestImageRow(group, keeper);
+  const locationRow = pickBestLocationRow(group, keeper);
+
+  if (imageRow && !hasImage(keeper)) {
+    patch.image_url = imageRow.image_url;
+  }
+
+  if (!keeper.google_maps_url) {
+    const mapsRow = group.find((row) => row.google_maps_url);
+    if (mapsRow) patch.google_maps_url = mapsRow.google_maps_url;
+  }
+
+  if (locationRow && (!sameCoordinates(keeper, locationRow) || keeper.location_verified !== locationRow.location_verified)) {
+    patch.location = `SRID=4326;POINT(${locationRow.longitude} ${locationRow.latitude})`;
+    patch.location_verified = locationRow.location_verified === true;
+  }
+
+  return { patch, imageRow, locationRow };
+}
+
 async function main() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -130,9 +229,40 @@ async function main() {
 
   for (const group of groups) {
     const keeper = pickKeeper(group);
+    const { patch, imageRow, locationRow } = buildKeeperPatch(group, keeper);
     const dupes = group.filter((r) => r.id !== keeper.id);
 
     console.log(`  keep: ${keeper.name} (${keeper.id})`);
+    if (imageRow && imageRow.id !== keeper.id) {
+      console.log(`    copy image from: ${imageRow.name} (${imageRow.id})`);
+    }
+    if (locationRow && locationRow.id !== keeper.id) {
+      console.log(
+        `    copy coordinates from: ${locationRow.name} (${locationRow.id}) ` +
+          `(${locationRow.latitude}, ${locationRow.longitude}, verified=${locationRow.location_verified})`
+      );
+    }
+    if (!imageRow) {
+      console.warn("    WARNING: no image found in this duplicate group");
+    }
+    if (!locationRow || !hasVerifiedCoordinates(locationRow)) {
+      console.warn("    WARNING: no verified coordinates found in this duplicate group");
+    }
+
+    const readyToDedupe = Boolean(imageRow && locationRow && hasVerifiedCoordinates(locationRow));
+    if (!readyToDedupe) {
+      console.warn("    SKIP: survivor would not have both a photo and verified coordinates");
+      if (apply) continue;
+    }
+
+    if (apply && Object.keys(patch).length) {
+      const { error } = await supabase.from("clinics").update(patch).eq("id", keeper.id);
+      if (error) {
+        console.error(`    FAILED to update keeper ${keeper.id}: ${error.message}`);
+        continue;
+      }
+    }
+
     for (const dupe of dupes) {
       console.log(`    drop: ${dupe.name} (${dupe.id})`);
       if (!apply) continue;
