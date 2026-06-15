@@ -1,8 +1,6 @@
 import { notFound, permanentRedirect } from "next/navigation";
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
-import { buttonVariants } from "@/components/ui/button";
 import { JsonLd } from "@/components/json-ld";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { ClinicImage } from "@/components/clinic-image";
@@ -10,6 +8,7 @@ import { ConfidenceBadge } from "@/components/confidence-badge";
 import { DirectionsButtons } from "@/components/directions-buttons";
 import { PulseForm } from "@/components/pulse-form";
 import { ReviewSection } from "@/components/review-section";
+import { SiteBreadcrumbs } from "@/components/site-breadcrumbs";
 import { SiteHeader } from "@/components/site-header";
 import { RelatedAreaClinics } from "@/components/related-area-clinics";
 import { clinicPath, isClinicUuid } from "@/lib/clinic-slug";
@@ -17,11 +16,17 @@ import { fetchClinicBySlugOrId, fetchTopClinicSlugs } from "@/lib/clinics";
 import { hasNavigableLocation } from "@/lib/geo";
 import { parseOpeningHours } from "@/lib/opening-hours";
 import { CallButton } from "@/components/call-button";
-import { canonicalUrl, getSiteUrl, pageMetadata, resolveClinicOgImage } from "@/lib/seo";
+import {
+  breadcrumbJsonLd,
+  canonicalUrl,
+  clinicPageTitle,
+  pageMetadata,
+  resolveClinicOgImage,
+} from "@/lib/seo";
 import { resolveClinicArea } from "@/lib/ph-regions";
 import { STATUS_CONFIG } from "@/lib/status";
 import type { ClinicReview, ReviewSummary, Verification } from "@/types/database";
-import { ArrowLeft, BadgeCheck, Clock, MapPin, Phone } from "lucide-react";
+import { BadgeCheck, Clock, MapPin, Phone } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 
 interface PageProps {
@@ -42,10 +47,11 @@ export async function generateMetadata({
   if (!clinic) return { title: "Clinic Not Found", robots: { index: false } };
 
   const path = clinicPath(clinic);
-  const description = `Emergency vet clinic in the Philippines — ${clinic.address}. Call before traveling. Hours, reviews, and directions on Vet247PH.`;
+  const area = resolveClinicArea(clinic.address);
+  const description = `24/7 emergency vet clinic in ${area?.label ?? "the Philippines"} — ${clinic.address}. Call before traveling. Hours, reviews, and directions on Vet247PH.`;
 
   return pageMetadata({
-    title: clinic.name,
+    title: clinicPageTitle(clinic.name, area?.label),
     description,
     path,
     image: resolveClinicOgImage(clinic),
@@ -111,9 +117,29 @@ export default async function ClinicDetailPage({ params }: PageProps) {
   const publishedReviews = (reviews ?? []) as ClinicReview[];
 
   const clinicUrl = canonicalUrl(clinicPath(clinic));
-  const siteUrl = getSiteUrl();
   const area = resolveClinicArea(clinic.address);
   const openingHours = parseOpeningHours(clinic.hours);
+
+  const breadcrumbCrumbs = area
+    ? [
+        { name: "Home", path: "/" },
+        { name: "Areas", path: "/areas" },
+        { name: area.label, path: `/areas/${area.id}` },
+        { name: clinic.name, path: clinicPath(clinic) },
+      ]
+    : [
+        { name: "Home", path: "/" },
+        { name: clinic.name, path: clinicPath(clinic) },
+      ];
+
+  const breadcrumbNav = area
+    ? [
+        { name: "Home", href: "/" },
+        { name: "Areas", href: "/areas" },
+        { name: area.label, href: `/areas/${area.id}` },
+        { name: clinic.name },
+      ]
+    : [{ name: "Home", href: "/" }, { name: clinic.name }];
 
   const businessJsonLd = {
     "@context": "https://schema.org",
@@ -160,54 +186,12 @@ export default async function ClinicDetailPage({ params }: PageProps) {
       : {}),
   };
 
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: siteUrl,
-      },
-      ...(area
-        ? [
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: area.label,
-              item: canonicalUrl(`/areas/${area.id}`),
-            },
-            {
-              "@type": "ListItem",
-              position: 3,
-              name: clinic.name,
-              item: clinicUrl,
-            },
-          ]
-        : [
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: clinic.name,
-              item: clinicUrl,
-            },
-          ]),
-    ],
-  };
-
   return (
     <div className="app-backdrop flex min-h-full flex-col">
-      <JsonLd data={[businessJsonLd, breadcrumbJsonLd]} />
+      <JsonLd data={[businessJsonLd, breadcrumbJsonLd(breadcrumbCrumbs)]} />
       <SiteHeader />
       <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-8 space-y-6">
-        <Link
-          href="/"
-          className={buttonVariants({ variant: "ghost", size: "sm", className: "gap-2 -ml-2" })}
-        >
-          <ArrowLeft className="size-4" />
-          Back to search
-        </Link>
+        <SiteBreadcrumbs items={breadcrumbNav} />
 
         <Card className="glass shadow-soft overflow-hidden rounded-2xl pt-0">
           <ClinicImage

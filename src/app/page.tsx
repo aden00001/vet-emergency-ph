@@ -8,13 +8,19 @@ import { fetchAreaGroups, getTopAreas } from "@/lib/clinic-areas";
 import { clinicPath } from "@/lib/clinic-slug";
 import { getPresetById, DEFAULT_PRESET_ID } from "@/lib/location-presets";
 import { fetchNearbyClinics } from "@/lib/nearby-clinics";
-import { canonicalUrl, itemListJsonLd, pageMetadata } from "@/lib/seo";
+import {
+  HOME_PAGE_TITLE,
+  canonicalUrl,
+  itemListJsonLd,
+  pageMetadata,
+} from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "Emergency Vet Clinics Philippines",
+  title: HOME_PAGE_TITLE,
   description:
     "Find 24/7 and after-hours emergency veterinary clinics across the Philippines. Search by location, call before traveling, and browse clinics in Metro Manila, Cebu, Davao, and nationwide.",
   path: "/",
+  absoluteTitle: true,
 });
 
 const DEFAULT_PRESET = getPresetById(DEFAULT_PRESET_ID)!;

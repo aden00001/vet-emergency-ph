@@ -12,6 +12,7 @@ import {
 } from "@/lib/clinic-areas";
 import { clinicPath } from "@/lib/clinic-slug";
 import {
+  areaPageTitle,
   breadcrumbJsonLd,
   canonicalUrl,
   itemListJsonLd,
@@ -44,8 +45,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     if (!area) return { title: "Area Not Found", robots: { index: false } };
 
     return pageMetadata({
-      title: `Emergency Vets in ${area.label}`,
-      description: `Find ${area.emergencyCount} emergency-capable veterinary clinics in ${area.label}, Philippines. Call before traveling — hours, phone numbers, and directions on Vet247PH.`,
+      title: areaPageTitle(area.label),
+      description: `Find ${area.emergencyCount} 24/7 and emergency veterinary clinics in ${area.label}, Philippines. Call before traveling — hours, phone numbers, and directions on Vet247PH.`,
       path: `/areas/${areaId}`,
     });
   } catch {

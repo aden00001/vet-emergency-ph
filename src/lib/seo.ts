@@ -1,8 +1,32 @@
 import type { Metadata } from "next";
-import { getSiteUrl, SITE_NAME, SITE_TAGLINE } from "@/lib/brand";
+import {
+  getSiteUrl,
+  SITE_AUTHOR_URL,
+  SITE_CONTACT_EMAIL,
+  SITE_NAME,
+  SITE_TAGLINE,
+} from "@/lib/brand";
 
 export const SITE_DESCRIPTION =
   "Find emergency veterinary clinics across the Philippines. Real-time directory of 24/7 and after-hours vet care in Metro Manila, Cebu, and nationwide.";
+
+/** Homepage <title> — local-intent keywords, no template suffix. */
+export const HOME_PAGE_TITLE =
+  "Emergency Vet Locator Philippines | Find 24/7 Animal Clinics";
+
+export function areaPageTitle(areaLabel: string): string {
+  return `24/7 Emergency Vets in ${areaLabel}`;
+}
+
+export function clinicPageTitle(
+  clinicName: string,
+  areaLabel?: string | null
+): string {
+  if (areaLabel) {
+    return `${clinicName} — 24/7 Emergency Vet in ${areaLabel}`;
+  }
+  return `${clinicName} — 24/7 Emergency Vet Philippines`;
+}
 
 export { getSiteUrl } from "@/lib/brand";
 
@@ -42,19 +66,22 @@ export function pageMetadata({
   path,
   image,
   noIndex,
+  absoluteTitle,
 }: {
   title: string;
   description: string;
   path?: string;
   image?: string | null;
   noIndex?: boolean;
+  /** Bypass layout title template (use for homepage). */
+  absoluteTitle?: boolean;
 }): Metadata {
   const url = path ? canonicalUrl(path) : undefined;
-  const ogTitle = `${title} | ${SITE_NAME}`;
+  const ogTitle = absoluteTitle ? title : `${title} | ${SITE_NAME}`;
   const ogImage = image ?? defaultOgImageUrl();
 
   return {
-    title,
+    title: absoluteTitle ? { absolute: title } : title,
     description,
     ...(url ? { alternates: { canonical: url } } : {}),
     openGraph: {
@@ -78,7 +105,7 @@ export function pageMetadata({
 
 export const rootMetadata: Metadata = {
   title: {
-    default: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    default: HOME_PAGE_TITLE,
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
@@ -99,13 +126,13 @@ export const rootMetadata: Metadata = {
     locale: "en_PH",
     url: getSiteUrl(),
     siteName: SITE_NAME,
-    title: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    title: HOME_PAGE_TITLE,
     description: SITE_DESCRIPTION,
-    images: [{ url: defaultOgImageUrl(), alt: `${SITE_NAME} — ${SITE_TAGLINE}` }],
+    images: [{ url: defaultOgImageUrl(), alt: HOME_PAGE_TITLE }],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    title: HOME_PAGE_TITLE,
     description: SITE_DESCRIPTION,
     images: [defaultOgImageUrl()],
   },
@@ -125,32 +152,58 @@ export const rootMetadata: Metadata = {
 };
 
 export function organizationJsonLd() {
+  const siteUrl = getSiteUrl();
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": `${siteUrl}/#organization`,
     name: SITE_NAME,
-    url: getSiteUrl(),
+    url: siteUrl,
     description: SITE_DESCRIPTION,
+    sameAs: [SITE_AUTHOR_URL],
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer support",
+      email: SITE_CONTACT_EMAIL,
+      areaServed: "PH",
+      availableLanguage: ["en"],
+    },
     areaServed: {
       "@type": "Country",
       name: "Philippines",
     },
+    knowsAbout: [
+      "Emergency veterinary care",
+      "24-hour veterinary clinics",
+      "After-hours pet emergency services",
+      "Veterinary clinics in the Philippines",
+    ],
   };
 }
 
 export function websiteJsonLd() {
+  const siteUrl = getSiteUrl();
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": `${siteUrl}/#website`,
     name: SITE_NAME,
-    url: getSiteUrl(),
+    url: siteUrl,
     description: SITE_DESCRIPTION,
     inLanguage: "en-PH",
-    publisher: {
-      "@type": "Organization",
-      name: SITE_NAME,
-      url: getSiteUrl(),
-    },
+    publisher: { "@id": `${siteUrl}/#organization` },
+  };
+}
+
+export function aboutPageJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    name: `About ${SITE_NAME}`,
+    url: canonicalUrl("/about"),
+    description: `${SITE_NAME} is a free emergency veterinary clinic directory for the Philippines.`,
+    inLanguage: "en-PH",
+    mainEntity: { "@id": `${getSiteUrl()}/#organization` },
   };
 }
 
