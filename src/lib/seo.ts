@@ -18,6 +18,10 @@ export function areaPageTitle(areaLabel: string): string {
   return `24/7 Emergency Vets in ${areaLabel}`;
 }
 
+export function regionPageTitle(region: string): string {
+  return `24/7 Emergency Vets in ${region}`;
+}
+
 export function clinicPageTitle(
   clinicName: string,
   areaLabel?: string | null
@@ -253,6 +257,30 @@ export function faqPageJsonLd(
         "@type": "Answer",
         text: faq.answer,
       },
+    })),
+  };
+}
+
+export function howToJsonLd({
+  name,
+  description,
+  steps,
+}: {
+  name: string;
+  description: string;
+  steps: string[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name,
+    description,
+    inLanguage: "en-PH",
+    step: steps.map((text, index) => ({
+      "@type": "HowToStep",
+      position: index + 1,
+      name: `Step ${index + 1}`,
+      text,
     })),
   };
 }

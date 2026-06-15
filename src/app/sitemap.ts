@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { getSiteUrl } from "@/lib/brand";
 import { fetchAreaGroups, flattenAreas } from "@/lib/clinic-areas";
 import { HELP_TOPICS } from "@/lib/help-content";
+import { AREA_GROUP_ORDER, regionSlug } from "@/lib/ph-regions";
 import { createServiceClient } from "@/lib/supabase/server";
 import { clinicPath } from "@/lib/clinic-slug";
 
@@ -23,6 +24,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "weekly",
       priority: 0.9,
     },
+    ...AREA_GROUP_ORDER.map((group) => ({
+      url: `${baseUrl}/areas/region/${regionSlug(group)}`,
+      lastModified: STATIC_LAST_MODIFIED,
+      changeFrequency: "weekly" as const,
+      priority: 0.88,
+    })),
     {
       url: `${baseUrl}/help`,
       lastModified: STATIC_LAST_MODIFIED,

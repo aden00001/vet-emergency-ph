@@ -2,15 +2,19 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/json-ld";
+import { AreaPagination, CLINICS_PER_PAGE } from "@/components/area-pagination";
 import { ClinicCard } from "@/components/clinic-card";
+import { SiteBreadcrumbs } from "@/components/site-breadcrumbs";
 import { SiteHeader } from "@/components/site-header";
 import { buttonVariants } from "@/components/ui/button";
+import { getAreaIntro } from "@/lib/area-intro";
 import {
   fetchAreaGroups,
   fetchClinicsForArea,
   getAreaById,
 } from "@/lib/clinic-areas";
 import { clinicPath } from "@/lib/clinic-slug";
+import { regionSlug } from "@/lib/ph-regions";
 import {
   areaPageTitle,
   breadcrumbJsonLd,
@@ -18,12 +22,12 @@ import {
   itemListJsonLd,
   pageMetadata,
 } from "@/lib/seo";
-import { ArrowLeft } from "lucide-react";
 
 export const revalidate = 3600;
 
 interface PageProps {
   params: Promise<{ areaId: string }>;
+  searchParams: Promise<{ page?: string }>;
 }
 
 export async function generateStaticParams() {
@@ -54,29 +58,43 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 }
 
-export default async function AreaDetailPage({ params }: PageProps) {
+export default async function AreaDetailPage({ params, searchParams }: PageProps) {
   const { areaId } = await params;
+  const { page: pageParam } = await searchParams;
+  const page = Math.max(1, Number.parseInt(pageParam ?? "1", 10) || 1);
+  const offset = (page - 1) * CLINICS_PER_PAGE;
 
   let area: Awaited<ReturnType<typeof fetchClinicsForArea>>["area"] = null;
   let clinics: Awaited<ReturnType<typeof fetchClinicsForArea>>["clinics"] = [];
+  let total = 0;
 
   try {
     const result = await fetchClinicsForArea(areaId, {
       emergencyOnly: true,
-      limit: 50,
+      limit: CLINICS_PER_PAGE,
+      offset,
     });
     area = result.area;
     clinics = result.clinics;
+    total = result.total;
   } catch {
     notFound();
   }
 
   if (!area) notFound();
 
+  const totalPages = Math.ceil(total / CLINICS_PER_PAGE);
+  if (page > totalPages && totalPages > 0) notFound();
+
   const path = `/areas/${areaId}`;
+  const intro = getAreaIntro(
+    area,
+    clinics.map((clinic) => clinic.name)
+  );
   const breadcrumbs = breadcrumbJsonLd([
     { name: "Home", path: "/" },
     { name: "Areas", path: "/areas" },
+    { name: area.group, path: `/areas/region/${regionSlug(area.group)}` },
     { name: area.label, path },
   ]);
   const itemList = itemListJsonLd(
@@ -92,25 +110,23 @@ export default async function AreaDetailPage({ params }: PageProps) {
       <JsonLd data={[breadcrumbs, itemList]} />
       <SiteHeader />
       <main className="mx-auto w-full max-w-3xl flex-1 space-y-6 px-4 py-8">
-        <Link
-          href="/areas"
-          className={buttonVariants({
-            variant: "ghost",
-            size: "sm",
-            className: "gap-2 -ml-2",
-          })}
-        >
-          <ArrowLeft className="size-4" />
-          All areas
-        </Link>
+        <SiteBreadcrumbs
+          items={[
+            { name: "Home", href: "/" },
+            { name: "Areas", href: "/areas" },
+            { name: area.group, href: `/areas/region/${regionSlug(area.group)}` },
+            { name: area.label },
+          ]}
+        />
 
-        <div className="space-y-2">
+        <div className="space-y-3">
           <h1 className="font-display text-3xl font-extrabold tracking-tight">
             Emergency vets in {area.label}
           </h1>
-          <p className="text-muted-foreground">
-            {clinics.length > 0
-              ? `${clinics.length} emergency-capable ${clinics.length === 1 ? "clinic" : "clinics"} listed in ${area.label}. Always call before traveling.`
+          <p className="text-muted-foreground">{intro}</p>
+          <p className="text-sm text-muted-foreground">
+            {total > 0
+              ? `${total} emergency-capable ${total === 1 ? "clinic" : "clinics"} in ${area.label}. Always call before traveling.`
               : `No emergency-capable clinics are currently listed in ${area.label}. Try searching from the homepage or browse a nearby area.`}
           </p>
         </div>
@@ -120,6 +136,7 @@ export default async function AreaDetailPage({ params }: PageProps) {
             {clinics.map((clinic) => (
               <ClinicCard key={clinic.id} clinic={clinic} />
             ))}
+            <AreaPagination areaId={areaId} page={page} total={total} />
           </div>
         ) : (
           <div className="rounded-2xl border border-dashed border-border py-12 text-center">

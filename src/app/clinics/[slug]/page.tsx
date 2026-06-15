@@ -1,5 +1,6 @@
 import { notFound, permanentRedirect } from "next/navigation";
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { JsonLd } from "@/components/json-ld";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -23,7 +24,7 @@ import {
   pageMetadata,
   resolveClinicOgImage,
 } from "@/lib/seo";
-import { resolveClinicArea } from "@/lib/ph-regions";
+import { resolveClinicArea, regionSlug } from "@/lib/ph-regions";
 import { STATUS_CONFIG } from "@/lib/status";
 import type { ClinicReview, ReviewSummary, Verification } from "@/types/database";
 import { BadgeCheck, Clock, MapPin, Phone } from "lucide-react";
@@ -124,6 +125,7 @@ export default async function ClinicDetailPage({ params }: PageProps) {
     ? [
         { name: "Home", path: "/" },
         { name: "Areas", path: "/areas" },
+        { name: area.group, path: `/areas/region/${regionSlug(area.group)}` },
         { name: area.label, path: `/areas/${area.id}` },
         { name: clinic.name, path: clinicPath(clinic) },
       ]
@@ -136,6 +138,7 @@ export default async function ClinicDetailPage({ params }: PageProps) {
     ? [
         { name: "Home", href: "/" },
         { name: "Areas", href: "/areas" },
+        { name: area.group, href: `/areas/region/${regionSlug(area.group)}` },
         { name: area.label, href: `/areas/${area.id}` },
         { name: clinic.name },
       ]
@@ -217,7 +220,21 @@ export default async function ClinicDetailPage({ params }: PageProps) {
           <CardContent className="space-y-4">
             <p className="flex items-start gap-2 text-muted-foreground">
               <MapPin className="mt-0.5 size-4 shrink-0" />
-              {clinic.address}
+              <span>
+                {clinic.address}
+                {area ? (
+                  <>
+                    {" "}
+                    ·{" "}
+                    <Link
+                      href={`/areas/${area.id}`}
+                      className="font-medium text-primary hover:underline"
+                    >
+                      More emergency vets in {area.label}
+                    </Link>
+                  </>
+                ) : null}
+              </span>
             </p>
             {clinic.hours && (
               <p className="flex items-center gap-2 text-sm">

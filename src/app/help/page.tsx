@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { JsonLd } from "@/components/json-ld";
+import { SiteBreadcrumbs } from "@/components/site-breadcrumbs";
 import { SiteHeader } from "@/components/site-header";
 import { buttonVariants } from "@/components/ui/button";
 import { GENERAL_HELP_FAQS, HELP_TOPICS } from "@/lib/help-content";
@@ -20,6 +21,10 @@ export default function HelpIndexPage() {
       <JsonLd data={faqJsonLd} />
       <SiteHeader />
       <main className="mx-auto w-full max-w-2xl flex-1 space-y-10 px-4 py-10">
+        <SiteBreadcrumbs
+          items={[{ name: "Home", href: "/" }, { name: "Help" }]}
+        />
+
         <div className="space-y-3">
           <h1 className="font-display text-3xl font-extrabold tracking-tight">
             Pet emergency help

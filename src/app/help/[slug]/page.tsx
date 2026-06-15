@@ -2,11 +2,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/json-ld";
+import { SiteBreadcrumbs } from "@/components/site-breadcrumbs";
 import { SiteHeader } from "@/components/site-header";
 import { buttonVariants } from "@/components/ui/button";
 import { getHelpTopic, HELP_TOPICS } from "@/lib/help-content";
-import { breadcrumbJsonLd, faqPageJsonLd, pageMetadata } from "@/lib/seo";
-import { ArrowLeft } from "lucide-react";
+import { breadcrumbJsonLd, faqPageJsonLd, howToJsonLd, pageMetadata } from "@/lib/seo";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -44,22 +44,23 @@ export default async function HelpTopicPage({ params }: PageProps) {
             { name: "Help", path: "/help" },
             { name: topic.title, path },
           ]),
+          howToJsonLd({
+            name: topic.title,
+            description: topic.description,
+            steps: topic.steps,
+          }),
           faqPageJsonLd(topic.faqs),
         ]}
       />
       <SiteHeader />
       <main className="mx-auto w-full max-w-2xl flex-1 space-y-8 px-4 py-10">
-        <Link
-          href="/help"
-          className={buttonVariants({
-            variant: "ghost",
-            size: "sm",
-            className: "gap-2 -ml-2",
-          })}
-        >
-          <ArrowLeft className="size-4" />
-          All help topics
-        </Link>
+        <SiteBreadcrumbs
+          items={[
+            { name: "Home", href: "/" },
+            { name: "Help", href: "/help" },
+            { name: topic.title },
+          ]}
+        />
 
         <div className="space-y-3">
           <h1 className="font-display text-3xl font-extrabold tracking-tight">

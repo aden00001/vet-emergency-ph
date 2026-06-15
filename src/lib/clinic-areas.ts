@@ -262,12 +262,12 @@ function toNearbyClinic(row: AreaClinicRow, area: ClinicArea): NearbyClinic {
 
 export async function fetchClinicsForArea(
   areaId: string,
-  options: { emergencyOnly?: boolean; limit?: number } = {}
-): Promise<{ area: ClinicArea | null; clinics: NearbyClinic[] }> {
-  const { emergencyOnly = true, limit = 50 } = options;
+  options: { emergencyOnly?: boolean; limit?: number; offset?: number } = {}
+): Promise<{ area: ClinicArea | null; clinics: NearbyClinic[]; total: number }> {
+  const { emergencyOnly = true, limit = 50, offset = 0 } = options;
   const groups = await fetchAreaGroups();
   const area = getAreaById(groups, areaId);
-  if (!area) return { area: null, clinics: [] };
+  if (!area) return { area: null, clinics: [], total: 0 };
 
   const rows = await fetchAreaClinicRows(emergencyOnly);
   const filtered = rows.filter((clinic) => {
@@ -279,5 +279,9 @@ export async function fetchClinicsForArea(
     filtered.map((clinic) => toNearbyClinic(clinic, area)),
     "recommended"
   );
-  return { area, clinics: sorted.slice(0, limit) };
+  return {
+    area,
+    clinics: sorted.slice(offset, offset + limit),
+    total: sorted.length,
+  };
 }

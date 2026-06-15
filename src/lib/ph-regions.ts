@@ -18,6 +18,22 @@ export const AREA_GROUP_ORDER: AreaGroup[] = [
   "Mindanao",
 ];
 
+export const REGION_SLUGS: Record<AreaGroup, string> = {
+  "Metro Manila": "metro-manila",
+  Luzon: "luzon",
+  Visayas: "visayas",
+  Mindanao: "mindanao",
+};
+
+export function regionSlug(group: AreaGroup): string {
+  return REGION_SLUGS[group];
+}
+
+export function groupFromRegionSlug(slug: string): AreaGroup | null {
+  const entry = Object.entries(REGION_SLUGS).find(([, value]) => value === slug);
+  return entry ? (entry[0] as AreaGroup) : null;
+}
+
 export interface ClinicArea {
   id: string;
   label: string;

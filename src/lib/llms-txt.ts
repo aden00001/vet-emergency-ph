@@ -6,6 +6,7 @@ import {
 } from "@/lib/brand";
 import { fetchAreaGroups, getTopAreas } from "@/lib/clinic-areas";
 import { HELP_TOPICS } from "@/lib/help-content";
+import { AREA_GROUP_ORDER, regionSlug } from "@/lib/ph-regions";
 import { canonicalUrl } from "@/lib/seo";
 
 function link(path: string, title: string, description: string): string {
@@ -30,6 +31,15 @@ export async function buildLlmsTxt(): Promise<string> {
       "/areas",
       "Browse by city and province",
       "Area index grouped by Metro Manila, Luzon, Visayas, and Mindanao."
+    ),
+    "",
+    "## Regions",
+    ...AREA_GROUP_ORDER.map((group) =>
+      link(
+        `/areas/region/${regionSlug(group)}`,
+        `Emergency vets in ${group}`,
+        `Regional hub linking to cities and provinces in ${group}.`
+      )
     ),
   ];
 
